@@ -41,12 +41,33 @@ function IngredientFilter() {
     setSelectedIngredient(ingredient);
     
     const filtered = pokemonData.filter(pokemon => {
-      return Object.values(pokemon.ingredientPatterns).some(pattern => 
-        pattern.ingredients.includes(ingredient)
-      );
+      // Lv.60パターンのみをチェック
+      const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+      return lv60Patterns.some(patternName => {
+        const pattern = pokemon.ingredientPatterns[patternName];
+        return pattern && pattern.ingredients.includes(ingredient);
+      });
     });
     
-    setFilteredPokemon(filtered);
+    // 選択した食材の最大値でソート（降順）
+    const sortedFiltered = filtered.sort((a, b) => {
+      const getMaxValue = (pokemon) => {
+        const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+        const patternValues = lv60Patterns
+          .map(patternName => {
+            const pattern = pokemon.ingredientPatterns[patternName];
+            const value = pattern?.individualValues?.[ingredient] || 0;
+            return value;
+          })
+          .filter(value => value > 0);
+        
+        return Math.max(...patternValues, 0);
+      };
+      
+      return getMaxValue(b) - getMaxValue(a); // 降順ソート
+    });
+    
+    setFilteredPokemon(sortedFiltered);
   };
 
   const clearFilter = () => {
@@ -87,26 +108,79 @@ function IngredientFilter() {
           </div>
           
           <div className="pokemon-grid">
-            {filteredPokemon.map(pokemon => (
-              <div key={pokemon.id} className="pokemon-card">
-                <h3>{pokemon.name}</h3>
-                <div className="patterns">
-                  {Object.entries(pokemon.ingredientPatterns)
-                    .filter(([_, pattern]) => pattern.ingredients.includes(selectedIngredient))
-                    .map(([patternName, pattern]) => (
-                      <div key={patternName} className="pattern-info">
-                        <span className="pattern-name">{patternName}:</span>
-                        <span className="ingredients">{pattern.ingredients.join(', ')}</span>
-                        <div className="values">
-                          <span>Lv.1: {pattern.values[1]}</span>
-                          <span>Lv.30: {pattern.values[30]}</span>
-                          <span>Lv.60: {pattern.values[60]}</span>
-                        </div>
-                      </div>
-                    ))}
+            {filteredPokemon.map(pokemon => {
+              // 選択された食材についての最大値とそのパターンを計算
+              const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+              const patternValues = lv60Patterns
+                .map(patternName => {
+                  const pattern = pokemon.ingredientPatterns[patternName];
+                  const value = pattern?.individualValues?.[selectedIngredient] || 0;
+                  return { patternName, value };
+                })
+                .filter(item => item.value > 0);
+              
+              const maxItem = patternValues.reduce((max, current) => 
+                current.value > max.value ? current : max, 
+                { patternName: '', value: 0 }
+              );
+
+              // ポケモンのA、B、C食材を特定
+              const getIngredientTypes = () => {
+                const patterns = pokemon.ingredientPatterns;
+                let ingredientA = null, ingredientB = null, ingredientC = null;
+                
+                // AAAパターンからA食材を取得
+                if (patterns['AAA']) {
+                  ingredientA = patterns['AAA'].ingredients[0];
+                }
+                
+                // ABパターンまたはAABパターンからB食材を取得
+                if (patterns['AB']) {
+                  ingredientA = ingredientA || patterns['AB'].ingredients[0];
+                  ingredientB = patterns['AB'].ingredients[1];
+                } else if (patterns['AAB']) {
+                  ingredientA = ingredientA || patterns['AAB'].ingredients[0];
+                  ingredientB = patterns['AAB'].ingredients[2];
+                }
+                
+                // ABCパターンがある場合のみC食材を設定
+                if (patterns['ABC']) {
+                  ingredientA = ingredientA || patterns['ABC'].ingredients[0];
+                  ingredientB = ingredientB || patterns['ABC'].ingredients[1];
+                  ingredientC = patterns['ABC'].ingredients[2];
+                }
+                
+                return { A: ingredientA, B: ingredientB, C: ingredientC };
+              };
+              
+              const ingredientTypes = getIngredientTypes();
+              
+              // 選択した食材がA/B/Cのどれに該当するかを判定
+              const getIngredientType = () => {
+                if (ingredientTypes.A === selectedIngredient) return 'A';
+                if (ingredientTypes.B === selectedIngredient) return 'B';
+                if (ingredientTypes.C === selectedIngredient) return 'C';
+                return '';
+              };
+              
+              const ingredientType = getIngredientType();
+
+              return (
+                <div key={pokemon.id} className="pokemon-card">
+                  <h3>
+                    <span>{pokemon.name}({ingredientType})</span>
+                    <span>{maxItem.value > 0 ? maxItem.value.toFixed(1) : 'N/A'}</span>
+                  </h3>
+                  <div className="pokemon-ingredients">
+                    <div className="ingredient-types">
+                      <div className="ingredient-simple">A:{ingredientTypes.A || 'なし'}</div>
+                      <div className="ingredient-simple">B:{ingredientTypes.B || 'なし'}</div>
+                      <div className="ingredient-simple">C:{ingredientTypes.C || 'なし'}</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           
           <div className="result-count">

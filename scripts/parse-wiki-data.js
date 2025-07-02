@@ -68,76 +68,33 @@ function parseHTMLTable(html) {
 
   console.log('Parsing HTML table...');
 
-  // テーブルを探す
-  const tables = $('table');
-  console.log(`Found ${tables.length} tables`);
-
-  if (tables.length === 0) {
-    console.log('No tables found. Using sample data...');
+  // メインテーブルを特定
+  const table = $('table').first();
+  if (table.length === 0) {
+    console.log('No table found. Using sample data...');
     return getSampleData();
   }
 
-  // メインテーブルを特定（最大の行数を持つテーブル）
-  let mainTable = null;
-  let maxRows = 0;
+  console.log(`Processing table with ${table.find('tr').length} rows`);
 
-  tables.each((i, table) => {
-    const rows = $(table).find('tr').length;
-    console.log(`Table ${i + 1}: ${rows} rows`);
-    if (rows > maxRows) {
-      maxRows = rows;
-      mainTable = table;
-    }
-  });
-
-  if (!mainTable) {
-    console.log('Could not identify main table. Using sample data...');
-    return getSampleData();
-  }
-
-  console.log(`Processing main table with ${maxRows} rows`);
-
-  // テーブルの構造を分析
-  const headerRow = $(mainTable).find('tr').first();
-  const headers = [];
-  headerRow.find('th, td').each((i, cell) => {
-    headers.push($(cell).text().trim());
-  });
-  
-  console.log('Table headers:', headers);
-
-  // テーブルの行を処理
-  const rows = $(mainTable).find('tr');
+  // データ行を処理（tbody内の行）
+  const dataRows = table.find('tbody tr');
   let successfulParses = 0;
   let failedParses = 0;
 
-  rows.each((rowIndex, row) => {
-    const cells = $(row).find('td, th');
-    
-    if (cells.length === 0) return;
-
-    // ヘッダー行をスキップ
-    if ($(row).find('th').length > 0) {
-      return;
-    }
-
-    // ポケモン名を含む行を処理
-    const firstCell = $(cells[0]).text().trim();
-    
-    if (firstCell && firstCell.length > 0 && !firstCell.includes('Lv.')) {
-      try {
-        const pokemon = parsePokemonRow($, cells, pokemonId, headers);
-        if (pokemon) {
-          pokemonList.push(pokemon);
-          pokemonId++;
-          successfulParses++;
-        } else {
-          failedParses++;
-        }
-      } catch (error) {
-        console.warn(`Error parsing row ${rowIndex} (${firstCell}):`, error.message);
+  dataRows.each((rowIndex, row) => {
+    try {
+      const pokemon = parsePokemonRow($, $(row).find('td'), pokemonId);
+      if (pokemon) {
+        pokemonList.push(pokemon);
+        pokemonId++;
+        successfulParses++;
+      } else {
         failedParses++;
       }
+    } catch (error) {
+      console.warn(`Error parsing row ${rowIndex}:`, error.message);
+      failedParses++;
     }
   });
 
@@ -152,11 +109,20 @@ function parseHTMLTable(html) {
   return pokemonList;
 }
 
-function parsePokemonRow($, cells, id, headers) {
-  if (cells.length < 3) return null;
+function parsePokemonRow($, cells, id) {
+  if (cells.length < 34) {
+    console.warn(`Row has ${cells.length} cells, expected 34`);
+    return null;
+  }
 
-  const name = $(cells[0]).text().trim();
-  if (!name || name.length === 0) return null;
+  // ポケモン名を取得（セル1）
+  const nameCell = $(cells[1]);
+  const name = nameCell.find('a').text().trim() || nameCell.text().trim();
+  
+  if (!name) {
+    console.warn('No Pokemon name found');
+    return null;
+  }
 
   console.log(`Parsing: ${name}`);
 
@@ -167,52 +133,150 @@ function parsePokemonRow($, cells, id, headers) {
     ingredientPatterns: {}
   };
 
-  // セルの内容をデバッグ出力
-  const cellContents = [];
-  cells.each((i, cell) => {
-    cellContents.push($(cell).text().trim());
-  });
-  console.log(`  Cells: [${cellContents.join(', ')}]`);
+  // Lv.1データ（セル2-3: 食材アイコン, 数値）
+  const lv1Ingredient = getIngredientFromCell($, cells[2]);
+  const lv1Value = parseFloat($(cells[3]).text().trim());
+  
+  if (lv1Ingredient && !isNaN(lv1Value)) {
+    pokemon.levels['1'] = { value: lv1Value };
+    pokemon.ingredientPatterns['AA'] = {
+      ingredients: [lv1Ingredient, lv1Ingredient],
+      individualValues: { [lv1Ingredient]: lv1Value },
+      totalValue: lv1Value
+    };
+  }
 
-  // レベル情報を抽出（推測で位置を特定）
-  for (let i = 1; i < Math.min(4, cells.length); i++) {
-    const cellText = $(cells[i]).text().trim();
-    const value = parseFloat(cellText);
-    if (!isNaN(value) && value > 0) {
-      const level = i === 1 ? '1' : i === 2 ? '30' : '60';
-      pokemon.levels[level] = { value };
+  // Lv.30 AAパターン（セル4-5: 食材アイコン, 数値）
+  const lv30Ingredient = getIngredientFromCell($, cells[4]);
+  const lv30Value = parseFloat($(cells[5]).text().trim());
+  
+  if (lv30Ingredient && !isNaN(lv30Value)) {
+    pokemon.levels['30'] = { value: lv30Value };
+    if (pokemon.ingredientPatterns['AA']) {
+      pokemon.ingredientPatterns['AA'].individualValues[lv30Ingredient] = lv30Value;
+      pokemon.ingredientPatterns['AA'].totalValue = lv30Value;
     }
   }
 
-  // 残りのセルから食材パターンを抽出
-  let patternIndex = 0;
-  const patternNames = ['AA', 'AB', 'AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+  // Lv.30 ABパターン（セル6-9: A食材, A数値, B食材, B数値）
+  const lv30AIngredient = getIngredientFromCell($, cells[6]);
+  const lv30AValue = parseFloat($(cells[7]).text().trim());
+  const lv30BIngredient = getIngredientFromCell($, cells[8]);
+  const lv30BValue = parseFloat($(cells[9]).text().trim());
   
-  for (let i = 4; i < cells.length; i++) {
-    const cellText = $(cells[i]).text().trim();
-    
-    // パターン名っぽい場合
-    if (patternNames.includes(cellText)) {
-      const pattern = cellText;
+  if (lv30AIngredient && lv30BIngredient && !isNaN(lv30AValue) && !isNaN(lv30BValue)) {
+    pokemon.ingredientPatterns['AB'] = {
+      ingredients: [lv30AIngredient, lv30BIngredient],
+      individualValues: {
+        [lv30AIngredient]: lv30AValue,
+        [lv30BIngredient]: lv30BValue
+      },
+      totalValue: lv30AValue + lv30BValue
+    };
+  }
+
+  // Lv.60パターンを解析
+  const lv60Patterns = [
+    { name: 'AAA', start: 10, cells: 2 },
+    { name: 'AAB', start: 12, cells: 4 },
+    { name: 'AAC', start: 16, cells: 4 },
+    { name: 'ABA', start: 20, cells: 4 },
+    { name: 'ABB', start: 24, cells: 4 },
+    { name: 'ABC', start: 28, cells: 6 }
+  ];
+
+  lv60Patterns.forEach(pattern => {
+    const patternData = parseLv60Pattern($, cells, pattern);
+    if (patternData) {
+      pokemon.ingredientPatterns[pattern.name] = patternData;
       
-      // 次のセルで食材を探す
-      if (i + 1 < cells.length) {
-        const ingredientsText = $(cells[i + 1]).text().trim();
-        if (ingredientsText && !patternNames.includes(ingredientsText)) {
-          const ingredients = ingredientsText.split(/[,、]/).map(s => s.trim()).filter(s => s);
-          
-          if (ingredients.length > 0) {
-            pokemon.ingredientPatterns[pattern] = {
-              ingredients,
-              values: {} // 値は別途処理が必要
-            };
-          }
-        }
+      // Lv.60の基本値をAAAパターンから設定
+      if (pattern.name === 'AAA' && patternData.totalValue) {
+        pokemon.levels['60'] = { value: patternData.totalValue };
       }
     }
+  });
+
+  return pokemon;
+}
+
+function parseLv60Pattern($, cells, pattern) {
+  const { name, start, cells: cellCount } = pattern;
+  
+  if (start + cellCount > cells.length) {
+    return null;
   }
 
-  return Object.keys(pokemon.ingredientPatterns).length > 0 ? pokemon : null;
+  if (cellCount === 2) {
+    // AAAパターン（同じ食材3つ）
+    const ingredient = getIngredientFromCell($, cells[start]);
+    const value = parseFloat($(cells[start + 1]).text().trim());
+    
+    if (ingredient && !isNaN(value)) {
+      return {
+        ingredients: [ingredient, ingredient, ingredient],
+        individualValues: { [ingredient]: value },
+        totalValue: value
+      };
+    }
+  } else if (cellCount === 4) {
+    // AAB, AAC, ABA, ABBパターン
+    const ingredientA = getIngredientFromCell($, cells[start]);
+    const valueA = parseFloat($(cells[start + 1]).text().trim());
+    const ingredientB = getIngredientFromCell($, cells[start + 2]);
+    const valueB = parseFloat($(cells[start + 3]).text().trim());
+    
+    if (ingredientA && ingredientB && !isNaN(valueA) && !isNaN(valueB)) {
+      let ingredients;
+      if (name === 'AAB' || name === 'AAC') {
+        ingredients = [ingredientA, ingredientA, ingredientB];
+      } else if (name === 'ABA') {
+        ingredients = [ingredientA, ingredientB, ingredientA];
+      } else if (name === 'ABB') {
+        ingredients = [ingredientA, ingredientB, ingredientB];
+      }
+      
+      return {
+        ingredients,
+        individualValues: {
+          [ingredientA]: valueA,
+          [ingredientB]: valueB
+        },
+        totalValue: valueA + valueB
+      };
+    }
+  } else if (cellCount === 6) {
+    // ABCパターン
+    const ingredientA = getIngredientFromCell($, cells[start]);
+    const valueA = parseFloat($(cells[start + 1]).text().trim());
+    const ingredientB = getIngredientFromCell($, cells[start + 2]);
+    const valueB = parseFloat($(cells[start + 3]).text().trim());
+    const ingredientC = getIngredientFromCell($, cells[start + 4]);
+    const valueC = parseFloat($(cells[start + 5]).text().trim());
+    
+    if (ingredientA && ingredientB && ingredientC && 
+        !isNaN(valueA) && !isNaN(valueB) && !isNaN(valueC)) {
+      return {
+        ingredients: [ingredientA, ingredientB, ingredientC],
+        individualValues: {
+          [ingredientA]: valueA,
+          [ingredientB]: valueB,
+          [ingredientC]: valueC
+        },
+        totalValue: valueA + valueB + valueC
+      };
+    }
+  }
+  
+  return null;
+}
+
+function getIngredientFromCell($, cell) {
+  const img = $(cell).find('img');
+  if (img.length > 0) {
+    return img.attr('alt') || img.attr('title') || '';
+  }
+  return '';
 }
 
 function extractUniqueIngredients(pokemonData) {
