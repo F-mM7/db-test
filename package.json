@@ -10,9 +10,13 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "fetch-data": "node scripts/fetch-pokemon-data.js"
+    "download-wiki": "node scripts/download-wiki.js",
+    "parse-wiki": "node scripts/parse-wiki-data.js",
+    "fetch-data": "npm run download-wiki && npm run parse-wiki",
+    "fetch-data-old": "node scripts/fetch-pokemon-data.js"
   },
   "dependencies": {
+    "cheerio": "^1.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

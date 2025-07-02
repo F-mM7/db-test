@@ -8,17 +8,26 @@ import * as cheerio from 'cheerio';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const WIKI_URL = 'https://wikiwiki.jp/poke_sleep/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%81%AE%E4%B8%80%E8%A6%A7/%E9%A3%9F%E6%9D%90%E7%8D%B2%E5%BE%97%E6%95%B0%E6%8E%A8%E5%AE%9A%E5%80%A4%E4%B8%80%E8%A6%A7/%E4%B8%80%E8%A6%A7%E8%A1%A8';
-
-async function fetchPokemonData() {
-  console.log('Fetching Pokemon data from wiki...');
+function parseWikiData() {
+  console.log('Pokemon Sleep Wiki Data Parser');
+  console.log('==============================');
+  
+  const dataDir = path.join(__dirname, '..', 'data');
+  const htmlPath = path.join(dataDir, 'wiki-raw.html');
+  
+  if (!fs.existsSync(htmlPath)) {
+    console.error('Error: wiki-raw.html not found!');
+    console.error('Please run "npm run download-wiki" first.');
+    process.exit(1);
+  }
   
   try {
-    const response = await fetch(WIKI_URL);
-    const html = await response.text();
+    const html = fs.readFileSync(htmlPath, 'utf8');
+    console.log(`✓ Loaded HTML file (${html.length} characters)`);
     
     const pokemonData = parseHTMLTable(html);
     
+    // JSONファイルを保存
     const outputPath = path.join(__dirname, '..', 'public', 'pokemon-data.json');
     const outputDir = path.dirname(outputPath);
     
@@ -27,11 +36,27 @@ async function fetchPokemonData() {
     }
     
     fs.writeFileSync(outputPath, JSON.stringify(pokemonData, null, 2));
-    console.log(`Data saved to ${outputPath}`);
-    console.log(`Total Pokemon: ${pokemonData.length}`);
+    
+    // パース結果のサマリーを保存
+    const summary = {
+      parseDate: new Date().toISOString(),
+      totalPokemon: pokemonData.length,
+      uniqueIngredients: extractUniqueIngredients(pokemonData),
+      sampleData: pokemonData.slice(0, 3) // 最初の3件をサンプルとして保存
+    };
+    
+    const summaryPath = path.join(dataDir, 'parse-summary.json');
+    fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
+    
+    console.log(`✓ Pokemon data saved to: ${outputPath}`);
+    console.log(`✓ Parse summary saved to: ${summaryPath}`);
+    console.log(`✓ Total Pokemon: ${pokemonData.length}`);
+    console.log(`✓ Unique ingredients: ${summary.uniqueIngredients.length}`);
+    
+    return pokemonData;
     
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error parsing wiki data:', error.message);
     process.exit(1);
   }
 }
@@ -58,6 +83,7 @@ function parseHTMLTable(html) {
 
   tables.each((i, table) => {
     const rows = $(table).find('tr').length;
+    console.log(`Table ${i + 1}: ${rows} rows`);
     if (rows > maxRows) {
       maxRows = rows;
       mainTable = table;
@@ -71,9 +97,19 @@ function parseHTMLTable(html) {
 
   console.log(`Processing main table with ${maxRows} rows`);
 
+  // テーブルの構造を分析
+  const headerRow = $(mainTable).find('tr').first();
+  const headers = [];
+  headerRow.find('th, td').each((i, cell) => {
+    headers.push($(cell).text().trim());
+  });
+  
+  console.log('Table headers:', headers);
+
   // テーブルの行を処理
   const rows = $(mainTable).find('tr');
-  let headerProcessed = false;
+  let successfulParses = 0;
+  let failedParses = 0;
 
   rows.each((rowIndex, row) => {
     const cells = $(row).find('td, th');
@@ -81,37 +117,42 @@ function parseHTMLTable(html) {
     if (cells.length === 0) return;
 
     // ヘッダー行をスキップ
-    if (!headerProcessed && $(row).find('th').length > 0) {
-      headerProcessed = true;
+    if ($(row).find('th').length > 0) {
       return;
     }
 
     // ポケモン名を含む行を処理
     const firstCell = $(cells[0]).text().trim();
     
-    if (firstCell && !firstCell.includes('Lv.') && firstCell.length > 0) {
+    if (firstCell && firstCell.length > 0 && !firstCell.includes('Lv.')) {
       try {
-        const pokemon = parsePokemonRow($, cells, pokemonId);
+        const pokemon = parsePokemonRow($, cells, pokemonId, headers);
         if (pokemon) {
           pokemonList.push(pokemon);
           pokemonId++;
+          successfulParses++;
+        } else {
+          failedParses++;
         }
       } catch (error) {
-        console.warn(`Error parsing row ${rowIndex}:`, error.message);
+        console.warn(`Error parsing row ${rowIndex} (${firstCell}):`, error.message);
+        failedParses++;
       }
     }
   });
+
+  console.log(`✓ Successfully parsed: ${successfulParses} Pokemon`);
+  console.log(`✗ Failed to parse: ${failedParses} rows`);
 
   if (pokemonList.length === 0) {
     console.log('No Pokemon data extracted. Using sample data...');
     return getSampleData();
   }
 
-  console.log(`Successfully parsed ${pokemonList.length} Pokemon`);
   return pokemonList;
 }
 
-function parsePokemonRow($, cells, id) {
+function parsePokemonRow($, cells, id, headers) {
   if (cells.length < 3) return null;
 
   const name = $(cells[0]).text().trim();
@@ -126,47 +167,66 @@ function parsePokemonRow($, cells, id) {
     ingredientPatterns: {}
   };
 
-  // レベル情報を抽出（Lv.1, Lv.30, Lv.60の基本値）
+  // セルの内容をデバッグ出力
+  const cellContents = [];
+  cells.each((i, cell) => {
+    cellContents.push($(cell).text().trim());
+  });
+  console.log(`  Cells: [${cellContents.join(', ')}]`);
+
+  // レベル情報を抽出（推測で位置を特定）
   for (let i = 1; i < Math.min(4, cells.length); i++) {
     const cellText = $(cells[i]).text().trim();
     const value = parseFloat(cellText);
-    if (!isNaN(value)) {
+    if (!isNaN(value) && value > 0) {
       const level = i === 1 ? '1' : i === 2 ? '30' : '60';
       pokemon.levels[level] = { value };
     }
   }
 
-  // 食材パターンを抽出
-  for (let i = 4; i < cells.length; i += 3) {
-    if (i + 2 >= cells.length) break;
-
-    const patternCell = $(cells[i]).text().trim();
-    const ingredientsCell = $(cells[i + 1]).text().trim();
-    const valuesCell = $(cells[i + 2]).text().trim();
-
-    if (patternCell && ingredientsCell) {
-      const pattern = patternCell;
-      const ingredients = ingredientsCell.split(/[,、]/).map(s => s.trim()).filter(s => s);
+  // 残りのセルから食材パターンを抽出
+  let patternIndex = 0;
+  const patternNames = ['AA', 'AB', 'AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+  
+  for (let i = 4; i < cells.length; i++) {
+    const cellText = $(cells[i]).text().trim();
+    
+    // パターン名っぽい場合
+    if (patternNames.includes(cellText)) {
+      const pattern = cellText;
       
-      // 数値を抽出
-      const values = {};
-      const numbers = valuesCell.match(/[\d.]+/g);
-      if (numbers && numbers.length >= 3) {
-        values['1'] = parseFloat(numbers[0]);
-        values['30'] = parseFloat(numbers[1]);
-        values['60'] = parseFloat(numbers[2]);
-      }
-
-      if (ingredients.length > 0) {
-        pokemon.ingredientPatterns[pattern] = {
-          ingredients,
-          values
-        };
+      // 次のセルで食材を探す
+      if (i + 1 < cells.length) {
+        const ingredientsText = $(cells[i + 1]).text().trim();
+        if (ingredientsText && !patternNames.includes(ingredientsText)) {
+          const ingredients = ingredientsText.split(/[,、]/).map(s => s.trim()).filter(s => s);
+          
+          if (ingredients.length > 0) {
+            pokemon.ingredientPatterns[pattern] = {
+              ingredients,
+              values: {} // 値は別途処理が必要
+            };
+          }
+        }
       }
     }
   }
 
   return Object.keys(pokemon.ingredientPatterns).length > 0 ? pokemon : null;
+}
+
+function extractUniqueIngredients(pokemonData) {
+  const ingredientSet = new Set();
+  
+  pokemonData.forEach(pokemon => {
+    Object.values(pokemon.ingredientPatterns).forEach(pattern => {
+      pattern.ingredients.forEach(ingredient => {
+        ingredientSet.add(ingredient);
+      });
+    });
+  });
+  
+  return Array.from(ingredientSet).sort();
 }
 
 function getSampleData() {
@@ -257,11 +317,9 @@ function getSampleData() {
   ];
 }
 
-// メッセージ
-console.log('Pokemon Sleep Food Material Data Fetcher');
-console.log('========================================');
-console.log('This script fetches the latest data from the wiki.');
-console.log('Note: Actual HTML parsing is not yet implemented.');
-console.log('');
+// 直接実行された場合
+if (import.meta.url === `file://${process.argv[1]}`) {
+  parseWikiData();
+}
 
-fetchPokemonData();
+export { parseWikiData };
