@@ -4,10 +4,15 @@
 
 ## 機能
 
-- 食材ボタンをクリックして、その食材を獲得できるポケモンを検索
-- 各ポケモンの獲得パターンと推定値を表示
-- レスポンシブデザイン対応
-- GitHub Pagesでホスティング可能
+- **食材別検索**: 食材ボタンをクリックして、その食材を獲得できるポケモンを検索
+- **最大値表示**: 各ポケモンの選択食材最大獲得量を表示（A/B/C食材タイプ付き）
+- **食材タイプ表示**: ポケモンのA/B/C食材を明確に表示
+- **効率ソート**: 選択した食材の最大値でポケモンを自動ソート
+- **レスポンシブデザイン**: デスクトップ・タブレット・スマートフォンに対応
+- **エラーハンドリング**: 堅牢なエラー処理とユーザーフレンドリーなエラー表示
+- **パフォーマンス最適化**: React.memo、useMemo、useCallbackを活用した高速レンダリング
+- **モダンUI**: GitHub Darkテーマをベースとしたダークモードデザイン
+- **GitHub Pagesホスティング**: 静的サイトホスティング対応
 
 ## 開発環境のセットアップ
 
@@ -132,9 +137,13 @@ npm run deploy
 
 ## 技術スタック
 
-- React 19
-- Vite 5
-- GitHub Pages
+- **Frontend**: React 19 with Hooks (useState, useEffect, useMemo, useCallback)
+- **Build Tool**: Vite 5
+- **CSS**: Modern CSS with CSS Grid, Flexbox, Animations
+- **Development**: Node.js 20+, ESLint, Hot Module Replacement
+- **Deployment**: GitHub Pages with gh-pages
+- **Data Processing**: Cheerio for HTML parsing, Node.js fs module
+- **Performance**: React.memo, component memoization, optimized re-renders
 
 ## 制限事項
 

@@ -1,31 +1,47 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback, memo } from 'react';
+import PokemonCard from './PokemonCard';
+import IngredientButton from './IngredientButton';
 import './IngredientFilter.css';
+
+// 定数定義
+const LV60_PATTERNS = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+const DATA_URL = '/db-test/pokemon-data.json';
 
 function IngredientFilter() {
   const [pokemonData, setPokemonData] = useState([]);
-  const [ingredients, setIngredients] = useState([]);
   const [selectedIngredient, setSelectedIngredient] = useState(null);
-  const [filteredPokemon, setFilteredPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/db-test/pokemon-data.json')
-      .then(res => res.json())
-      .then(data => {
+    const loadData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await fetch(DATA_URL);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
         setPokemonData(data);
-        extractIngredients(data);
-        setLoading(false);
-      })
-      .catch(err => {
+      } catch (err) {
         console.error('Failed to load Pokemon data:', err);
+        setError(err.message);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+    
+    loadData();
   }, []);
 
-  const extractIngredients = (data) => {
+  // 全食材リストをメモ化
+  const ingredients = useMemo(() => {
     const ingredientSet = new Set();
     
-    data.forEach(pokemon => {
+    pokemonData.forEach(pokemon => {
       Object.values(pokemon.ingredientPatterns).forEach(pattern => {
         pattern.ingredients.forEach(ingredient => {
           ingredientSet.add(ingredient);
@@ -33,50 +49,73 @@ function IngredientFilter() {
       });
     });
     
-    const sortedIngredients = Array.from(ingredientSet).sort();
-    setIngredients(sortedIngredients);
-  };
+    return Array.from(ingredientSet).sort();
+  }, [pokemonData]);
 
-  const handleIngredientClick = (ingredient) => {
-    setSelectedIngredient(ingredient);
+  // 最大値取得のユーティリティ関数
+  const getMaxValueForIngredient = useCallback((pokemon, ingredient) => {
+    const patternValues = LV60_PATTERNS
+      .map(patternName => {
+        const pattern = pokemon.ingredientPatterns[patternName];
+        const value = pattern?.individualValues?.[ingredient] || 0;
+        return { patternName, value };
+      })
+      .filter(item => item.value > 0);
+    
+    return patternValues.reduce((max, current) => 
+      current.value > max.value ? current : max, 
+      { patternName: '', value: 0 }
+    );
+  }, []);
+  
+  // フィルタリングされたポケモンリストをメモ化
+  const filteredPokemon = useMemo(() => {
+    if (!selectedIngredient) return [];
     
     const filtered = pokemonData.filter(pokemon => {
-      // Lv.60パターンのみをチェック
-      const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
-      return lv60Patterns.some(patternName => {
+      return LV60_PATTERNS.some(patternName => {
         const pattern = pokemon.ingredientPatterns[patternName];
-        return pattern && pattern.ingredients.includes(ingredient);
+        return pattern && pattern.ingredients.includes(selectedIngredient);
       });
     });
     
-    // 選択した食材の最大値でソート（降順）
-    const sortedFiltered = filtered.sort((a, b) => {
-      const getMaxValue = (pokemon) => {
-        const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
-        const patternValues = lv60Patterns
-          .map(patternName => {
-            const pattern = pokemon.ingredientPatterns[patternName];
-            const value = pattern?.individualValues?.[ingredient] || 0;
-            return value;
-          })
-          .filter(value => value > 0);
-        
-        return Math.max(...patternValues, 0);
-      };
-      
-      return getMaxValue(b) - getMaxValue(a); // 降順ソート
+    return filtered.sort((a, b) => {
+      const maxA = getMaxValueForIngredient(a, selectedIngredient);
+      const maxB = getMaxValueForIngredient(b, selectedIngredient);
+      return maxB.value - maxA.value;
     });
-    
-    setFilteredPokemon(sortedFiltered);
-  };
+  }, [pokemonData, selectedIngredient, getMaxValueForIngredient]);
+  
+  const handleIngredientClick = useCallback((ingredient) => {
+    setSelectedIngredient(ingredient);
+  }, []);
 
-  const clearFilter = () => {
+  const clearFilter = useCallback(() => {
     setSelectedIngredient(null);
-    setFilteredPokemon([]);
-  };
+  }, []);
 
   if (loading) {
-    return <div className="loading">データを読み込み中...</div>;
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <div className="loading-text">データを読み込み中...</div>
+      </div>
+    );
+  }
+  
+  if (error) {
+    return (
+      <div className="error-container">
+        <div className="error-icon">⚠️</div>
+        <div className="error-text">
+          データの読み込みに失敗しました
+          <div className="error-detail">{error}</div>
+        </div>
+        <button className="retry-button" onClick={() => window.location.reload()}>
+          再試行
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -87,13 +126,12 @@ function IngredientFilter() {
         <h2>食材を選択</h2>
         <div className="ingredient-buttons">
           {ingredients.map(ingredient => (
-            <button
+            <IngredientButton
               key={ingredient}
-              className={`ingredient-button ${selectedIngredient === ingredient ? 'active' : ''}`}
-              onClick={() => handleIngredientClick(ingredient)}
-            >
-              {ingredient}
-            </button>
+              ingredient={ingredient}
+              isActive={selectedIngredient === ingredient}
+              onClick={handleIngredientClick}
+            />
           ))}
         </div>
       </div>
@@ -108,79 +146,14 @@ function IngredientFilter() {
           </div>
           
           <div className="pokemon-grid">
-            {filteredPokemon.map(pokemon => {
-              // 選択された食材についての最大値とそのパターンを計算
-              const lv60Patterns = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
-              const patternValues = lv60Patterns
-                .map(patternName => {
-                  const pattern = pokemon.ingredientPatterns[patternName];
-                  const value = pattern?.individualValues?.[selectedIngredient] || 0;
-                  return { patternName, value };
-                })
-                .filter(item => item.value > 0);
-              
-              const maxItem = patternValues.reduce((max, current) => 
-                current.value > max.value ? current : max, 
-                { patternName: '', value: 0 }
-              );
-
-              // ポケモンのA、B、C食材を特定
-              const getIngredientTypes = () => {
-                const patterns = pokemon.ingredientPatterns;
-                let ingredientA = null, ingredientB = null, ingredientC = null;
-                
-                // AAAパターンからA食材を取得
-                if (patterns['AAA']) {
-                  ingredientA = patterns['AAA'].ingredients[0];
-                }
-                
-                // ABパターンまたはAABパターンからB食材を取得
-                if (patterns['AB']) {
-                  ingredientA = ingredientA || patterns['AB'].ingredients[0];
-                  ingredientB = patterns['AB'].ingredients[1];
-                } else if (patterns['AAB']) {
-                  ingredientA = ingredientA || patterns['AAB'].ingredients[0];
-                  ingredientB = patterns['AAB'].ingredients[2];
-                }
-                
-                // ABCパターンがある場合のみC食材を設定
-                if (patterns['ABC']) {
-                  ingredientA = ingredientA || patterns['ABC'].ingredients[0];
-                  ingredientB = ingredientB || patterns['ABC'].ingredients[1];
-                  ingredientC = patterns['ABC'].ingredients[2];
-                }
-                
-                return { A: ingredientA, B: ingredientB, C: ingredientC };
-              };
-              
-              const ingredientTypes = getIngredientTypes();
-              
-              // 選択した食材がA/B/Cのどれに該当するかを判定
-              const getIngredientType = () => {
-                if (ingredientTypes.A === selectedIngredient) return 'A';
-                if (ingredientTypes.B === selectedIngredient) return 'B';
-                if (ingredientTypes.C === selectedIngredient) return 'C';
-                return '';
-              };
-              
-              const ingredientType = getIngredientType();
-
-              return (
-                <div key={pokemon.id} className="pokemon-card">
-                  <h3>
-                    <span>{pokemon.name}({ingredientType})</span>
-                    <span>{maxItem.value > 0 ? maxItem.value.toFixed(1) : 'N/A'}</span>
-                  </h3>
-                  <div className="pokemon-ingredients">
-                    <div className="ingredient-types">
-                      <div className="ingredient-simple">A:{ingredientTypes.A || 'なし'}</div>
-                      <div className="ingredient-simple">B:{ingredientTypes.B || 'なし'}</div>
-                      <div className="ingredient-simple">C:{ingredientTypes.C || 'なし'}</div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {filteredPokemon.map(pokemon => (
+              <PokemonCard
+                key={pokemon.id}
+                pokemon={pokemon}
+                selectedIngredient={selectedIngredient}
+                getMaxValueForIngredient={getMaxValueForIngredient}
+              />
+            ))}
           </div>
           
           <div className="result-count">
