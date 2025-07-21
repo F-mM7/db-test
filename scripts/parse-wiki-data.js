@@ -110,8 +110,11 @@ function parseHTMLTable(html) {
 }
 
 function parsePokemonRow($, cells, id) {
-  if (cells.length < 34) {
-    console.warn(`Row has ${cells.length} cells, expected 34`);
+  // C食材がないポケモンは26セル、通常は34セル
+  const hasC = cells.length >= 34;
+  
+  if (cells.length < 26) {
+    console.warn(`Row has ${cells.length} cells, expected at least 26`);
     return null;
   }
 
@@ -124,7 +127,7 @@ function parsePokemonRow($, cells, id) {
     return null;
   }
 
-  console.log(`Parsing: ${name}`);
+  console.log(`Parsing: ${name} (${cells.length} cells${!hasC ? ' - no C ingredient' : ''})`);
 
   const pokemon = {
     id,
@@ -176,14 +179,27 @@ function parsePokemonRow($, cells, id) {
   }
 
   // Lv.60パターンを解析
-  const lv60Patterns = [
-    { name: 'AAA', start: 10, cells: 2 },
-    { name: 'AAB', start: 12, cells: 4 },
-    { name: 'AAC', start: 16, cells: 4 },
-    { name: 'ABA', start: 20, cells: 4 },
-    { name: 'ABB', start: 24, cells: 4 },
-    { name: 'ABC', start: 28, cells: 6 }
-  ];
+  let lv60Patterns;
+  
+  if (hasC) {
+    // C食材がある場合（通常）
+    lv60Patterns = [
+      { name: 'AAA', start: 10, cells: 2 },
+      { name: 'AAB', start: 12, cells: 4 },
+      { name: 'AAC', start: 16, cells: 4 },
+      { name: 'ABA', start: 20, cells: 4 },
+      { name: 'ABB', start: 24, cells: 4 },
+      { name: 'ABC', start: 28, cells: 6 }
+    ];
+  } else {
+    // C食材がない場合（AACとABCパターンなし）
+    lv60Patterns = [
+      { name: 'AAA', start: 10, cells: 2 },
+      { name: 'AAB', start: 12, cells: 4 },
+      { name: 'ABA', start: 16, cells: 4 },
+      { name: 'ABB', start: 20, cells: 4 }
+    ];
+  }
 
   lv60Patterns.forEach(pattern => {
     const patternData = parseLv60Pattern($, cells, pattern);
