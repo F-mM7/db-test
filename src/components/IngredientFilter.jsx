@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback, memo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import PokemonCard from './PokemonCard';
 import IngredientButton from './IngredientButton';
 import './IngredientFilter.css';

@@ -1,7 +1,5 @@
 import { useMemo, memo } from 'react';
 
-const LV60_PATTERNS = ['AAA', 'AAC', 'ABB'];
-
 function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) {
   // ポケモンのA、B、C食材を特定
   const ingredientTypes = useMemo(() => {
@@ -19,7 +17,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
       ingredientB = patterns['ABB'].ingredients[1];
     }
     
-    // AACパターンがある場合のみC食材を設定
+    // AACパターンからC食材を取得
     if (patterns['AAC']) {
       ingredientA = ingredientA || patterns['AAC'].ingredients[0];
       ingredientC = patterns['AAC'].ingredients[2];

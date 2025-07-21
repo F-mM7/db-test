@@ -146,14 +146,14 @@ function parsePokemonRow($, cells, id) {
     // C食材がある場合（通常）
     lv60Patterns = [
       { name: 'AAA', start: 10, cells: 2 },
-      { name: 'AAC', start: 12, cells: 4 },
-      { name: 'ABB', start: 20, cells: 4 }
+      { name: 'AAC', start: 16, cells: 4 },
+      { name: 'ABB', start: 24, cells: 4 }
     ];
   } else {
     // C食材がない場合（AACパターンなし）
     lv60Patterns = [
       { name: 'AAA', start: 10, cells: 2 },
-      { name: 'ABB', start: 12, cells: 4 }
+      { name: 'ABB', start: 21, cells: 4 }
     ];
   }
 
@@ -182,8 +182,7 @@ function parseLv60Pattern($, cells, pattern) {
     if (ingredient && !isNaN(value)) {
       return {
         ingredients: [ingredient, ingredient, ingredient],
-        individualValues: { [ingredient]: value },
-        totalValue: value
+        individualValues: { [ingredient]: value }
       };
     }
   } else if (cellCount === 4) {
@@ -206,8 +205,7 @@ function parseLv60Pattern($, cells, pattern) {
         individualValues: {
           [ingredientA]: valueA,
           [ingredientB]: valueB
-        },
-        totalValue: valueA + valueB
+        }
       };
     }
   }
