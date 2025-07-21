@@ -1,4 +1,5 @@
 import { useMemo, memo } from 'react';
+import { LV60_PATTERNS } from '../utils/constants';
 
 function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) {
   // ポケモンのA、B、C食材を特定
