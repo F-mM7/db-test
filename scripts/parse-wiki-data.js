@@ -9,175 +9,209 @@ import process from 'process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function parseWikiData() {
-  console.log('Pokemon Sleep Wiki Data Parser');
-  console.log('==============================');
-  
-  const dataDir = path.join(__dirname, '..', 'data');
-  const htmlPath = path.join(dataDir, 'wiki-raw.html');
-  
-  if (!fs.existsSync(htmlPath)) {
-    console.error('Error: wiki-raw.html not found!');
-    console.error('Please run "npm run download-wiki" first.');
-    process.exit(1);
+// 定数定義
+const CELL_PATTERNS = {
+  WITH_C_INGREDIENT: {
+    AAA: { start: 10, cells: 2 },
+    AAC: { start: 16, cells: 4 },
+    ABB: { start: 24, cells: 4 }
+  },
+  WITHOUT_C_INGREDIENT: {
+    AAA: { start: 10, cells: 2 },
+    ABB: { start: 21, cells: 4 }
   }
-  
-  try {
-    const html = fs.readFileSync(htmlPath, 'utf8');
+};
+
+const MIN_CELLS = {
+  WITH_C: 34,
+  WITHOUT_C: 26
+};
+
+class PokemonWikiParser {
+  constructor() {
+    this.dataDir = path.join(__dirname, '..', 'data');
+    this.htmlPath = path.join(this.dataDir, 'wiki-raw.html');
+    this.outputPath = path.join(__dirname, '..', 'public', 'pokemon-data.json');
+    this.summaryPath = path.join(this.dataDir, 'parse-summary.json');
+  }
+
+  validateInputFile() {
+    if (!fs.existsSync(this.htmlPath)) {
+      console.error('Error: wiki-raw.html not found!');
+      console.error('Please run "npm run download-wiki" first.');
+      process.exit(1);
+    }
+  }
+
+  loadHTML() {
+    const html = fs.readFileSync(this.htmlPath, 'utf8');
     console.log(`✓ Loaded HTML file (${html.length} characters)`);
-    
-    const pokemonData = parseHTMLTable(html);
-    
+    return html;
+  }
+
+  saveResults(pokemonData) {
     // JSONファイルを保存
-    const outputPath = path.join(__dirname, '..', 'public', 'pokemon-data.json');
-    const outputDir = path.dirname(outputPath);
-    
+    const outputDir = path.dirname(this.outputPath);
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    
-    fs.writeFileSync(outputPath, JSON.stringify(pokemonData, null, 2));
-    
+    fs.writeFileSync(this.outputPath, JSON.stringify(pokemonData, null, 2));
+
     // パース結果のサマリーを保存
-    const summary = {
+    const summary = this.createSummary(pokemonData);
+    fs.writeFileSync(this.summaryPath, JSON.stringify(summary, null, 2));
+
+    this.logResults(pokemonData, summary);
+  }
+
+  createSummary(pokemonData) {
+    return {
       parseDate: new Date().toISOString(),
       totalPokemon: pokemonData.length,
-      uniqueIngredients: extractUniqueIngredients(pokemonData),
-      sampleData: pokemonData.slice(0, 3) // 最初の3件をサンプルとして保存
+      uniqueIngredients: this.extractUniqueIngredients(pokemonData),
+      sampleData: pokemonData.slice(0, 3)
     };
-    
-    const summaryPath = path.join(dataDir, 'parse-summary.json');
-    fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
-    
-    console.log(`✓ Pokemon data saved to: ${outputPath}`);
-    console.log(`✓ Parse summary saved to: ${summaryPath}`);
+  }
+
+  logResults(pokemonData, summary) {
+    console.log(`✓ Pokemon data saved to: ${this.outputPath}`);
+    console.log(`✓ Parse summary saved to: ${this.summaryPath}`);
     console.log(`✓ Total Pokemon: ${pokemonData.length}`);
     console.log(`✓ Unique ingredients: ${summary.uniqueIngredients.length}`);
-    
-    return pokemonData;
-    
-  } catch (error) {
-    console.error('Error parsing wiki data:', error.message);
-    process.exit(1);
-  }
-}
-
-function parseHTMLTable(html) {
-  const $ = cheerio.load(html);
-  const pokemonList = [];
-  let pokemonId = 1;
-
-  console.log('Parsing HTML table...');
-
-  // メインテーブルを特定
-  const table = $('table').first();
-  if (table.length === 0) {
-    console.log('No table found. Using sample data...');
-    return getSampleData();
   }
 
-  console.log(`Processing table with ${table.find('tr').length} rows`);
+  extractUniqueIngredients(pokemonData) {
+    const ingredientSet = new Set();
+    
+    pokemonData.forEach(pokemon => {
+      Object.values(pokemon.ingredientPatterns).forEach(pattern => {
+        pattern.ingredients.forEach(ingredient => {
+          ingredientSet.add(ingredient);
+        });
+      });
+    });
+    
+    return Array.from(ingredientSet).sort();
+  }
 
-  // データ行を処理（tbody内の行）
-  const dataRows = table.find('tbody tr');
-  let successfulParses = 0;
-  let failedParses = 0;
-
-  dataRows.each((rowIndex, row) => {
+  parse() {
+    console.log('Pokemon Sleep Wiki Data Parser');
+    console.log('==============================');
+    
     try {
-      const pokemon = parsePokemonRow($, $(row).find('td'), pokemonId);
-      if (pokemon) {
-        pokemonList.push(pokemon);
-        pokemonId++;
-        successfulParses++;
-      } else {
+      this.validateInputFile();
+      const html = this.loadHTML();
+      const pokemonData = this.parseHTMLTable(html);
+      this.saveResults(pokemonData);
+      return pokemonData;
+    } catch (error) {
+      console.error('Error parsing wiki data:', error.message);
+      process.exit(1);
+    }
+  }
+
+  parseHTMLTable(html) {
+    const $ = cheerio.load(html);
+    console.log('Parsing HTML table...');
+
+    const table = $('table').first();
+    if (table.length === 0) {
+      console.log('No table found. Using sample data...');
+      return this.getSampleData();
+    }
+
+    console.log(`Processing table with ${table.find('tr').length} rows`);
+
+    const dataRows = table.find('tbody tr');
+    const pokemonList = [];
+    let pokemonId = 1;
+    let successfulParses = 0;
+    let failedParses = 0;
+
+    dataRows.each((rowIndex, row) => {
+      try {
+        const pokemon = this.parsePokemonRow($, $(row).find('td'), pokemonId);
+        if (pokemon) {
+          pokemonList.push(pokemon);
+          pokemonId++;
+          successfulParses++;
+        } else {
+          failedParses++;
+        }
+      } catch (error) {
+        console.warn(`Error parsing row ${rowIndex}:`, error.message);
         failedParses++;
       }
-    } catch (error) {
-      console.warn(`Error parsing row ${rowIndex}:`, error.message);
-      failedParses++;
+    });
+
+    console.log(`✓ Successfully parsed: ${successfulParses} Pokemon`);
+    console.log(`✗ Failed to parse: ${failedParses} rows`);
+
+    if (pokemonList.length === 0) {
+      console.log('No Pokemon data extracted. Using sample data...');
+      return this.getSampleData();
     }
-  });
 
-  console.log(`✓ Successfully parsed: ${successfulParses} Pokemon`);
-  console.log(`✗ Failed to parse: ${failedParses} rows`);
-
-  if (pokemonList.length === 0) {
-    console.log('No Pokemon data extracted. Using sample data...');
-    return getSampleData();
+    return pokemonList;
   }
 
-  return pokemonList;
-}
-
-function parsePokemonRow($, cells, id) {
-  // C食材がないポケモンは26セル、通常は34セル
-  const hasC = cells.length >= 34;
-  
-  if (cells.length < 26) {
-    console.warn(`Row has ${cells.length} cells, expected at least 26`);
-    return null;
-  }
-
-  // ポケモン名を取得（セル1）
-  const nameCell = $(cells[1]);
-  const name = nameCell.find('a').text().trim() || nameCell.text().trim();
-  
-  if (!name) {
-    console.warn('No Pokemon name found');
-    return null;
-  }
-
-  console.log(`Parsing: ${name} (${cells.length} cells${!hasC ? ' - no C ingredient' : ''})`);
-
-  const pokemon = {
-    id,
-    name,
-    ingredientPatterns: {}
-  };
-
-  // Lv.1とLv.30のAAパターンデータは削除（使用されていないため）
-
-  // Lv.30のABパターンデータは削除（使用されていないため）
-
-  // Lv.60パターンを解析
-  let lv60Patterns;
-  
-  if (hasC) {
-    // C食材がある場合（通常）
-    lv60Patterns = [
-      { name: 'AAA', start: 10, cells: 2 },
-      { name: 'AAC', start: 16, cells: 4 },
-      { name: 'ABB', start: 24, cells: 4 }
-    ];
-  } else {
-    // C食材がない場合（AACパターンなし）
-    lv60Patterns = [
-      { name: 'AAA', start: 10, cells: 2 },
-      { name: 'ABB', start: 21, cells: 4 }
-    ];
-  }
-
-  lv60Patterns.forEach(pattern => {
-    const patternData = parseLv60Pattern($, cells, pattern);
-    if (patternData) {
-      pokemon.ingredientPatterns[pattern.name] = patternData;
+  parsePokemonRow($, cells, id) {
+    const hasC = cells.length >= MIN_CELLS.WITH_C;
+    
+    if (cells.length < MIN_CELLS.WITHOUT_C) {
+      console.warn(`Row has ${cells.length} cells, expected at least ${MIN_CELLS.WITHOUT_C}`);
+      return null;
     }
-  });
 
-  return pokemon;
-}
+    const name = this.extractPokemonName($, cells);
+    if (!name) {
+      console.warn('No Pokemon name found');
+      return null;
+    }
 
-function parseLv60Pattern($, cells, pattern) {
-  const { name, start, cells: cellCount } = pattern;
-  
-  if (start + cellCount > cells.length) {
+    console.log(`Parsing: ${name} (${cells.length} cells${!hasC ? ' - no C ingredient' : ''})`);
+
+    const pokemon = {
+      id,
+      name,
+      ingredientPatterns: {}
+    };
+
+    const patterns = hasC ? CELL_PATTERNS.WITH_C_INGREDIENT : CELL_PATTERNS.WITHOUT_C_INGREDIENT;
+    
+    Object.entries(patterns).forEach(([patternName, config]) => {
+      const patternData = this.parsePattern($, cells, patternName, config);
+      if (patternData) {
+        pokemon.ingredientPatterns[patternName] = patternData;
+      }
+    });
+
+    return pokemon;
+  }
+
+  extractPokemonName($, cells) {
+    const nameCell = $(cells[1]);
+    return nameCell.find('a').text().trim() || nameCell.text().trim();
+  }
+
+  parsePattern($, cells, patternName, config) {
+    const { start, cells: cellCount } = config;
+    
+    if (start + cellCount > cells.length) {
+      return null;
+    }
+
+    if (cellCount === 2) {
+      return this.parseAAAPattern($, cells, start);
+    } else if (cellCount === 4) {
+      return this.parseFourCellPattern($, cells, start, patternName);
+    }
+    
     return null;
   }
 
-  if (cellCount === 2) {
-    // AAAパターン（同じ食材3つ）
-    const ingredient = getIngredientFromCell($, cells[start]);
+  parseAAAPattern($, cells, start) {
+    const ingredient = this.getIngredientFromCell($, cells[start]);
     const value = parseFloat($(cells[start + 1]).text().trim());
     
     if (ingredient && !isNaN(value)) {
@@ -186,20 +220,17 @@ function parseLv60Pattern($, cells, pattern) {
         individualValues: { [ingredient]: value }
       };
     }
-  } else if (cellCount === 4) {
-    // AAC, ABBパターン
-    const ingredientA = getIngredientFromCell($, cells[start]);
+    return null;
+  }
+
+  parseFourCellPattern($, cells, start, patternName) {
+    const ingredientA = this.getIngredientFromCell($, cells[start]);
     const valueA = parseFloat($(cells[start + 1]).text().trim());
-    const ingredientB = getIngredientFromCell($, cells[start + 2]);
+    const ingredientB = this.getIngredientFromCell($, cells[start + 2]);
     const valueB = parseFloat($(cells[start + 3]).text().trim());
     
     if (ingredientA && ingredientB && !isNaN(valueA) && !isNaN(valueB)) {
-      let ingredients;
-      if (name === 'AAC') {
-        ingredients = [ingredientA, ingredientA, ingredientB];
-      } else if (name === 'ABB') {
-        ingredients = [ingredientA, ingredientB, ingredientB];
-      }
+      const ingredients = this.createIngredientsArray(patternName, ingredientA, ingredientB);
       
       return {
         ingredients,
@@ -209,77 +240,63 @@ function parseLv60Pattern($, cells, pattern) {
         }
       };
     }
+    return null;
   }
-  
-  return null;
-}
 
-function getIngredientFromCell($, cell) {
-  const img = $(cell).find('img');
-  if (img.length > 0) {
-    return img.attr('alt') || img.attr('title') || '';
-  }
-  return '';
-}
-
-function extractUniqueIngredients(pokemonData) {
-  const ingredientSet = new Set();
-  
-  pokemonData.forEach(pokemon => {
-    Object.values(pokemon.ingredientPatterns).forEach(pattern => {
-      pattern.ingredients.forEach(ingredient => {
-        ingredientSet.add(ingredient);
-      });
-    });
-  });
-  
-  return Array.from(ingredientSet).sort();
-}
-
-function getSampleData() {
-  return [
-    {
-      id: 1,
-      name: "フシギダネ",
-      ingredientPatterns: {
-        "AAA": { ingredients: ["あまいミツ", "あまいミツ", "あまいミツ"], values: { 1: 3.2, 30: 6.8, 60: 12.3 } }
-      }
-    },
-    {
-      id: 2,
-      name: "フシギソウ",
-      ingredientPatterns: {
-      }
-    },
-    {
-      id: 3,
-      name: "ピカチュウ",
-      ingredientPatterns: {
-        "AAA": { ingredients: ["リンゴ", "リンゴ", "リンゴ"], values: { 1: 4.2, 30: 8.8, 60: 15.9 } }
-      }
-    },
-    {
-      id: 4,
-      name: "イーブイ",
-      ingredientPatterns: {
-        "ABB": { ingredients: ["モーモーミルク", "ふといながねぎ", "ふといながねぎ"], values: { 1: 3.6, 30: 7.6, 60: 13.8 } }
-      }
-    },
-    {
-      id: 5,
-      name: "カビゴン",
-      ingredientPatterns: {
-        "AAC": { ingredients: ["きのみ", "きのみ", "ワカクサ大豆"], values: { 1: 5.0, 30: 10.6, 60: 19.2 } }
-      }
-    },
-    {
-      id: 6,
-      name: "コダック",
-      ingredientPatterns: {
-        "AAA": { ingredients: ["カカオ", "カカオ", "カカオ"], values: { 1: 3.4, 30: 7.1, 60: 12.8 } }
-      }
+  createIngredientsArray(patternName, ingredientA, ingredientB) {
+    switch (patternName) {
+      case 'AAC':
+        return [ingredientA, ingredientA, ingredientB];
+      case 'ABB':
+        return [ingredientA, ingredientB, ingredientB];
+      default:
+        return [ingredientA, ingredientB, ingredientB];
     }
-  ];
+  }
+
+  getIngredientFromCell($, cell) {
+    const img = $(cell).find('img');
+    if (img.length > 0) {
+      return img.attr('alt') || img.attr('title') || '';
+    }
+    return '';
+  }
+
+  getSampleData() {
+    return [
+      {
+        id: 1,
+        name: "フシギダネ",
+        ingredientPatterns: {
+          "AAA": { 
+            ingredients: ["あまいミツ", "あまいミツ", "あまいミツ"], 
+            individualValues: { "あまいミツ": 12.3 }
+          }
+        }
+      },
+      {
+        id: 2,
+        name: "フシギソウ",
+        ingredientPatterns: {}
+      },
+      {
+        id: 3,
+        name: "ピカチュウ",
+        ingredientPatterns: {
+          "AAA": { 
+            ingredients: ["リンゴ", "リンゴ", "リンゴ"], 
+            individualValues: { "リンゴ": 15.9 }
+          }
+        }
+      }
+    ];
+  }
+}
+
+// 関数として公開（後方互換性のため）
+function parseWikiData() {
+  const parser = new PokemonWikiParser();
+  return parser.parse();
 }
 
 // 直接実行された場合
@@ -287,4 +304,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   parseWikiData();
 }
 
-export { parseWikiData };
+export { parseWikiData, PokemonWikiParser };
