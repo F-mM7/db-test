@@ -4,7 +4,7 @@ import IngredientButton from './IngredientButton';
 import './IngredientFilter.css';
 
 // 定数定義
-const LV60_PATTERNS = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+const LV60_PATTERNS = ['AAA', 'AAC', 'ABB'];
 const DATA_URL = '/db-test/pokemon-data.json';
 
 function IngredientFilter() {

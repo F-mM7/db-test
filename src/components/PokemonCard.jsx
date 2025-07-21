@@ -1,6 +1,6 @@
 import { useMemo, memo } from 'react';
 
-const LV60_PATTERNS = ['AAA', 'AAB', 'AAC', 'ABA', 'ABB', 'ABC'];
+const LV60_PATTERNS = ['AAA', 'AAC', 'ABB'];
 
 function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) {
   // ポケモンのA、B、C食材を特定
@@ -13,20 +13,16 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
       ingredientA = patterns['AAA'].ingredients[0];
     }
     
-    // AABパターンまたはABBパターンからB食材を取得
-    if (patterns['AAB']) {
-      ingredientA = ingredientA || patterns['AAB'].ingredients[0];
-      ingredientB = patterns['AAB'].ingredients[2];
-    } else if (patterns['ABB']) {
+    // ABBパターンからB食材を取得
+    if (patterns['ABB']) {
       ingredientA = ingredientA || patterns['ABB'].ingredients[0];
       ingredientB = patterns['ABB'].ingredients[1];
     }
     
-    // ABCパターンがある場合のみC食材を設定
-    if (patterns['ABC']) {
-      ingredientA = ingredientA || patterns['ABC'].ingredients[0];
-      ingredientB = ingredientB || patterns['ABC'].ingredients[1];
-      ingredientC = patterns['ABC'].ingredients[2];
+    // AACパターンがある場合のみC食材を設定
+    if (patterns['AAC']) {
+      ingredientA = ingredientA || patterns['AAC'].ingredients[0];
+      ingredientC = patterns['AAC'].ingredients[2];
     }
     
     return { A: ingredientA, B: ingredientB, C: ingredientC };

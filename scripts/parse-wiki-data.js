@@ -146,19 +146,14 @@ function parsePokemonRow($, cells, id) {
     // C食材がある場合（通常）
     lv60Patterns = [
       { name: 'AAA', start: 10, cells: 2 },
-      { name: 'AAB', start: 12, cells: 4 },
-      { name: 'AAC', start: 16, cells: 4 },
-      { name: 'ABA', start: 20, cells: 4 },
-      { name: 'ABB', start: 24, cells: 4 },
-      { name: 'ABC', start: 28, cells: 6 }
+      { name: 'AAC', start: 12, cells: 4 },
+      { name: 'ABB', start: 20, cells: 4 }
     ];
   } else {
-    // C食材がない場合（AACとABCパターンなし）
+    // C食材がない場合（AACパターンなし）
     lv60Patterns = [
       { name: 'AAA', start: 10, cells: 2 },
-      { name: 'AAB', start: 12, cells: 4 },
-      { name: 'ABA', start: 16, cells: 4 },
-      { name: 'ABB', start: 20, cells: 4 }
+      { name: 'ABB', start: 12, cells: 4 }
     ];
   }
 
@@ -192,7 +187,7 @@ function parseLv60Pattern($, cells, pattern) {
       };
     }
   } else if (cellCount === 4) {
-    // AAB, AAC, ABA, ABBパターン
+    // AAC, ABBパターン
     const ingredientA = getIngredientFromCell($, cells[start]);
     const valueA = parseFloat($(cells[start + 1]).text().trim());
     const ingredientB = getIngredientFromCell($, cells[start + 2]);
@@ -200,10 +195,8 @@ function parseLv60Pattern($, cells, pattern) {
     
     if (ingredientA && ingredientB && !isNaN(valueA) && !isNaN(valueB)) {
       let ingredients;
-      if (name === 'AAB' || name === 'AAC') {
+      if (name === 'AAC') {
         ingredients = [ingredientA, ingredientA, ingredientB];
-      } else if (name === 'ABA') {
-        ingredients = [ingredientA, ingredientB, ingredientA];
       } else if (name === 'ABB') {
         ingredients = [ingredientA, ingredientB, ingredientB];
       }
@@ -215,27 +208,6 @@ function parseLv60Pattern($, cells, pattern) {
           [ingredientB]: valueB
         },
         totalValue: valueA + valueB
-      };
-    }
-  } else if (cellCount === 6) {
-    // ABCパターン
-    const ingredientA = getIngredientFromCell($, cells[start]);
-    const valueA = parseFloat($(cells[start + 1]).text().trim());
-    const ingredientB = getIngredientFromCell($, cells[start + 2]);
-    const valueB = parseFloat($(cells[start + 3]).text().trim());
-    const ingredientC = getIngredientFromCell($, cells[start + 4]);
-    const valueC = parseFloat($(cells[start + 5]).text().trim());
-    
-    if (ingredientA && ingredientB && ingredientC && 
-        !isNaN(valueA) && !isNaN(valueB) && !isNaN(valueC)) {
-      return {
-        ingredients: [ingredientA, ingredientB, ingredientC],
-        individualValues: {
-          [ingredientA]: valueA,
-          [ingredientB]: valueB,
-          [ingredientC]: valueC
-        },
-        totalValue: valueA + valueB + valueC
       };
     }
   }
@@ -291,14 +263,14 @@ function getSampleData() {
       id: 4,
       name: "イーブイ",
       ingredientPatterns: {
-        "AAB": { ingredients: ["モーモーミルク", "モーモーミルク", "ふといながねぎ"], values: { 1: 3.6, 30: 7.6, 60: 13.8 } }
+        "ABB": { ingredients: ["モーモーミルク", "ふといながねぎ", "ふといながねぎ"], values: { 1: 3.6, 30: 7.6, 60: 13.8 } }
       }
     },
     {
       id: 5,
       name: "カビゴン",
       ingredientPatterns: {
-        "ABC": { ingredients: ["きのみ", "ワカクサ大豆", "おいしいシッポ"], values: { 1: 5.0, 30: 10.6, 60: 19.2 } }
+        "AAC": { ingredients: ["きのみ", "きのみ", "ワカクサ大豆"], values: { 1: 5.0, 30: 10.6, 60: 19.2 } }
       }
     },
     {
