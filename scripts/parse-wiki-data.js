@@ -132,51 +132,12 @@ function parsePokemonRow($, cells, id) {
   const pokemon = {
     id,
     name,
-    levels: {},
     ingredientPatterns: {}
   };
 
-  // Lv.1データ（セル2-3: 食材アイコン, 数値）
-  const lv1Ingredient = getIngredientFromCell($, cells[2]);
-  const lv1Value = parseFloat($(cells[3]).text().trim());
-  
-  if (lv1Ingredient && !isNaN(lv1Value)) {
-    pokemon.levels['1'] = { value: lv1Value };
-    pokemon.ingredientPatterns['AA'] = {
-      ingredients: [lv1Ingredient, lv1Ingredient],
-      individualValues: { [lv1Ingredient]: lv1Value },
-      totalValue: lv1Value
-    };
-  }
+  // Lv.1とLv.30のAAパターンデータは削除（使用されていないため）
 
-  // Lv.30 AAパターン（セル4-5: 食材アイコン, 数値）
-  const lv30Ingredient = getIngredientFromCell($, cells[4]);
-  const lv30Value = parseFloat($(cells[5]).text().trim());
-  
-  if (lv30Ingredient && !isNaN(lv30Value)) {
-    pokemon.levels['30'] = { value: lv30Value };
-    if (pokemon.ingredientPatterns['AA']) {
-      pokemon.ingredientPatterns['AA'].individualValues[lv30Ingredient] = lv30Value;
-      pokemon.ingredientPatterns['AA'].totalValue = lv30Value;
-    }
-  }
-
-  // Lv.30 ABパターン（セル6-9: A食材, A数値, B食材, B数値）
-  const lv30AIngredient = getIngredientFromCell($, cells[6]);
-  const lv30AValue = parseFloat($(cells[7]).text().trim());
-  const lv30BIngredient = getIngredientFromCell($, cells[8]);
-  const lv30BValue = parseFloat($(cells[9]).text().trim());
-  
-  if (lv30AIngredient && lv30BIngredient && !isNaN(lv30AValue) && !isNaN(lv30BValue)) {
-    pokemon.ingredientPatterns['AB'] = {
-      ingredients: [lv30AIngredient, lv30BIngredient],
-      individualValues: {
-        [lv30AIngredient]: lv30AValue,
-        [lv30BIngredient]: lv30BValue
-      },
-      totalValue: lv30AValue + lv30BValue
-    };
-  }
+  // Lv.30のABパターンデータは削除（使用されていないため）
 
   // Lv.60パターンを解析
   let lv60Patterns;
@@ -205,11 +166,6 @@ function parsePokemonRow($, cells, id) {
     const patternData = parseLv60Pattern($, cells, pattern);
     if (patternData) {
       pokemon.ingredientPatterns[pattern.name] = patternData;
-      
-      // Lv.60の基本値をAAAパターンから設定
-      if (pattern.name === 'AAA' && patternData.totalValue) {
-        pokemon.levels['60'] = { value: patternData.totalValue };
-      }
     }
   });
 
@@ -314,83 +270,41 @@ function getSampleData() {
     {
       id: 1,
       name: "フシギダネ",
-      levels: {
-        1: { value: 1.5 },
-        30: { value: 3.2 },
-        60: { value: 5.8 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["あまいミツ", "あまいミツ"], values: { 1: 2.1, 30: 4.5, 60: 8.2 } },
-        "AB": { ingredients: ["あまいミツ", "あんみんトマト"], values: { 1: 1.8, 30: 3.9, 60: 7.1 } },
         "AAA": { ingredients: ["あまいミツ", "あまいミツ", "あまいミツ"], values: { 1: 3.2, 30: 6.8, 60: 12.3 } }
       }
     },
     {
       id: 2,
       name: "フシギソウ",
-      levels: {
-        1: { value: 1.7 },
-        30: { value: 3.6 },
-        60: { value: 6.5 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["あまいミツ", "あまいミツ"], values: { 1: 2.4, 30: 5.0, 60: 9.1 } },
-        "AB": { ingredients: ["あまいミツ", "あんみんトマト"], values: { 1: 2.0, 30: 4.3, 60: 7.8 } }
       }
     },
     {
       id: 3,
       name: "ピカチュウ",
-      levels: {
-        1: { value: 2.0 },
-        30: { value: 4.2 },
-        60: { value: 7.6 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["リンゴ", "リンゴ"], values: { 1: 2.8, 30: 5.9, 60: 10.6 } },
-        "AB": { ingredients: ["リンゴ", "ワカクサコーン"], values: { 1: 2.4, 30: 5.0, 60: 9.1 } },
         "AAA": { ingredients: ["リンゴ", "リンゴ", "リンゴ"], values: { 1: 4.2, 30: 8.8, 60: 15.9 } }
       }
     },
     {
       id: 4,
       name: "イーブイ",
-      levels: {
-        1: { value: 1.8 },
-        30: { value: 3.8 },
-        60: { value: 6.9 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["モーモーミルク", "モーモーミルク"], values: { 1: 2.5, 30: 5.3, 60: 9.7 } },
-        "AB": { ingredients: ["モーモーミルク", "ふといながねぎ"], values: { 1: 2.2, 30: 4.6, 60: 8.3 } },
         "AAB": { ingredients: ["モーモーミルク", "モーモーミルク", "ふといながねぎ"], values: { 1: 3.6, 30: 7.6, 60: 13.8 } }
       }
     },
     {
       id: 5,
       name: "カビゴン",
-      levels: {
-        1: { value: 2.5 },
-        30: { value: 5.3 },
-        60: { value: 9.6 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["きのみ", "きのみ"], values: { 1: 3.5, 30: 7.4, 60: 13.4 } },
-        "AB": { ingredients: ["きのみ", "ワカクサ大豆"], values: { 1: 3.0, 30: 6.4, 60: 11.5 } },
         "ABC": { ingredients: ["きのみ", "ワカクサ大豆", "おいしいシッポ"], values: { 1: 5.0, 30: 10.6, 60: 19.2 } }
       }
     },
     {
       id: 6,
       name: "コダック",
-      levels: {
-        1: { value: 1.6 },
-        30: { value: 3.4 },
-        60: { value: 6.1 }
-      },
       ingredientPatterns: {
-        "AA": { ingredients: ["カカオ", "カカオ"], values: { 1: 2.2, 30: 4.8, 60: 8.5 } },
-        "AB": { ingredients: ["カカオ", "リラックスカカオ"], values: { 1: 1.9, 30: 4.1, 60: 7.3 } },
         "AAA": { ingredients: ["カカオ", "カカオ", "カカオ"], values: { 1: 3.4, 30: 7.1, 60: 12.8 } }
       }
     }

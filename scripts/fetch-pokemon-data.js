@@ -122,19 +122,8 @@ function parsePokemonRow($, cells, id) {
   const pokemon = {
     id,
     name,
-    levels: {},
     ingredientPatterns: {}
   };
-
-  // レベル情報を抽出（Lv.1, Lv.30, Lv.60の基本値）
-  for (let i = 1; i < Math.min(4, cells.length); i++) {
-    const cellText = $(cells[i]).text().trim();
-    const value = parseFloat(cellText);
-    if (!isNaN(value)) {
-      const level = i === 1 ? '1' : i === 2 ? '30' : '60';
-      pokemon.levels[level] = { value };
-    }
-  }
 
   // 食材パターンを抽出
   for (let i = 4; i < cells.length; i += 3) {

@@ -13,13 +13,13 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
       ingredientA = patterns['AAA'].ingredients[0];
     }
     
-    // ABパターンまたはAABパターンからB食材を取得
-    if (patterns['AB']) {
-      ingredientA = ingredientA || patterns['AB'].ingredients[0];
-      ingredientB = patterns['AB'].ingredients[1];
-    } else if (patterns['AAB']) {
+    // AABパターンまたはABBパターンからB食材を取得
+    if (patterns['AAB']) {
       ingredientA = ingredientA || patterns['AAB'].ingredients[0];
       ingredientB = patterns['AAB'].ingredients[2];
+    } else if (patterns['ABB']) {
+      ingredientA = ingredientA || patterns['ABB'].ingredients[0];
+      ingredientB = patterns['ABB'].ingredients[1];
     }
     
     // ABCパターンがある場合のみC食材を設定

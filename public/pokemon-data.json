@@ -2,39 +2,7 @@
   {
     "id": 1,
     "name": "フシギダネ",
-    "levels": {
-      "1": {
-        "value": 15.6
-      },
-      "30": {
-        "value": 28.9
-      },
-      "60": {
-        "value": 41.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 28.9
-        },
-        "totalValue": 28.9
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 8.3,
-          "あんみんトマト": 16.5
-        },
-        "totalValue": 24.8
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -112,39 +80,7 @@
   {
     "id": 2,
     "name": "フシギソウ",
-    "levels": {
-      "1": {
-        "value": 20.6
-      },
-      "30": {
-        "value": 38.2
-      },
-      "60": {
-        "value": 54.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 38.2
-        },
-        "totalValue": 38.2
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 10.9,
-          "あんみんトマト": 21.8
-        },
-        "totalValue": 32.7
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -222,39 +158,7 @@
   {
     "id": 3,
     "name": "フシギバナ",
-    "levels": {
-      "1": {
-        "value": 25.3
-      },
-      "30": {
-        "value": 47
-      },
-      "60": {
-        "value": 66.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 47
-        },
-        "totalValue": 47
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 13.4,
-          "あんみんトマト": 26.9
-        },
-        "totalValue": 40.3
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -332,39 +236,7 @@
   {
     "id": 4,
     "name": "ヒトカゲ",
-    "levels": {
-      "1": {
-        "value": 15.3
-      },
-      "30": {
-        "value": 28.4
-      },
-      "60": {
-        "value": 40.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 28.4
-        },
-        "totalValue": 28.4
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "マメミート": 8.1,
-          "あったかジンジャー": 16.2
-        },
-        "totalValue": 24.299999999999997
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -442,39 +314,7 @@
   {
     "id": 5,
     "name": "リザード",
-    "levels": {
-      "1": {
-        "value": 20.2
-      },
-      "30": {
-        "value": 37.4
-      },
-      "60": {
-        "value": 53.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 37.4
-        },
-        "totalValue": 37.4
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "マメミート": 10.7,
-          "あったかジンジャー": 21.4
-        },
-        "totalValue": 32.099999999999994
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -552,39 +392,7 @@
   {
     "id": 6,
     "name": "リザードン",
-    "levels": {
-      "1": {
-        "value": 24.9
-      },
-      "30": {
-        "value": 46.2
-      },
-      "60": {
-        "value": 65.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 46.2
-        },
-        "totalValue": 46.2
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "マメミート": 13.2,
-          "あったかジンジャー": 26.4
-        },
-        "totalValue": 39.599999999999994
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -662,39 +470,7 @@
   {
     "id": 7,
     "name": "ゼニガメ",
-    "levels": {
-      "1": {
-        "value": 16
-      },
-      "30": {
-        "value": 29.8
-      },
-      "60": {
-        "value": 42.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 29.8
-        },
-        "totalValue": 29.8
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 8.5,
-          "リラックスカカオ": 12.8
-        },
-        "totalValue": 21.3
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -772,39 +548,7 @@
   {
     "id": 8,
     "name": "カメール",
-    "levels": {
-      "1": {
-        "value": 21.2
-      },
-      "30": {
-        "value": 39.4
-      },
-      "60": {
-        "value": 56.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 39.4
-        },
-        "totalValue": 39.4
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 11.3,
-          "リラックスカカオ": 16.9
-        },
-        "totalValue": 28.2
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -882,39 +626,7 @@
   {
     "id": 9,
     "name": "カメックス",
-    "levels": {
-      "1": {
-        "value": 26.2
-      },
-      "30": {
-        "value": 48.6
-      },
-      "60": {
-        "value": 69.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 48.6
-        },
-        "totalValue": 48.6
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 13.9,
-          "リラックスカカオ": 20.8
-        },
-        "totalValue": 34.7
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -992,39 +704,7 @@
   {
     "id": 10,
     "name": "キャタピー",
-    "levels": {
-      "1": {
-        "value": 5.4
-      },
-      "30": {
-        "value": 8.6
-      },
-      "60": {
-        "value": 14.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 8.6
-        },
-        "totalValue": 8.6
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 2.9,
-          "あんみんトマト": 5.8
-        },
-        "totalValue": 8.7
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -1102,39 +782,7 @@
   {
     "id": 11,
     "name": "トランセル",
-    "levels": {
-      "1": {
-        "value": 6.6
-      },
-      "30": {
-        "value": 10.5
-      },
-      "60": {
-        "value": 17.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 10.5
-        },
-        "totalValue": 10.5
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 3.5,
-          "あんみんトマト": 7
-        },
-        "totalValue": 10.5
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -1212,39 +860,7 @@
   {
     "id": 12,
     "name": "バタフリー",
-    "levels": {
-      "1": {
-        "value": 10.5
-      },
-      "30": {
-        "value": 16.7
-      },
-      "60": {
-        "value": 27.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 16.7
-        },
-        "totalValue": 16.7
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あまいミツ": 5.6,
-          "あんみんトマト": 11.1
-        },
-        "totalValue": 16.7
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -1322,39 +938,7 @@
   {
     "id": 13,
     "name": "コラッタ",
-    "levels": {
-      "1": {
-        "value": 6.4
-      },
-      "30": {
-        "value": 10.3
-      },
-      "60": {
-        "value": 17
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 10.3
-        },
-        "totalValue": 10.3
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 3.4,
-          "ワカクサ大豆": 6.8
-        },
-        "totalValue": 10.2
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -1432,39 +1016,7 @@
   {
     "id": 14,
     "name": "ラッタ",
-    "levels": {
-      "1": {
-        "value": 10.7
-      },
-      "30": {
-        "value": 17
-      },
-      "60": {
-        "value": 28.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 17
-        },
-        "totalValue": 17
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 5.7,
-          "ワカクサ大豆": 11.4
-        },
-        "totalValue": 17.1
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -1542,39 +1094,7 @@
   {
     "id": 15,
     "name": "アーボ",
-    "levels": {
-      "1": {
-        "value": 6.3
-      },
-      "30": {
-        "value": 10
-      },
-      "60": {
-        "value": 16.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 10
-        },
-        "totalValue": 10
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "マメミート": 3.3,
-          "とくせんエッグ": 6.6
-        },
-        "totalValue": 9.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -1652,39 +1172,7 @@
   {
     "id": 16,
     "name": "アーボック",
-    "levels": {
-      "1": {
-        "value": 10.3
-      },
-      "30": {
-        "value": 16.5
-      },
-      "60": {
-        "value": 27.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 16.5
-        },
-        "totalValue": 16.5
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "マメミート": 5.5,
-          "とくせんエッグ": 11
-        },
-        "totalValue": 16.5
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -1762,39 +1250,7 @@
   {
     "id": 17,
     "name": "ピカチュウ",
-    "levels": {
-      "1": {
-        "value": 10.2
-      },
-      "30": {
-        "value": 16.3
-      },
-      "60": {
-        "value": 27
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 16.3
-        },
-        "totalValue": 16.3
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 5.4,
-          "あったかジンジャー": 10.8
-        },
-        "totalValue": 16.200000000000003
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -1872,39 +1328,7 @@
   {
     "id": 18,
     "name": "ピカチュウ(ハロウィン)",
-    "levels": {
-      "1": {
-        "value": 11.2
-      },
-      "30": {
-        "value": 17.8
-      },
-      "60": {
-        "value": 29.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 17.8
-        },
-        "totalValue": 17.8
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 5.9,
-          "あったかジンジャー": 11.9
-        },
-        "totalValue": 17.8
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -1982,39 +1406,7 @@
   {
     "id": 19,
     "name": "ピカチュウ(ホリデー)",
-    "levels": {
-      "1": {
-        "value": 7
-      },
-      "30": {
-        "value": 11.1
-      },
-      "60": {
-        "value": 18.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 11.1
-        },
-        "totalValue": 11.1
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 3.7,
-          "あったかジンジャー": 7.4
-        },
-        "totalValue": 11.100000000000001
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -2092,39 +1484,7 @@
   {
     "id": 20,
     "name": "ライチュウ",
-    "levels": {
-      "1": {
-        "value": 13.6
-      },
-      "30": {
-        "value": 21.6
-      },
-      "60": {
-        "value": 35.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 21.6
-        },
-        "totalValue": 21.6
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 7.2,
-          "あったかジンジャー": 14.4
-        },
-        "totalValue": 21.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -2202,39 +1562,7 @@
   {
     "id": 21,
     "name": "ピッピ",
-    "levels": {
-      "1": {
-        "value": 5.6
-      },
-      "30": {
-        "value": 8.9
-      },
-      "60": {
-        "value": 14.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 8.9
-        },
-        "totalValue": 8.9
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 3,
-          "あまいミツ": 5.9
-        },
-        "totalValue": 8.9
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -2312,39 +1640,7 @@
   {
     "id": 22,
     "name": "ピクシー",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.7
-      },
-      "60": {
-        "value": 21.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 12.7
-        },
-        "totalValue": 12.7
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 4.2,
-          "あまいミツ": 8.5
-        },
-        "totalValue": 12.7
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -2422,39 +1718,7 @@
   {
     "id": 23,
     "name": "ロコン",
-    "levels": {
-      "1": {
-        "value": 4.8
-      },
-      "30": {
-        "value": 7.6
-      },
-      "60": {
-        "value": 12.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 7.6
-        },
-        "totalValue": 7.6
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 2.5,
-          "ワカクサコーン": 5.1
-        },
-        "totalValue": 7.6
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -2532,39 +1796,7 @@
   {
     "id": 24,
     "name": "ロコン(アローラ)",
-    "levels": {
-      "1": {
-        "value": 5.5
-      },
-      "30": {
-        "value": 8.7
-      },
-      "60": {
-        "value": 14.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 8.7
-        },
-        "totalValue": 8.7
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 2.9,
-          "ワカクサコーン": 5.8
-        },
-        "totalValue": 8.7
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -2642,39 +1874,7 @@
   {
     "id": 25,
     "name": "キュウコン",
-    "levels": {
-      "1": {
-        "value": 8.4
-      },
-      "30": {
-        "value": 13.4
-      },
-      "60": {
-        "value": 22.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 13.4
-        },
-        "totalValue": 13.4
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 4.5,
-          "ワカクサコーン": 8.9
-        },
-        "totalValue": 13.4
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -2752,39 +1952,7 @@
   {
     "id": 26,
     "name": "キュウコン(アローラ)",
-    "levels": {
-      "1": {
-        "value": 10.6
-      },
-      "30": {
-        "value": 17
-      },
-      "60": {
-        "value": 28.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 17
-        },
-        "totalValue": 17
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 5.7,
-          "ワカクサコーン": 11.3
-        },
-        "totalValue": 17
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -2862,39 +2030,7 @@
   {
     "id": 27,
     "name": "プリン",
-    "levels": {
-      "1": {
-        "value": 6.2
-      },
-      "30": {
-        "value": 9.9
-      },
-      "60": {
-        "value": 16.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 9.9
-        },
-        "totalValue": 9.9
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あまいミツ": 3.3,
-          "ピュアなオイル": 6.6
-        },
-        "totalValue": 9.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -2972,39 +2108,7 @@
   {
     "id": 28,
     "name": "プクリン",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.7
-      },
-      "60": {
-        "value": 21.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 12.7
-        },
-        "totalValue": 12.7
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あまいミツ": 4.2,
-          "ピュアなオイル": 8.5
-        },
-        "totalValue": 12.7
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -3082,39 +2186,7 @@
   {
     "id": 29,
     "name": "ディグダ",
-    "levels": {
-      "1": {
-        "value": 11.9
-      },
-      "30": {
-        "value": 22.1
-      },
-      "60": {
-        "value": 31.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 22.1
-        },
-        "totalValue": 22.1
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.3,
-          "ふといながねぎ": 9.5
-        },
-        "totalValue": 15.8
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -3192,39 +2264,7 @@
   {
     "id": 30,
     "name": "ダグトリオ",
-    "levels": {
-      "1": {
-        "value": 18.1
-      },
-      "30": {
-        "value": 33.6
-      },
-      "60": {
-        "value": 47.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 33.6
-        },
-        "totalValue": 33.6
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 9.6,
-          "ふといながねぎ": 14.4
-        },
-        "totalValue": 24
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -3302,39 +2342,7 @@
   {
     "id": 31,
     "name": "ニャース",
-    "levels": {
-      "1": {
-        "value": 4.9
-      },
-      "30": {
-        "value": 7.9
-      },
-      "60": {
-        "value": 13.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 7.9
-        },
-        "totalValue": 7.9
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "マメミート"
-        ],
-        "individualValues": {
-          "モーモーミルク": 2.6,
-          "マメミート": 5.2
-        },
-        "totalValue": 7.800000000000001
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -3363,39 +2371,7 @@
   {
     "id": 32,
     "name": "ペルシアン",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.8
-      },
-      "60": {
-        "value": 21.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 12.8
-        },
-        "totalValue": 12.8
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "マメミート"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.3,
-          "マメミート": 8.5
-        },
-        "totalValue": 12.8
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -3424,39 +2400,7 @@
   {
     "id": 33,
     "name": "コダック",
-    "levels": {
-      "1": {
-        "value": 3.4
-      },
-      "30": {
-        "value": 5.3
-      },
-      "60": {
-        "value": 8.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 5.3
-        },
-        "totalValue": 5.3
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 1.8,
-          "とくせんリンゴ": 7.1
-        },
-        "totalValue": 8.9
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -3534,39 +2478,7 @@
   {
     "id": 34,
     "name": "ゴルダック",
-    "levels": {
-      "1": {
-        "value": 6.3
-      },
-      "30": {
-        "value": 10.1
-      },
-      "60": {
-        "value": 16.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 10.1
-        },
-        "totalValue": 10.1
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 3.4,
-          "とくせんリンゴ": 13.5
-        },
-        "totalValue": 16.9
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -3644,39 +2556,7 @@
   {
     "id": 35,
     "name": "マンキー",
-    "levels": {
-      "1": {
-        "value": 6.2
-      },
-      "30": {
-        "value": 9.9
-      },
-      "60": {
-        "value": 16.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 9.9
-        },
-        "totalValue": 9.9
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "マメミート": 3.3,
-          "あじわいキノコ": 3.3
-        },
-        "totalValue": 6.6
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -3754,39 +2634,7 @@
   {
     "id": 36,
     "name": "オコリザル",
-    "levels": {
-      "1": {
-        "value": 9.5
-      },
-      "30": {
-        "value": 15.1
-      },
-      "60": {
-        "value": 25.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 15.1
-        },
-        "totalValue": 15.1
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "マメミート": 5,
-          "あじわいキノコ": 5
-        },
-        "totalValue": 10
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -3864,39 +2712,7 @@
   {
     "id": 37,
     "name": "ガーディ",
-    "levels": {
-      "1": {
-        "value": 4.3
-      },
-      "30": {
-        "value": 6.8
-      },
-      "60": {
-        "value": 11.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 6.8
-        },
-        "totalValue": 6.8
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "げきからハーブ": 2.3,
-          "マメミート": 6.8
-        },
-        "totalValue": 9.1
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -3974,39 +2790,7 @@
   {
     "id": 38,
     "name": "ウインディ",
-    "levels": {
-      "1": {
-        "value": 7.2
-      },
-      "30": {
-        "value": 11.5
-      },
-      "60": {
-        "value": 19.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 11.5
-        },
-        "totalValue": 11.5
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "げきからハーブ": 3.8,
-          "マメミート": 11.5
-        },
-        "totalValue": 15.3
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -4084,39 +2868,7 @@
   {
     "id": 39,
     "name": "マダツボミ",
-    "levels": {
-      "1": {
-        "value": 11.9
-      },
-      "30": {
-        "value": 22.2
-      },
-      "60": {
-        "value": 31.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 22.2
-        },
-        "totalValue": 22.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.3,
-          "ほっこりポテト": 12.7
-        },
-        "totalValue": 19
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -4194,39 +2946,7 @@
   {
     "id": 40,
     "name": "ウツドン",
-    "levels": {
-      "1": {
-        "value": 16.5
-      },
-      "30": {
-        "value": 30.6
-      },
-      "60": {
-        "value": 43.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 30.6
-        },
-        "totalValue": 30.6
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 8.7,
-          "ほっこりポテト": 17.5
-        },
-        "totalValue": 26.2
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -4304,39 +3024,7 @@
   {
     "id": 41,
     "name": "ウツボット",
-    "levels": {
-      "1": {
-        "value": 22.2
-      },
-      "30": {
-        "value": 41.2
-      },
-      "60": {
-        "value": 58.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 41.2
-        },
-        "totalValue": 41.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 11.8,
-          "ほっこりポテト": 23.5
-        },
-        "totalValue": 35.3
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -4414,39 +3102,7 @@
   {
     "id": 42,
     "name": "イシツブテ",
-    "levels": {
-      "1": {
-        "value": 13.1
-      },
-      "30": {
-        "value": 24.4
-      },
-      "60": {
-        "value": 34.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 24.4
-        },
-        "totalValue": 24.4
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 7,
-          "ほっこりポテト": 13.9
-        },
-        "totalValue": 20.9
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -4524,39 +3180,7 @@
   {
     "id": 43,
     "name": "ゴローン",
-    "levels": {
-      "1": {
-        "value": 18.1
-      },
-      "30": {
-        "value": 33.6
-      },
-      "60": {
-        "value": 47.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 33.6
-        },
-        "totalValue": 33.6
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 9.6,
-          "ほっこりポテト": 19.2
-        },
-        "totalValue": 28.799999999999997
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -4634,39 +3258,7 @@
   {
     "id": 44,
     "name": "ゴローニャ",
-    "levels": {
-      "1": {
-        "value": 24.1
-      },
-      "30": {
-        "value": 44.7
-      },
-      "60": {
-        "value": 63.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 44.7
-        },
-        "totalValue": 44.7
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 12.8,
-          "ほっこりポテト": 25.5
-        },
-        "totalValue": 38.3
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -4744,39 +3336,7 @@
   {
     "id": 45,
     "name": "ヤドン",
-    "levels": {
-      "1": {
-        "value": 3.5
-      },
-      "30": {
-        "value": 5.6
-      },
-      "60": {
-        "value": 9.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 5.6
-        },
-        "totalValue": 5.6
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "おいしいシッポ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 1.9,
-          "おいしいシッポ": 1.9
-        },
-        "totalValue": 3.8
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -4854,39 +3414,7 @@
   {
     "id": 46,
     "name": "ヤドラン",
-    "levels": {
-      "1": {
-        "value": 6.9
-      },
-      "30": {
-        "value": 11
-      },
-      "60": {
-        "value": 18.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 11
-        },
-        "totalValue": 11
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "おいしいシッポ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 3.7,
-          "おいしいシッポ": 3.7
-        },
-        "totalValue": 7.4
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -4964,39 +3492,7 @@
   {
     "id": 47,
     "name": "コイル",
-    "levels": {
-      "1": {
-        "value": 4.2
-      },
-      "30": {
-        "value": 6.7
-      },
-      "60": {
-        "value": 11.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 6.7
-        },
-        "totalValue": 6.7
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 2.2,
-          "げきからハーブ": 4.4
-        },
-        "totalValue": 6.6000000000000005
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -5025,39 +3521,7 @@
   {
     "id": 48,
     "name": "レアコイル",
-    "levels": {
-      "1": {
-        "value": 6.1
-      },
-      "30": {
-        "value": 9.6
-      },
-      "60": {
-        "value": 16
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 9.6
-        },
-        "totalValue": 9.6
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 3.2,
-          "げきからハーブ": 6.4
-        },
-        "totalValue": 9.600000000000001
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -5086,39 +3550,7 @@
   {
     "id": 49,
     "name": "カモネギ",
-    "levels": {
-      "1": {
-        "value": 14.2
-      },
-      "30": {
-        "value": 26.4
-      },
-      "60": {
-        "value": 37.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ふといながねぎ",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "ふといながねぎ": 26.4
-        },
-        "totalValue": 26.4
-      },
-      "AB": {
-        "ingredients": [
-          "ふといながねぎ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ふといながねぎ": 7.5,
-          "マメミート": 30.2
-        },
-        "totalValue": 37.7
-      },
       "AAA": {
         "ingredients": [
           "ふといながねぎ",
@@ -5196,39 +3628,7 @@
   {
     "id": 50,
     "name": "ドードー",
-    "levels": {
-      "1": {
-        "value": 6.4
-      },
-      "30": {
-        "value": 10.3
-      },
-      "60": {
-        "value": 17.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 10.3
-        },
-        "totalValue": 10.3
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 3.4,
-          "リラックスカカオ": 3.4
-        },
-        "totalValue": 6.8
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -5306,39 +3706,7 @@
   {
     "id": 51,
     "name": "ドードリオ",
-    "levels": {
-      "1": {
-        "value": 10.6
-      },
-      "30": {
-        "value": 17
-      },
-      "60": {
-        "value": 28.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 17
-        },
-        "totalValue": 17
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 5.7,
-          "リラックスカカオ": 5.7
-        },
-        "totalValue": 11.4
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -5416,39 +3784,7 @@
   {
     "id": 52,
     "name": "ゴース",
-    "levels": {
-      "1": {
-        "value": 10.1
-      },
-      "30": {
-        "value": 18.8
-      },
-      "60": {
-        "value": 26.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 18.8
-        },
-        "totalValue": 18.8
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 5.4,
-          "あじわいキノコ": 10.7
-        },
-        "totalValue": 16.1
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -5526,39 +3862,7 @@
   {
     "id": 53,
     "name": "ゴースト",
-    "levels": {
-      "1": {
-        "value": 13.9
-      },
-      "30": {
-        "value": 25.9
-      },
-      "60": {
-        "value": 36.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 25.9
-        },
-        "totalValue": 25.9
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 7.4,
-          "あじわいキノコ": 14.8
-        },
-        "totalValue": 22.200000000000003
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -5636,39 +3940,7 @@
   {
     "id": 54,
     "name": "ゲンガー",
-    "levels": {
-      "1": {
-        "value": 19.5
-      },
-      "30": {
-        "value": 36.2
-      },
-      "60": {
-        "value": 51.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 36.2
-        },
-        "totalValue": 36.2
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 10.3,
-          "あじわいキノコ": 20.7
-        },
-        "totalValue": 31
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -5746,39 +4018,7 @@
   {
     "id": 55,
     "name": "イワーク",
-    "levels": {
-      "1": {
-        "value": 5.7
-      },
-      "30": {
-        "value": 9
-      },
-      "60": {
-        "value": 15
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 9
-        },
-        "totalValue": 9
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "マメミート"
-        ],
-        "individualValues": {
-          "あんみんトマト": 3,
-          "マメミート": 6
-        },
-        "totalValue": 9
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -5856,39 +4096,7 @@
   {
     "id": 56,
     "name": "カラカラ",
-    "levels": {
-      "1": {
-        "value": 6.2
-      },
-      "30": {
-        "value": 9.9
-      },
-      "60": {
-        "value": 16.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 9.9
-        },
-        "totalValue": 9.9
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 3.3,
-          "リラックスカカオ": 6.6
-        },
-        "totalValue": 9.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -5917,39 +4125,7 @@
   {
     "id": 57,
     "name": "ガラガラ",
-    "levels": {
-      "1": {
-        "value": 8.6
-      },
-      "30": {
-        "value": 13.6
-      },
-      "60": {
-        "value": 22.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 13.6
-        },
-        "totalValue": 13.6
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 4.5,
-          "リラックスカカオ": 9.1
-        },
-        "totalValue": 13.6
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -5978,39 +4154,7 @@
   {
     "id": 58,
     "name": "ラッキー",
-    "levels": {
-      "1": {
-        "value": 19
-      },
-      "30": {
-        "value": 35.4
-      },
-      "60": {
-        "value": 50.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 35.4
-        },
-        "totalValue": 35.4
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 10.1,
-          "ほっこりポテト": 20.2
-        },
-        "totalValue": 30.299999999999997
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -6088,39 +4232,7 @@
   {
     "id": 59,
     "name": "ガルーラ",
-    "levels": {
-      "1": {
-        "value": 22.3
-      },
-      "30": {
-        "value": 41.5
-      },
-      "60": {
-        "value": 59
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 41.5
-        },
-        "totalValue": 41.5
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 11.8,
-          "ほっこりポテト": 23.7
-        },
-        "totalValue": 35.5
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -6198,39 +4310,7 @@
   {
     "id": 60,
     "name": "バリヤード",
-    "levels": {
-      "1": {
-        "value": 20.5
-      },
-      "30": {
-        "value": 38.2
-      },
-      "60": {
-        "value": 54.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 38.2
-        },
-        "totalValue": 38.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 10.9,
-          "ほっこりポテト": 21.8
-        },
-        "totalValue": 32.7
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -6308,39 +4388,7 @@
   {
     "id": 61,
     "name": "カイロス",
-    "levels": {
-      "1": {
-        "value": 24
-      },
-      "30": {
-        "value": 44.5
-      },
-      "60": {
-        "value": 63.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 44.5
-        },
-        "totalValue": 44.5
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "あまいミツ": 12.7,
-          "とくせんリンゴ": 31.8
-        },
-        "totalValue": 44.5
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -6418,39 +4466,7 @@
   {
     "id": 62,
     "name": "メタモン",
-    "levels": {
-      "1": {
-        "value": 15.3
-      },
-      "30": {
-        "value": 28.4
-      },
-      "60": {
-        "value": 40.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 28.4
-        },
-        "totalValue": 28.4
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 8.1,
-          "ふといながねぎ": 12.2
-        },
-        "totalValue": 20.299999999999997
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -6528,39 +4544,7 @@
   {
     "id": 63,
     "name": "イーブイ",
-    "levels": {
-      "1": {
-        "value": 6.9
-      },
-      "30": {
-        "value": 11
-      },
-      "60": {
-        "value": 18.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 11
-        },
-        "totalValue": 11
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 3.7,
-          "リラックスカカオ": 3.7
-        },
-        "totalValue": 7.4
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -6638,39 +4622,7 @@
   {
     "id": 64,
     "name": "イーブイ(ホリデー)",
-    "levels": {
-      "1": {
-        "value": 6.7
-      },
-      "30": {
-        "value": 10.7
-      },
-      "60": {
-        "value": 17.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 10.7
-        },
-        "totalValue": 10.7
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 3.6,
-          "リラックスカカオ": 3.6
-        },
-        "totalValue": 7.2
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -6748,39 +4700,7 @@
   {
     "id": 65,
     "name": "シャワーズ",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -6858,39 +4778,7 @@
   {
     "id": 66,
     "name": "サンダース",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.6
-      },
-      "60": {
-        "value": 24.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.6
-        },
-        "totalValue": 14.6
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.9,
-          "リラックスカカオ": 4.9
-        },
-        "totalValue": 9.8
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -6968,39 +4856,7 @@
   {
     "id": 67,
     "name": "ブースター",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -7078,39 +4934,7 @@
   {
     "id": 68,
     "name": "ミニリュウ",
-    "levels": {
-      "1": {
-        "value": 13.3
-      },
-      "30": {
-        "value": 24.7
-      },
-      "60": {
-        "value": 35.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 24.7
-        },
-        "totalValue": 24.7
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "げきからハーブ": 7.1,
-          "ワカクサコーン": 14.1
-        },
-        "totalValue": 21.2
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -7188,39 +5012,7 @@
   {
     "id": 69,
     "name": "ハクリュー",
-    "levels": {
-      "1": {
-        "value": 18.4
-      },
-      "30": {
-        "value": 34.1
-      },
-      "60": {
-        "value": 48.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 34.1
-        },
-        "totalValue": 34.1
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "げきからハーブ": 9.7,
-          "ワカクサコーン": 19.5
-        },
-        "totalValue": 29.2
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -7298,39 +5090,7 @@
   {
     "id": 70,
     "name": "カイリュー",
-    "levels": {
-      "1": {
-        "value": 27
-      },
-      "30": {
-        "value": 50.2
-      },
-      "60": {
-        "value": 71.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 50.2
-        },
-        "totalValue": 50.2
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "げきからハーブ": 14.4,
-          "ワカクサコーン": 28.7
-        },
-        "totalValue": 43.1
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -7408,39 +5168,7 @@
   {
     "id": 71,
     "name": "チコリータ",
-    "levels": {
-      "1": {
-        "value": 5.1
-      },
-      "30": {
-        "value": 8.1
-      },
-      "60": {
-        "value": 13.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 8.1
-        },
-        "totalValue": 8.1
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 2.7,
-          "あまいミツ": 8.1
-        },
-        "totalValue": 10.8
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -7518,39 +5246,7 @@
   {
     "id": 72,
     "name": "ベイリーフ",
-    "levels": {
-      "1": {
-        "value": 6.8
-      },
-      "30": {
-        "value": 10.8
-      },
-      "60": {
-        "value": 17.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 10.8
-        },
-        "totalValue": 10.8
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 3.6,
-          "あまいミツ": 10.8
-        },
-        "totalValue": 14.4
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -7628,39 +5324,7 @@
   {
     "id": 73,
     "name": "メガニウム",
-    "levels": {
-      "1": {
-        "value": 8.3
-      },
-      "30": {
-        "value": 13.3
-      },
-      "60": {
-        "value": 22
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 13.3
-        },
-        "totalValue": 13.3
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 4.4,
-          "あまいミツ": 13.3
-        },
-        "totalValue": 17.700000000000003
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -7738,39 +5402,7 @@
   {
     "id": 74,
     "name": "ヒノアラシ",
-    "levels": {
-      "1": {
-        "value": 7.1
-      },
-      "30": {
-        "value": 11.3
-      },
-      "60": {
-        "value": 18.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 11.3
-        },
-        "totalValue": 11.3
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 3.8,
-          "げきからハーブ": 7.5
-        },
-        "totalValue": 11.3
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -7848,39 +5480,7 @@
   {
     "id": 75,
     "name": "マグマラシ",
-    "levels": {
-      "1": {
-        "value": 9.4
-      },
-      "30": {
-        "value": 14.9
-      },
-      "60": {
-        "value": 24.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 14.9
-        },
-        "totalValue": 14.9
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 5,
-          "げきからハーブ": 9.9
-        },
-        "totalValue": 14.9
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -7958,39 +5558,7 @@
   {
     "id": 76,
     "name": "バクフーン",
-    "levels": {
-      "1": {
-        "value": 11.5
-      },
-      "30": {
-        "value": 18.4
-      },
-      "60": {
-        "value": 30.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 18.4
-        },
-        "totalValue": 18.4
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 6.1,
-          "げきからハーブ": 12.3
-        },
-        "totalValue": 18.4
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -8068,39 +5636,7 @@
   {
     "id": 77,
     "name": "ワニノコ",
-    "levels": {
-      "1": {
-        "value": 7.5
-      },
-      "30": {
-        "value": 11.9
-      },
-      "60": {
-        "value": 19.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 11.9
-        },
-        "totalValue": 11.9
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "マメミート": 4,
-          "ピュアなオイル": 7.9
-        },
-        "totalValue": 11.9
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -8129,39 +5665,7 @@
   {
     "id": 78,
     "name": "アリゲイツ",
-    "levels": {
-      "1": {
-        "value": 9.9
-      },
-      "30": {
-        "value": 15.8
-      },
-      "60": {
-        "value": 26.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 15.8
-        },
-        "totalValue": 15.8
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "マメミート": 5.3,
-          "ピュアなオイル": 10.5
-        },
-        "totalValue": 15.8
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -8190,39 +5694,7 @@
   {
     "id": 79,
     "name": "オーダイル",
-    "levels": {
-      "1": {
-        "value": 12.2
-      },
-      "30": {
-        "value": 19.5
-      },
-      "60": {
-        "value": 32.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 19.5
-        },
-        "totalValue": 19.5
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "マメミート": 6.5,
-          "ピュアなオイル": 13
-        },
-        "totalValue": 19.5
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -8251,39 +5723,7 @@
   {
     "id": 80,
     "name": "ピチュー",
-    "levels": {
-      "1": {
-        "value": 6.5
-      },
-      "30": {
-        "value": 10.4
-      },
-      "60": {
-        "value": 17.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 10.4
-        },
-        "totalValue": 10.4
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 3.5,
-          "あったかジンジャー": 6.9
-        },
-        "totalValue": 10.4
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -8361,39 +5801,7 @@
   {
     "id": 81,
     "name": "ピィ",
-    "levels": {
-      "1": {
-        "value": 3.9
-      },
-      "30": {
-        "value": 6.2
-      },
-      "60": {
-        "value": 10.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 6.2
-        },
-        "totalValue": 6.2
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 2.1,
-          "あまいミツ": 4.1
-        },
-        "totalValue": 6.199999999999999
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -8471,39 +5879,7 @@
   {
     "id": 82,
     "name": "ププリン",
-    "levels": {
-      "1": {
-        "value": 4.4
-      },
-      "30": {
-        "value": 6.9
-      },
-      "60": {
-        "value": 11.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 6.9
-        },
-        "totalValue": 6.9
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あまいミツ": 2.3,
-          "ピュアなオイル": 4.6
-        },
-        "totalValue": 6.8999999999999995
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -8581,39 +5957,7 @@
   {
     "id": 83,
     "name": "トゲピー",
-    "levels": {
-      "1": {
-        "value": 4.2
-      },
-      "30": {
-        "value": 6.7
-      },
-      "60": {
-        "value": 11.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 6.7
-        },
-        "totalValue": 6.7
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 2.2,
-          "あったかジンジャー": 4.4
-        },
-        "totalValue": 6.6000000000000005
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -8691,39 +6035,7 @@
   {
     "id": 84,
     "name": "トゲチック",
-    "levels": {
-      "1": {
-        "value": 5.7
-      },
-      "30": {
-        "value": 9.1
-      },
-      "60": {
-        "value": 15.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 9.1
-        },
-        "totalValue": 9.1
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 3,
-          "あったかジンジャー": 6.1
-        },
-        "totalValue": 9.1
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -8801,39 +6113,7 @@
   {
     "id": 85,
     "name": "メリープ",
-    "levels": {
-      "1": {
-        "value": 3.7
-      },
-      "30": {
-        "value": 5.9
-      },
-      "60": {
-        "value": 9.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 5.9
-        },
-        "totalValue": 5.9
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 2,
-          "とくせんエッグ": 5.9
-        },
-        "totalValue": 7.9
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -8862,39 +6142,7 @@
   {
     "id": 86,
     "name": "モココ",
-    "levels": {
-      "1": {
-        "value": 5.1
-      },
-      "30": {
-        "value": 8.2
-      },
-      "60": {
-        "value": 13.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 8.2
-        },
-        "totalValue": 8.2
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 2.7,
-          "とくせんエッグ": 8.2
-        },
-        "totalValue": 10.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -8923,39 +6171,7 @@
   {
     "id": 87,
     "name": "デンリュウ",
-    "levels": {
-      "1": {
-        "value": 6.9
-      },
-      "30": {
-        "value": 11
-      },
-      "60": {
-        "value": 18.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 11
-        },
-        "totalValue": 11
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 3.7,
-          "とくせんエッグ": 11
-        },
-        "totalValue": 14.7
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -8984,39 +6200,7 @@
   {
     "id": 88,
     "name": "ウソッキー",
-    "levels": {
-      "1": {
-        "value": 7.2
-      },
-      "30": {
-        "value": 11.5
-      },
-      "60": {
-        "value": 19.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 11.5
-        },
-        "totalValue": 11.5
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あんみんトマト": 3.8,
-          "ワカクサ大豆": 7.7
-        },
-        "totalValue": 11.5
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -9094,39 +6278,7 @@
   {
     "id": 89,
     "name": "ウパー",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 16.9
-      },
-      "60": {
-        "value": 24
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あじわいキノコ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 16.9
-        },
-        "totalValue": 16.9
-      },
-      "AB": {
-        "ingredients": [
-          "あじわいキノコ",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 4.8,
-          "ほっこりポテト": 14.4
-        },
-        "totalValue": 19.2
-      },
       "AAA": {
         "ingredients": [
           "あじわいキノコ",
@@ -9204,39 +6356,7 @@
   {
     "id": 90,
     "name": "ウパー(パルデア)",
-    "levels": {
-      "1": {
-        "value": 8.7
-      },
-      "30": {
-        "value": 16.2
-      },
-      "60": {
-        "value": 23
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 16.2
-        },
-        "totalValue": 16.2
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 4.6,
-          "めざましコーヒー": 9.2
-        },
-        "totalValue": 13.799999999999999
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -9314,39 +6434,7 @@
   {
     "id": 91,
     "name": "ヌオー",
-    "levels": {
-      "1": {
-        "value": 14.9
-      },
-      "30": {
-        "value": 27.7
-      },
-      "60": {
-        "value": 39.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あじわいキノコ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 27.7
-        },
-        "totalValue": 27.7
-      },
-      "AB": {
-        "ingredients": [
-          "あじわいキノコ",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 7.9,
-          "ほっこりポテト": 23.7
-        },
-        "totalValue": 31.6
-      },
       "AAA": {
         "ingredients": [
           "あじわいキノコ",
@@ -9424,39 +6512,7 @@
   {
     "id": 92,
     "name": "エーフィ",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -9534,39 +6590,7 @@
   {
     "id": 93,
     "name": "ブラッキー",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -9644,39 +6668,7 @@
   {
     "id": 94,
     "name": "ヤミカラス",
-    "levels": {
-      "1": {
-        "value": 5.2
-      },
-      "30": {
-        "value": 8.3
-      },
-      "60": {
-        "value": 13.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 8.3
-        },
-        "totalValue": 8.3
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 2.8,
-          "ワカクサ大豆": 8.3
-        },
-        "totalValue": 11.100000000000001
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -9754,39 +6746,7 @@
   {
     "id": 95,
     "name": "ヤドキング",
-    "levels": {
-      "1": {
-        "value": 6.5
-      },
-      "30": {
-        "value": 10.4
-      },
-      "60": {
-        "value": 17.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 10.4
-        },
-        "totalValue": 10.4
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "おいしいシッポ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 3.5,
-          "おいしいシッポ": 3.5
-        },
-        "totalValue": 7
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -9864,39 +6824,7 @@
   {
     "id": 96,
     "name": "ソーナンス",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.8
-      },
-      "60": {
-        "value": 21.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 12.8
-        },
-        "totalValue": 12.8
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 4.3,
-          "あじわいキノコ": 4.3
-        },
-        "totalValue": 8.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -9974,39 +6902,7 @@
   {
     "id": 97,
     "name": "ハガネール",
-    "levels": {
-      "1": {
-        "value": 6.8
-      },
-      "30": {
-        "value": 10.9
-      },
-      "60": {
-        "value": 18.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 10.9
-        },
-        "totalValue": 10.9
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "マメミート"
-        ],
-        "individualValues": {
-          "あんみんトマト": 3.6,
-          "マメミート": 7.3
-        },
-        "totalValue": 10.9
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -10084,39 +6980,7 @@
   {
     "id": 98,
     "name": "ヘラクロス",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.6
-      },
-      "60": {
-        "value": 24.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 14.6
-        },
-        "totalValue": 14.6
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あまいミツ": 4.9,
-          "あじわいキノコ": 4.9
-        },
-        "totalValue": 9.8
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -10194,39 +7058,7 @@
   {
     "id": 99,
     "name": "ニューラ",
-    "levels": {
-      "1": {
-        "value": 10.6
-      },
-      "30": {
-        "value": 16.9
-      },
-      "60": {
-        "value": 28.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 16.9
-        },
-        "totalValue": 16.9
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "マメミート": 5.6,
-          "とくせんエッグ": 11.3
-        },
-        "totalValue": 16.9
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -10304,39 +7136,7 @@
   {
     "id": 100,
     "name": "デリバード",
-    "levels": {
-      "1": {
-        "value": 20
-      },
-      "30": {
-        "value": 37.2
-      },
-      "60": {
-        "value": 53
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 37.2
-        },
-        "totalValue": 37.2
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 10.6,
-          "とくせんリンゴ": 31.9
-        },
-        "totalValue": 42.5
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -10414,39 +7214,7 @@
   {
     "id": 101,
     "name": "デルビル",
-    "levels": {
-      "1": {
-        "value": 5.5
-      },
-      "30": {
-        "value": 8.7
-      },
-      "60": {
-        "value": 14.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 8.7
-        },
-        "totalValue": 8.7
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "げきからハーブ": 2.9,
-          "あったかジンジャー": 8.7
-        },
-        "totalValue": 11.6
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -10524,39 +7292,7 @@
   {
     "id": 102,
     "name": "ヘルガー",
-    "levels": {
-      "1": {
-        "value": 8.2
-      },
-      "30": {
-        "value": 13
-      },
-      "60": {
-        "value": 21.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "げきからハーブ",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "げきからハーブ": 13
-        },
-        "totalValue": 13
-      },
-      "AB": {
-        "ingredients": [
-          "げきからハーブ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "げきからハーブ": 4.3,
-          "あったかジンジャー": 13
-        },
-        "totalValue": 17.3
-      },
       "AAA": {
         "ingredients": [
           "げきからハーブ",
@@ -10634,39 +7370,7 @@
   {
     "id": 103,
     "name": "ハピナス",
-    "levels": {
-      "1": {
-        "value": 20.4
-      },
-      "30": {
-        "value": 38
-      },
-      "60": {
-        "value": 54.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 38
-        },
-        "totalValue": 38
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 10.9,
-          "ほっこりポテト": 21.7
-        },
-        "totalValue": 32.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -10744,39 +7448,7 @@
   {
     "id": 104,
     "name": "ライコウ",
-    "levels": {
-      "1": {
-        "value": 12.2
-      },
-      "30": {
-        "value": 19.4
-      },
-      "60": {
-        "value": 32.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 19.4
-        },
-        "totalValue": 19.4
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "マメミート": 6.5,
-          "げきからハーブ": 12.9
-        },
-        "totalValue": 19.4
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -10854,39 +7526,7 @@
   {
     "id": 105,
     "name": "エンテイ",
-    "levels": {
-      "1": {
-        "value": 10.4
-      },
-      "30": {
-        "value": 16.5
-      },
-      "60": {
-        "value": 27.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 16.5
-        },
-        "totalValue": 16.5
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 5.5,
-          "あんみんトマト": 11
-        },
-        "totalValue": 16.5
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -10964,39 +7604,7 @@
   {
     "id": 106,
     "name": "スイクン",
-    "levels": {
-      "1": {
-        "value": 13.6
-      },
-      "30": {
-        "value": 21.8
-      },
-      "60": {
-        "value": 36.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 21.8
-        },
-        "totalValue": 21.8
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 7.3,
-          "ピュアなオイル": 14.5
-        },
-        "totalValue": 21.8
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -11074,39 +7682,7 @@
   {
     "id": 107,
     "name": "ヨーギラス",
-    "levels": {
-      "1": {
-        "value": 13.2
-      },
-      "30": {
-        "value": 24.5
-      },
-      "60": {
-        "value": 34.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 24.5
-        },
-        "totalValue": 24.5
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 7,
-          "ワカクサ大豆": 17.5
-        },
-        "totalValue": 24.5
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -11184,39 +7760,7 @@
   {
     "id": 108,
     "name": "サナギラス",
-    "levels": {
-      "1": {
-        "value": 18.3
-      },
-      "30": {
-        "value": 33.9
-      },
-      "60": {
-        "value": 48.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 33.9
-        },
-        "totalValue": 33.9
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 9.7,
-          "ワカクサ大豆": 24.2
-        },
-        "totalValue": 33.9
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -11294,39 +7838,7 @@
   {
     "id": 109,
     "name": "バンギラス",
-    "levels": {
-      "1": {
-        "value": 26.2
-      },
-      "30": {
-        "value": 48.7
-      },
-      "60": {
-        "value": 69.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 48.7
-        },
-        "totalValue": 48.7
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 13.9,
-          "ワカクサ大豆": 34.8
-        },
-        "totalValue": 48.699999999999996
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -11404,39 +7916,7 @@
   {
     "id": 110,
     "name": "キモリ",
-    "levels": {
-      "1": {
-        "value": 5.1
-      },
-      "30": {
-        "value": 8.1
-      },
-      "60": {
-        "value": 13.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 8.1
-        },
-        "totalValue": 8.1
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 2.7,
-          "めざましコーヒー": 5.4
-        },
-        "totalValue": 8.100000000000001
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -11514,39 +7994,7 @@
   {
     "id": 111,
     "name": "ジュプトル",
-    "levels": {
-      "1": {
-        "value": 6
-      },
-      "30": {
-        "value": 9.6
-      },
-      "60": {
-        "value": 16
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 9.6
-        },
-        "totalValue": 9.6
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 3.2,
-          "めざましコーヒー": 6.4
-        },
-        "totalValue": 9.600000000000001
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -11624,39 +8072,7 @@
   {
     "id": 112,
     "name": "ジュカイン",
-    "levels": {
-      "1": {
-        "value": 6.2
-      },
-      "30": {
-        "value": 9.9
-      },
-      "60": {
-        "value": 16.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 9.9
-        },
-        "totalValue": 9.9
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 3.3,
-          "めざましコーヒー": 6.6
-        },
-        "totalValue": 9.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -11734,39 +8150,7 @@
   {
     "id": 113,
     "name": "アチャモ",
-    "levels": {
-      "1": {
-        "value": 4.9
-      },
-      "30": {
-        "value": 7.9
-      },
-      "60": {
-        "value": 13.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あじわいキノコ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 7.9
-        },
-        "totalValue": 7.9
-      },
-      "AB": {
-        "ingredients": [
-          "あじわいキノコ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 2.6,
-          "ワカクサ大豆": 10.5
-        },
-        "totalValue": 13.1
-      },
       "AAA": {
         "ingredients": [
           "あじわいキノコ",
@@ -11844,39 +8228,7 @@
   {
     "id": 114,
     "name": "ワカシャモ",
-    "levels": {
-      "1": {
-        "value": 6.6
-      },
-      "30": {
-        "value": 10.6
-      },
-      "60": {
-        "value": 17.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あじわいキノコ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 10.6
-        },
-        "totalValue": 10.6
-      },
-      "AB": {
-        "ingredients": [
-          "あじわいキノコ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 3.5,
-          "ワカクサ大豆": 14.1
-        },
-        "totalValue": 17.6
-      },
       "AAA": {
         "ingredients": [
           "あじわいキノコ",
@@ -11954,39 +8306,7 @@
   {
     "id": 115,
     "name": "バシャーモ",
-    "levels": {
-      "1": {
-        "value": 7.8
-      },
-      "30": {
-        "value": 12.5
-      },
-      "60": {
-        "value": 20.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あじわいキノコ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 12.5
-        },
-        "totalValue": 12.5
-      },
-      "AB": {
-        "ingredients": [
-          "あじわいキノコ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あじわいキノコ": 4.2,
-          "ワカクサ大豆": 16.6
-        },
-        "totalValue": 20.8
-      },
       "AAA": {
         "ingredients": [
           "あじわいキノコ",
@@ -12064,39 +8384,7 @@
   {
     "id": 116,
     "name": "ミズゴロウ",
-    "levels": {
-      "1": {
-        "value": 5.4
-      },
-      "30": {
-        "value": 8.7
-      },
-      "60": {
-        "value": 14.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 8.7
-        },
-        "totalValue": 8.7
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 2.9,
-          "モーモーミルク": 8.7
-        },
-        "totalValue": 11.6
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -12174,39 +8462,7 @@
   {
     "id": 117,
     "name": "ヌマクロー",
-    "levels": {
-      "1": {
-        "value": 6.4
-      },
-      "30": {
-        "value": 10.2
-      },
-      "60": {
-        "value": 16.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 10.2
-        },
-        "totalValue": 10.2
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 3.4,
-          "モーモーミルク": 10.2
-        },
-        "totalValue": 13.6
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -12284,39 +8540,7 @@
   {
     "id": 118,
     "name": "ラグラージ",
-    "levels": {
-      "1": {
-        "value": 6.9
-      },
-      "30": {
-        "value": 11.1
-      },
-      "60": {
-        "value": 18.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 11.1
-        },
-        "totalValue": 11.1
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 3.7,
-          "モーモーミルク": 11.1
-        },
-        "totalValue": 14.8
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -12394,39 +8618,7 @@
   {
     "id": 119,
     "name": "ラルトス",
-    "levels": {
-      "1": {
-        "value": 4
-      },
-      "30": {
-        "value": 6.4
-      },
-      "60": {
-        "value": 10.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 6.4
-        },
-        "totalValue": 6.4
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 2.1,
-          "ワカクサコーン": 2.1
-        },
-        "totalValue": 4.2
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -12504,39 +8696,7 @@
   {
     "id": 120,
     "name": "キルリア",
-    "levels": {
-      "1": {
-        "value": 5.6
-      },
-      "30": {
-        "value": 8.8
-      },
-      "60": {
-        "value": 14.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 8.8
-        },
-        "totalValue": 8.8
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 2.9,
-          "ワカクサコーン": 2.9
-        },
-        "totalValue": 5.8
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -12614,39 +8774,7 @@
   {
     "id": 121,
     "name": "サーナイト",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.7
-      },
-      "60": {
-        "value": 21.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 12.7
-        },
-        "totalValue": 12.7
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 4.2,
-          "ワカクサコーン": 4.2
-        },
-        "totalValue": 8.4
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -12724,39 +8852,7 @@
   {
     "id": 122,
     "name": "ナマケロ",
-    "levels": {
-      "1": {
-        "value": 5.9
-      },
-      "30": {
-        "value": 9.3
-      },
-      "60": {
-        "value": 15.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 9.3
-        },
-        "totalValue": 9.3
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 3.1,
-          "あまいミツ": 6.2
-        },
-        "totalValue": 9.3
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -12834,39 +8930,7 @@
   {
     "id": 123,
     "name": "ヤルキモノ",
-    "levels": {
-      "1": {
-        "value": 8.5
-      },
-      "30": {
-        "value": 13.5
-      },
-      "60": {
-        "value": 22.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 13.5
-        },
-        "totalValue": 13.5
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 4.5,
-          "あまいミツ": 9
-        },
-        "totalValue": 13.5
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -12944,39 +9008,7 @@
   {
     "id": 124,
     "name": "ケッキング",
-    "levels": {
-      "1": {
-        "value": 12.5
-      },
-      "30": {
-        "value": 20
-      },
-      "60": {
-        "value": 33.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 20
-        },
-        "totalValue": 20
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.7,
-          "あまいミツ": 13.3
-        },
-        "totalValue": 20
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -13054,39 +9086,7 @@
   {
     "id": 125,
     "name": "ヤミラミ",
-    "levels": {
-      "1": {
-        "value": 7
-      },
-      "30": {
-        "value": 11.1
-      },
-      "60": {
-        "value": 18.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 11.1
-        },
-        "totalValue": 11.1
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 3.7,
-          "あじわいキノコ": 7.4
-        },
-        "totalValue": 11.100000000000001
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -13164,39 +9164,7 @@
   {
     "id": 126,
     "name": "クチート",
-    "levels": {
-      "1": {
-        "value": 16.9
-      },
-      "30": {
-        "value": 31.5
-      },
-      "60": {
-        "value": 44.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 31.5
-        },
-        "totalValue": 31.5
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 9,
-          "ワカクサコーン": 18
-        },
-        "totalValue": 27
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -13274,39 +9242,7 @@
   {
     "id": 127,
     "name": "ココドラ",
-    "levels": {
-      "1": {
-        "value": 12.7
-      },
-      "30": {
-        "value": 23.7
-      },
-      "60": {
-        "value": 33.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 23.7
-        },
-        "totalValue": 23.7
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "マメミート": 6.8,
-          "めざましコーヒー": 10.2
-        },
-        "totalValue": 17
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -13384,39 +9320,7 @@
   {
     "id": 128,
     "name": "コドラ",
-    "levels": {
-      "1": {
-        "value": 17.5
-      },
-      "30": {
-        "value": 32.6
-      },
-      "60": {
-        "value": 46.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 32.6
-        },
-        "totalValue": 32.6
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "マメミート": 9.3,
-          "めざましコーヒー": 14
-        },
-        "totalValue": 23.3
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -13494,39 +9398,7 @@
   {
     "id": 129,
     "name": "ボスゴドラ",
-    "levels": {
-      "1": {
-        "value": 25.2
-      },
-      "30": {
-        "value": 47
-      },
-      "60": {
-        "value": 66.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 47
-        },
-        "totalValue": 47
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "マメミート": 13.4,
-          "めざましコーヒー": 20.1
-        },
-        "totalValue": 33.5
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -13604,39 +9476,7 @@
   {
     "id": 130,
     "name": "プラスル",
-    "levels": {
-      "1": {
-        "value": 5.7
-      },
-      "30": {
-        "value": 9.1
-      },
-      "60": {
-        "value": 15.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 9.1
-        },
-        "totalValue": 9.1
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 3,
-          "ふといながねぎ": 6.1
-        },
-        "totalValue": 9.1
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -13714,39 +9554,7 @@
   {
     "id": 131,
     "name": "マイナン",
-    "levels": {
-      "1": {
-        "value": 9.6
-      },
-      "30": {
-        "value": 15.4
-      },
-      "60": {
-        "value": 25.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あまいミツ",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "あまいミツ": 15.4
-        },
-        "totalValue": 15.4
-      },
-      "AB": {
-        "ingredients": [
-          "あまいミツ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "あまいミツ": 5.1,
-          "とくせんエッグ": 10.2
-        },
-        "totalValue": 15.299999999999999
-      },
       "AAA": {
         "ingredients": [
           "あまいミツ",
@@ -13824,39 +9632,7 @@
   {
     "id": 132,
     "name": "ゴクリン",
-    "levels": {
-      "1": {
-        "value": 4.8
-      },
-      "30": {
-        "value": 7.7
-      },
-      "60": {
-        "value": 12.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 7.7
-        },
-        "totalValue": 7.7
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 2.6,
-          "あじわいキノコ": 2.6
-        },
-        "totalValue": 5.2
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -13934,39 +9710,7 @@
   {
     "id": 133,
     "name": "マルノーム",
-    "levels": {
-      "1": {
-        "value": 8
-      },
-      "30": {
-        "value": 12.7
-      },
-      "60": {
-        "value": 21.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 12.7
-        },
-        "totalValue": 12.7
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 4.2,
-          "あじわいキノコ": 4.2
-        },
-        "totalValue": 8.4
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -14044,39 +9788,7 @@
   {
     "id": 134,
     "name": "チルット",
-    "levels": {
-      "1": {
-        "value": 5.6
-      },
-      "30": {
-        "value": 8.9
-      },
-      "60": {
-        "value": 14.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 8.9
-        },
-        "totalValue": 8.9
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 3,
-          "ワカクサ大豆": 8.9
-        },
-        "totalValue": 11.9
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -14154,39 +9866,7 @@
   {
     "id": 135,
     "name": "チルタリス",
-    "levels": {
-      "1": {
-        "value": 9.8
-      },
-      "30": {
-        "value": 15.6
-      },
-      "60": {
-        "value": 26
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 15.6
-        },
-        "totalValue": 15.6
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 5.2,
-          "ワカクサ大豆": 15.6
-        },
-        "totalValue": 20.8
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -14264,39 +9944,7 @@
   {
     "id": 136,
     "name": "カゲボウズ",
-    "levels": {
-      "1": {
-        "value": 5.8
-      },
-      "30": {
-        "value": 9.3
-      },
-      "60": {
-        "value": 15.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 9.3
-        },
-        "totalValue": 9.3
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 3.1,
-          "あったかジンジャー": 6.2
-        },
-        "totalValue": 9.3
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -14374,39 +10022,7 @@
   {
     "id": 137,
     "name": "ジュペッタ",
-    "levels": {
-      "1": {
-        "value": 9.2
-      },
-      "30": {
-        "value": 14.6
-      },
-      "60": {
-        "value": 24.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 14.6
-        },
-        "totalValue": 14.6
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 4.9,
-          "あったかジンジャー": 9.7
-        },
-        "totalValue": 14.6
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -14484,39 +10100,7 @@
   {
     "id": 138,
     "name": "アブソル",
-    "levels": {
-      "1": {
-        "value": 16
-      },
-      "30": {
-        "value": 29.9
-      },
-      "60": {
-        "value": 42.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 29.9
-        },
-        "totalValue": 29.9
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 8.5,
-          "とくせんリンゴ": 34.1
-        },
-        "totalValue": 42.6
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -14594,39 +10178,7 @@
   {
     "id": 139,
     "name": "ソーナノ",
-    "levels": {
-      "1": {
-        "value": 4.9
-      },
-      "30": {
-        "value": 7.8
-      },
-      "60": {
-        "value": 12.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 7.8
-        },
-        "totalValue": 7.8
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 2.6,
-          "あじわいキノコ": 2.6
-        },
-        "totalValue": 5.2
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -14704,39 +10256,7 @@
   {
     "id": 140,
     "name": "タマザラシ",
-    "levels": {
-      "1": {
-        "value": 5.3
-      },
-      "30": {
-        "value": 8.5
-      },
-      "60": {
-        "value": 14.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 8.5
-        },
-        "totalValue": 8.5
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 2.8,
-          "マメミート": 8.5
-        },
-        "totalValue": 11.3
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -14814,39 +10334,7 @@
   {
     "id": 141,
     "name": "トドグラー",
-    "levels": {
-      "1": {
-        "value": 7.4
-      },
-      "30": {
-        "value": 11.7
-      },
-      "60": {
-        "value": 19.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 11.7
-        },
-        "totalValue": 11.7
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 3.9,
-          "マメミート": 11.7
-        },
-        "totalValue": 15.6
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -14924,39 +10412,7 @@
   {
     "id": 142,
     "name": "トドゼルガ",
-    "levels": {
-      "1": {
-        "value": 9.9
-      },
-      "30": {
-        "value": 15.8
-      },
-      "60": {
-        "value": 26.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 15.8
-        },
-        "totalValue": 15.8
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 5.3,
-          "マメミート": 15.8
-        },
-        "totalValue": 21.1
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -15034,39 +10490,7 @@
   {
     "id": 143,
     "name": "コリンク",
-    "levels": {
-      "1": {
-        "value": 10.9
-      },
-      "30": {
-        "value": 20.4
-      },
-      "60": {
-        "value": 29
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 20.4
-        },
-        "totalValue": 20.4
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あんみんトマト": 5.8,
-          "ピュアなオイル": 11.6
-        },
-        "totalValue": 17.4
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -15144,39 +10568,7 @@
   {
     "id": 144,
     "name": "ルクシオ",
-    "levels": {
-      "1": {
-        "value": 15.1
-      },
-      "30": {
-        "value": 28.1
-      },
-      "60": {
-        "value": 40.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 28.1
-        },
-        "totalValue": 28.1
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あんみんトマト": 8,
-          "ピュアなオイル": 16.1
-        },
-        "totalValue": 24.1
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -15254,39 +10646,7 @@
   {
     "id": 145,
     "name": "レントラー",
-    "levels": {
-      "1": {
-        "value": 22.1
-      },
-      "30": {
-        "value": 41.2
-      },
-      "60": {
-        "value": 58.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 41.2
-        },
-        "totalValue": 41.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "あんみんトマト": 11.8,
-          "ピュアなオイル": 23.6
-        },
-        "totalValue": 35.400000000000006
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -15364,39 +10724,7 @@
   {
     "id": 146,
     "name": "フワンテ",
-    "levels": {
-      "1": {
-        "value": 3.8
-      },
-      "30": {
-        "value": 6.1
-      },
-      "60": {
-        "value": 10.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 6.1
-        },
-        "totalValue": 6.1
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 2,
-          "ピュアなオイル": 6.1
-        },
-        "totalValue": 8.1
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -15474,39 +10802,7 @@
   {
     "id": 147,
     "name": "フワライド",
-    "levels": {
-      "1": {
-        "value": 6.8
-      },
-      "30": {
-        "value": 10.9
-      },
-      "60": {
-        "value": 18
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 10.9
-        },
-        "totalValue": 10.9
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 3.6,
-          "ピュアなオイル": 10.9
-        },
-        "totalValue": 14.5
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -15584,39 +10880,7 @@
   {
     "id": 148,
     "name": "ドンカラス",
-    "levels": {
-      "1": {
-        "value": 5.9
-      },
-      "30": {
-        "value": 9.5
-      },
-      "60": {
-        "value": 15.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 9.5
-        },
-        "totalValue": 9.5
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 3.2,
-          "ワカクサ大豆": 9.5
-        },
-        "totalValue": 12.7
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -15694,39 +10958,7 @@
   {
     "id": 149,
     "name": "ウソハチ",
-    "levels": {
-      "1": {
-        "value": 4
-      },
-      "30": {
-        "value": 6.4
-      },
-      "60": {
-        "value": 10.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.4
-        },
-        "totalValue": 6.4
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "あんみんトマト": 2.1,
-          "ワカクサ大豆": 4.2
-        },
-        "totalValue": 6.300000000000001
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -15804,39 +11036,7 @@
   {
     "id": 150,
     "name": "マネネ",
-    "levels": {
-      "1": {
-        "value": 12.4
-      },
-      "30": {
-        "value": 23.1
-      },
-      "60": {
-        "value": 32.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 23.1
-        },
-        "totalValue": 23.1
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.6,
-          "ほっこりポテト": 13.2
-        },
-        "totalValue": 19.799999999999997
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -15914,39 +11114,7 @@
   {
     "id": 151,
     "name": "ピンプク",
-    "levels": {
-      "1": {
-        "value": 12.4
-      },
-      "30": {
-        "value": 23.1
-      },
-      "60": {
-        "value": 32.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 23.1
-        },
-        "totalValue": 23.1
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 6.6,
-          "ほっこりポテト": 13.2
-        },
-        "totalValue": 19.799999999999997
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -16024,39 +11192,7 @@
   {
     "id": 152,
     "name": "リオル",
-    "levels": {
-      "1": {
-        "value": 4
-      },
-      "30": {
-        "value": 6.4
-      },
-      "60": {
-        "value": 10.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 6.4
-        },
-        "totalValue": 6.4
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 2.1,
-          "ほっこりポテト": 4.2
-        },
-        "totalValue": 6.300000000000001
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -16134,39 +11270,7 @@
   {
     "id": 153,
     "name": "ルカリオ",
-    "levels": {
-      "1": {
-        "value": 7.7
-      },
-      "30": {
-        "value": 12.2
-      },
-      "60": {
-        "value": 20.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 12.2
-        },
-        "totalValue": 12.2
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 4.1,
-          "ほっこりポテト": 8.2
-        },
-        "totalValue": 12.299999999999999
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -16244,39 +11348,7 @@
   {
     "id": 154,
     "name": "グレッグル",
-    "levels": {
-      "1": {
-        "value": 10.8
-      },
-      "30": {
-        "value": 20.1
-      },
-      "60": {
-        "value": 28.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 20.1
-        },
-        "totalValue": 20.1
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 5.8,
-          "マメミート": 14.4
-        },
-        "totalValue": 20.2
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -16305,39 +11377,7 @@
   {
     "id": 155,
     "name": "ドクロッグ",
-    "levels": {
-      "1": {
-        "value": 17.9
-      },
-      "30": {
-        "value": 33.3
-      },
-      "60": {
-        "value": 47.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 33.3
-        },
-        "totalValue": 33.3
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 9.5,
-          "マメミート": 23.8
-        },
-        "totalValue": 33.3
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -16366,39 +11406,7 @@
   {
     "id": 156,
     "name": "ユキカブリ",
-    "levels": {
-      "1": {
-        "value": 11.9
-      },
-      "30": {
-        "value": 22.2
-      },
-      "60": {
-        "value": 31.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 22.2
-        },
-        "totalValue": 22.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 6.3,
-          "とくせんエッグ": 12.7
-        },
-        "totalValue": 19
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -16476,39 +11484,7 @@
   {
     "id": 157,
     "name": "ユキノオー",
-    "levels": {
-      "1": {
-        "value": 22.2
-      },
-      "30": {
-        "value": 41.2
-      },
-      "60": {
-        "value": 58.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あんみんトマト",
-          "あんみんトマト"
-        ],
-        "individualValues": {
-          "あんみんトマト": 41.2
-        },
-        "totalValue": 41.2
-      },
-      "AB": {
-        "ingredients": [
-          "あんみんトマト",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "あんみんトマト": 11.8,
-          "とくせんエッグ": 23.6
-        },
-        "totalValue": 35.400000000000006
-      },
       "AAA": {
         "ingredients": [
           "あんみんトマト",
@@ -16586,39 +11562,7 @@
   {
     "id": 158,
     "name": "マニューラ",
-    "levels": {
-      "1": {
-        "value": 12.4
-      },
-      "30": {
-        "value": 19.7
-      },
-      "60": {
-        "value": 32.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 19.7
-        },
-        "totalValue": 19.7
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "マメミート": 6.6,
-          "とくせんエッグ": 13.1
-        },
-        "totalValue": 19.7
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -16696,39 +11640,7 @@
   {
     "id": 159,
     "name": "ジバコイル",
-    "levels": {
-      "1": {
-        "value": 7.7
-      },
-      "30": {
-        "value": 12.2
-      },
-      "60": {
-        "value": 20.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 12.2
-        },
-        "totalValue": 12.2
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "げきからハーブ"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 4.1,
-          "げきからハーブ": 8.2
-        },
-        "totalValue": 12.299999999999999
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -16757,39 +11669,7 @@
   {
     "id": 160,
     "name": "トゲキッス",
-    "levels": {
-      "1": {
-        "value": 8.1
-      },
-      "30": {
-        "value": 12.9
-      },
-      "60": {
-        "value": 21.4
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんエッグ",
-          "とくせんエッグ"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 12.9
-        },
-        "totalValue": 12.9
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんエッグ",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "とくせんエッグ": 4.3,
-          "あったかジンジャー": 8.6
-        },
-        "totalValue": 12.899999999999999
-      },
       "AAA": {
         "ingredients": [
           "とくせんエッグ",
@@ -16867,39 +11747,7 @@
   {
     "id": 161,
     "name": "リーフィア",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -16977,39 +11825,7 @@
   {
     "id": 162,
     "name": "グレイシア",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -17087,39 +11903,7 @@
   {
     "id": 163,
     "name": "エルレイド",
-    "levels": {
-      "1": {
-        "value": 8.2
-      },
-      "30": {
-        "value": 13
-      },
-      "60": {
-        "value": 21.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 13
-        },
-        "totalValue": 13
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 4.3,
-          "ワカクサコーン": 4.3
-        },
-        "totalValue": 8.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -17197,39 +11981,7 @@
   {
     "id": 164,
     "name": "クレセリア",
-    "levels": {
-      "1": {
-        "value": 13.8
-      },
-      "30": {
-        "value": 22
-      },
-      "60": {
-        "value": 36.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "あったかジンジャー",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 22
-        },
-        "totalValue": 22
-      },
-      "AB": {
-        "ingredients": [
-          "あったかジンジャー",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "あったかジンジャー": 7.3,
-          "リラックスカカオ": 14.7
-        },
-        "totalValue": 22
-      },
       "AAA": {
         "ingredients": [
           "あったかジンジャー",
@@ -17307,38 +12059,7 @@
   {
     "id": 165,
     "name": "ダークライ",
-    "levels": {
-      "1": {
-        "value": 17.6
-      },
-      "30": {
-        "value": 9.4
-      },
-      "60": {
-        "value": 6.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 9.4
-        },
-        "totalValue": 9.4
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 0
-        },
-        "totalValue": 9.4
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -17410,39 +12131,7 @@
   {
     "id": 166,
     "name": "ムンナ",
-    "levels": {
-      "1": {
-        "value": 4.6
-      },
-      "30": {
-        "value": 7.3
-      },
-      "60": {
-        "value": 12.2
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 7.3
-        },
-        "totalValue": 7.3
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 2.4,
-          "あまいミツ": 4.9
-        },
-        "totalValue": 7.300000000000001
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -17520,39 +12209,7 @@
   {
     "id": 167,
     "name": "ムシャーナ",
-    "levels": {
-      "1": {
-        "value": 8.9
-      },
-      "30": {
-        "value": 14.2
-      },
-      "60": {
-        "value": 23.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.2
-        },
-        "totalValue": 14.2
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "あまいミツ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.7,
-          "あまいミツ": 9.5
-        },
-        "totalValue": 14.2
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -17630,39 +12287,7 @@
   {
     "id": 168,
     "name": "ワシボン",
-    "levels": {
-      "1": {
-        "value": 4.4
-      },
-      "30": {
-        "value": 7
-      },
-      "60": {
-        "value": 11.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 7
-        },
-        "totalValue": 7
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "マメミート": 2.3,
-          "ワカクサコーン": 4.7
-        },
-        "totalValue": 7
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -17740,39 +12365,7 @@
   {
     "id": 169,
     "name": "ウォーグル",
-    "levels": {
-      "1": {
-        "value": 6.7
-      },
-      "30": {
-        "value": 10.7
-      },
-      "60": {
-        "value": 17.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "マメミート",
-          "マメミート"
-        ],
-        "individualValues": {
-          "マメミート": 10.7
-        },
-        "totalValue": 10.7
-      },
-      "AB": {
-        "ingredients": [
-          "マメミート",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "マメミート": 3.6,
-          "ワカクサコーン": 7.1
-        },
-        "totalValue": 10.7
-      },
       "AAA": {
         "ingredients": [
           "マメミート",
@@ -17850,39 +12443,7 @@
   {
     "id": 170,
     "name": "ニンフィア",
-    "levels": {
-      "1": {
-        "value": 9.1
-      },
-      "30": {
-        "value": 14.5
-      },
-      "60": {
-        "value": 24.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "モーモーミルク",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "モーモーミルク": 14.5
-        },
-        "totalValue": 14.5
-      },
-      "AB": {
-        "ingredients": [
-          "モーモーミルク",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "モーモーミルク": 4.8,
-          "リラックスカカオ": 4.8
-        },
-        "totalValue": 9.6
-      },
       "AAA": {
         "ingredients": [
           "モーモーミルク",
@@ -17960,39 +12521,7 @@
   {
     "id": 171,
     "name": "デデンネ",
-    "levels": {
-      "1": {
-        "value": 9.4
-      },
-      "30": {
-        "value": 15
-      },
-      "60": {
-        "value": 24.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 15
-        },
-        "totalValue": 15
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 5,
-          "リラックスカカオ": 5
-        },
-        "totalValue": 10
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -18070,39 +12599,7 @@
   {
     "id": 172,
     "name": "アゴジムシ",
-    "levels": {
-      "1": {
-        "value": 9
-      },
-      "30": {
-        "value": 16.7
-      },
-      "60": {
-        "value": 23.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 16.7
-        },
-        "totalValue": 16.7
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 4.8,
-          "あじわいキノコ": 9.5
-        },
-        "totalValue": 14.3
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -18180,39 +12677,7 @@
   {
     "id": 173,
     "name": "デンヂムシ",
-    "levels": {
-      "1": {
-        "value": 12.4
-      },
-      "30": {
-        "value": 23.1
-      },
-      "60": {
-        "value": 32.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 23.1
-        },
-        "totalValue": 23.1
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 6.6,
-          "あじわいキノコ": 13.2
-        },
-        "totalValue": 19.799999999999997
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -18290,39 +12755,7 @@
   {
     "id": 174,
     "name": "クワガノン",
-    "levels": {
-      "1": {
-        "value": 18.4
-      },
-      "30": {
-        "value": 34.3
-      },
-      "60": {
-        "value": 48.8
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "めざましコーヒー",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 34.3
-        },
-        "totalValue": 34.3
-      },
-      "AB": {
-        "ingredients": [
-          "めざましコーヒー",
-          "あじわいキノコ"
-        ],
-        "individualValues": {
-          "めざましコーヒー": 9.8,
-          "あじわいキノコ": 19.6
-        },
-        "totalValue": 29.400000000000002
-      },
       "AAA": {
         "ingredients": [
           "めざましコーヒー",
@@ -18400,39 +12833,7 @@
   {
     "id": 175,
     "name": "ヌイコグマ",
-    "levels": {
-      "1": {
-        "value": 14.6
-      },
-      "30": {
-        "value": 27.2
-      },
-      "60": {
-        "value": 38.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 27.2
-        },
-        "totalValue": 27.2
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 7.8,
-          "マメミート": 23.3
-        },
-        "totalValue": 31.1
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -18510,39 +12911,7 @@
   {
     "id": 176,
     "name": "キテルグマ",
-    "levels": {
-      "1": {
-        "value": 21.8
-      },
-      "30": {
-        "value": 40.5
-      },
-      "60": {
-        "value": 57.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 40.5
-        },
-        "totalValue": 40.5
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "マメミート"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 11.6,
-          "マメミート": 34.7
-        },
-        "totalValue": 46.300000000000004
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -18620,39 +12989,7 @@
   {
     "id": 177,
     "name": "キュワワー",
-    "levels": {
-      "1": {
-        "value": 17.8
-      },
-      "30": {
-        "value": 28.3
-      },
-      "60": {
-        "value": 43.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサコーン",
-          "ワカクサコーン"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 28.3
-        },
-        "totalValue": 28.3
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサコーン",
-          "あったかジンジャー"
-        ],
-        "individualValues": {
-          "ワカクサコーン": 9.4,
-          "あったかジンジャー": 28.3
-        },
-        "totalValue": 37.7
-      },
       "AAA": {
         "ingredients": [
           "ワカクサコーン",
@@ -18730,39 +13067,7 @@
   {
     "id": 178,
     "name": "ミミッキュ",
-    "levels": {
-      "1": {
-        "value": 8.1
-      },
-      "30": {
-        "value": 13
-      },
-      "60": {
-        "value": 21.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 13
-        },
-        "totalValue": 13
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 4.3,
-          "めざましコーヒー": 4.3
-        },
-        "totalValue": 8.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -18840,39 +13145,7 @@
   {
     "id": 179,
     "name": "ウッウ",
-    "levels": {
-      "1": {
-        "value": 16.3
-      },
-      "30": {
-        "value": 30.2
-      },
-      "60": {
-        "value": 43.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ピュアなオイル"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 30.2
-        },
-        "totalValue": 30.2
-      },
-      "AB": {
-        "ingredients": [
-          "ピュアなオイル",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ピュアなオイル": 8.6,
-          "ほっこりポテト": 17.3
-        },
-        "totalValue": 25.9
-      },
       "AAA": {
         "ingredients": [
           "ピュアなオイル",
@@ -18950,39 +13223,7 @@
   {
     "id": 180,
     "name": "ニャオハ",
-    "levels": {
-      "1": {
-        "value": 12
-      },
-      "30": {
-        "value": 22.4
-      },
-      "60": {
-        "value": 31.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ほっこりポテト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 22.4
-        },
-        "totalValue": 22.4
-      },
-      "AB": {
-        "ingredients": [
-          "ほっこりポテト",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 6.4,
-          "モーモーミルク": 19.2
-        },
-        "totalValue": 25.6
-      },
       "AAA": {
         "ingredients": [
           "ほっこりポテト",
@@ -19060,39 +13301,7 @@
   {
     "id": 181,
     "name": "ニャローテ",
-    "levels": {
-      "1": {
-        "value": 15.9
-      },
-      "30": {
-        "value": 29.5
-      },
-      "60": {
-        "value": 42.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ほっこりポテト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 29.5
-        },
-        "totalValue": 29.5
-      },
-      "AB": {
-        "ingredients": [
-          "ほっこりポテト",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 8.4,
-          "モーモーミルク": 25.3
-        },
-        "totalValue": 33.7
-      },
       "AAA": {
         "ingredients": [
           "ほっこりポテト",
@@ -19170,39 +13379,7 @@
   {
     "id": 182,
     "name": "マスカーニャ",
-    "levels": {
-      "1": {
-        "value": 19.5
-      },
-      "30": {
-        "value": 36.2
-      },
-      "60": {
-        "value": 51.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ほっこりポテト",
-          "ほっこりポテト"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 36.2
-        },
-        "totalValue": 36.2
-      },
-      "AB": {
-        "ingredients": [
-          "ほっこりポテト",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "ほっこりポテト": 10.3,
-          "モーモーミルク": 31
-        },
-        "totalValue": 41.3
-      },
       "AAA": {
         "ingredients": [
           "ほっこりポテト",
@@ -19280,39 +13457,7 @@
   {
     "id": 183,
     "name": "ホゲータ",
-    "levels": {
-      "1": {
-        "value": 16.1
-      },
-      "30": {
-        "value": 29.9
-      },
-      "60": {
-        "value": 42.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 29.9
-        },
-        "totalValue": 29.9
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 8.5,
-          "マメミート": 17.1
-        },
-        "totalValue": 25.6
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -19390,39 +13535,7 @@
   {
     "id": 184,
     "name": "アチゲータ",
-    "levels": {
-      "1": {
-        "value": 21.2
-      },
-      "30": {
-        "value": 39.4
-      },
-      "60": {
-        "value": 56.1
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 39.4
-        },
-        "totalValue": 39.4
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 11.3,
-          "マメミート": 22.5
-        },
-        "totalValue": 33.8
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -19500,39 +13613,7 @@
   {
     "id": 185,
     "name": "ラウドボーン",
-    "levels": {
-      "1": {
-        "value": 26.4
-      },
-      "30": {
-        "value": 49.1
-      },
-      "60": {
-        "value": 69.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "とくせんリンゴ"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 49.1
-        },
-        "totalValue": 49.1
-      },
-      "AB": {
-        "ingredients": [
-          "とくせんリンゴ",
-          "マメミート"
-        ],
-        "individualValues": {
-          "とくせんリンゴ": 14,
-          "マメミート": 28.1
-        },
-        "totalValue": 42.1
-      },
       "AAA": {
         "ingredients": [
           "とくせんリンゴ",
@@ -19610,39 +13691,7 @@
   {
     "id": 186,
     "name": "クワッス",
-    "levels": {
-      "1": {
-        "value": 14.5
-      },
-      "30": {
-        "value": 26.9
-      },
-      "60": {
-        "value": 38.3
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 26.9
-        },
-        "totalValue": 26.9
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 7.7,
-          "ふといながねぎ": 7.7
-        },
-        "totalValue": 15.4
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -19720,39 +13769,7 @@
   {
     "id": 187,
     "name": "ウェルカモ",
-    "levels": {
-      "1": {
-        "value": 19.2
-      },
-      "30": {
-        "value": 35.6
-      },
-      "60": {
-        "value": 50.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 35.6
-        },
-        "totalValue": 35.6
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 10.2,
-          "ふといながねぎ": 10.2
-        },
-        "totalValue": 20.4
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -19830,39 +13847,7 @@
   {
     "id": 188,
     "name": "ウェーニバル",
-    "levels": {
-      "1": {
-        "value": 23.8
-      },
-      "30": {
-        "value": 44.2
-      },
-      "60": {
-        "value": 62.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ワカクサ大豆"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 44.2
-        },
-        "totalValue": 44.2
-      },
-      "AB": {
-        "ingredients": [
-          "ワカクサ大豆",
-          "ふといながねぎ"
-        ],
-        "individualValues": {
-          "ワカクサ大豆": 12.6,
-          "ふといながねぎ": 12.6
-        },
-        "totalValue": 25.2
-      },
       "AAA": {
         "ingredients": [
           "ワカクサ大豆",
@@ -19940,39 +13925,7 @@
   {
     "id": 189,
     "name": "パモ",
-    "levels": {
-      "1": {
-        "value": 3.2
-      },
-      "30": {
-        "value": 5.1
-      },
-      "60": {
-        "value": 8.5
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 5.1
-        },
-        "totalValue": 5.1
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 1.7,
-          "モーモーミルク": 5.1
-        },
-        "totalValue": 6.8
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -20050,39 +14003,7 @@
   {
     "id": 190,
     "name": "パモット",
-    "levels": {
-      "1": {
-        "value": 4.4
-      },
-      "30": {
-        "value": 7
-      },
-      "60": {
-        "value": 11.6
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 7
-        },
-        "totalValue": 7
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 2.3,
-          "モーモーミルク": 7
-        },
-        "totalValue": 9.3
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -20160,39 +14081,7 @@
   {
     "id": 191,
     "name": "パーモット",
-    "levels": {
-      "1": {
-        "value": 7.8
-      },
-      "30": {
-        "value": 12.5
-      },
-      "60": {
-        "value": 20.7
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 12.5
-        },
-        "totalValue": 12.5
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "モーモーミルク"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 4.2,
-          "モーモーミルク": 12.5
-        },
-        "totalValue": 16.7
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
@@ -20270,39 +14159,7 @@
   {
     "id": 192,
     "name": "ドオー",
-    "levels": {
-      "1": {
-        "value": 15.8
-      },
-      "30": {
-        "value": 29.4
-      },
-      "60": {
-        "value": 41.9
-      }
-    },
     "ingredientPatterns": {
-      "AA": {
-        "ingredients": [
-          "リラックスカカオ",
-          "リラックスカカオ"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 29.4
-        },
-        "totalValue": 29.4
-      },
-      "AB": {
-        "ingredients": [
-          "リラックスカカオ",
-          "めざましコーヒー"
-        ],
-        "individualValues": {
-          "リラックスカカオ": 8.4,
-          "めざましコーヒー": 16.8
-        },
-        "totalValue": 25.200000000000003
-      },
       "AAA": {
         "ingredients": [
           "リラックスカカオ",
