@@ -1112,7 +1112,7 @@
           "あんみんトマト"
         ],
         "individualValues": {
-          "あんみんトマト": 47.8
+          "あんみんトマト": 51.1
         }
       },
       "AAC": {
@@ -1122,8 +1122,8 @@
           "ワカクサ大豆"
         ],
         "individualValues": {
-          "あんみんトマト": 23.9,
-          "ワカクサ大豆": 27.3
+          "あんみんトマト": 25.5,
+          "ワカクサ大豆": 29.2
         }
       },
       "ABB": {
@@ -1133,8 +1133,8 @@
           "ふといながねぎ"
         ],
         "individualValues": {
-          "あんみんトマト": 6.8,
-          "ふといながねぎ": 23.9
+          "あんみんトマト": 7.3,
+          "ふといながねぎ": 25.5
         }
       }
     }
@@ -2083,7 +2083,7 @@
           "あったかジンジャー"
         ],
         "individualValues": {
-          "あったかジンジャー": 22.7
+          "あったかジンジャー": 23.8
         }
       },
       "ABB": {
@@ -2093,8 +2093,8 @@
           "リラックスカカオ"
         ],
         "individualValues": {
-          "あったかジンジャー": 3.2,
-          "リラックスカカオ": 16.2
+          "あったかジンジャー": 3.4,
+          "リラックスカカオ": 17
         }
       }
     }
@@ -2367,6 +2367,44 @@
   },
   {
     "id": 65,
+    "name": "イーブイ(ハロウィン)",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 13.2
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "モーモーミルク"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 5.7,
+          "モーモーミルク": 17
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "リラックスカカオ",
+          "リラックスカカオ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 1.9,
+          "リラックスカカオ": 18.9
+        }
+      }
+    }
+  },
+  {
+    "id": 66,
     "name": "シャワーズ",
     "ingredientPatterns": {
       "AAA": {
@@ -2404,7 +2442,7 @@
     }
   },
   {
-    "id": 66,
+    "id": 67,
     "name": "サンダース",
     "ingredientPatterns": {
       "AAA": {
@@ -2442,7 +2480,7 @@
     }
   },
   {
-    "id": 67,
+    "id": 68,
     "name": "ブースター",
     "ingredientPatterns": {
       "AAA": {
@@ -2480,7 +2518,7 @@
     }
   },
   {
-    "id": 68,
+    "id": 69,
     "name": "ミニリュウ",
     "ingredientPatterns": {
       "AAA": {
@@ -2518,7 +2556,7 @@
     }
   },
   {
-    "id": 69,
+    "id": 70,
     "name": "ハクリュー",
     "ingredientPatterns": {
       "AAA": {
@@ -2556,7 +2594,7 @@
     }
   },
   {
-    "id": 70,
+    "id": 71,
     "name": "カイリュー",
     "ingredientPatterns": {
       "AAA": {
@@ -2594,7 +2632,7 @@
     }
   },
   {
-    "id": 71,
+    "id": 72,
     "name": "チコリータ",
     "ingredientPatterns": {
       "AAA": {
@@ -2632,7 +2670,7 @@
     }
   },
   {
-    "id": 72,
+    "id": 73,
     "name": "ベイリーフ",
     "ingredientPatterns": {
       "AAA": {
@@ -2670,7 +2708,7 @@
     }
   },
   {
-    "id": 73,
+    "id": 74,
     "name": "メガニウム",
     "ingredientPatterns": {
       "AAA": {
@@ -2708,7 +2746,7 @@
     }
   },
   {
-    "id": 74,
+    "id": 75,
     "name": "ヒノアラシ",
     "ingredientPatterns": {
       "AAA": {
@@ -2746,7 +2784,7 @@
     }
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "マグマラシ",
     "ingredientPatterns": {
       "AAA": {
@@ -2784,7 +2822,7 @@
     }
   },
   {
-    "id": 76,
+    "id": 77,
     "name": "バクフーン",
     "ingredientPatterns": {
       "AAA": {
@@ -2822,7 +2860,7 @@
     }
   },
   {
-    "id": 77,
+    "id": 78,
     "name": "ワニノコ",
     "ingredientPatterns": {
       "AAA": {
@@ -2849,7 +2887,7 @@
     }
   },
   {
-    "id": 78,
+    "id": 79,
     "name": "アリゲイツ",
     "ingredientPatterns": {
       "AAA": {
@@ -2876,7 +2914,7 @@
     }
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "オーダイル",
     "ingredientPatterns": {
       "AAA": {
@@ -2903,7 +2941,7 @@
     }
   },
   {
-    "id": 80,
+    "id": 81,
     "name": "ピチュー",
     "ingredientPatterns": {
       "AAA": {
@@ -2941,7 +2979,7 @@
     }
   },
   {
-    "id": 81,
+    "id": 82,
     "name": "ピィ",
     "ingredientPatterns": {
       "AAA": {
@@ -2979,7 +3017,7 @@
     }
   },
   {
-    "id": 82,
+    "id": 83,
     "name": "ププリン",
     "ingredientPatterns": {
       "AAA": {
@@ -3017,7 +3055,7 @@
     }
   },
   {
-    "id": 83,
+    "id": 84,
     "name": "トゲピー",
     "ingredientPatterns": {
       "AAA": {
@@ -3055,7 +3093,7 @@
     }
   },
   {
-    "id": 84,
+    "id": 85,
     "name": "トゲチック",
     "ingredientPatterns": {
       "AAA": {
@@ -3093,7 +3131,83 @@
     }
   },
   {
-    "id": 85,
+    "id": 86,
+    "name": "ネイティ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "とくせんエッグ",
+          "とくせんエッグ",
+          "とくせんエッグ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 14.5
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "とくせんエッグ",
+          "とくせんエッグ",
+          "とくせんリンゴ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 6.2,
+          "とくせんリンゴ": 10.3
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "とくせんエッグ",
+          "リラックスカカオ",
+          "リラックスカカオ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 2.1,
+          "リラックスカカオ": 10.3
+        }
+      }
+    }
+  },
+  {
+    "id": 87,
+    "name": "ネイティオ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "とくせんエッグ",
+          "とくせんエッグ",
+          "とくせんエッグ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 26.9
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "とくせんエッグ",
+          "とくせんエッグ",
+          "とくせんリンゴ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 11.5,
+          "とくせんリンゴ": 19.2
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "とくせんエッグ",
+          "リラックスカカオ",
+          "リラックスカカオ"
+        ],
+        "individualValues": {
+          "とくせんエッグ": 3.8,
+          "リラックスカカオ": 19.2
+        }
+      }
+    }
+  },
+  {
+    "id": 88,
     "name": "メリープ",
     "ingredientPatterns": {
       "AAA": {
@@ -3120,7 +3234,7 @@
     }
   },
   {
-    "id": 86,
+    "id": 89,
     "name": "モココ",
     "ingredientPatterns": {
       "AAA": {
@@ -3147,7 +3261,7 @@
     }
   },
   {
-    "id": 87,
+    "id": 90,
     "name": "デンリュウ",
     "ingredientPatterns": {
       "AAA": {
@@ -3174,7 +3288,7 @@
     }
   },
   {
-    "id": 88,
+    "id": 91,
     "name": "ウソッキー",
     "ingredientPatterns": {
       "AAA": {
@@ -3212,7 +3326,7 @@
     }
   },
   {
-    "id": 89,
+    "id": 92,
     "name": "ウパー",
     "ingredientPatterns": {
       "AAA": {
@@ -3250,7 +3364,7 @@
     }
   },
   {
-    "id": 90,
+    "id": 93,
     "name": "ウパー(パルデア)",
     "ingredientPatterns": {
       "AAA": {
@@ -3288,7 +3402,7 @@
     }
   },
   {
-    "id": 91,
+    "id": 94,
     "name": "ヌオー",
     "ingredientPatterns": {
       "AAA": {
@@ -3326,7 +3440,7 @@
     }
   },
   {
-    "id": 92,
+    "id": 95,
     "name": "エーフィ",
     "ingredientPatterns": {
       "AAA": {
@@ -3364,7 +3478,7 @@
     }
   },
   {
-    "id": 93,
+    "id": 96,
     "name": "ブラッキー",
     "ingredientPatterns": {
       "AAA": {
@@ -3402,7 +3516,7 @@
     }
   },
   {
-    "id": 94,
+    "id": 97,
     "name": "ヤミカラス",
     "ingredientPatterns": {
       "AAA": {
@@ -3440,7 +3554,7 @@
     }
   },
   {
-    "id": 95,
+    "id": 98,
     "name": "ヤドキング",
     "ingredientPatterns": {
       "AAA": {
@@ -3478,7 +3592,7 @@
     }
   },
   {
-    "id": 96,
+    "id": 99,
     "name": "ソーナンス",
     "ingredientPatterns": {
       "AAA": {
@@ -3516,7 +3630,7 @@
     }
   },
   {
-    "id": 97,
+    "id": 100,
     "name": "ハガネール",
     "ingredientPatterns": {
       "AAA": {
@@ -3554,7 +3668,7 @@
     }
   },
   {
-    "id": 98,
+    "id": 101,
     "name": "ヘラクロス",
     "ingredientPatterns": {
       "AAA": {
@@ -3592,7 +3706,7 @@
     }
   },
   {
-    "id": 99,
+    "id": 102,
     "name": "ニューラ",
     "ingredientPatterns": {
       "AAA": {
@@ -3630,7 +3744,7 @@
     }
   },
   {
-    "id": 100,
+    "id": 103,
     "name": "デリバード",
     "ingredientPatterns": {
       "AAA": {
@@ -3668,7 +3782,7 @@
     }
   },
   {
-    "id": 101,
+    "id": 104,
     "name": "デルビル",
     "ingredientPatterns": {
       "AAA": {
@@ -3706,7 +3820,7 @@
     }
   },
   {
-    "id": 102,
+    "id": 105,
     "name": "ヘルガー",
     "ingredientPatterns": {
       "AAA": {
@@ -3744,7 +3858,7 @@
     }
   },
   {
-    "id": 103,
+    "id": 106,
     "name": "ハピナス",
     "ingredientPatterns": {
       "AAA": {
@@ -3782,7 +3896,7 @@
     }
   },
   {
-    "id": 104,
+    "id": 107,
     "name": "ライコウ",
     "ingredientPatterns": {
       "AAA": {
@@ -3820,7 +3934,7 @@
     }
   },
   {
-    "id": 105,
+    "id": 108,
     "name": "エンテイ",
     "ingredientPatterns": {
       "AAA": {
@@ -3858,7 +3972,7 @@
     }
   },
   {
-    "id": 106,
+    "id": 109,
     "name": "スイクン",
     "ingredientPatterns": {
       "AAA": {
@@ -3896,7 +4010,7 @@
     }
   },
   {
-    "id": 107,
+    "id": 110,
     "name": "ヨーギラス",
     "ingredientPatterns": {
       "AAA": {
@@ -3934,7 +4048,7 @@
     }
   },
   {
-    "id": 108,
+    "id": 111,
     "name": "サナギラス",
     "ingredientPatterns": {
       "AAA": {
@@ -3972,7 +4086,7 @@
     }
   },
   {
-    "id": 109,
+    "id": 112,
     "name": "バンギラス",
     "ingredientPatterns": {
       "AAA": {
@@ -4010,7 +4124,7 @@
     }
   },
   {
-    "id": 110,
+    "id": 113,
     "name": "キモリ",
     "ingredientPatterns": {
       "AAA": {
@@ -4048,7 +4162,7 @@
     }
   },
   {
-    "id": 111,
+    "id": 114,
     "name": "ジュプトル",
     "ingredientPatterns": {
       "AAA": {
@@ -4086,7 +4200,7 @@
     }
   },
   {
-    "id": 112,
+    "id": 115,
     "name": "ジュカイン",
     "ingredientPatterns": {
       "AAA": {
@@ -4124,7 +4238,7 @@
     }
   },
   {
-    "id": 113,
+    "id": 116,
     "name": "アチャモ",
     "ingredientPatterns": {
       "AAA": {
@@ -4162,7 +4276,7 @@
     }
   },
   {
-    "id": 114,
+    "id": 117,
     "name": "ワカシャモ",
     "ingredientPatterns": {
       "AAA": {
@@ -4200,7 +4314,7 @@
     }
   },
   {
-    "id": 115,
+    "id": 118,
     "name": "バシャーモ",
     "ingredientPatterns": {
       "AAA": {
@@ -4238,7 +4352,7 @@
     }
   },
   {
-    "id": 116,
+    "id": 119,
     "name": "ミズゴロウ",
     "ingredientPatterns": {
       "AAA": {
@@ -4276,7 +4390,7 @@
     }
   },
   {
-    "id": 117,
+    "id": 120,
     "name": "ヌマクロー",
     "ingredientPatterns": {
       "AAA": {
@@ -4314,7 +4428,7 @@
     }
   },
   {
-    "id": 118,
+    "id": 121,
     "name": "ラグラージ",
     "ingredientPatterns": {
       "AAA": {
@@ -4352,7 +4466,7 @@
     }
   },
   {
-    "id": 119,
+    "id": 122,
     "name": "ラルトス",
     "ingredientPatterns": {
       "AAA": {
@@ -4390,7 +4504,7 @@
     }
   },
   {
-    "id": 120,
+    "id": 123,
     "name": "キルリア",
     "ingredientPatterns": {
       "AAA": {
@@ -4428,7 +4542,7 @@
     }
   },
   {
-    "id": 121,
+    "id": 124,
     "name": "サーナイト",
     "ingredientPatterns": {
       "AAA": {
@@ -4466,7 +4580,7 @@
     }
   },
   {
-    "id": 122,
+    "id": 125,
     "name": "ナマケロ",
     "ingredientPatterns": {
       "AAA": {
@@ -4504,7 +4618,7 @@
     }
   },
   {
-    "id": 123,
+    "id": 126,
     "name": "ヤルキモノ",
     "ingredientPatterns": {
       "AAA": {
@@ -4542,7 +4656,7 @@
     }
   },
   {
-    "id": 124,
+    "id": 127,
     "name": "ケッキング",
     "ingredientPatterns": {
       "AAA": {
@@ -4580,7 +4694,7 @@
     }
   },
   {
-    "id": 125,
+    "id": 128,
     "name": "ヤミラミ",
     "ingredientPatterns": {
       "AAA": {
@@ -4618,7 +4732,7 @@
     }
   },
   {
-    "id": 126,
+    "id": 129,
     "name": "クチート",
     "ingredientPatterns": {
       "AAA": {
@@ -4656,7 +4770,7 @@
     }
   },
   {
-    "id": 127,
+    "id": 130,
     "name": "ココドラ",
     "ingredientPatterns": {
       "AAA": {
@@ -4694,7 +4808,7 @@
     }
   },
   {
-    "id": 128,
+    "id": 131,
     "name": "コドラ",
     "ingredientPatterns": {
       "AAA": {
@@ -4732,7 +4846,7 @@
     }
   },
   {
-    "id": 129,
+    "id": 132,
     "name": "ボスゴドラ",
     "ingredientPatterns": {
       "AAA": {
@@ -4770,7 +4884,7 @@
     }
   },
   {
-    "id": 130,
+    "id": 133,
     "name": "プラスル",
     "ingredientPatterns": {
       "AAA": {
@@ -4808,7 +4922,7 @@
     }
   },
   {
-    "id": 131,
+    "id": 134,
     "name": "マイナン",
     "ingredientPatterns": {
       "AAA": {
@@ -4846,7 +4960,7 @@
     }
   },
   {
-    "id": 132,
+    "id": 135,
     "name": "ゴクリン",
     "ingredientPatterns": {
       "AAA": {
@@ -4884,7 +4998,7 @@
     }
   },
   {
-    "id": 133,
+    "id": 136,
     "name": "マルノーム",
     "ingredientPatterns": {
       "AAA": {
@@ -4922,7 +5036,7 @@
     }
   },
   {
-    "id": 134,
+    "id": 137,
     "name": "チルット",
     "ingredientPatterns": {
       "AAA": {
@@ -4960,7 +5074,7 @@
     }
   },
   {
-    "id": 135,
+    "id": 138,
     "name": "チルタリス",
     "ingredientPatterns": {
       "AAA": {
@@ -4998,7 +5112,7 @@
     }
   },
   {
-    "id": 136,
+    "id": 139,
     "name": "カゲボウズ",
     "ingredientPatterns": {
       "AAA": {
@@ -5036,7 +5150,7 @@
     }
   },
   {
-    "id": 137,
+    "id": 140,
     "name": "ジュペッタ",
     "ingredientPatterns": {
       "AAA": {
@@ -5074,7 +5188,7 @@
     }
   },
   {
-    "id": 138,
+    "id": 141,
     "name": "アブソル",
     "ingredientPatterns": {
       "AAA": {
@@ -5112,7 +5226,7 @@
     }
   },
   {
-    "id": 139,
+    "id": 142,
     "name": "ソーナノ",
     "ingredientPatterns": {
       "AAA": {
@@ -5150,7 +5264,7 @@
     }
   },
   {
-    "id": 140,
+    "id": 143,
     "name": "タマザラシ",
     "ingredientPatterns": {
       "AAA": {
@@ -5188,7 +5302,7 @@
     }
   },
   {
-    "id": 141,
+    "id": 144,
     "name": "トドグラー",
     "ingredientPatterns": {
       "AAA": {
@@ -5226,7 +5340,7 @@
     }
   },
   {
-    "id": 142,
+    "id": 145,
     "name": "トドゼルガ",
     "ingredientPatterns": {
       "AAA": {
@@ -5264,7 +5378,7 @@
     }
   },
   {
-    "id": 143,
+    "id": 146,
     "name": "コリンク",
     "ingredientPatterns": {
       "AAA": {
@@ -5302,7 +5416,7 @@
     }
   },
   {
-    "id": 144,
+    "id": 147,
     "name": "ルクシオ",
     "ingredientPatterns": {
       "AAA": {
@@ -5340,7 +5454,7 @@
     }
   },
   {
-    "id": 145,
+    "id": 148,
     "name": "レントラー",
     "ingredientPatterns": {
       "AAA": {
@@ -5378,7 +5492,7 @@
     }
   },
   {
-    "id": 146,
+    "id": 149,
     "name": "フワンテ",
     "ingredientPatterns": {
       "AAA": {
@@ -5416,7 +5530,7 @@
     }
   },
   {
-    "id": 147,
+    "id": 150,
     "name": "フワライド",
     "ingredientPatterns": {
       "AAA": {
@@ -5454,7 +5568,7 @@
     }
   },
   {
-    "id": 148,
+    "id": 151,
     "name": "ドンカラス",
     "ingredientPatterns": {
       "AAA": {
@@ -5492,7 +5606,7 @@
     }
   },
   {
-    "id": 149,
+    "id": 152,
     "name": "ウソハチ",
     "ingredientPatterns": {
       "AAA": {
@@ -5530,7 +5644,7 @@
     }
   },
   {
-    "id": 150,
+    "id": 153,
     "name": "マネネ",
     "ingredientPatterns": {
       "AAA": {
@@ -5568,7 +5682,7 @@
     }
   },
   {
-    "id": 151,
+    "id": 154,
     "name": "ピンプク",
     "ingredientPatterns": {
       "AAA": {
@@ -5606,7 +5720,7 @@
     }
   },
   {
-    "id": 152,
+    "id": 155,
     "name": "リオル",
     "ingredientPatterns": {
       "AAA": {
@@ -5644,7 +5758,7 @@
     }
   },
   {
-    "id": 153,
+    "id": 156,
     "name": "ルカリオ",
     "ingredientPatterns": {
       "AAA": {
@@ -5682,7 +5796,7 @@
     }
   },
   {
-    "id": 154,
+    "id": 157,
     "name": "グレッグル",
     "ingredientPatterns": {
       "AAA": {
@@ -5709,7 +5823,7 @@
     }
   },
   {
-    "id": 155,
+    "id": 158,
     "name": "ドクロッグ",
     "ingredientPatterns": {
       "AAA": {
@@ -5736,7 +5850,7 @@
     }
   },
   {
-    "id": 156,
+    "id": 159,
     "name": "ユキカブリ",
     "ingredientPatterns": {
       "AAA": {
@@ -5774,7 +5888,7 @@
     }
   },
   {
-    "id": 157,
+    "id": 160,
     "name": "ユキノオー",
     "ingredientPatterns": {
       "AAA": {
@@ -5812,7 +5926,7 @@
     }
   },
   {
-    "id": 158,
+    "id": 161,
     "name": "マニューラ",
     "ingredientPatterns": {
       "AAA": {
@@ -5850,7 +5964,7 @@
     }
   },
   {
-    "id": 159,
+    "id": 162,
     "name": "ジバコイル",
     "ingredientPatterns": {
       "AAA": {
@@ -5877,7 +5991,7 @@
     }
   },
   {
-    "id": 160,
+    "id": 163,
     "name": "トゲキッス",
     "ingredientPatterns": {
       "AAA": {
@@ -5915,7 +6029,7 @@
     }
   },
   {
-    "id": 161,
+    "id": 164,
     "name": "リーフィア",
     "ingredientPatterns": {
       "AAA": {
@@ -5953,7 +6067,7 @@
     }
   },
   {
-    "id": 162,
+    "id": 165,
     "name": "グレイシア",
     "ingredientPatterns": {
       "AAA": {
@@ -5991,7 +6105,7 @@
     }
   },
   {
-    "id": 163,
+    "id": 166,
     "name": "エルレイド",
     "ingredientPatterns": {
       "AAA": {
@@ -6029,7 +6143,7 @@
     }
   },
   {
-    "id": 164,
+    "id": 167,
     "name": "クレセリア",
     "ingredientPatterns": {
       "AAA": {
@@ -6067,7 +6181,7 @@
     }
   },
   {
-    "id": 165,
+    "id": 168,
     "name": "ダークライ",
     "ingredientPatterns": {
       "AAA": {
@@ -6103,7 +6217,7 @@
     }
   },
   {
-    "id": 166,
+    "id": 169,
     "name": "ムンナ",
     "ingredientPatterns": {
       "AAA": {
@@ -6141,7 +6255,7 @@
     }
   },
   {
-    "id": 167,
+    "id": 170,
     "name": "ムシャーナ",
     "ingredientPatterns": {
       "AAA": {
@@ -6179,7 +6293,7 @@
     }
   },
   {
-    "id": 168,
+    "id": 171,
     "name": "ワシボン",
     "ingredientPatterns": {
       "AAA": {
@@ -6217,7 +6331,7 @@
     }
   },
   {
-    "id": 169,
+    "id": 172,
     "name": "ウォーグル",
     "ingredientPatterns": {
       "AAA": {
@@ -6255,7 +6369,7 @@
     }
   },
   {
-    "id": 170,
+    "id": 173,
     "name": "ニンフィア",
     "ingredientPatterns": {
       "AAA": {
@@ -6293,7 +6407,7 @@
     }
   },
   {
-    "id": 171,
+    "id": 174,
     "name": "デデンネ",
     "ingredientPatterns": {
       "AAA": {
@@ -6331,7 +6445,311 @@
     }
   },
   {
-    "id": 172,
+    "id": 175,
+    "name": "バケッチャ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 16
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 8,
+          "ほっこりポテト": 17.1
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 2.3,
+          "ワカクサ大豆": 33.1
+        }
+      }
+    }
+  },
+  {
+    "id": 176,
+    "name": "バケッチャ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 15.7
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 7.8,
+          "ほっこりポテト": 16.8
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 2.2,
+          "ワカクサ大豆": 32.4
+        }
+      }
+    }
+  },
+  {
+    "id": 177,
+    "name": "バケッチャ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 15.4
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 7.7,
+          "ほっこりポテト": 16.5
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 2.2,
+          "ワカクサ大豆": 31.8
+        }
+      }
+    }
+  },
+  {
+    "id": 178,
+    "name": "バケッチャ",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 15.1
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 7.6,
+          "ほっこりポテト": 16.2
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 2.2,
+          "ワカクサ大豆": 31.3
+        }
+      }
+    }
+  },
+  {
+    "id": 179,
+    "name": "パンプジン",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 29.6
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 14.8,
+          "ほっこりポテト": 31.7
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 4.2,
+          "ワカクサ大豆": 61.2
+        }
+      }
+    }
+  },
+  {
+    "id": 180,
+    "name": "パンプジン",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 28.6
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 14.3,
+          "ほっこりポテト": 30.7
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 4.1,
+          "ワカクサ大豆": 59.3
+        }
+      }
+    }
+  },
+  {
+    "id": 181,
+    "name": "パンプジン",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 27.8
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 13.9,
+          "ほっこりポテト": 29.7
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 4,
+          "ワカクサ大豆": 57.5
+        }
+      }
+    }
+  },
+  {
+    "id": 182,
+    "name": "パンプジン",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ずっしりカボチャ"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 26.9
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ずっしりカボチャ",
+          "ほっこりポテト"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 13.5,
+          "ほっこりポテト": 28.9
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "ずっしりカボチャ",
+          "ワカクサ大豆",
+          "ワカクサ大豆"
+        ],
+        "individualValues": {
+          "ずっしりカボチャ": 3.8,
+          "ワカクサ大豆": 55.8
+        }
+      }
+    }
+  },
+  {
+    "id": 183,
     "name": "アゴジムシ",
     "ingredientPatterns": {
       "AAA": {
@@ -6369,7 +6787,7 @@
     }
   },
   {
-    "id": 173,
+    "id": 184,
     "name": "デンヂムシ",
     "ingredientPatterns": {
       "AAA": {
@@ -6407,7 +6825,7 @@
     }
   },
   {
-    "id": 174,
+    "id": 185,
     "name": "クワガノン",
     "ingredientPatterns": {
       "AAA": {
@@ -6445,7 +6863,7 @@
     }
   },
   {
-    "id": 175,
+    "id": 186,
     "name": "ヌイコグマ",
     "ingredientPatterns": {
       "AAA": {
@@ -6483,7 +6901,7 @@
     }
   },
   {
-    "id": 176,
+    "id": 187,
     "name": "キテルグマ",
     "ingredientPatterns": {
       "AAA": {
@@ -6521,7 +6939,7 @@
     }
   },
   {
-    "id": 177,
+    "id": 188,
     "name": "キュワワー",
     "ingredientPatterns": {
       "AAA": {
@@ -6559,7 +6977,7 @@
     }
   },
   {
-    "id": 178,
+    "id": 189,
     "name": "ミミッキュ",
     "ingredientPatterns": {
       "AAA": {
@@ -6597,7 +7015,7 @@
     }
   },
   {
-    "id": 179,
+    "id": 190,
     "name": "ウッウ",
     "ingredientPatterns": {
       "AAA": {
@@ -6635,7 +7053,121 @@
     }
   },
   {
-    "id": 180,
+    "id": 191,
+    "name": "エレズン",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "モーモーミルク"
+        ],
+        "individualValues": {
+          "モーモーミルク": 13.2
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "ふといながねぎ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 5.6,
+          "ふといながねぎ": 3.8
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "モーモーミルク",
+          "とくせんリンゴ",
+          "とくせんリンゴ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 1.9,
+          "とくせんリンゴ": 11.3
+        }
+      }
+    }
+  },
+  {
+    "id": 192,
+    "name": "ストリンダー(ハイ)",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "モーモーミルク"
+        ],
+        "individualValues": {
+          "モーモーミルク": 27.2
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "ふといながねぎ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 11.6,
+          "ふといながねぎ": 7.8
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "モーモーミルク",
+          "とくせんリンゴ",
+          "とくせんリンゴ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 3.9,
+          "とくせんリンゴ": 23.3
+        }
+      }
+    }
+  },
+  {
+    "id": 193,
+    "name": "ストリンダー(ロー)",
+    "ingredientPatterns": {
+      "AAA": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "モーモーミルク"
+        ],
+        "individualValues": {
+          "モーモーミルク": 27.2
+        }
+      },
+      "AAC": {
+        "ingredients": [
+          "モーモーミルク",
+          "モーモーミルク",
+          "ふといながねぎ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 11.6,
+          "ふといながねぎ": 7.8
+        }
+      },
+      "ABB": {
+        "ingredients": [
+          "モーモーミルク",
+          "とくせんリンゴ",
+          "とくせんリンゴ"
+        ],
+        "individualValues": {
+          "モーモーミルク": 3.9,
+          "とくせんリンゴ": 23.3
+        }
+      }
+    }
+  },
+  {
+    "id": 194,
     "name": "ニャオハ",
     "ingredientPatterns": {
       "AAA": {
@@ -6673,7 +7205,7 @@
     }
   },
   {
-    "id": 181,
+    "id": 195,
     "name": "ニャローテ",
     "ingredientPatterns": {
       "AAA": {
@@ -6711,7 +7243,7 @@
     }
   },
   {
-    "id": 182,
+    "id": 196,
     "name": "マスカーニャ",
     "ingredientPatterns": {
       "AAA": {
@@ -6749,7 +7281,7 @@
     }
   },
   {
-    "id": 183,
+    "id": 197,
     "name": "ホゲータ",
     "ingredientPatterns": {
       "AAA": {
@@ -6787,7 +7319,7 @@
     }
   },
   {
-    "id": 184,
+    "id": 198,
     "name": "アチゲータ",
     "ingredientPatterns": {
       "AAA": {
@@ -6825,7 +7357,7 @@
     }
   },
   {
-    "id": 185,
+    "id": 199,
     "name": "ラウドボーン",
     "ingredientPatterns": {
       "AAA": {
@@ -6863,7 +7395,7 @@
     }
   },
   {
-    "id": 186,
+    "id": 200,
     "name": "クワッス",
     "ingredientPatterns": {
       "AAA": {
@@ -6901,7 +7433,7 @@
     }
   },
   {
-    "id": 187,
+    "id": 201,
     "name": "ウェルカモ",
     "ingredientPatterns": {
       "AAA": {
@@ -6939,7 +7471,7 @@
     }
   },
   {
-    "id": 188,
+    "id": 202,
     "name": "ウェーニバル",
     "ingredientPatterns": {
       "AAA": {
@@ -6977,7 +7509,7 @@
     }
   },
   {
-    "id": 189,
+    "id": 203,
     "name": "パモ",
     "ingredientPatterns": {
       "AAA": {
@@ -7015,7 +7547,7 @@
     }
   },
   {
-    "id": 190,
+    "id": 204,
     "name": "パモット",
     "ingredientPatterns": {
       "AAA": {
@@ -7053,7 +7585,7 @@
     }
   },
   {
-    "id": 191,
+    "id": 205,
     "name": "パーモット",
     "ingredientPatterns": {
       "AAA": {
@@ -7091,7 +7623,7 @@
     }
   },
   {
-    "id": 192,
+    "id": 206,
     "name": "ドオー",
     "ingredientPatterns": {
       "AAA": {
