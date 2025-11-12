@@ -6446,7 +6446,7 @@
   },
   {
     "id": 175,
-    "name": "バケッチャ",
+    "name": "バケッチャ(こだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6484,7 +6484,7 @@
   },
   {
     "id": 176,
-    "name": "バケッチャ",
+    "name": "バケッチャ(ちゅうだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6522,7 +6522,7 @@
   },
   {
     "id": 177,
-    "name": "バケッチャ",
+    "name": "バケッチャ(おおだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6560,7 +6560,7 @@
   },
   {
     "id": 178,
-    "name": "バケッチャ",
+    "name": "バケッチャ(ギガだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6598,7 +6598,7 @@
   },
   {
     "id": 179,
-    "name": "パンプジン",
+    "name": "パンプジン(こだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6636,7 +6636,7 @@
   },
   {
     "id": 180,
-    "name": "パンプジン",
+    "name": "パンプジン(ちゅうだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6674,7 +6674,7 @@
   },
   {
     "id": 181,
-    "name": "パンプジン",
+    "name": "パンプジン(おおだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6712,7 +6712,7 @@
   },
   {
     "id": 182,
-    "name": "パンプジン",
+    "name": "パンプジン(ギガだま)",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
