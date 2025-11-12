@@ -116,8 +116,7 @@ class PokemonWikiParser {
 
     const table = $('table').first();
     if (table.length === 0) {
-      console.log('No table found. Using sample data...');
-      return this.getSampleData();
+      throw new Error('No table found in HTML');
     }
 
     console.log(`Processing table with ${table.find('tr').length} rows`);
@@ -148,8 +147,7 @@ class PokemonWikiParser {
     console.log(`✗ Failed to parse: ${failedParses} rows`);
 
     if (pokemonList.length === 0) {
-      console.log('No Pokemon data extracted. Using sample data...');
-      return this.getSampleData();
+      throw new Error('No Pokemon data extracted from table');
     }
 
     return pokemonList;
@@ -191,7 +189,8 @@ class PokemonWikiParser {
 
   extractPokemonName($, cells) {
     const nameCell = $(cells[1]);
-    return nameCell.find('a').text().trim() || nameCell.text().trim();
+    // <br>で改行されたサイズ情報も含めて取得（例: バケッチャ(こだま)、ピカチュウ(ハロウィン)）
+    return nameCell.text().trim().replace(/\n+/g, '');
   }
 
   parsePattern($, cells, patternName, config) {
@@ -260,36 +259,6 @@ class PokemonWikiParser {
       return img.attr('alt') || img.attr('title') || '';
     }
     return '';
-  }
-
-  getSampleData() {
-    return [
-      {
-        id: 1,
-        name: "フシギダネ",
-        ingredientPatterns: {
-          "AAA": { 
-            ingredients: ["あまいミツ", "あまいミツ", "あまいミツ"], 
-            individualValues: { "あまいミツ": 12.3 }
-          }
-        }
-      },
-      {
-        id: 2,
-        name: "フシギソウ",
-        ingredientPatterns: {}
-      },
-      {
-        id: 3,
-        name: "ピカチュウ",
-        ingredientPatterns: {
-          "AAA": { 
-            ingredients: ["リンゴ", "リンゴ", "リンゴ"], 
-            individualValues: { "リンゴ": 15.9 }
-          }
-        }
-      }
-    ];
   }
 }
 
