@@ -1,0 +1,1454 @@
+[
+  {
+    "name": "とくせんリンゴカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 7,
+    "energy": 748
+  },
+  {
+    "name": "あぶりテールカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "おいしいシッポ",
+        "quantity": 8
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 25
+      }
+    ],
+    "totalIngredients": 33,
+    "energy": 7483
+  },
+  {
+    "name": "サンパワートマトカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あんみんトマト",
+        "quantity": 10
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 15,
+    "energy": 2078
+  },
+  {
+    "name": "ぜったいねむりバターカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ほっこりポテト",
+        "quantity": 18
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 15
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 12
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 10
+      }
+    ],
+    "totalIngredients": 55,
+    "energy": 9010
+  },
+  {
+    "name": "からくちネギもりカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ふといながねぎ",
+        "quantity": 14
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 10
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 32,
+    "energy": 5900
+  },
+  {
+    "name": "キノコのほうしカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あじわいキノコ",
+        "quantity": 14
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 4162
+  },
+  {
+    "name": "おやこあいカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 12
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 11
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 8
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 4
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 4523
+  },
+  {
+    "name": "満腹チーズバーグカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 8
+      },
+      {
+        "name": "マメミート",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 1910
+  },
+  {
+    "name": "ほっこりホワイトシチュー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 10
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 8
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 4
+      }
+    ],
+    "totalIngredients": 22,
+    "energy": 3181
+  },
+  {
+    "name": "たんじゅんホワイトシチュー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 7,
+    "energy": 814
+  },
+  {
+    "name": "マメバーグカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "マメミート",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 7,
+    "energy": 856
+  },
+  {
+    "name": "ベイビィハニーカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 7,
+    "energy": 839
+  },
+  {
+    "name": "ニンジャカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 24
+      },
+      {
+        "name": "マメミート",
+        "quantity": 9
+      },
+      {
+        "name": "ふといながねぎ",
+        "quantity": 12
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 50,
+    "energy": 9445
+  },
+  {
+    "name": "ひでりカツレツカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "マメミート",
+        "quantity": 10
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 15,
+    "energy": 1942
+  },
+  {
+    "name": "とけるオムカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "とくせんエッグ",
+        "quantity": 10
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 6
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 2150
+  },
+  {
+    "name": "ビルドアップマメカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 12
+      },
+      {
+        "name": "マメミート",
+        "quantity": 6
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 4
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 4
+      }
+    ],
+    "totalIngredients": 26,
+    "energy": 3372
+  },
+  {
+    "name": "じゅうなんコーンシチュー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ワカクサコーン",
+        "quantity": 14
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 8
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 30,
+    "energy": 4670
+  },
+  {
+    "name": "れんごくコーンキーマカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "げきからハーブ",
+        "quantity": 27
+      },
+      {
+        "name": "マメミート",
+        "quantity": 24
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 14
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 77,
+    "energy": 13690
+  },
+  {
+    "name": "ピヨピヨパンチ辛口カレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "めざましコーヒー",
+        "quantity": 11
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 11
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 11
+      }
+    ],
+    "totalIngredients": 33,
+    "energy": 5702
+  },
+  {
+    "name": "めざめるパワーシチュー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 28
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 25
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 23
+      },
+      {
+        "name": "めざましコーヒー",
+        "quantity": 16
+      }
+    ],
+    "totalIngredients": 92,
+    "energy": 19061
+  },
+  {
+    "name": "いあいぎりすき焼きカレー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ふといながねぎ",
+        "quantity": 27
+      },
+      {
+        "name": "マメミート",
+        "quantity": 26
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 26
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 22
+      }
+    ],
+    "totalIngredients": 101,
+    "energy": 20655
+  },
+  {
+    "name": "なりきりバケッチャシチュー",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "ずっしりカボチャ",
+        "quantity": 10
+      },
+      {
+        "name": "マメミート",
+        "quantity": 16
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 18
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 25
+      }
+    ],
+    "totalIngredients": 69,
+    "energy": 15621
+  },
+  {
+    "name": "しんりょくアボカドグラタン",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "つやつやアボカド",
+        "quantity": 22
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 20
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 41
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 32
+      }
+    ],
+    "totalIngredients": 115,
+    "energy": 24802
+  },
+  {
+    "name": "ヤドンテールのペッパーサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "おいしいシッポ",
+        "quantity": 10
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 10
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 15
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 8169
+  },
+  {
+    "name": "キノコのほうしサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "あじわいキノコ",
+        "quantity": 17
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 8
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 33,
+    "energy": 5859
+  },
+  {
+    "name": "ゆきかきシーザーサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 10
+      },
+      {
+        "name": "マメミート",
+        "quantity": 6
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 1898
+  },
+  {
+    "name": "くいしんぼうポテトサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ほっこりポテト",
+        "quantity": 14
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 9
+      },
+      {
+        "name": "マメミート",
+        "quantity": 7
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 6
+      }
+    ],
+    "totalIngredients": 36,
+    "energy": 5040
+  },
+  {
+    "name": "うるおいとうふサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 15
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 24,
+    "energy": 3113
+  },
+  {
+    "name": "ばかぢからワイルドサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "マメミート",
+        "quantity": 9
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 6
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 5
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 3
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 3046
+  },
+  {
+    "name": "マメハムサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "マメミート",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 8,
+    "energy": 978
+  },
+  {
+    "name": "あんみんトマトサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "あんみんトマト",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 8,
+    "energy": 1045
+  },
+  {
+    "name": "モーモーカプレーゼ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 12
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 6
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 2942
+  },
+  {
+    "name": "ムラっけチョコミートサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "リラックスカカオ",
+        "quantity": 14
+      },
+      {
+        "name": "マメミート",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 3665
+  },
+  {
+    "name": "オーバーヒートサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "げきからハーブ",
+        "quantity": 17
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 10
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 5225
+  },
+  {
+    "name": "とくせんリンゴサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 8,
+    "energy": 855
+  },
+  {
+    "name": "めんえきねぎサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ふといながねぎ",
+        "quantity": 10
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 15,
+    "energy": 2845
+  },
+  {
+    "name": "メロメロりんごのチーズサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 15
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 5
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 3
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 2655
+  },
+  {
+    "name": "ニンジャサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ふといながねぎ",
+        "quantity": 15
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 19
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 12
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 11
+      }
+    ],
+    "totalIngredients": 57,
+    "energy": 11659
+  },
+  {
+    "name": "ねっぷうとうふサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 10
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 6
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 2114
+  },
+  {
+    "name": "ワカクササラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ピュアなオイル",
+        "quantity": 22
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 17
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 14
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 62,
+    "energy": 11393
+  },
+  {
+    "name": "めいそうスイートサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 21
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 16
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 49,
+    "energy": 7675
+  },
+  {
+    "name": "みだれづきコーンサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ワカクサコーン",
+        "quantity": 9
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 17,
+    "energy": 2785
+  },
+  {
+    "name": "クロスチョップドサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんエッグ",
+        "quantity": 20
+      },
+      {
+        "name": "マメミート",
+        "quantity": 15
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 11
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 10
+      }
+    ],
+    "totalIngredients": 56,
+    "energy": 8755
+  },
+  {
+    "name": "まけんきコーヒーサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "めざましコーヒー",
+        "quantity": 28
+      },
+      {
+        "name": "マメミート",
+        "quantity": 28
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 22
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 22
+      }
+    ],
+    "totalIngredients": 100,
+    "energy": 20218
+  },
+  {
+    "name": "はなふぶきミモザサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんエッグ",
+        "quantity": 25
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 17
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 15
+      },
+      {
+        "name": "マメミート",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 69,
+    "energy": 11881
+  },
+  {
+    "name": "りんごさんヨーグルトサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "とくせんエッグ",
+        "quantity": 35
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 28
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 23
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 18
+      }
+    ],
+    "totalIngredients": 104,
+    "energy": 19293
+  },
+  {
+    "name": "くだけるアボカドサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "つやつやアボカド",
+        "quantity": 14
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 18
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 10
+      }
+    ],
+    "totalIngredients": 42,
+    "energy": 7125
+  },
+  {
+    "name": "じならしワカモレチップス",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "つやつやアボカド",
+        "quantity": 28
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 25
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 30
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 22
+      }
+    ],
+    "totalIngredients": 105,
+    "energy": 25162
+  },
+  {
+    "name": "じゅくせいスイートポテト",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ほっこりポテト",
+        "quantity": 9
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 5
+      }
+    ],
+    "totalIngredients": 14,
+    "energy": 1907
+  },
+  {
+    "name": "ふくつのジンジャークッキー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 14
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 12
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 5
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 4
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 4921
+  },
+  {
+    "name": "とくせんリンゴジュース",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 8,
+    "energy": 855
+  },
+  {
+    "name": "クラフトサイコソーダ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 9,
+    "energy": 1079
+  },
+  {
+    "name": "ひのこのジンジャーティー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あったかジンジャー",
+        "quantity": 9
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 1913
+  },
+  {
+    "name": "プリンのプリンアラモード",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 20
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 15
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 10
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 10
+      }
+    ],
+    "totalIngredients": 55,
+    "energy": 7594
+  },
+  {
+    "name": "あくまのキッスフルーツオレ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 11
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 9
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 7
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 4734
+  },
+  {
+    "name": "ねがいごとアップルパイ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 12
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 4
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 1748
+  },
+  {
+    "name": "ネロリのデトックスティー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あったかジンジャー",
+        "quantity": 11
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 15
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 5065
+  },
+  {
+    "name": "あまいかおりチョコケーキ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 9
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 8
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 24,
+    "energy": 3378
+  },
+  {
+    "name": "モーモーホットミルク",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "モーモーミルク",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 7,
+    "energy": 814
+  },
+  {
+    "name": "かるわざソイケーキ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんエッグ",
+        "quantity": 8
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 15,
+    "energy": 1924
+  },
+  {
+    "name": "はりきりプロテインスムージー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 15
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 8
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 3263
+  },
+  {
+    "name": "マイペースやさいジュース",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あんみんトマト",
+        "quantity": 9
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 16,
+    "energy": 1924
+  },
+  {
+    "name": "おおきいマラサダ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ピュアなオイル",
+        "quantity": 10
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 7
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 6
+      }
+    ],
+    "totalIngredients": 23,
+    "energy": 3015
+  },
+  {
+    "name": "ちからもちソイドーナッツ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ピュアなオイル",
+        "quantity": 12
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 16
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 35,
+    "energy": 5547
+  },
+  {
+    "name": "だいばくはつポップコーン",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ワカクサコーン",
+        "quantity": 15
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 14
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 7
+      }
+    ],
+    "totalIngredients": 36,
+    "energy": 6048
+  },
+  {
+    "name": "おちゃかいコーンスコーン",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 20
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 20
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 18
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 9
+      }
+    ],
+    "totalIngredients": 67,
+    "energy": 10925
+  },
+  {
+    "name": "はなびらのまいチョコタルト",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "リラックスカカオ",
+        "quantity": 11
+      },
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 11
+      }
+    ],
+    "totalIngredients": 22,
+    "energy": 3314
+  },
+  {
+    "name": "フラワーギフトマカロン",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "リラックスカカオ",
+        "quantity": 25
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 25
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 17
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 10
+      }
+    ],
+    "totalIngredients": 77,
+    "energy": 13834
+  },
+  {
+    "name": "はやおきコーヒーゼリー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "めざましコーヒー",
+        "quantity": 16
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 14
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 42,
+    "energy": 6793
+  },
+  {
+    "name": "スパークスパイスコーラ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "とくせんリンゴ",
+        "quantity": 35
+      },
+      {
+        "name": "あったかジンジャー",
+        "quantity": 20
+      },
+      {
+        "name": "ふといながねぎ",
+        "quantity": 20
+      },
+      {
+        "name": "めざましコーヒー",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 87,
+    "energy": 17494
+  },
+  {
+    "name": "かたやぶりコーンティラミス",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "めざましコーヒー",
+        "quantity": 14
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 14
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 12
+      }
+    ],
+    "totalIngredients": 40,
+    "energy": 7125
+  },
+  {
+    "name": "ドオーのエクレア",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "リラックスカカオ",
+        "quantity": 30
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 26
+      },
+      {
+        "name": "めざましコーヒー",
+        "quantity": 24
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 22
+      }
+    ],
+    "totalIngredients": 102,
+    "energy": 20885
+  },
+  {
+    "name": "ドキドキこわいかおパンケーキ",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "ずっしりカボチャ",
+        "quantity": 18
+      },
+      {
+        "name": "とくせんエッグ",
+        "quantity": 24
+      },
+      {
+        "name": "あまいミツ",
+        "quantity": 32
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 29
+      }
+    ],
+    "totalIngredients": 103,
+    "energy": 24354
+  },
+  {
+    "name": "グラスミキサースムージー",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "つやつやアボカド",
+        "quantity": 18
+      },
+      {
+        "name": "あんみんトマト",
+        "quantity": 16
+      },
+      {
+        "name": "モーモーミルク",
+        "quantity": 14
+      }
+    ],
+    "totalIngredients": 48,
+    "energy": 8165
+  },
+  {
+    "name": "みつあつめチョコワッフル",
+    "category": "デザート・ドリンク",
+    "ingredients": [
+      {
+        "name": "あまいミツ",
+        "quantity": 38
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 28
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 28
+      },
+      {
+        "name": "リラックスカカオ",
+        "quantity": 21
+      }
+    ],
+    "totalIngredients": 115,
+    "energy": 25484
+  }
+]

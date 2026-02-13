@@ -12,7 +12,10 @@
     "deploy": "gh-pages -d dist",
     "download-wiki": "node scripts/download-wiki.js",
     "parse-wiki": "node scripts/parse-wiki-data.js",
-    "fetch-data": "npm run download-wiki && npm run parse-wiki"
+    "fetch-data": "npm run download-wiki && npm run parse-wiki",
+    "download-recipe-wiki": "node scripts/download-recipe-wiki.js",
+    "parse-recipe": "node scripts/parse-recipe-data.js",
+    "fetch-recipe-data": "npm run download-recipe-wiki && npm run parse-recipe"
   },
   "dependencies": {
     "cheerio": "^1.1.0",
