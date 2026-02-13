@@ -24,7 +24,7 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 ### ディレクトリ構成
 
 ```
-/home/futa/db-test/
+/home/futa/pokesleep-kitchen/
 ├── scripts/                    # データ処理スクリプト
 │   ├── download-wiki.js       # Wiki HTML ダウンロード
 │   ├── parse-wiki-data.js     # HTML → JSON パース (メイン処理)
@@ -124,7 +124,7 @@ npm run deploy
 ## 設定情報
 
 ### 重要な設定
-- **データURL**: `/db-test/pokemon-data.json`
+- **データURL**: `/pokesleep-kitchen/pokemon-data.json`
 - **対象パターン**: `['AAA', 'AAC', 'ABB']`
 - **対象ポケモン**: 192体（C食材あり: 34セル, なし: 26セル）
 

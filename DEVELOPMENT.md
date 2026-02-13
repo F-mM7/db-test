@@ -11,7 +11,7 @@
 ```bash
 # リポジトリのクローン
 git clone [repository-url]
-cd db-test
+cd pokesleep-kitchen
 
 # 依存関係のインストール
 npm install
@@ -26,7 +26,7 @@ nvm use 20
 npm run dev
 ```
 
-http://localhost:5173/db-test/ でアプリケーションが開きます。
+http://localhost:5173/pokesleep-kitchen/ でアプリケーションが開きます。
 
 ## アーキテクチャ概要
 

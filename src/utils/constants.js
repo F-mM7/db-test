@@ -2,7 +2,7 @@
 export const LV60_PATTERNS = ['AAA', 'AAC', 'ABB'];
 
 // API エンドポイント
-export const DATA_URL = '/db-test/pokemon-data.json';
+export const DATA_URL = '/pokesleep-kitchen/pokemon-data.json';
 
 // フィルタリング設定
 export const FILTER_CONFIG = {
