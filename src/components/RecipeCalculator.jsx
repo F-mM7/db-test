@@ -1,6 +1,6 @@
 import { memo, useState, useCallback, useMemo } from 'react';
 import { useRecipeData } from '../hooks/useRecipeData';
-import { useRecipeCalculator, POT_SIZE_PRESETS } from '../hooks/useRecipeCalculator';
+import { useRecipeCalculator, POT_SIZE_MIN, POT_SIZE_MAX } from '../hooks/useRecipeCalculator';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorDisplay from './ErrorDisplay';
 import './RecipeCalculator.css';
@@ -14,9 +14,8 @@ function RecipeCalculator() {
     clearAll,
     categories,
     potSize,
-    setPotSize,
-    sortByEnergy,
-    toggleSortByEnergy,
+    incrementPotSize,
+    decrementPotSize,
     getFilteredRecipes
   } = useRecipeCalculator(recipeData);
 
@@ -53,9 +52,8 @@ function RecipeCalculator() {
 
       <FilterBar
         potSize={potSize}
-        onPotSizeChange={setPotSize}
-        sortByEnergy={sortByEnergy}
-        onToggleSortByEnergy={toggleSortByEnergy}
+        onIncrement={incrementPotSize}
+        onDecrement={decrementPotSize}
       />
 
       <CategoryTabs
@@ -81,70 +79,31 @@ function RecipeCalculator() {
   );
 }
 
-// 鍋サイズフィルター＋ソートバー
-const FilterBar = memo(({ potSize, onPotSizeChange, sortByEnergy, onToggleSortByEnergy }) => {
-  const [customSize, setCustomSize] = useState('');
-
-  const handleCustomInput = useCallback((e) => {
-    const val = e.target.value;
-    setCustomSize(val);
-    const num = parseInt(val, 10);
-    if (num > 0) {
-      onPotSizeChange(num);
-      // プリセットと同じ値なら再度呼んで選択状態にする
-    }
-  }, [onPotSizeChange]);
-
-  const handlePresetClick = useCallback((size) => {
-    setCustomSize('');
-    onPotSizeChange(size);
-  }, [onPotSizeChange]);
-
-  return (
-    <div className="filter-bar">
-      <div className="filter-group">
-        <label className="filter-label">鍋のサイズ</label>
-        <div className="pot-size-controls">
-          <div className="pot-size-presets">
-            {POT_SIZE_PRESETS.map(size => (
-              <button
-                key={size}
-                className={`pot-size-button ${potSize === size ? 'active' : ''}`}
-                onClick={() => handlePresetClick(size)}
-              >
-                {size}
-              </button>
-            ))}
-          </div>
-          <div className="pot-size-custom">
-            <input
-              type="number"
-              className="pot-size-input"
-              placeholder="自由入力"
-              min="1"
-              max="200"
-              value={customSize}
-              onChange={handleCustomInput}
-            />
-          </div>
-          {potSize !== null && (
-            <span className="pot-size-badge">
-              食材{potSize}個以下
-            </span>
-          )}
-        </div>
-      </div>
-      <div className="filter-group">
+// 鍋サイズフィルター
+const FilterBar = memo(({ potSize, onIncrement, onDecrement }) => (
+  <div className="filter-bar">
+    <div className="filter-group">
+      <label className="filter-label">鍋のサイズ</label>
+      <div className="pot-size-controls">
         <button
-          className={`sort-toggle ${sortByEnergy ? 'active' : ''}`}
-          onClick={onToggleSortByEnergy}
+          className="pot-size-step-button"
+          onClick={onDecrement}
+          disabled={potSize <= POT_SIZE_MIN}
         >
-          エナジー順
+          -
+        </button>
+        <span className="pot-size-value">{potSize}</span>
+        <button
+          className="pot-size-step-button"
+          onClick={onIncrement}
+          disabled={potSize >= POT_SIZE_MAX}
+        >
+          +
         </button>
       </div>
     </div>
-  );
-});
+  </div>
+));
 
 // カテゴリタブ
 const CategoryTabs = memo(({ categories, activeCategory, onSelect }) => (
@@ -190,8 +149,11 @@ const RecipeRow = memo(({ recipe, count, onCountChange }) => {
   }, [onCountChange, recipe.name, count]);
 
   return (
-    <div className={`recipe-row ${count > 0 ? 'selected' : ''}`}>
-      <span className="recipe-name">{recipe.name}</span>
+    <div className={`recipe-row ${count > 0 ? 'selected' : ''} ${recipe.weekendOnly ? 'weekend-only' : ''}`}>
+      <span className="recipe-name">
+        {recipe.name}
+        {recipe.weekendOnly && <span className="weekend-badge">週末</span>}
+      </span>
       <div className="recipe-meta">
         <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
         <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>

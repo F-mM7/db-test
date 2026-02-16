@@ -1,12 +1,15 @@
 import { useState, useMemo, useCallback } from 'react';
 
-// 鍋サイズのプリセット（初期12、3刻みで拡張可能、最大81）
-export const POT_SIZE_PRESETS = [15, 24, 36, 48, 57, 81];
+// 鍋サイズ（初期12、3刻みで拡張、最大81）
+export const POT_SIZE_MIN = 12;
+export const POT_SIZE_MAX = 81;
+export const POT_SIZE_STEP = 3;
+export const POT_SIZE_DEFAULT = 72;
 
 export function useRecipeCalculator(recipeData) {
   const [selectedRecipes, setSelectedRecipes] = useState({});
-  const [potSize, setPotSize] = useState(null);
-  const [sortByEnergy, setSortByEnergy] = useState(false);
+  const [potSize, setPotSize] = useState(POT_SIZE_DEFAULT);
+  const sortByEnergy = true;
 
   // カテゴリ一覧をデータから導出
   const categories = useMemo(() => {
@@ -18,12 +21,15 @@ export function useRecipeCalculator(recipeData) {
   }, [recipeData]);
 
   // 鍋サイズ・カテゴリでフィルタし、エナジーでソートした料理リスト
+  // 週末は鍋サイズが1.5倍になるため、weekendOnly フラグで区別
   const getFilteredRecipes = useCallback((category) => {
-    let filtered = recipeData.filter(r => r.category === category);
-
-    if (potSize !== null) {
-      filtered = filtered.filter(r => r.totalIngredients <= potSize);
-    }
+    const weekendPotSize = Math.floor(potSize * 1.5);
+    let filtered = recipeData
+      .filter(r => r.category === category && r.totalIngredients <= weekendPotSize)
+      .map(r => ({
+        ...r,
+        weekendOnly: r.totalIngredients > potSize
+      }));
 
     if (sortByEnergy) {
       filtered = [...filtered].sort((a, b) => b.energy - a.energy);
@@ -70,14 +76,13 @@ export function useRecipeCalculator(recipeData) {
     setSelectedRecipes({});
   }, []);
 
-  // 鍋サイズを設定（null = フィルタなし）
-  const handleSetPotSize = useCallback((size) => {
-    setPotSize(prev => prev === size ? null : size);
+  // 鍋サイズを増減
+  const incrementPotSize = useCallback(() => {
+    setPotSize(prev => Math.min(prev + POT_SIZE_STEP, POT_SIZE_MAX));
   }, []);
 
-  // エナジーソートを切替
-  const toggleSortByEnergy = useCallback(() => {
-    setSortByEnergy(prev => !prev);
+  const decrementPotSize = useCallback(() => {
+    setPotSize(prev => Math.max(prev - POT_SIZE_STEP, POT_SIZE_MIN));
   }, []);
 
   return {
@@ -87,9 +92,8 @@ export function useRecipeCalculator(recipeData) {
     clearAll,
     categories,
     potSize,
-    setPotSize: handleSetPotSize,
-    sortByEnergy,
-    toggleSortByEnergy,
+    incrementPotSize,
+    decrementPotSize,
     getFilteredRecipes
   };
 }

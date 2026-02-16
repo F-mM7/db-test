@@ -59,97 +59,41 @@
 .pot-size-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.pot-size-presets {
-  display: flex;
-  gap: 6px;
-}
-
-.pot-size-button {
-  padding: 6px 14px;
+.pot-size-step-button {
+  width: 36px;
+  height: 36px;
   border: 2px solid #30363d;
   background: linear-gradient(135deg, #21262d, #161b22);
-  color: #8b949e;
+  color: #c9d1d9;
   border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-
-.pot-size-button:hover {
-  color: #c9d1d9;
-  border-color: #58a6ff;
-}
-
-.pot-size-button.active {
-  background: linear-gradient(135deg, #1f6feb, #1158c7);
-  color: #ffffff;
-  border-color: #58a6ff;
-  box-shadow: 0 2px 8px rgba(31, 111, 235, 0.3);
-}
-
-.pot-size-custom {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.pot-size-input {
-  width: 80px;
-  padding: 6px 10px;
-  border: 2px solid #30363d;
-  background: #0d1117;
-  color: #c9d1d9;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  transition: border-color 0.2s ease;
-}
-
-.pot-size-input:focus {
-  outline: none;
+.pot-size-step-button:hover:not(:disabled) {
   border-color: #58a6ff;
-}
-
-.pot-size-input::placeholder {
-  color: #484f58;
-  font-weight: 400;
-}
-
-.pot-size-badge {
-  font-size: 12px;
-  color: #58a6ff;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.sort-toggle {
-  padding: 8px 18px;
-  border: 2px solid #30363d;
-  background: linear-gradient(135deg, #21262d, #161b22);
-  color: #8b949e;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.sort-toggle:hover {
-  color: #c9d1d9;
-  border-color: #f85149;
-}
-
-.sort-toggle.active {
-  background: linear-gradient(135deg, #da3633, #cf222e);
   color: #ffffff;
-  border-color: #f85149;
-  box-shadow: 0 2px 8px rgba(218, 54, 51, 0.3);
+}
+
+.pot-size-step-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pot-size-value {
+  min-width: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #58a6ff;
 }
 
 /* カテゴリタブ */
@@ -216,6 +160,26 @@
 .recipe-row.selected {
   border-color: #8b5cf6;
   background: linear-gradient(135deg, #1a1530, #21262d);
+}
+
+.recipe-row.weekend-only {
+  opacity: 0.7;
+}
+
+.recipe-row.weekend-only:hover {
+  opacity: 1;
+}
+
+.weekend-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  background: linear-gradient(135deg, #f09030, #e87020);
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
 }
 
 .recipe-name {
@@ -491,9 +455,6 @@
     padding: 16px;
   }
 
-  .pot-size-presets {
-    flex-wrap: wrap;
-  }
 
   .category-tabs {
     gap: 4px;
