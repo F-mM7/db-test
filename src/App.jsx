@@ -29,7 +29,12 @@ function App() {
           </button>
         ))}
       </nav>
-      {activeTab === 'ingredient' ? <IngredientFilter /> : <RecipeCalculator />}
+      <div style={{ display: activeTab === 'ingredient' ? 'block' : 'none' }}>
+        <IngredientFilter />
+      </div>
+      <div style={{ display: activeTab === 'recipe' ? 'block' : 'none' }}>
+        <RecipeCalculator />
+      </div>
     </ErrorBoundary>
   )
 }
