@@ -1,11 +1,77 @@
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  /* ─ Color: Surface ─ */
+  --color-bg: #0d1117;
+  --color-surface-1: #161b22;
+  --color-surface-2: #21262d;
+  --color-border: #30363d;
+
+  /* ─ Color: Text ─ */
+  --color-text: #c9d1d9;
+  --color-text-strong: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-text-subtle: #6e7681;
+  --color-text-on-accent: #ffffff;
+
+  /* ─ Color: Accent ─ */
+  --color-blue: #58a6ff;
+  --color-blue-dark: #1f6feb;
+  --color-blue-light: #79c0ff;
+  --color-green: #2ea043;
+  --color-green-dark: #238636;
+  --color-purple: #8b5cf6;
+  --color-purple-dark: #6f42c1;
+  --color-red: #f85149;
+  --color-red-dark: #da3633;
+  --color-red-darker: #cf222e;
+  --color-red-darkest: #a40e26;
+  --color-orange: #f09030;
+  --color-orange-dark: #e87020;
+
+  /* ─ Gradient ─ */
+  --grad-surface: linear-gradient(135deg, var(--color-surface-2), var(--color-surface-1));
+  --grad-surface-reverse: linear-gradient(135deg, var(--color-surface-1), var(--color-surface-2));
+  --grad-surface-darker: linear-gradient(135deg, var(--color-border), var(--color-surface-2));
+  --grad-bg-surface: linear-gradient(135deg, var(--color-bg), var(--color-surface-1));
+  --grad-blue: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
+  --grad-green: linear-gradient(135deg, var(--color-green), var(--color-green-dark));
+  --grad-green-reverse: linear-gradient(135deg, var(--color-green-dark), var(--color-green));
+  --grad-purple: linear-gradient(135deg, var(--color-purple), var(--color-purple-dark));
+  --grad-purple-reverse: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
+  --grad-red: linear-gradient(135deg, var(--color-red-dark), var(--color-red-darker));
+  --grad-red-hover: linear-gradient(135deg, var(--color-red-darker), var(--color-red-darkest));
+
+  /* ─ Radius ─ */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ─ Motion ─ */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
+  --transition-base: all 0.3s ease;
+  --transition-smooth: all 0.3s var(--ease-out);
+
+  /* ─ Shadow ─ */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-md-lift: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow-inset: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* ─ Font ─ */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark;
-  color: #c9d1d9;
-  background-color: #0d1117;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,23 +84,23 @@
 }
 
 html {
-  background-color: #0d1117;
+  background-color: var(--color-bg);
 }
 
 body {
   margin: 0;
-  background-color: #0d1117;
-  color: #c9d1d9;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
 }
 
 a {
   font-weight: 500;
-  color: #58a6ff;
+  color: var(--color-blue);
   text-decoration: inherit;
 }
 a:hover {
-  color: #79c0ff;
+  color: var(--color-blue-light);
 }
 
 h1 {
@@ -42,24 +108,23 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid #30363d;
+:where(button) {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #21262d;
-  color: #c9d1d9;
+  background-color: var(--color-surface-2);
+  color: var(--color-text);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: var(--transition-fast);
 }
-button:hover {
-  border-color: #58a6ff;
-  background-color: #30363d;
+:where(button:hover) {
+  border-color: var(--color-blue);
+  background-color: var(--color-border);
 }
-button:focus,
-button:focus-visible {
-  outline: 2px solid #58a6ff;
+:where(button:focus, button:focus-visible) {
+  outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }

@@ -25,7 +25,7 @@ class ErrorBoundary extends Component {
       return (
         <div className="error-boundary">
           <div className="error-boundary-content">
-            <div className="error-icon">💥</div>
+            <div className="error-boundary-icon">💥</div>
             <h2 className="error-title">申し訳ございません</h2>
             <p className="error-message">
               予期しないエラーが発生しました。ページを再読み込みしてください。
