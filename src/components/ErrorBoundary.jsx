@@ -32,13 +32,13 @@ class ErrorBoundary extends Component {
             </p>
             <div className="error-actions">
               <button 
-                className="retry-button"
+                className="btn btn-success"
                 onClick={() => window.location.reload()}
               >
                 ページを再読み込み
               </button>
               <button 
-                className="reset-button"
+                className="btn btn-purple"
                 onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
               >
                 もう一度試す

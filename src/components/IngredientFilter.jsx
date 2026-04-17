@@ -81,7 +81,7 @@ const SearchResults = memo(({
   <section className="results-section">
     <div className="selected-header">
       <h2>「{selectedIngredient}」を獲得できるポケモン</h2>
-      <button className="clear-button" onClick={onClear}>
+      <button className="btn btn-sm btn-danger" onClick={onClear}>
         選択をクリア
       </button>
     </div>

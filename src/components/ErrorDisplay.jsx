@@ -6,7 +6,7 @@ function ErrorDisplay({ error, onRetry }) {
         データの読み込みに失敗しました
         <div className="error-detail">{error}</div>
       </div>
-      <button className="retry-button" onClick={onRetry}>
+      <button className="btn btn-success" onClick={onRetry}>
         再試行
       </button>
     </div>

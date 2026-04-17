@@ -24,28 +24,8 @@
 
 .app-nav-tab {
   padding: 12px 32px;
-  border: 2px solid var(--color-border);
-  border-bottom: none;
-  background: var(--grad-surface);
-  color: var(--color-text-muted);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-smooth);
   font-family: var(--font-sans);
-}
-
-.app-nav-tab:hover {
-  color: var(--color-text);
-  background: var(--grad-surface-darker);
-}
-
-.app-nav-tab.active {
-  background: var(--grad-blue);
-  color: var(--color-text-on-accent);
-  border-color: var(--color-blue);
-  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
 }
 
 @media (max-width: 480px) {

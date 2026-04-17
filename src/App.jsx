@@ -22,7 +22,7 @@ function App() {
         {TABS.map(tab => (
           <button
             key={tab.id}
-            className={`app-nav-tab ${activeTab === tab.id ? 'active' : ''}`}
+            className={`app-nav-tab tab tab-blue ${activeTab === tab.id ? 'active' : ''}`}
             onClick={() => handleTabChange(tab.id)}
           >
             {tab.label}

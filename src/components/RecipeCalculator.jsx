@@ -131,7 +131,7 @@ const FilterBar = memo(({ potSize, onIncrement, onDecrement }) => (
       <label className="filter-label">鍋のサイズ</label>
       <div className="pot-size-controls">
         <button
-          className="pot-size-step-button"
+          className="icon-btn icon-btn-step"
           onClick={onDecrement}
           disabled={potSize <= POT_SIZE_MIN}
         >
@@ -139,7 +139,7 @@ const FilterBar = memo(({ potSize, onIncrement, onDecrement }) => (
         </button>
         <span className="pot-size-value">{potSize}</span>
         <button
-          className="pot-size-step-button"
+          className="icon-btn icon-btn-step"
           onClick={onIncrement}
           disabled={potSize >= POT_SIZE_MAX}
         >
@@ -156,14 +156,14 @@ const CategoryTabs = memo(({ categories, activeTab, onSelect, selectedCount }) =
     {categories.map(category => (
       <button
         key={category}
-        className={`category-tab ${activeTab === category ? 'active' : ''}`}
+        className={`category-tab tab tab-purple ${activeTab === category ? 'active' : ''}`}
         onClick={() => onSelect(category)}
       >
         {category}
       </button>
     ))}
     <button
-      className={`category-tab summary-tab ${activeTab === SUMMARY_TAB ? 'active' : ''}`}
+      className={`category-tab summary-tab tab tab-purple ${activeTab === SUMMARY_TAB ? 'active' : ''}`}
       onClick={() => onSelect(SUMMARY_TAB)}
     >
       集計
@@ -215,14 +215,14 @@ const RecipeRow = memo(({ recipe, count, onCountChange }) => {
       </div>
       <div className="recipe-count-control">
         <button
-          className="count-button"
+          className="icon-btn icon-btn-count"
           onClick={handleDecrement}
           disabled={count <= 0}
         >
           -
         </button>
         <span className="count-display">{count}</span>
-        <button className="count-button" onClick={handleIncrement}>
+        <button className="icon-btn icon-btn-count" onClick={handleIncrement}>
           +
         </button>
       </div>
@@ -276,17 +276,17 @@ const SummaryRow = memo(({ recipe, onCountChange }) => {
       </div>
       <div className="recipe-count-control">
         <button
-          className="count-button"
+          className="icon-btn icon-btn-count"
           onClick={handleDecrement}
           disabled={recipe.count <= 1}
         >
           -
         </button>
         <span className="count-display">{recipe.count}</span>
-        <button className="count-button" onClick={handleIncrement}>
+        <button className="icon-btn icon-btn-count" onClick={handleIncrement}>
           +
         </button>
-        <button className="remove-button" onClick={handleRemove}>
+        <button className="icon-btn icon-btn-remove" onClick={handleRemove}>
           &times;
         </button>
       </div>
@@ -299,7 +299,7 @@ const TotalResults = memo(({ totalIngredients, selectedCount, onClear }) => (
   <section>
     <div className="results-header">
       <h2>必要食材一覧</h2>
-      <button className="clear-all-button" onClick={onClear}>
+      <button className="btn btn-sm btn-danger" onClick={onClear}>
         すべてクリア
       </button>
     </div>

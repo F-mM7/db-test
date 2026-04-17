@@ -104,25 +104,6 @@
   font-weight: 600;
 }
 
-.clear-button {
-  padding: 10px 18px;
-  background: var(--grad-red);
-  color: var(--color-text-on-accent);
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: var(--transition-base);
-  box-shadow: var(--shadow-red-glow);
-}
-
-.clear-button:hover {
-  background: var(--grad-red-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-red-glow-strong);
-}
-
 .pokemon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -445,24 +426,6 @@
   margin-top: 8px;
 }
 
-.retry-button {
-  padding: 12px 24px;
-  background: var(--grad-green-reverse);
-  color: var(--color-text-on-accent);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-base);
-}
-
-.retry-button:hover {
-  background: var(--grad-green);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(35, 134, 54, 0.3);
-}
-
 /* ErrorBoundary スタイル */
 .error-boundary {
   display: flex;
@@ -507,24 +470,6 @@
   gap: 16px;
   justify-content: center;
   margin-bottom: 24px;
-}
-
-.reset-button {
-  padding: 12px 24px;
-  background: var(--grad-purple-reverse);
-  color: var(--color-text-on-accent);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition-base);
-}
-
-.reset-button:hover {
-  background: var(--grad-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
 }
 
 .error-details {
