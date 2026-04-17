@@ -1,5 +1,6 @@
 import { memo, useState, useCallback, useMemo } from 'react';
 import { useRecipeData } from '../hooks/useRecipeData';
+import { useIngredientData } from '../hooks/useIngredientData';
 import { useRecipeCalculator, POT_SIZE_MIN, POT_SIZE_MAX } from '../hooks/useRecipeCalculator';
 import { ingredientIconUrl } from '../utils/constants';
 import LoadingSpinner from './LoadingSpinner';
@@ -24,9 +25,11 @@ IngredientIcon.displayName = 'IngredientIcon';
 
 function RecipeCalculator() {
   const { recipeData, loading, error } = useRecipeData();
+  const { ingredientData } = useIngredientData();
   const {
     selectedRecipes,
     totalIngredients,
+    missingIngredients,
     setRecipeCount,
     clearAll,
     categories,
@@ -34,7 +37,7 @@ function RecipeCalculator() {
     incrementPotSize,
     decrementPotSize,
     getFilteredRecipes
-  } = useRecipeCalculator(recipeData);
+  } = useRecipeCalculator(recipeData, ingredientData);
 
   const [activeTab, setActiveTab] = useState(null);
 
@@ -112,6 +115,10 @@ function RecipeCalculator() {
           selectedCount={selectedCount}
           onClear={clearAll}
         />
+      )}
+
+      {isSummaryTab && missingIngredients.length > 0 && (
+        <MissingIngredients ingredients={missingIngredients} />
       )}
     </div>
   );
@@ -321,6 +328,32 @@ const TotalResults = memo(({ totalIngredients, selectedCount, onClear }) => (
   </section>
 ));
 
+// 集計に含まれていない食材セクション（基礎エナジー降順）
+const MissingIngredients = memo(({ ingredients }) => (
+  <section className="missing-ingredients-section">
+    <div className="results-header">
+      <h2>集計にない食材</h2>
+      <span className="missing-ingredients-count">{ingredients.length} 種類</span>
+    </div>
+
+    <div className="missing-ingredients-grid">
+      {ingredients.map(({ name, baseEnergy }) => (
+        <div key={name} className="missing-ingredient-card">
+          <img
+            className="missing-ingredient-icon"
+            src={ingredientIconUrl(name)}
+            alt={name}
+          />
+          <span className="missing-ingredient-name">{name}</span>
+          <span className="missing-ingredient-energy">
+            {baseEnergy != null ? baseEnergy : '—'}
+          </span>
+        </div>
+      ))}
+    </div>
+  </section>
+));
+
 FilterBar.displayName = 'FilterBar';
 CategoryTabs.displayName = 'CategoryTabs';
 RecipeList.displayName = 'RecipeList';
@@ -328,5 +361,6 @@ RecipeRow.displayName = 'RecipeRow';
 SummaryList.displayName = 'SummaryList';
 SummaryRow.displayName = 'SummaryRow';
 TotalResults.displayName = 'TotalResults';
+MissingIngredients.displayName = 'MissingIngredients';
 
 export default RecipeCalculator;

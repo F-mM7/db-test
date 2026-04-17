@@ -23,23 +23,31 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 
 ```
 /home/futa/pokesleep-kitchen/
-├── scripts/                    # データ処理スクリプト
-│   ├── download-wiki.js       # Wiki HTML ダウンロード
-│   ├── parse-wiki-data.js     # HTML → JSON パース (メイン処理)
-│   └── analyze-table-structure.js # 開発用テーブル構造分析
+├── scripts/                          # データ処理スクリプト
+│   ├── download-wiki.js              # ポケモン Wiki HTML ダウンロード
+│   ├── parse-wiki-data.js            # ポケモン HTML → JSON パース
+│   ├── download-recipe-wiki.js       # 料理 Wiki HTML ダウンロード
+│   ├── parse-recipe-data.js          # 料理 HTML → JSON パース
+│   ├── download-ingredient-wiki.js   # 食材 Wiki HTML ダウンロード
+│   ├── parse-ingredient-data.js      # 食材 HTML → JSON パース (基礎エナジー含む)
+│   └── analyze-table-structure.js    # 開発用テーブル構造分析
 │
 ├── src/                       # React アプリケーション
 │   ├── components/           # UI コンポーネント
 │   │   ├── IngredientFilter.jsx    # メインフィルタリング画面
 │   │   ├── PokemonCard.jsx         # ポケモン表示カード
 │   │   ├── IngredientButton.jsx    # 食材選択ボタン
+│   │   ├── RecipeCalculator.jsx    # 料理カリキュレーター画面
 │   │   ├── LoadingSpinner.jsx      # ローディング表示
 │   │   ├── ErrorDisplay.jsx        # エラー表示
 │   │   └── ErrorBoundary.jsx       # エラーバウンダリ
 │   │
 │   ├── hooks/                # カスタムフック
-│   │   ├── usePokemonData.js       # データ取得ロジック
-│   │   └── usePokemonFilter.js     # フィルタリングロジック
+│   │   ├── usePokemonData.js       # ポケモンデータ取得
+│   │   ├── usePokemonFilter.js     # フィルタリングロジック
+│   │   ├── useRecipeData.js        # 料理データ取得
+│   │   ├── useIngredientData.js    # 食材データ取得 (基礎エナジー)
+│   │   └── useRecipeCalculator.js  # 集計・並び替えロジック
 │   │
 │   ├── utils/                # ユーティリティ
 │   │   └── constants.js            # 共通定数定義
@@ -47,12 +55,16 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 │   ├── App.jsx               # アプリケーションルート
 │   └── main.jsx              # エントリーポイント
 │
-├── data/                     # データファイル
-│   ├── wiki-raw.html         # ダウンロードしたWiki HTML
-│   └── parse-summary.json    # パース結果サマリー
+├── data/                            # データファイル (gitignore候補)
+│   ├── wiki-raw.html                # ダウンロードしたポケモン Wiki HTML
+│   ├── recipe-wiki-raw.html         # ダウンロードした料理 Wiki HTML
+│   ├── ingredient-wiki-raw.html     # ダウンロードした食材 Wiki HTML
+│   └── *-summary.json               # 各パース結果サマリー
 │
 └── public/
-    └── pokemon-data.json     # パース済みポケモンデータ
+    ├── pokemon-data.json            # パース済みポケモンデータ
+    ├── recipe-data.json             # パース済み料理データ
+    └── ingredient-data.json         # パース済み食材データ (基礎エナジー含む)
 ```
 
 ## データ構造
@@ -108,11 +120,17 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 npm run dev
 
 # Wiki データ更新
-npm run fetch-data
+npm run fetch-data              # ポケモン食材獲得データ
+npm run fetch-recipe-data       # 料理レシピデータ
+npm run fetch-ingredient-data   # 食材データ (基礎エナジー含む)
 
 # 個別実行
-npm run download-wiki  # HTML ダウンロード
-npm run parse-wiki     # JSON パース
+npm run download-wiki              # ポケモン HTML ダウンロード
+npm run parse-wiki                 # ポケモン JSON パース
+npm run download-recipe-wiki       # 料理 HTML ダウンロード
+npm run parse-recipe               # 料理 JSON パース
+npm run download-ingredient-wiki   # 食材 HTML ダウンロード
+npm run parse-ingredient           # 食材 JSON パース
 
 # ビルド・デプロイ
 npm run build
@@ -122,9 +140,13 @@ npm run deploy
 ## 設定情報
 
 ### 重要な設定
-- **データURL**: `/pokesleep-kitchen/pokemon-data.json`
+- **データURL**:
+  - `/pokesleep-kitchen/pokemon-data.json`
+  - `/pokesleep-kitchen/recipe-data.json`
+  - `/pokesleep-kitchen/ingredient-data.json`
 - **対象パターン**: `['AAA', 'AAC', 'ABB']`
 - **対象ポケモン**: C食材あり: 34セル, なし: 26セル
+- **食材データ取得元**: https://wikiwiki.jp/poke_sleep/食材/食材の一覧 （`基礎エナジー` を含むテーブルを自動選別）
 
 ### セル位置マッピング
 ```javascript

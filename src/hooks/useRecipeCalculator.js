@@ -6,7 +6,7 @@ export const POT_SIZE_MAX = 81;
 export const POT_SIZE_STEP = 3;
 export const POT_SIZE_DEFAULT = 75;
 
-export function useRecipeCalculator(recipeData) {
+export function useRecipeCalculator(recipeData, ingredientData = []) {
   const [selectedRecipes, setSelectedRecipes] = useState({});
   const [potSize, setPotSize] = useState(POT_SIZE_DEFAULT);
   const sortByEnergy = true;
@@ -58,6 +58,42 @@ export function useRecipeCalculator(recipeData) {
       .sort((a, b) => b.quantity - a.quantity);
   }, [selectedRecipes, recipeData]);
 
+  // 食材名 → 基礎エナジー の参照テーブル
+  const baseEnergyMap = useMemo(() => {
+    const map = new Map();
+    ingredientData.forEach(({ name, baseEnergy }) => {
+      map.set(name, baseEnergy);
+    });
+    return map;
+  }, [ingredientData]);
+
+  // 全食材リスト（ingredientData 優先、未収載のレシピ食材は補完）
+  const allIngredients = useMemo(() => {
+    const set = new Set();
+    ingredientData.forEach(({ name }) => set.add(name));
+    recipeData.forEach(recipe => {
+      recipe.ingredients.forEach(({ name }) => set.add(name));
+    });
+    return Array.from(set);
+  }, [ingredientData, recipeData]);
+
+  // 集計に含まれていない食材を基礎エナジー降順でソート
+  // 基礎エナジー不明の食材は末尾にまわす
+  const missingIngredients = useMemo(() => {
+    const usedSet = new Set(totalIngredients.map(t => t.name));
+    return allIngredients
+      .filter(name => !usedSet.has(name))
+      .map(name => ({
+        name,
+        baseEnergy: baseEnergyMap.has(name) ? baseEnergyMap.get(name) : null
+      }))
+      .sort((a, b) => {
+        const ae = a.baseEnergy ?? -Infinity;
+        const be = b.baseEnergy ?? -Infinity;
+        return be - ae;
+      });
+  }, [allIngredients, totalIngredients, baseEnergyMap]);
+
   // 料理の回数を設定
   const setRecipeCount = useCallback((recipeName, count) => {
     setSelectedRecipes(prev => {
@@ -88,6 +124,7 @@ export function useRecipeCalculator(recipeData) {
   return {
     selectedRecipes,
     totalIngredients,
+    missingIngredients,
     setRecipeCount,
     clearAll,
     categories,

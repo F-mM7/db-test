@@ -15,7 +15,10 @@
     "fetch-data": "npm run download-wiki && npm run parse-wiki",
     "download-recipe-wiki": "node scripts/download-recipe-wiki.js",
     "parse-recipe": "node scripts/parse-recipe-data.js",
-    "fetch-recipe-data": "npm run download-recipe-wiki && npm run parse-recipe"
+    "fetch-recipe-data": "npm run download-recipe-wiki && npm run parse-recipe",
+    "download-ingredient-wiki": "node scripts/download-ingredient-wiki.js",
+    "parse-ingredient": "node scripts/parse-ingredient-data.js",
+    "fetch-ingredient-data": "npm run download-ingredient-wiki && npm run parse-ingredient"
   },
   "dependencies": {
     "cheerio": "^1.1.0",
