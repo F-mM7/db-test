@@ -1,25 +1,5 @@
-.recipe-calculator-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 24px;
-  background: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100vh;
-  font-family: var(--font-sans);
-}
-
-.recipe-calculator-container h1 {
-  text-align: center;
-  color: var(--color-text-strong);
+.recipe-calculator-container .gradient-title {
   margin-bottom: 12px;
-  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
 }
 
 .recipe-calculator-description {
@@ -130,7 +110,7 @@
   background: var(--grad-purple);
   color: var(--color-text-on-accent);
   border-color: var(--color-purple);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  box-shadow: var(--shadow-purple-glow);
 }
 
 .category-tab.summary-tab {
@@ -224,7 +204,7 @@
 
 .recipe-row:hover {
   border-color: var(--color-purple);
-  box-shadow: var(--shadow-md-lift);
+  box-shadow: var(--shadow-md);
 }
 
 .recipe-row.selected {
@@ -265,10 +245,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.recipe-meta {
-  display: contents;
 }
 
 .recipe-total-badge {
@@ -404,13 +380,13 @@
   font-size: 14px;
   font-weight: 500;
   transition: var(--transition-base);
-  box-shadow: 0 2px 8px rgba(218, 54, 51, 0.3);
+  box-shadow: var(--shadow-red-glow);
 }
 
 .clear-all-button:hover {
   background: var(--grad-red-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(218, 54, 51, 0.4);
+  box-shadow: var(--shadow-red-glow-strong);
 }
 
 .total-ingredients-grid {
@@ -478,7 +454,7 @@
   font-size: 18px;
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  box-shadow: var(--shadow-purple-glow);
 }
 
 .no-results {
@@ -598,11 +574,6 @@
 
 /* タブレット用のレスポンシブデザイン */
 @media (max-width: 1024px) {
-  .recipe-calculator-container {
-    max-width: 100%;
-    padding: 20px;
-  }
-
   .recipe-row {
     grid-template-columns: minmax(120px, 1.2fr) 44px 50px 95px 1fr auto;
   }
@@ -620,12 +591,7 @@
 
 /* スマートフォン用のレスポンシブデザイン */
 @media (max-width: 768px) {
-  .recipe-calculator-container {
-    padding: 16px;
-  }
-
-  .recipe-calculator-container h1 {
-    font-size: 2.2rem;
+  .recipe-calculator-container .gradient-title {
     margin-bottom: 8px;
   }
 
@@ -737,14 +703,6 @@
 
 /* 極小画面用のレスポンシブデザイン */
 @media (max-width: 480px) {
-  .recipe-calculator-container {
-    padding: 12px;
-  }
-
-  .recipe-calculator-container h1 {
-    font-size: 1.8rem;
-  }
-
   .category-tabs {
     gap: 4px;
   }

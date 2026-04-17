@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
 .app-nav {
   display: flex;
   justify-content: center;

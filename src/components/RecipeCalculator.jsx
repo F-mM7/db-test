@@ -75,9 +75,9 @@ function RecipeCalculator() {
   }
 
   return (
-    <div className="recipe-calculator-container">
+    <div className="page-container recipe-calculator-container">
       <header>
-        <h1>料理カリキュレーター</h1>
+        <h1 className="gradient-title gradient-title-purple">料理カリキュレーター</h1>
         <p className="recipe-calculator-description">
           作りたい料理と回数を指定すると、必要な食材の合計数を算出します
         </p>
@@ -206,10 +206,8 @@ const RecipeRow = memo(({ recipe, count, onCountChange }) => {
       <span className="recipe-weekend-cell">
         {recipe.weekendOnly && <span className="weekend-badge">週末</span>}
       </span>
-      <div className="recipe-meta">
-        <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
-        <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
-      </div>
+      <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
+      <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
       <div className="recipe-ingredients-summary">
         {recipe.ingredients.map(ing => (
           <IngredientIcon key={ing.name} name={ing.name} quantity={ing.quantity} />
@@ -269,10 +267,8 @@ const SummaryRow = memo(({ recipe, onCountChange }) => {
       <span className="recipe-weekend-cell">
         <span className="summary-category-badge">{recipe.category}</span>
       </span>
-      <div className="recipe-meta">
-        <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
-        <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
-      </div>
+      <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
+      <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
       <div className="recipe-ingredients-summary">
         {recipe.ingredients.map(ing => (
           <IngredientIcon key={ing.name} name={ing.name} quantity={ing.quantity * recipe.count} />

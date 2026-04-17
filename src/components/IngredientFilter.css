@@ -1,25 +1,5 @@
-.ingredient-filter-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 24px;
-  background: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100vh;
-  font-family: var(--font-sans);
-}
-
-.ingredient-filter-container h1 {
-  text-align: center;
-  color: var(--color-text-strong);
+.ingredient-filter-container .gradient-title {
   margin-bottom: 40px;
-  background: var(--grad-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
 }
 
 .ingredient-section {
@@ -49,7 +29,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   text-align: center;
   white-space: nowrap;
   position: relative;
@@ -134,13 +114,13 @@
   font-size: 14px;
   font-weight: 500;
   transition: var(--transition-base);
-  box-shadow: 0 2px 8px rgba(218, 54, 51, 0.3);
+  box-shadow: var(--shadow-red-glow);
 }
 
 .clear-button:hover {
   background: var(--grad-red-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(218, 54, 51, 0.4);
+  box-shadow: var(--shadow-red-glow-strong);
 }
 
 .pokemon-grid {
@@ -170,7 +150,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-blue-dark), var(--color-purple));
+  background: var(--grad-accent-line);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -215,7 +195,7 @@
 }
 
 .max-value {
-  background: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  background: var(--grad-red-light);
   color: var(--color-text-on-accent);
   padding: 8px 16px;
   border-radius: var(--radius-lg);
@@ -378,7 +358,7 @@
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   font-weight: 700;
-  box-shadow: var(--shadow-md-lift);
+  box-shadow: var(--shadow-md);
   position: relative;
 }
 
@@ -389,7 +369,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-blue-dark), var(--color-purple));
+  background: var(--grad-accent-line);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
@@ -575,11 +555,6 @@
 
 /* タブレット用のレスポンシブデザイン */
 @media (max-width: 1024px) {
-  .ingredient-filter-container {
-    max-width: 100%;
-    padding: 20px;
-  }
-  
   .pokemon-grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 24px;
@@ -593,12 +568,7 @@
 
 /* スマートフォン用のレスポンシブデザイン */
 @media (max-width: 768px) {
-  .ingredient-filter-container {
-    padding: 16px;
-  }
-  
-  .ingredient-filter-container h1 {
-    font-size: 2.2rem;
+  .ingredient-filter-container .gradient-title {
     margin-bottom: 32px;
   }
   
@@ -671,12 +641,7 @@
 
 /* 極小画面用のレスポンシブデザイン */
 @media (max-width: 480px) {
-  .ingredient-filter-container {
-    padding: 12px;
-  }
-  
-  .ingredient-filter-container h1 {
-    font-size: 1.8rem;
+  .ingredient-filter-container .gradient-title {
     margin-bottom: 24px;
   }
   
