@@ -24,7 +24,7 @@
   border: 2px solid var(--color-border);
   background: var(--grad-surface);
   color: var(--color-text);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -32,8 +32,6 @@
   box-shadow: var(--shadow-sm);
   text-align: center;
   white-space: nowrap;
-  position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,42 +45,20 @@
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
-.ingredient-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.6s;
-}
-
-.ingredient-button:hover::before {
-  left: 100%;
-}
-
 .ingredient-button:hover {
   background: var(--grad-green-reverse);
   border-color: var(--color-green);
   color: var(--color-text-on-accent);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(35, 134, 54, 0.4);
+  transform: var(--lift-md);
+  box-shadow: var(--shadow-glow-green);
 }
 
 .ingredient-button.active {
   background: var(--grad-green);
   color: var(--color-text-on-accent);
   border-color: var(--color-green);
-  box-shadow: 0 8px 20px rgba(35, 134, 54, 0.5);
-  transform: translateY(-2px);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 8px 20px rgba(35, 134, 54, 0.5); }
-  50% { box-shadow: 0 8px 20px rgba(35, 134, 54, 0.3); }
-  100% { box-shadow: 0 8px 20px rgba(35, 134, 54, 0.5); }
+  box-shadow: var(--shadow-glow-green);
+  transform: var(--lift-sm);
 }
 
 .results-section {
@@ -115,35 +91,16 @@
 .pokemon-card {
   background: var(--grad-surface-reverse);
   border: 2px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: 28px;
-  box-shadow: var(--shadow-lg);
-  transition: all 0.4s var(--ease-out);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-}
-
-.pokemon-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--grad-accent-line);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
 }
 
 .pokemon-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-2xl);
+  transform: var(--lift-md);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-blue);
-}
-
-.pokemon-card:hover::before {
-  opacity: 1;
 }
 
 .pokemon-header h3 {
@@ -172,18 +129,16 @@
   border-radius: var(--radius-md);
   font-size: 14px;
   font-weight: 700;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .max-value {
   background: var(--grad-red-light);
   color: var(--color-text-on-accent);
   padding: 8px 16px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   font-size: 18px;
   font-weight: 800;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 12px rgba(248, 81, 73, 0.3);
+  box-shadow: var(--shadow-glow-red);
 }
 
 .pokemon-ingredients {
@@ -197,7 +152,7 @@
   background: var(--grad-bg-surface);
   border: 2px solid var(--color-surface-2);
   padding: 20px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-inset);
 }
 
@@ -209,12 +164,12 @@
   background: linear-gradient(135deg, var(--color-surface-2), var(--color-border));
   border-radius: var(--radius-md);
   border-left: 4px solid var(--color-blue);
-  transition: var(--transition-base);
+  transition: var(--transition-smooth);
 }
 
 .ingredient-row:hover {
   background: var(--grad-surface-darker);
-  transform: translateX(4px);
+  transform: var(--lift-sm);
 }
 
 .ingredient-label-text {
@@ -340,18 +295,6 @@
   border-radius: var(--radius-lg);
   font-weight: 700;
   box-shadow: var(--shadow-md);
-  position: relative;
-}
-
-.result-count::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--grad-accent-line);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .info {
@@ -441,9 +384,9 @@
   text-align: center;
   background: var(--grad-surface-reverse);
   border: 2px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: 40px;
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 .error-boundary-icon {

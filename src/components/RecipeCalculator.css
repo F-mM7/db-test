@@ -60,11 +60,6 @@
   overflow-x: auto;
 }
 
-.category-tab {
-  padding: 12px 24px;
-  font-size: 15px;
-}
-
 .summary-tab {
   margin-left: auto;
 }
@@ -79,7 +74,7 @@
   padding: 0 6px;
   background: var(--color-red-dark);
   color: var(--color-text-on-accent);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
@@ -125,7 +120,7 @@
   background: var(--grad-surface-reverse);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: var(--transition-base);
+  transition: var(--transition-smooth);
 }
 
 .recipe-row:hover {
@@ -280,31 +275,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: var(--transition-base);
-  position: relative;
-  overflow: hidden;
-}
-
-.total-ingredient-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-purple), var(--color-blue));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition-smooth);
 }
 
 .total-ingredient-card:hover {
-  transform: translateY(-4px);
+  transform: var(--lift-md);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-purple);
-}
-
-.total-ingredient-card:hover::before {
-  opacity: 1;
 }
 
 .total-ingredient-icon {
@@ -326,11 +303,10 @@
   background: var(--grad-purple);
   color: var(--color-text-on-accent);
   padding: 6px 14px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   font-size: 18px;
   font-weight: 800;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: var(--shadow-purple-glow);
+  box-shadow: var(--shadow-glow-purple);
 }
 
 .no-results {
@@ -373,13 +349,13 @@
 .missing-ingredient-card {
   background: var(--grad-bg-surface);
   border: 1px dashed var(--color-border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 10px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
   opacity: 0.6;
-  transition: var(--transition-base);
+  transition: var(--transition-smooth);
 }
 
 .missing-ingredient-card:hover {
@@ -429,18 +405,6 @@
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   font-weight: 600;
-  position: relative;
-}
-
-.selected-recipes-summary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-purple), var(--color-blue), var(--color-green));
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .summary-count {
@@ -481,11 +445,6 @@
   .category-tabs {
     gap: 4px;
     margin-bottom: 24px;
-  }
-
-  .category-tab {
-    padding: 10px 16px;
-    font-size: 14px;
   }
 
   .recipe-row {
@@ -581,11 +540,6 @@
 @media (max-width: 480px) {
   .category-tabs {
     gap: 4px;
-  }
-
-  .category-tab {
-    padding: 8px 12px;
-    font-size: 13px;
   }
 
   .recipe-row {

@@ -22,20 +22,9 @@
   z-index: 100;
 }
 
-.app-nav-tab {
-  padding: 12px 32px;
-  font-size: 16px;
-  font-family: var(--font-sans);
-}
-
 @media (max-width: 480px) {
   .app-nav {
     padding: 12px 12px 0;
     gap: 4px;
-  }
-
-  .app-nav-tab {
-    padding: 10px 16px;
-    font-size: 14px;
   }
 }

@@ -40,33 +40,32 @@
   --grad-red: linear-gradient(135deg, var(--color-red-dark), var(--color-red-darker));
   --grad-red-light: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
   --grad-red-hover: linear-gradient(135deg, var(--color-red-darker), var(--color-red-darkest));
-  --grad-accent-line: linear-gradient(90deg, var(--color-blue), var(--color-blue-dark), var(--color-purple));
 
-  /* ─ Radius ─ */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  /* ─ Radius (3 tiers) ─ */
+  --radius-sm: 6px;   /* small badges */
+  --radius-md: 10px;  /* buttons, mid-size */
+  --radius-lg: 14px;  /* cards, sections */
 
-  /* ─ Motion ─ */
+  /* ─ Motion (2 tiers, unified easing) ─ */
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.2s ease;
-  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.2s var(--ease-out);
   --transition-smooth: all 0.3s var(--ease-out);
 
-  /* ─ Shadow (neutral elevation) ─ */
-  --shadow-xs: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* ─ Lift (hover transform) ─ */
+  --lift-sm: translateY(-2px);
+  --lift-md: translateY(-4px);
+
+  /* ─ Shadow (3 elevation tiers + inset) ─ */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-2xl: 0 16px 48px rgba(0, 0, 0, 0.4);
   --shadow-inset: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 
-  /* ─ Shadow (accent glow) ─ */
-  --shadow-purple-glow: 0 4px 12px rgba(139, 92, 246, 0.3);
-  --shadow-red-glow: 0 2px 8px rgba(218, 54, 51, 0.3);
-  --shadow-red-glow-strong: 0 4px 12px rgba(218, 54, 51, 0.4);
+  /* ─ Shadow (accent glow, 4 colors) ─ */
+  --shadow-glow-blue: 0 4px 12px rgba(88, 166, 255, 0.3);
+  --shadow-glow-green: 0 4px 12px rgba(35, 134, 54, 0.3);
+  --shadow-glow-purple: 0 4px 12px rgba(139, 92, 246, 0.3);
+  --shadow-glow-red: 0 4px 12px rgba(248, 81, 73, 0.3);
 
   /* ─ Font ─ */
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;

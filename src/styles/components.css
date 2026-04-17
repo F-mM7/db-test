@@ -1,5 +1,7 @@
 /* ─ Component: Tab ─ */
 .tab {
+  padding: 12px 24px;
+  font-size: 15px;
   border: 2px solid var(--color-border);
   border-bottom: none;
   background: var(--grad-surface);
@@ -8,7 +10,6 @@
   cursor: pointer;
   transition: var(--transition-smooth);
   white-space: nowrap;
-  position: relative;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
@@ -21,14 +22,14 @@
   background: var(--grad-blue);
   color: var(--color-text-on-accent);
   border-color: var(--color-blue);
-  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+  box-shadow: var(--shadow-glow-blue);
 }
 
 .tab-purple.active {
   background: var(--grad-purple);
   color: var(--color-text-on-accent);
   border-color: var(--color-purple);
-  box-shadow: var(--shadow-purple-glow);
+  box-shadow: var(--shadow-glow-purple);
 }
 
 /* ─ Component: Button (flat) ─ */
@@ -39,7 +40,7 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: var(--transition-smooth);
   color: var(--color-text-on-accent);
 }
 
@@ -51,13 +52,12 @@
 
 .btn-danger {
   background: var(--grad-red);
-  box-shadow: var(--shadow-red-glow);
+  box-shadow: var(--shadow-glow-red);
 }
 
 .btn-danger:hover {
   background: var(--grad-red-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-red-glow-strong);
+  transform: var(--lift-sm);
 }
 
 .btn-success {
@@ -66,8 +66,8 @@
 
 .btn-success:hover {
   background: var(--grad-green);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(35, 134, 54, 0.3);
+  transform: var(--lift-sm);
+  box-shadow: var(--shadow-glow-green);
 }
 
 .btn-purple {
@@ -76,8 +76,8 @@
 
 .btn-purple:hover {
   background: var(--grad-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
+  transform: var(--lift-sm);
+  box-shadow: var(--shadow-glow-purple);
 }
 
 /* ─ Component: Icon Button ─ */
@@ -138,4 +138,18 @@
   border-color: var(--color-red-dark);
   color: var(--color-text-on-accent);
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 }
