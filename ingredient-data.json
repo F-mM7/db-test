@@ -1,0 +1,116 @@
+[
+  {
+    "name": "ふといながねぎ",
+    "baseEnergy": 185,
+    "effectiveEnergyMax": 995,
+    "dreamShards": 7
+  },
+  {
+    "name": "あじわいキノコ",
+    "baseEnergy": 167,
+    "effectiveEnergyMax": 898,
+    "dreamShards": 7
+  },
+  {
+    "name": "とくせんエッグ",
+    "baseEnergy": 115,
+    "effectiveEnergyMax": 684,
+    "dreamShards": 5
+  },
+  {
+    "name": "ほっこりポテト",
+    "baseEnergy": 124,
+    "effectiveEnergyMax": 737,
+    "dreamShards": 5
+  },
+  {
+    "name": "とくせんリンゴ",
+    "baseEnergy": 90,
+    "effectiveEnergyMax": 536,
+    "dreamShards": 4
+  },
+  {
+    "name": "げきからハーブ",
+    "baseEnergy": 130,
+    "effectiveEnergyMax": 773,
+    "dreamShards": 5
+  },
+  {
+    "name": "マメミート",
+    "baseEnergy": 103,
+    "effectiveEnergyMax": 554,
+    "dreamShards": 4
+  },
+  {
+    "name": "モーモーミルク",
+    "baseEnergy": 98,
+    "effectiveEnergyMax": 582,
+    "dreamShards": 4
+  },
+  {
+    "name": "あまいミツ",
+    "baseEnergy": 101,
+    "effectiveEnergyMax": 600,
+    "dreamShards": 4
+  },
+  {
+    "name": "ピュアなオイル",
+    "baseEnergy": 121,
+    "effectiveEnergyMax": 719,
+    "dreamShards": 5
+  },
+  {
+    "name": "あったかジンジャー",
+    "baseEnergy": 109,
+    "effectiveEnergyMax": 586,
+    "dreamShards": 4
+  },
+  {
+    "name": "あんみんトマト",
+    "baseEnergy": 110,
+    "effectiveEnergyMax": 653,
+    "dreamShards": 4
+  },
+  {
+    "name": "リラックスカカオ",
+    "baseEnergy": 151,
+    "effectiveEnergyMax": 811,
+    "dreamShards": 6
+  },
+  {
+    "name": "おいしいシッポ",
+    "baseEnergy": 342,
+    "effectiveEnergyMax": 1428,
+    "dreamShards": 14
+  },
+  {
+    "name": "ワカクサ大豆",
+    "baseEnergy": 100,
+    "effectiveEnergyMax": 595,
+    "dreamShards": 4
+  },
+  {
+    "name": "ワカクサコーン",
+    "baseEnergy": 140,
+    "effectiveEnergyMax": 832,
+    "dreamShards": 6
+  },
+  {
+    "name": "めざましコーヒー",
+    "baseEnergy": 153,
+    "effectiveEnergyMax": 823,
+    "dreamShards": 6
+  },
+  {
+    "name": "ずっしりカボチャ",
+    "baseEnergy": 250,
+    "effectiveEnergyMax": 1486,
+    "dreamShards": 10
+  },
+  {
+    "name": "つやつやアボカド",
+    "baseEnergy": 162,
+    "effectiveEnergyMax": 963,
+    "dreamShards": 6
+  }
+]
