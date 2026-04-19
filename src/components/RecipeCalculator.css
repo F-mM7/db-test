@@ -130,7 +130,7 @@
 
 .recipe-row.selected {
   border-color: var(--color-purple);
-  background: linear-gradient(135deg, #1a1530, var(--color-surface-2));
+  background: var(--color-surface-2);
 }
 
 .recipe-row.weekend-only {
@@ -183,8 +183,8 @@
 }
 
 .recipe-energy-badge {
-  background: linear-gradient(135deg, #2a1a1a, #2d1f1f);
-  border: 1px solid #f8514933;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
   padding: 2px 0;
   border-radius: var(--radius-sm);
   font-size: 12px;
@@ -216,7 +216,7 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  filter: var(--filter-icon-shadow-strong);
 }
 
 .ingredient-icon-qty {
@@ -289,7 +289,7 @@
   height: 36px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  filter: var(--filter-icon-shadow-strong);
 }
 
 .total-ingredient-name {
@@ -368,7 +368,7 @@
   height: 28px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: grayscale(0.5) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  filter: grayscale(0.5) var(--filter-icon-shadow-strong);
 }
 
 .missing-ingredient-name {

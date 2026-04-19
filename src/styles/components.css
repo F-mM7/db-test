@@ -121,14 +121,12 @@
   background: var(--grad-purple);
   border-color: var(--color-purple);
   color: var(--color-text-on-accent);
-  transform: scale(1.1);
 }
 
 .icon-btn-remove {
   width: 32px;
   height: 32px;
-  border-color: #da363380;
-  background: linear-gradient(135deg, #2a1a1a, #1a1010);
+  border-color: var(--color-red-dark);
   color: var(--color-red);
   margin-left: 4px;
 }
@@ -137,7 +135,6 @@
   background: var(--grad-red);
   border-color: var(--color-red-dark);
   color: var(--color-text-on-accent);
-  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
