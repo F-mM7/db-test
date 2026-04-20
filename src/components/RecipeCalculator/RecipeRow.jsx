@@ -18,8 +18,6 @@ const RecipeRow = memo(({ variant, recipe, count, onCountChange }) => {
           )
         )}
       </span>
-      <span className="recipe-total-badge badge badge--outline badge--sm badge--block">計{recipe.totalIngredients}</span>
-      <span className="recipe-energy-badge badge badge--outline badge--sm badge--block">{recipe.energy.toLocaleString()} En</span>
       <div className="recipe-ingredients-summary">
         {recipe.ingredients.map(ing => (
           <IngredientIcon
@@ -29,6 +27,8 @@ const RecipeRow = memo(({ variant, recipe, count, onCountChange }) => {
           />
         ))}
       </div>
+      <span className="recipe-total-badge badge badge--outline badge--sm badge--block">計{recipe.totalIngredients}</span>
+      <span className="recipe-energy-badge badge badge--outline badge--sm badge--block">{recipe.energy.toLocaleString()} En</span>
       <div className="recipe-count-control">
         <button
           className="icon-btn icon-btn-count"
