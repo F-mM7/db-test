@@ -1,23 +1,24 @@
 import { useFetchJson } from '../hooks/useFetchJson';
 import { usePokemonFilter } from '../hooks/usePokemonFilter';
-import { DATA_URL } from '../utils/constants';
+import { DATA_URL, INGREDIENT_DATA_URL } from '../utils/constants';
 import PokemonCard from './PokemonCard';
 import IngredientButton from './IngredientButton';
 import AsyncBoundary from './AsyncBoundary';
 import './IngredientFilter.css';
 
 function IngredientFilter() {
-  const { data: pokemonData, loading, error } = useFetchJson(DATA_URL);
+  const { data: pokemonData, loading: pokemonLoading, error: pokemonError } = useFetchJson(DATA_URL);
+  const { data: ingredientData, loading: ingredientLoading, error: ingredientError } = useFetchJson(INGREDIENT_DATA_URL);
   const {
     selectedIngredient,
     setSelectedIngredient,
     ingredients,
     filteredPokemon,
     getMaxValueForIngredient
-  } = usePokemonFilter(pokemonData);
+  } = usePokemonFilter(pokemonData, ingredientData);
 
   return (
-    <AsyncBoundary loading={loading} error={error}>
+    <AsyncBoundary loading={pokemonLoading || ingredientLoading} error={pokemonError || ingredientError}>
       <div className="page-container ingredient-filter-container">
         <section className="ingredient-section">
           <h2>食材を選択</h2>

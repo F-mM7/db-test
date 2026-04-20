@@ -68,7 +68,7 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
     return Array.from(set);
   }, [ingredientData, recipeData]);
 
-  // 集計に含まれていない食材を基礎エナジー降順でソート
+  // 集計に含まれていない食材を基礎エナジー昇順でソート
   // 基礎エナジー不明の食材は末尾にまわす
   const missingIngredients = useMemo(() => {
     const usedSet = new Set(totalIngredients.map(t => t.name));
@@ -79,9 +79,9 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
         baseEnergy: baseEnergyMap.has(name) ? baseEnergyMap.get(name) : null
       }))
       .sort((a, b) => {
-        const ae = a.baseEnergy ?? -Infinity;
-        const be = b.baseEnergy ?? -Infinity;
-        return be - ae;
+        const ae = a.baseEnergy ?? Infinity;
+        const be = b.baseEnergy ?? Infinity;
+        return ae - be;
       });
   }, [allIngredients, totalIngredients, baseEnergyMap]);
 
