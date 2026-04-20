@@ -2,8 +2,7 @@ import { memo, useState, useMemo } from 'react';
 import { useFetchJson } from '../hooks/useFetchJson';
 import { useRecipeCalculator, POT_SIZE_MIN, POT_SIZE_MAX } from '../hooks/useRecipeCalculator';
 import { ingredientIconUrl, RECIPE_DATA_URL, INGREDIENT_DATA_URL } from '../utils/constants';
-import LoadingSpinner from './LoadingSpinner';
-import ErrorDisplay from './ErrorDisplay';
+import AsyncBoundary from './AsyncBoundary';
 import './RecipeCalculator.css';
 
 const SUMMARY_TAB = '__summary__';
@@ -65,61 +64,55 @@ function RecipeCalculator() {
       .filter(Boolean);
   }, [isSummaryTab, selectedRecipes, recipeData]);
 
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
-  if (error) {
-    return <ErrorDisplay error={error} onRetry={() => window.location.reload()} />;
-  }
-
   return (
-    <div className="page-container recipe-calculator-container">
-      <header>
-        <h1 className="page-title">料理カリキュレーター</h1>
-        <p className="recipe-calculator-description">
-          作りたい料理と回数を指定すると、必要な食材の合計数を算出します
-        </p>
-      </header>
+    <AsyncBoundary loading={loading} error={error}>
+      <div className="page-container recipe-calculator-container">
+        <header>
+          <h1 className="page-title">料理カリキュレーター</h1>
+          <p className="recipe-calculator-description">
+            作りたい料理と回数を指定すると、必要な食材の合計数を算出します
+          </p>
+        </header>
 
-      <FilterBar
-        potSize={potSize}
-        onIncrement={incrementPotSize}
-        onDecrement={decrementPotSize}
-      />
-
-      <CategoryTabs
-        categories={categories}
-        activeTab={currentTab}
-        onSelect={setActiveTab}
-        selectedCount={selectedCount}
-      />
-
-      {isSummaryTab ? (
-        <SummaryList
-          recipes={selectedRecipeDetails}
-          onCountChange={setRecipeCount}
+        <FilterBar
+          potSize={potSize}
+          onIncrement={incrementPotSize}
+          onDecrement={decrementPotSize}
         />
-      ) : (
-        <RecipeList
-          recipes={filteredRecipes}
-          selectedRecipes={selectedRecipes}
-          onCountChange={setRecipeCount}
-        />
-      )}
 
-      {totalIngredients.length > 0 && (
-        <TotalResults
-          totalIngredients={totalIngredients}
+        <CategoryTabs
+          categories={categories}
+          activeTab={currentTab}
+          onSelect={setActiveTab}
           selectedCount={selectedCount}
-          onClear={clearAll}
         />
-      )}
 
-      {isSummaryTab && missingIngredients.length > 0 && (
-        <MissingIngredients ingredients={missingIngredients} />
-      )}
-    </div>
+        {isSummaryTab ? (
+          <SummaryList
+            recipes={selectedRecipeDetails}
+            onCountChange={setRecipeCount}
+          />
+        ) : (
+          <RecipeList
+            recipes={filteredRecipes}
+            selectedRecipes={selectedRecipes}
+            onCountChange={setRecipeCount}
+          />
+        )}
+
+        {totalIngredients.length > 0 && (
+          <TotalResults
+            totalIngredients={totalIngredients}
+            selectedCount={selectedCount}
+            onClear={clearAll}
+          />
+        )}
+
+        {isSummaryTab && missingIngredients.length > 0 && (
+          <MissingIngredients ingredients={missingIngredients} />
+        )}
+      </div>
+    </AsyncBoundary>
   );
 }
 
@@ -180,45 +173,13 @@ const RecipeList = memo(({ recipes, selectedRecipes, onCountChange }) => (
       recipes.map(recipe => (
         <RecipeRow
           key={recipe.name}
+          variant="list"
           recipe={recipe}
           count={selectedRecipes[recipe.name] || 0}
           onCountChange={onCountChange}
         />
       ))
     )}
-  </div>
-));
-
-// 料理1行
-const RecipeRow = memo(({ recipe, count, onCountChange }) => (
-  <div className={`recipe-row ${count > 0 ? 'selected' : ''} ${recipe.weekendOnly ? 'weekend-only' : ''}`}>
-    <span className="recipe-name">{recipe.name}</span>
-    <span className="recipe-weekend-cell">
-      {recipe.weekendOnly && <span className="weekend-badge">週末</span>}
-    </span>
-    <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
-    <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
-    <div className="recipe-ingredients-summary">
-      {recipe.ingredients.map(ing => (
-        <IngredientIcon key={ing.name} name={ing.name} quantity={ing.quantity} />
-      ))}
-    </div>
-    <div className="recipe-count-control">
-      <button
-        className="icon-btn icon-btn-count"
-        onClick={() => onCountChange(recipe.name, count - 1)}
-        disabled={count <= 0}
-      >
-        -
-      </button>
-      <span className="count-display">{count}</span>
-      <button
-        className="icon-btn icon-btn-count"
-        onClick={() => onCountChange(recipe.name, count + 1)}
-      >
-        +
-      </button>
-    </div>
   </div>
 ));
 
@@ -229,9 +190,11 @@ const SummaryList = memo(({ recipes, onCountChange }) => (
       <div className="no-results">料理が選択されていません</div>
     ) : (
       recipes.map(recipe => (
-        <SummaryRow
+        <RecipeRow
           key={recipe.name}
+          variant="summary"
           recipe={recipe}
+          count={recipe.count}
           onCountChange={onCountChange}
         />
       ))
@@ -239,44 +202,60 @@ const SummaryList = memo(({ recipes, onCountChange }) => (
   </div>
 ));
 
-// 集計タブ: 料理1行（削除ボタン付き）
-const SummaryRow = memo(({ recipe, onCountChange }) => (
-  <div className="recipe-row">
-    <span className="recipe-name">{recipe.name}</span>
-    <span className="recipe-weekend-cell">
-      <span className="summary-category-badge">{recipe.category}</span>
-    </span>
-    <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
-    <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
-    <div className="recipe-ingredients-summary">
-      {recipe.ingredients.map(ing => (
-        <IngredientIcon key={ing.name} name={ing.name} quantity={ing.quantity * recipe.count} />
-      ))}
+// 料理1行（list / summary 両対応）
+const RecipeRow = memo(({ variant, recipe, count, onCountChange }) => {
+  const isSummary = variant === 'summary';
+  const rowClassName = !isSummary && count > 0 ? 'recipe-row selected' : 'recipe-row';
+  const decrementDisabled = isSummary ? count <= 1 : count <= 0;
+
+  return (
+    <div className={rowClassName}>
+      <span className="recipe-name">{recipe.name}</span>
+      <span className="recipe-weekend-cell">
+        {isSummary ? (
+          <span className="summary-category-badge">{recipe.category}</span>
+        ) : (
+          recipe.weekendOnly && <span className="weekend-badge">週末</span>
+        )}
+      </span>
+      <span className="recipe-total-badge">計{recipe.totalIngredients}</span>
+      <span className="recipe-energy-badge">{recipe.energy.toLocaleString()} En</span>
+      <div className="recipe-ingredients-summary">
+        {recipe.ingredients.map(ing => (
+          <IngredientIcon
+            key={ing.name}
+            name={ing.name}
+            quantity={isSummary ? ing.quantity * count : ing.quantity}
+          />
+        ))}
+      </div>
+      <div className="recipe-count-control">
+        <button
+          className="icon-btn icon-btn-count"
+          onClick={() => onCountChange(recipe.name, count - 1)}
+          disabled={decrementDisabled}
+        >
+          -
+        </button>
+        <span className="count-display">{count}</span>
+        <button
+          className="icon-btn icon-btn-count"
+          onClick={() => onCountChange(recipe.name, count + 1)}
+        >
+          +
+        </button>
+        {isSummary && (
+          <button
+            className="icon-btn icon-btn-remove"
+            onClick={() => onCountChange(recipe.name, 0)}
+          >
+            &times;
+          </button>
+        )}
+      </div>
     </div>
-    <div className="recipe-count-control">
-      <button
-        className="icon-btn icon-btn-count"
-        onClick={() => onCountChange(recipe.name, recipe.count - 1)}
-        disabled={recipe.count <= 1}
-      >
-        -
-      </button>
-      <span className="count-display">{recipe.count}</span>
-      <button
-        className="icon-btn icon-btn-count"
-        onClick={() => onCountChange(recipe.name, recipe.count + 1)}
-      >
-        +
-      </button>
-      <button
-        className="icon-btn icon-btn-remove"
-        onClick={() => onCountChange(recipe.name, 0)}
-      >
-        &times;
-      </button>
-    </div>
-  </div>
-));
+  );
+});
 
 // 合計結果セクション
 const TotalResults = memo(({ totalIngredients, selectedCount, onClear }) => (
@@ -337,9 +316,8 @@ const MissingIngredients = memo(({ ingredients }) => (
 FilterBar.displayName = 'FilterBar';
 CategoryTabs.displayName = 'CategoryTabs';
 RecipeList.displayName = 'RecipeList';
-RecipeRow.displayName = 'RecipeRow';
 SummaryList.displayName = 'SummaryList';
-SummaryRow.displayName = 'SummaryRow';
+RecipeRow.displayName = 'RecipeRow';
 TotalResults.displayName = 'TotalResults';
 MissingIngredients.displayName = 'MissingIngredients';
 
