@@ -1,4 +1,4 @@
-.ingredient-filter-container .gradient-title {
+.ingredient-filter-container .page-title {
   margin-bottom: 40px;
 }
 
@@ -22,7 +22,7 @@
 .ingredient-button {
   padding: 12px 8px;
   border: 2px solid var(--color-border);
-  background: var(--grad-surface);
+  background: var(--color-surface-2);
   color: var(--color-text);
   border-radius: var(--radius-md);
   font-size: 15px;
@@ -46,14 +46,18 @@
 }
 
 .ingredient-button:hover {
-  background: var(--grad-green);
   border-color: var(--color-green);
-  color: var(--color-text-on-accent);
+  box-shadow: var(--shadow-md);
 }
 
 .ingredient-button.active {
-  background: var(--grad-green);
+  background: var(--fill-green);
   color: var(--color-text-on-accent);
+  border-color: var(--fill-green);
+}
+
+.ingredient-button.active:hover {
+  background: var(--color-green);
   border-color: var(--color-green);
 }
 
@@ -85,7 +89,7 @@
 }
 
 .pokemon-card {
-  background: var(--grad-surface-reverse);
+  background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 28px;
@@ -95,6 +99,7 @@
 
 .pokemon-card:hover {
   border-color: var(--color-blue);
+  box-shadow: var(--shadow-md);
 }
 
 .pokemon-header h3 {
@@ -117,7 +122,7 @@
 }
 
 .ingredient-label {
-  background: var(--grad-blue);
+  background: var(--fill-blue);
   color: var(--color-text-on-accent);
   padding: 4px 10px;
   border-radius: var(--radius-md);
@@ -126,7 +131,7 @@
 }
 
 .max-value {
-  background: var(--grad-red);
+  background: var(--fill-red);
   color: var(--color-text-on-accent);
   padding: 8px 16px;
   border-radius: var(--radius-md);
@@ -142,7 +147,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: var(--grad-bg-surface);
+  background: var(--color-surface-1);
   border: 2px solid var(--color-surface-2);
   padding: 20px;
   border-radius: var(--radius-md);
@@ -187,7 +192,7 @@
   color: var(--color-text);
   margin: 32px 0;
   padding: 20px;
-  background: var(--grad-bg-surface);
+  background: var(--color-surface-1);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   font-weight: 700;
@@ -279,7 +284,7 @@
 .error-boundary-content {
   max-width: 600px;
   text-align: center;
-  background: var(--grad-surface-reverse);
+  background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 40px;
@@ -353,7 +358,7 @@
 
 /* スマートフォン用のレスポンシブデザイン */
 @media (max-width: 768px) {
-  .ingredient-filter-container .gradient-title {
+  .ingredient-filter-container .page-title {
     margin-bottom: 32px;
   }
   
@@ -426,7 +431,7 @@
 
 /* 極小画面用のレスポンシブデザイン */
 @media (max-width: 480px) {
-  .ingredient-filter-container .gradient-title {
+  .ingredient-filter-container .page-title {
     margin-bottom: 24px;
   }
   

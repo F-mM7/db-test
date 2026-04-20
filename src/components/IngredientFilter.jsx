@@ -24,7 +24,7 @@ function IngredientFilter() {
   return (
     <div className="page-container ingredient-filter-container">
       <header>
-        <h1 className="gradient-title">ポケモンスリープ 食材別ポケモン検索</h1>
+        <h1 className="page-title">ポケモンスリープ 食材別ポケモン検索</h1>
       </header>
 
       <section className="ingredient-section">

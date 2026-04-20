@@ -1,6 +1,6 @@
 :root {
   /* ─ Color: Surface ─ */
-  --color-bg: #0d1117;
+  --color-bg: #000000;
   --color-surface-1: #161b22;
   --color-surface-2: #21262d;
   --color-border: #30363d;
@@ -13,24 +13,17 @@
 
   /* ─ Color: Accent ─ */
   --color-blue: #58a6ff;
-  --color-blue-dark: #1f6feb;
   --color-green: #2ea043;
-  --color-green-dark: #238636;
   --color-purple: #8b5cf6;
-  --color-purple-dark: #6f42c1;
   --color-red: #f85149;
-  --color-red-dark: #da3633;
   --color-orange: #f09030;
-  --color-orange-dark: #e87020;
 
-  /* ─ Gradient ─ */
-  --grad-surface: linear-gradient(135deg, var(--color-surface-2), var(--color-surface-1));
-  --grad-surface-reverse: linear-gradient(135deg, var(--color-surface-1), var(--color-surface-2));
-  --grad-bg-surface: linear-gradient(135deg, var(--color-bg), var(--color-surface-1));
-  --grad-blue: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
-  --grad-green: linear-gradient(135deg, var(--color-green), var(--color-green-dark));
-  --grad-purple: linear-gradient(135deg, var(--color-purple), var(--color-purple-dark));
-  --grad-red: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  /* ─ Color: Accent Fill (塗りつぶし用、通常色より暗め) ─ */
+  --fill-blue: #1f6feb;
+  --fill-green: #2a9540;
+  --fill-purple: #6f42c1;
+  --fill-red: #da3633;
+  --fill-orange: #e87020;
 
   /* ─ Radius ─ */
   --radius-sm: 6px;
@@ -45,6 +38,7 @@
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
   --shadow-inset: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.6);
 
   /* ─ Filter: Icon Drop Shadow ─ */
   --filter-icon-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
@@ -123,14 +117,10 @@ h1 {
   min-height: 100vh;
 }
 
-/* ─ Typography: Gradient Title ─ */
-.gradient-title {
+/* ─ Typography: Page Title ─ */
+.page-title {
   text-align: center;
-  color: var(--color-text-strong);
-  background: var(--grad-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-blue);
   font-size: 2.75rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -149,7 +139,7 @@ h1 {
     padding: 16px;
   }
 
-  .gradient-title {
+  .page-title {
     font-size: 2.2rem;
   }
 }
@@ -159,7 +149,7 @@ h1 {
     padding: 12px;
   }
 
-  .gradient-title {
+  .page-title {
     font-size: 1.8rem;
   }
 }

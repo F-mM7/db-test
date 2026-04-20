@@ -1,4 +1,4 @@
-.recipe-calculator-container .gradient-title {
+.recipe-calculator-container .page-title {
   margin-bottom: 12px;
 }
 
@@ -16,7 +16,7 @@
   gap: 24px;
   margin-bottom: 24px;
   padding: 20px;
-  background: var(--grad-surface-reverse);
+  background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   flex-wrap: wrap;
@@ -72,7 +72,7 @@
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
-  background: var(--color-red-dark);
+  background: var(--fill-red);
   color: var(--color-text-on-accent);
   border-radius: var(--radius-md);
   font-size: 11px;
@@ -82,7 +82,7 @@
 
 .summary-tab.active .summary-tab-badge {
   background: var(--color-text-on-accent);
-  color: var(--color-purple);
+  color: var(--color-green);
 }
 
 .summary-category-badge {
@@ -117,20 +117,26 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: var(--grad-surface-reverse);
+  background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: var(--transition-smooth);
 }
 
 .recipe-row:hover {
-  border-color: var(--color-purple);
+  border-color: var(--color-green);
   box-shadow: var(--shadow-md);
 }
 
 .recipe-row.selected {
-  border-color: var(--color-purple);
-  background: var(--color-surface-2);
+  background: var(--fill-green);
+  color: var(--color-text-on-accent);
+  border-color: var(--fill-green);
+}
+
+.recipe-row.selected:hover {
+  background: var(--color-green);
+  border-color: var(--color-green);
 }
 
 .recipe-row.weekend-only {
@@ -151,7 +157,7 @@
 .weekend-badge {
   display: inline-block;
   padding: 1px 6px;
-  background: linear-gradient(135deg, var(--color-orange), var(--color-orange-dark));
+  background: var(--fill-orange);
   color: var(--color-text-on-accent);
   border-radius: var(--radius-sm);
   font-size: 10px;
@@ -224,7 +230,7 @@
   font-weight: 700;
   color: var(--color-text-strong);
   line-height: 1;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: var(--shadow-text);
 }
 
 /* 回数コントロール */
@@ -268,7 +274,7 @@
 }
 
 .total-ingredient-card {
-  background: var(--grad-surface-reverse);
+  background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
@@ -279,7 +285,8 @@
 }
 
 .total-ingredient-card:hover {
-  border-color: var(--color-purple);
+  border-color: var(--color-green);
+  box-shadow: var(--shadow-md);
 }
 
 .total-ingredient-icon {
@@ -298,7 +305,7 @@
 }
 
 .total-ingredient-quantity {
-  background: var(--grad-purple);
+  background: var(--fill-green);
   color: var(--color-text-on-accent);
   padding: 6px 14px;
   border-radius: var(--radius-md);
@@ -312,7 +319,7 @@
   color: var(--color-text-muted);
   margin: 40px 0;
   padding: 32px;
-  background: var(--grad-bg-surface);
+  background: var(--color-surface-1);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
 }
@@ -344,7 +351,7 @@
 }
 
 .missing-ingredient-card {
-  background: var(--grad-bg-surface);
+  background: var(--color-surface-1);
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   padding: 10px 14px;
@@ -398,14 +405,14 @@
   color: var(--color-text-muted);
   margin-top: 24px;
   padding: 16px;
-  background: var(--grad-bg-surface);
+  background: var(--color-surface-1);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   font-weight: 600;
 }
 
 .summary-count {
-  color: var(--color-purple);
+  color: var(--color-green);
   font-size: 18px;
 }
 
@@ -428,7 +435,7 @@
 
 /* スマートフォン用のレスポンシブデザイン */
 @media (max-width: 768px) {
-  .recipe-calculator-container .gradient-title {
+  .recipe-calculator-container .page-title {
     margin-bottom: 8px;
   }
 

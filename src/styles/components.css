@@ -4,7 +4,7 @@
   font-size: 15px;
   border: 2px solid var(--color-border);
   border-bottom: none;
-  background: var(--grad-surface);
+  background: var(--color-surface-2);
   color: var(--color-text-muted);
   font-weight: 600;
   cursor: pointer;
@@ -15,11 +15,18 @@
 
 .tab:hover {
   color: var(--color-text);
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow-md);
 }
 
 .tab.active {
-  background: var(--grad-blue);
+  background: var(--fill-blue);
   color: var(--color-text-on-accent);
+  border-color: var(--fill-blue);
+}
+
+.tab.active:hover {
+  background: var(--color-blue);
   border-color: var(--color-blue);
 }
 
@@ -42,27 +49,27 @@
 }
 
 .btn-danger {
-  background: var(--grad-red);
+  background: var(--fill-red);
 }
 
 .btn-danger:hover {
-  filter: brightness(1.1);
+  background: var(--color-red);
 }
 
 .btn-success {
-  background: var(--grad-green);
+  background: var(--fill-green);
 }
 
 .btn-success:hover {
-  filter: brightness(1.1);
+  background: var(--color-green);
 }
 
 .btn-purple {
-  background: var(--grad-purple);
+  background: var(--fill-purple);
 }
 
 .btn-purple:hover {
-  filter: brightness(1.1);
+  background: var(--color-purple);
 }
 
 /* ─ Component: Icon Button ─ */
@@ -72,7 +79,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid var(--color-border);
-  background: var(--grad-surface);
+  background: var(--color-surface-2);
   color: var(--color-text);
   border-radius: var(--radius-md);
   font-size: 18px;
@@ -94,32 +101,34 @@
 
 .icon-btn-step:hover:not(:disabled) {
   border-color: var(--color-blue);
-  color: var(--color-text-on-accent);
+  box-shadow: var(--shadow-md);
 }
 
 .icon-btn-count {
   width: 30px;
   height: 30px;
+  background: var(--fill-blue);
+  border-color: var(--fill-blue);
+  color: var(--color-text-on-accent);
 }
 
 .icon-btn-count:hover:not(:disabled) {
-  background: var(--grad-purple);
-  border-color: var(--color-purple);
-  color: var(--color-text-on-accent);
+  background: var(--color-blue);
+  border-color: var(--color-blue);
 }
 
 .icon-btn-remove {
   width: 32px;
   height: 32px;
-  border-color: var(--color-red-dark);
-  color: var(--color-red);
+  background: var(--fill-red);
+  border-color: var(--fill-red);
+  color: var(--color-text-on-accent);
   margin-left: 4px;
 }
 
 .icon-btn-remove:hover:not(:disabled) {
-  background: var(--grad-red);
-  border-color: var(--color-red-dark);
-  color: var(--color-text-on-accent);
+  background: var(--color-red);
+  border-color: var(--color-red);
 }
 
 @media (max-width: 768px) {

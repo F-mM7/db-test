@@ -76,7 +76,7 @@ function RecipeCalculator() {
   return (
     <div className="page-container recipe-calculator-container">
       <header>
-        <h1 className="gradient-title">料理カリキュレーター</h1>
+        <h1 className="page-title">料理カリキュレーター</h1>
         <p className="recipe-calculator-description">
           作りたい料理と回数を指定すると、必要な食材の合計数を算出します
         </p>
@@ -241,7 +241,7 @@ const SummaryList = memo(({ recipes, onCountChange }) => (
 
 // 集計タブ: 料理1行（削除ボタン付き）
 const SummaryRow = memo(({ recipe, onCountChange }) => (
-  <div className="recipe-row selected">
+  <div className="recipe-row">
     <span className="recipe-name">{recipe.name}</span>
     <span className="recipe-weekend-cell">
       <span className="summary-category-badge">{recipe.category}</span>
