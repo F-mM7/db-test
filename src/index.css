@@ -12,15 +12,15 @@
   --color-text-on-accent: #ffffff;
 
   /* ─ Color: Accent ─ */
-  --color-blue: #58a6ff;
-  --color-green: #2ea043;
+  --color-blue: #5a9efb;
+  --color-green: #238636;
   --color-purple: #8b5cf6;
   --color-red: #f85149;
   --color-orange: #f09030;
 
   /* ─ Color: Accent Fill (塗りつぶし用、通常色より暗め) ─ */
-  --fill-blue: #1f6feb;
-  --fill-green: #1d7331;
+  --fill-blue: #3a8bf7;
+  --fill-green: #11521f;
   --fill-purple: #6f42c1;
   --fill-red: #da3633;
   --fill-orange: #e87020;
