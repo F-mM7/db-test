@@ -113,23 +113,6 @@
   gap: 8px;
 }
 
-.ingredient-label {
-  background: var(--fill-blue);
-  color: var(--color-text-on-accent);
-  padding: 4px 10px;
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.max-value {
-  background: var(--fill-red);
-  color: var(--color-text-on-accent);
-  padding: 8px 16px;
-  border-radius: var(--radius-md);
-  font-size: 18px;
-  font-weight: 800;
-}
 
 .pokemon-ingredients {
   margin: 0;
@@ -244,6 +227,7 @@
     width: 100%;
   }
   
+  /* スマホでは badge--lg のフォントサイズ・パディングを縮小し、見出し右端へ寄せる */
   .max-value {
     align-self: flex-end;
     font-size: 16px;
@@ -291,6 +275,7 @@
     padding: 10px 4px;
   }
   
+  /* 極小画面では badge--solid-blue / badge--lg のフォントサイズ・パディングをさらに縮小 */
   .ingredient-label {
     font-size: 12px;
     padding: 3px 8px;

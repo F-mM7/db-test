@@ -8,34 +8,27 @@
 /* フィルターバー */
 .filter-bar {
   display: flex;
-  align-items: flex-end;
-  gap: 24px;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 24px;
-  padding: 20px;
+  padding: 16px 20px;
   background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   flex-wrap: wrap;
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.filter-label {
-  font-size: 13px;
+.filter-bar-label {
+  font-size: 14px;
   font-weight: 600;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--color-text);
 }
 
 .pot-size-controls {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .pot-size-value {
@@ -60,42 +53,29 @@
   margin-left: auto;
 }
 
+/* 集計タブ右上のカウンタバッジ。.badge .badge--solid-red .badge--sm に円形サイズを付与 */
 .summary-tab-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   margin-left: 6px;
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
-  background: var(--fill-red);
-  color: var(--color-text-on-accent);
   border-radius: var(--radius-md);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
 }
 
+/* 集計タブ選択中はバッジを白背景・緑文字に反転 */
 .summary-tab.active .summary-tab-badge {
-  background: var(--color-text-on-accent);
+  background: var(--color-text-strong);
   color: var(--color-green);
 }
 
+/* 集計行のカテゴリ表示。.badge--outline + 極小サイズ */
 .summary-category-badge {
   display: block;
   padding: 1px 4px;
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  border-radius: var(--radius-sm);
   font-size: 9px;
-  font-weight: 700;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  text-align: center;
-  box-sizing: border-box;
 }
 
 /* 料理リスト */
@@ -125,7 +105,7 @@
 
 .recipe-row.selected {
   background: var(--fill-green);
-  color: var(--color-text-on-accent);
+  color: var(--color-text-strong);
   border-color: var(--fill-green);
 }
 
@@ -141,16 +121,6 @@
   min-height: 1px;
 }
 
-.weekend-badge {
-  display: inline-block;
-  padding: 1px 6px;
-  background: var(--fill-orange);
-  color: var(--color-text-on-accent);
-  border-radius: var(--radius-sm);
-  font-size: 10px;
-  font-weight: 700;
-  vertical-align: middle;
-}
 
 .recipe-name {
   font-size: 14px;
@@ -161,32 +131,14 @@
   white-space: nowrap;
 }
 
+/* 料理行の合計セル。.badge--outline + .badge--sm + .badge--block に色だけ重ねる */
 .recipe-total-badge {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  padding: 2px 0;
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  font-weight: 600;
   color: var(--color-blue);
-  white-space: nowrap;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
+  font-weight: 600;
 }
 
 .recipe-energy-badge {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  padding: 2px 0;
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  font-weight: 700;
   color: var(--color-red);
-  white-space: nowrap;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* 食材アイコン表示 */
@@ -260,7 +212,8 @@
   margin-bottom: 32px;
 }
 
-.total-ingredient-card {
+/* 食材カード（合計／集計にない、共通ベース） */
+.ingredient-card {
   background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -271,11 +224,11 @@
   transition: var(--transition);
 }
 
-.total-ingredient-card:hover {
+.ingredient-card:hover {
   border-color: var(--color-green);
 }
 
-.total-ingredient-icon {
+.ingredient-card__icon {
   width: 36px;
   height: 36px;
   object-fit: contain;
@@ -283,20 +236,41 @@
   filter: var(--filter-icon-shadow);
 }
 
-.total-ingredient-name {
+.ingredient-card__name {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-text-strong);
   flex: 1;
 }
 
-.total-ingredient-quantity {
-  background: var(--fill-green);
-  color: var(--color-text-on-accent);
-  padding: 6px 14px;
+/* 集計に含まれていない食材用バリアント（薄め・点線・グレースケール） */
+.ingredient-card--muted {
+  background: var(--color-surface-1);
+  border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
-  font-size: 18px;
-  font-weight: 800;
+  padding: 10px 14px;
+  gap: 10px;
+  opacity: 0.6;
+}
+
+.ingredient-card--muted:hover {
+  opacity: 1;
+  border-color: var(--color-text-muted);
+}
+
+.ingredient-card--muted .ingredient-card__icon {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(0.5) var(--filter-icon-shadow);
+}
+
+.ingredient-card--muted .ingredient-card__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .no-results {
@@ -319,13 +293,8 @@
   color: var(--color-text-muted);
 }
 
+/* セクションヘッダーの種類数バッジ。.badge--outline をそのまま使用 */
 .missing-ingredients-count {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  padding: 6px 12px;
-  border-radius: var(--radius-md);
-  font-size: 13px;
   font-weight: 600;
 }
 
@@ -336,51 +305,10 @@
   margin-bottom: 16px;
 }
 
-.missing-ingredient-card {
-  background: var(--color-surface-1);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  opacity: 0.6;
-  transition: var(--transition);
-}
-
-.missing-ingredient-card:hover {
-  opacity: 1;
-  border-color: var(--color-text-muted);
-}
-
-.missing-ingredient-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter: grayscale(0.5) var(--filter-icon-shadow);
-}
-
-.missing-ingredient-name {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
+/* 集計にない食材の基礎エナジー値。.badge--outline + .badge--sm を tabular-nums に */
 .missing-ingredient-energy {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
   color: var(--color-text);
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  font-weight: 700;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -465,11 +393,6 @@
     grid-column: 1 / -1;
   }
 
-  .recipe-count-control {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
   .total-ingredients-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
@@ -480,29 +403,29 @@
     gap: 6px;
   }
 
-  .missing-ingredient-card {
+  .ingredient-card--muted {
     padding: 8px 10px;
   }
 
-  .missing-ingredient-icon {
+  .ingredient-card--muted .ingredient-card__icon {
     width: 24px;
     height: 24px;
   }
 
-  .missing-ingredient-name {
+  .ingredient-card--muted .ingredient-card__name {
     font-size: 12px;
   }
 
-  .total-ingredient-card {
+  .ingredient-card {
     padding: 14px 16px;
   }
 
-  .total-ingredient-icon {
+  .ingredient-card__icon {
     width: 30px;
     height: 30px;
   }
 
-  .total-ingredient-name {
+  .ingredient-card__name {
     font-size: 13px;
   }
 
@@ -559,16 +482,16 @@
     gap: 6px;
   }
 
-  .total-ingredient-card {
+  .ingredient-card {
     padding: 12px;
   }
 
-  .total-ingredient-icon {
+  .ingredient-card__icon {
     width: 26px;
     height: 26px;
   }
 
-  .total-ingredient-name {
+  .ingredient-card__name {
     font-size: 12px;
   }
 

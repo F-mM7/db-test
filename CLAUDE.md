@@ -24,35 +24,48 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 ```
 /home/futa/pokesleep-kitchen/
 ├── scripts/                          # データ処理スクリプト
-│   ├── download-wiki.js              # ポケモン Wiki HTML ダウンロード
+│   ├── download.js                   # Wiki HTML ダウンロード (pokemon/recipe/ingredient 対応)
 │   ├── parse-wiki-data.js            # ポケモン HTML → JSON パース
-│   ├── download-recipe-wiki.js       # 料理 Wiki HTML ダウンロード
 │   ├── parse-recipe-data.js          # 料理 HTML → JSON パース
-│   ├── download-ingredient-wiki.js   # 食材 Wiki HTML ダウンロード
 │   ├── parse-ingredient-data.js      # 食材 HTML → JSON パース (基礎エナジー含む)
-│   └── analyze-table-structure.js    # 開発用テーブル構造分析
+│   ├── analyze-table-structure.js    # 開発用テーブル構造分析
+│   └── lib/
+│       └── io.js                     # 共通 I/O ヘルパー (loadHtml / writeJson)
 │
 ├── src/                       # React アプリケーション
 │   ├── components/           # UI コンポーネント
-│   │   ├── IngredientFilter.jsx    # メインフィルタリング画面
+│   │   ├── IngredientFilter.jsx    # 食材検索画面（親）
 │   │   ├── PokemonCard.jsx         # ポケモン表示カード
 │   │   ├── IngredientButton.jsx    # 食材選択ボタン
-│   │   ├── RecipeCalculator.jsx    # 料理カリキュレーター画面
+│   │   ├── IngredientIcon.jsx      # 食材アイコン + 数量表示（汎用）
+│   │   ├── RecipeCalculator.jsx    # 料理カリキュレーター画面（親）
+│   │   ├── RecipeCalculator/       # RecipeCalculator のサブコンポーネント
+│   │   │   ├── FilterBar.jsx           # 鍋サイズ調整
+│   │   │   ├── CategoryTabs.jsx        # カテゴリタブ + 集計タブ
+│   │   │   ├── RecipeRow.jsx           # 料理1行（list / summary 共用）
+│   │   │   ├── RecipeList.jsx          # 料理一覧
+│   │   │   ├── SummaryList.jsx         # 集計タブの選択中料理一覧
+│   │   │   ├── TotalResults.jsx        # 必要食材合計
+│   │   │   └── MissingIngredients.jsx  # 集計に含まれない食材
+│   │   ├── AsyncBoundary.jsx       # loading / error ハンドラ
 │   │   ├── LoadingSpinner.jsx      # ローディング表示
 │   │   ├── ErrorDisplay.jsx        # エラー表示
 │   │   └── ErrorBoundary.jsx       # エラーバウンダリ
 │   │
 │   ├── hooks/                # カスタムフック
-│   │   ├── usePokemonData.js       # ポケモンデータ取得
-│   │   ├── usePokemonFilter.js     # フィルタリングロジック
-│   │   ├── useRecipeData.js        # 料理データ取得
-│   │   ├── useIngredientData.js    # 食材データ取得 (基礎エナジー)
-│   │   └── useRecipeCalculator.js  # 集計・並び替えロジック
+│   │   ├── useFetchJson.js         # 汎用 JSON 取得（旧 usePokemon/Recipe/Ingredient データを統合）
+│   │   ├── usePokemonFilter.js     # 食材選択・フィルタ・効率順ソート
+│   │   └── useRecipeCalculator.js  # 料理選択・鍋サイズ・必要食材集計
+│   │
+│   ├── styles/               # 汎用コンポーネント用 CSS
+│   │   └── components.css          # .badge / .tab / .btn / .icon-btn / .loading / .error-* 等
 │   │
 │   ├── utils/                # ユーティリティ
-│   │   └── constants.js            # 共通定数定義
+│   │   └── constants.js            # 共通定数 + ingredientIconUrl()
 │   │
-│   ├── App.jsx               # アプリケーションルート
+│   ├── App.jsx               # アプリケーションルート（タブ切替）
+│   ├── App.css               # ルート + .app-nav + .tab-panel
+│   ├── index.css             # デザイントークン（CSS 変数） + .page-container / .page-title
 │   └── main.jsx              # エントリーポイント
 │
 ├── data/                            # データファイル (gitignore候補)
@@ -108,10 +121,17 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 - **効率順ソート**: 選択した食材の獲得効率でソート
 - **リアルタイム検索**: 遅延なしの即座フィルタリング
 
-### 3. パフォーマンス最適化
-- **メモ化**: React.memo, useMemo, useCallback 活用
-- **カスタムフック**: ロジック分離とコード再利用
-- **コンポーネント分割**: 責任範囲の明確化
+### 3. 料理カリキュレーター
+- **鍋サイズ調整**: 12〜81 を 3 刻みで増減
+- **カテゴリタブ**: 料理を `category` で分けて表示、最右に「集計」タブ
+- **必要食材集計**: 選択した料理 × 回数から食材合計を算出
+- **集計にない食材**: 選択中の料理に含まれない食材を基礎エナジー降順で表示
+- **タブ切替時の状態保持**: 食材検索／料理カリキュレーターは `display` 切替で両方 mount 維持
+
+### 4. パフォーマンス最適化
+- **メモ化**: 重い計算は `useMemo`、リスト要素は `React.memo` で再レンダリング抑制
+- **カスタムフック**: データ取得 (`useFetchJson`)・状態管理を集約
+- **コンポーネント分割**: 画面ごとにサブコンポーネント化（`RecipeCalculator/` 配下）
 
 ## 開発用コマンド
 
@@ -163,33 +183,6 @@ CELL_PATTERNS.WITHOUT_C_INGREDIENT = {
   ABB: { start: 21, cells: 4 }
 }
 ```
-
-## 今後の機能追加予定
-
-### 料理必要食材カリキュレーター
-ユーザーが作りたい料理と回数を指定すると、必要な食材の合計数を算出する機能。
-
-- **入力例**: 料理Aを3回、料理Bを5回
-- **出力例**: 食材Xは120個、食材Yは90個、食材Zは60個...
-- **必要なデータ**: 料理ごとの必要食材DB（料理名・必要食材・個数）
-- **実装方針**:
-  - `public/` に料理データJSON を追加
-  - 料理選択UI + 回数入力フォーム
-  - 食材合計の集計・表示コンポーネント
-
-## 最近の主要変更
-
-### リファクタリング完了 (2025-07)
-- ✅ **クラスベース設計**: PokemonWikiParser クラス導入
-- ✅ **カスタムフック**: データ取得・フィルタリングロジック分離
-- ✅ **コンポーネント分割**: UI と ロジックの責任分離
-- ✅ **定数管理**: 共通設定の一元化
-- ✅ **パフォーマンス**: 不要な再レンダリング削減
-
-### データ最適化
-- ✅ **不要パターン削除**: AA, AB, AAB, ABA, ABC → 5パターン削除
-- ✅ **不要フィールド削除**: levels, totalValue → データサイズ削減
-- ✅ **セル位置修正**: AACパターン(16列), ABBパターン(24/21列)
 
 ## トラブルシューティング
 

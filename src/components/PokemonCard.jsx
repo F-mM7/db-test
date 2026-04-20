@@ -23,9 +23,11 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
         <h3>
           <span className="pokemon-name">
             {pokemon.name}
-            {ingredientType && <span className="ingredient-label">{ingredientType}</span>}
+            {ingredientType && (
+              <span className="ingredient-label badge badge--solid-blue">{ingredientType}</span>
+            )}
           </span>
-          <span className="max-value">
+          <span className="max-value badge badge--solid-red badge--lg">
             {maxValue > 0 ? maxValue.toFixed(1) : 'N/A'}
           </span>
         </h3>
