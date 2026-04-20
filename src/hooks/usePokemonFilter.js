@@ -21,35 +21,27 @@ export function usePokemonFilter(pokemonData) {
 
   // 最大値取得のユーティリティ関数
   const getMaxValueForIngredient = useCallback((pokemon, ingredient) => {
-    const patternValues = LV60_PATTERNS
-      .map(patternName => {
-        const pattern = pokemon.ingredientPatterns[patternName];
-        const value = pattern?.individualValues?.[ingredient] || 0;
-        return { patternName, value };
-      })
-      .filter(item => item.value > 0);
-    
-    return patternValues.reduce((max, current) => 
-      current.value > max.value ? current : max, 
-      { patternName: '', value: 0 }
-    );
+    const values = LV60_PATTERNS
+      .map(name => pokemon.ingredientPatterns[name]?.individualValues?.[ingredient] || 0)
+      .filter(v => v > 0);
+    return values.length > 0 ? Math.max(...values) : 0;
   }, []);
-  
+
   // フィルタリングされたポケモンリストをメモ化
   const filteredPokemon = useMemo(() => {
     if (!selectedIngredient) return [];
-    
+
     const filtered = pokemonData.filter(pokemon => {
       return LV60_PATTERNS.some(patternName => {
         const pattern = pokemon.ingredientPatterns[patternName];
         return pattern && pattern.ingredients.includes(selectedIngredient);
       });
     });
-    
+
     return filtered.sort((a, b) => {
       const maxA = getMaxValueForIngredient(a, selectedIngredient);
       const maxB = getMaxValueForIngredient(b, selectedIngredient);
-      return maxB.value - maxA.value;
+      return maxB - maxA;
     });
   }, [pokemonData, selectedIngredient, getMaxValueForIngredient]);
 

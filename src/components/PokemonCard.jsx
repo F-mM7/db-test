@@ -9,7 +9,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
     selectedIngredient === ingredientB ? 'B' :
     selectedIngredient === ingredientC ? 'C' : '';
 
-  const maxItem = getMaxValueForIngredient(pokemon, selectedIngredient);
+  const maxValue = getMaxValueForIngredient(pokemon, selectedIngredient);
 
   const slots = [
     { label: 'A', name: ingredientA },
@@ -26,7 +26,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
             {ingredientType && <span className="ingredient-label">{ingredientType}</span>}
           </span>
           <span className="max-value">
-            {maxItem.value > 0 ? maxItem.value.toFixed(1) : 'N/A'}
+            {maxValue > 0 ? maxValue.toFixed(1) : 'N/A'}
           </span>
         </h3>
       </div>
