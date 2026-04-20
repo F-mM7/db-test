@@ -1,7 +1,3 @@
-.ingredient-filter-container .page-title {
-  margin-bottom: 40px;
-}
-
 .ingredient-section {
   margin-bottom: 30px;
 }
@@ -50,7 +46,7 @@
 
 .ingredient-button.active {
   background: var(--fill-green);
-  color: var(--color-text-on-accent);
+  color: var(--color-text-strong);
   border-color: var(--fill-green);
 }
 
@@ -223,10 +219,6 @@
 
 /* スマートフォン用のレスポンシブデザイン */
 @media (max-width: 768px) {
-  .ingredient-filter-container .page-title {
-    margin-bottom: 32px;
-  }
-  
   .ingredient-buttons {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
@@ -290,10 +282,6 @@
 
 /* 極小画面用のレスポンシブデザイン */
 @media (max-width: 480px) {
-  .ingredient-filter-container .page-title {
-    margin-bottom: 24px;
-  }
-  
   .ingredient-buttons {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 8px;

@@ -18,7 +18,7 @@ function App() {
         {TABS.map(tab => (
           <button
             key={tab.id}
-            className={`app-nav-tab tab ${activeTab === tab.id ? 'active' : ''}`}
+            className={`tab ${activeTab === tab.id ? 'active' : ''}`}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}

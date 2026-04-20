@@ -15,8 +15,6 @@ class ErrorBoundary extends Component {
       error,
       errorInfo
     });
-    
-    // エラーログを出力
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
@@ -30,20 +28,12 @@ class ErrorBoundary extends Component {
             <p className="error-message">
               予期しないエラーが発生しました。ページを再読み込みしてください。
             </p>
-            <div className="error-actions">
-              <button 
-                className="btn btn-success"
-                onClick={() => window.location.reload()}
-              >
-                ページを再読み込み
-              </button>
-              <button 
-                className="btn btn-purple"
-                onClick={() => this.setState({ hasError: false, error: null, errorInfo: null })}
-              >
-                もう一度試す
-              </button>
-            </div>
+            <button
+              className="btn btn-success error-reload-btn"
+              onClick={() => window.location.reload()}
+            >
+              ページを再読み込み
+            </button>
             {import.meta.env.DEV && this.state.error && (
               <details className="error-details">
                 <summary>技術的な詳細 (開発モードのみ)</summary>

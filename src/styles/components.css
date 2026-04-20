@@ -63,14 +63,6 @@
   background: var(--color-green);
 }
 
-.btn-purple {
-  background: var(--fill-purple);
-}
-
-.btn-purple:hover {
-  background: var(--color-purple);
-}
-
 /* ─ Component: Icon Button ─ */
 .icon-btn {
   padding: 0;
@@ -240,10 +232,7 @@
   margin-bottom: 32px;
 }
 
-.error-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
+.error-reload-btn {
   margin-bottom: 24px;
 }
 

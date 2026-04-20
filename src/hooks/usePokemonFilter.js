@@ -45,20 +45,11 @@ export function usePokemonFilter(pokemonData) {
     });
   }, [pokemonData, selectedIngredient, getMaxValueForIngredient]);
 
-  const handleIngredientClick = useCallback((ingredient) => {
-    setSelectedIngredient(ingredient);
-  }, []);
-
-  const clearFilter = useCallback(() => {
-    setSelectedIngredient(null);
-  }, []);
-
   return {
     selectedIngredient,
+    setSelectedIngredient,
     ingredients,
     filteredPokemon,
-    getMaxValueForIngredient,
-    handleIngredientClick,
-    clearFilter
+    getMaxValueForIngredient
   };
 }

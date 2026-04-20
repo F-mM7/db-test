@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export function useFetchJson(url, initialData = null) {
-  const [data, setData] = useState(initialData);
+export function useFetchJson(url) {
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 

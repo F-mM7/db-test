@@ -7,21 +7,18 @@
 
   /* ─ Color: Text ─ */
   --color-text: #c9d1d9;
-  --color-text-strong: #f0f6fc;
+  --color-text-strong: #ffffff;
   --color-text-muted: #8b949e;
-  --color-text-on-accent: #ffffff;
 
   /* ─ Color: Accent ─ */
   --color-blue: #5a9efb;
   --color-green: #238636;
-  --color-purple: #8b5cf6;
   --color-red: #f85149;
   --color-orange: #f09030;
 
   /* ─ Color: Accent Fill (塗りつぶし用、通常色より暗め) ─ */
   --fill-blue: #3a8bf7;
   --fill-green: #11521f;
-  --fill-purple: #6f42c1;
   --fill-red: #da3633;
   --fill-orange: #e87020;
 
@@ -79,27 +76,6 @@ h1 {
   line-height: 1.1;
 }
 
-:where(button) {
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--color-surface-2);
-  color: var(--color-text);
-  cursor: pointer;
-  transition: var(--transition);
-}
-:where(button:hover) {
-  border-color: var(--color-blue);
-  background-color: var(--color-border);
-}
-:where(button:focus, button:focus-visible) {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
-}
-
 /* ─ Layout: Page Container ─ */
 .page-container {
   max-width: 1400px;
@@ -118,6 +94,7 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  margin: 0 0 clamp(12px, calc(8px + 1.5vw), 28px);
 }
 
 @media (max-width: 1024px) {
