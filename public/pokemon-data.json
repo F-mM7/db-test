@@ -2,6 +2,9 @@
   {
     "id": 1,
     "name": "フシギダネ",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -40,6 +43,9 @@
   {
     "id": 2,
     "name": "フシギソウ",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -78,6 +84,9 @@
   {
     "id": 3,
     "name": "フシギバナ",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -116,6 +125,9 @@
   {
     "id": 4,
     "name": "ヒトカゲ",
+    "ingredientA": "マメミート",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -154,6 +166,9 @@
   {
     "id": 5,
     "name": "リザード",
+    "ingredientA": "マメミート",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -192,6 +207,9 @@
   {
     "id": 6,
     "name": "リザードン",
+    "ingredientA": "マメミート",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -230,6 +248,9 @@
   {
     "id": 7,
     "name": "ゼニガメ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -268,6 +289,9 @@
   {
     "id": 8,
     "name": "カメール",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -306,6 +330,9 @@
   {
     "id": 9,
     "name": "カメックス",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -344,6 +371,9 @@
   {
     "id": 10,
     "name": "キャタピー",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -382,6 +412,9 @@
   {
     "id": 11,
     "name": "トランセル",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -420,6 +453,9 @@
   {
     "id": 12,
     "name": "バタフリー",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -458,6 +494,9 @@
   {
     "id": 13,
     "name": "コラッタ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -496,6 +535,9 @@
   {
     "id": 14,
     "name": "ラッタ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -534,6 +576,9 @@
   {
     "id": 15,
     "name": "アーボ",
+    "ingredientA": "マメミート",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -572,6 +617,9 @@
   {
     "id": 16,
     "name": "アーボック",
+    "ingredientA": "マメミート",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -610,6 +658,9 @@
   {
     "id": 17,
     "name": "ピカチュウ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -648,6 +699,9 @@
   {
     "id": 18,
     "name": "ピカチュウ(ハロウィン)",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -686,6 +740,9 @@
   {
     "id": 19,
     "name": "ピカチュウ(ホリデー)",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -724,6 +781,9 @@
   {
     "id": 20,
     "name": "ライチュウ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -762,6 +822,9 @@
   {
     "id": 21,
     "name": "ピッピ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -800,6 +863,9 @@
   {
     "id": 22,
     "name": "ピクシー",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -838,6 +904,9 @@
   {
     "id": 23,
     "name": "ロコン",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -876,6 +945,9 @@
   {
     "id": 24,
     "name": "ロコン(アローラ)",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -914,6 +986,9 @@
   {
     "id": 25,
     "name": "キュウコン",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -952,6 +1027,9 @@
   {
     "id": 26,
     "name": "キュウコン(アローラ)",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -990,6 +1068,9 @@
   {
     "id": 27,
     "name": "プリン",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1028,6 +1109,9 @@
   {
     "id": 28,
     "name": "プクリン",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1066,6 +1150,9 @@
   {
     "id": 29,
     "name": "ディグダ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1104,6 +1191,9 @@
   {
     "id": 30,
     "name": "ダグトリオ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1142,6 +1232,9 @@
   {
     "id": 31,
     "name": "ニャース",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "マメミート",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1169,6 +1262,9 @@
   {
     "id": 32,
     "name": "ペルシアン",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "マメミート",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1196,6 +1292,9 @@
   {
     "id": 33,
     "name": "コダック",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1234,6 +1333,9 @@
   {
     "id": 34,
     "name": "ゴルダック",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1272,6 +1374,9 @@
   {
     "id": 35,
     "name": "マンキー",
+    "ingredientA": "マメミート",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1310,6 +1415,9 @@
   {
     "id": 36,
     "name": "オコリザル",
+    "ingredientA": "マメミート",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1348,6 +1456,9 @@
   {
     "id": 37,
     "name": "ガーディ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "マメミート",
+    "ingredientC": "モーモーミルク",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1386,6 +1497,9 @@
   {
     "id": 38,
     "name": "ウインディ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "マメミート",
+    "ingredientC": "モーモーミルク",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1424,6 +1538,9 @@
   {
     "id": 39,
     "name": "マダツボミ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1462,6 +1579,9 @@
   {
     "id": 40,
     "name": "ウツドン",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1500,6 +1620,9 @@
   {
     "id": 41,
     "name": "ウツボット",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1538,6 +1661,9 @@
   {
     "id": 42,
     "name": "イシツブテ",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1576,6 +1702,9 @@
   {
     "id": 43,
     "name": "ゴローン",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1614,6 +1743,9 @@
   {
     "id": 44,
     "name": "ゴローニャ",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1652,6 +1784,9 @@
   {
     "id": 45,
     "name": "ヤドン",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "おいしいシッポ",
+    "ingredientC": "あんみんトマト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1690,6 +1825,9 @@
   {
     "id": 46,
     "name": "ヤドラン",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "おいしいシッポ",
+    "ingredientC": "あんみんトマト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1728,6 +1866,9 @@
   {
     "id": 47,
     "name": "コイル",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1755,6 +1896,9 @@
   {
     "id": 48,
     "name": "レアコイル",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1782,6 +1926,9 @@
   {
     "id": 49,
     "name": "カモネギ",
+    "ingredientA": "ふといながねぎ",
+    "ingredientB": "マメミート",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1820,6 +1967,9 @@
   {
     "id": 50,
     "name": "ドードー",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1858,6 +2008,9 @@
   {
     "id": 51,
     "name": "ドードリオ",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1896,6 +2049,9 @@
   {
     "id": 52,
     "name": "ゴース",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1934,6 +2090,9 @@
   {
     "id": 53,
     "name": "ゴースト",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -1972,6 +2131,9 @@
   {
     "id": 54,
     "name": "ゲンガー",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2010,6 +2172,9 @@
   {
     "id": 55,
     "name": "イワーク",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "マメミート",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2048,6 +2213,9 @@
   {
     "id": 56,
     "name": "カラカラ",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2075,6 +2243,9 @@
   {
     "id": 57,
     "name": "ガラガラ",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2102,6 +2273,9 @@
   {
     "id": 58,
     "name": "ラッキー",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2140,6 +2314,9 @@
   {
     "id": 59,
     "name": "ガルーラ",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2178,6 +2355,9 @@
   {
     "id": 60,
     "name": "バリヤード",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2216,6 +2396,9 @@
   {
     "id": 61,
     "name": "カイロス",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2254,6 +2437,9 @@
   {
     "id": 62,
     "name": "メタモン",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "おいしいシッポ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2292,6 +2478,9 @@
   {
     "id": 63,
     "name": "イーブイ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2330,6 +2519,9 @@
   {
     "id": 64,
     "name": "イーブイ(ホリデー)",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2368,6 +2560,9 @@
   {
     "id": 65,
     "name": "イーブイ(ハロウィン)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "モーモーミルク",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2406,6 +2601,9 @@
   {
     "id": 66,
     "name": "シャワーズ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2444,6 +2642,9 @@
   {
     "id": 67,
     "name": "サンダース",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2482,6 +2683,9 @@
   {
     "id": 68,
     "name": "ブースター",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2520,6 +2724,9 @@
   {
     "id": 69,
     "name": "ミニリュウ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2558,6 +2765,9 @@
   {
     "id": 70,
     "name": "ハクリュー",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2596,6 +2806,9 @@
   {
     "id": 71,
     "name": "カイリュー",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2634,6 +2847,9 @@
   {
     "id": 72,
     "name": "チコリータ",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2672,6 +2888,9 @@
   {
     "id": 73,
     "name": "ベイリーフ",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2710,6 +2929,9 @@
   {
     "id": 74,
     "name": "メガニウム",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2748,6 +2970,9 @@
   {
     "id": 75,
     "name": "ヒノアラシ",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2786,6 +3011,9 @@
   {
     "id": 76,
     "name": "マグマラシ",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2824,6 +3052,9 @@
   {
     "id": 77,
     "name": "バクフーン",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2862,6 +3093,9 @@
   {
     "id": 78,
     "name": "ワニノコ",
+    "ingredientA": "マメミート",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2889,6 +3123,9 @@
   {
     "id": 79,
     "name": "アリゲイツ",
+    "ingredientA": "マメミート",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2916,6 +3153,9 @@
   {
     "id": 80,
     "name": "オーダイル",
+    "ingredientA": "マメミート",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2943,6 +3183,9 @@
   {
     "id": 81,
     "name": "ピチュー",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -2981,6 +3224,9 @@
   {
     "id": 82,
     "name": "ピィ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3019,6 +3265,9 @@
   {
     "id": 83,
     "name": "ププリン",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3057,6 +3306,9 @@
   {
     "id": 84,
     "name": "トゲピー",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3095,6 +3347,9 @@
   {
     "id": 85,
     "name": "トゲチック",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3133,6 +3388,9 @@
   {
     "id": 86,
     "name": "ネイティ",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3171,6 +3429,9 @@
   {
     "id": 87,
     "name": "ネイティオ",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3209,6 +3470,9 @@
   {
     "id": 88,
     "name": "メリープ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3236,6 +3500,9 @@
   {
     "id": 89,
     "name": "モココ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3263,6 +3530,9 @@
   {
     "id": 90,
     "name": "デンリュウ",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3290,6 +3560,9 @@
   {
     "id": 91,
     "name": "ウソッキー",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3328,6 +3601,9 @@
   {
     "id": 92,
     "name": "ウパー",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3366,6 +3642,9 @@
   {
     "id": 93,
     "name": "ウパー(パルデア)",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3404,6 +3683,9 @@
   {
     "id": 94,
     "name": "ヌオー",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3442,6 +3724,9 @@
   {
     "id": 95,
     "name": "エーフィ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3480,6 +3765,9 @@
   {
     "id": 96,
     "name": "ブラッキー",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3518,6 +3806,9 @@
   {
     "id": 97,
     "name": "ヤミカラス",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3556,6 +3847,9 @@
   {
     "id": 98,
     "name": "ヤドキング",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "おいしいシッポ",
+    "ingredientC": "あんみんトマト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3594,6 +3888,9 @@
   {
     "id": 99,
     "name": "ソーナンス",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3632,6 +3929,9 @@
   {
     "id": 100,
     "name": "ハガネール",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "マメミート",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3670,6 +3970,9 @@
   {
     "id": 101,
     "name": "ツボツボ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3708,6 +4011,9 @@
   {
     "id": 102,
     "name": "ヘラクロス",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3746,6 +4052,9 @@
   {
     "id": 103,
     "name": "ニューラ",
+    "ingredientA": "マメミート",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3784,6 +4093,9 @@
   {
     "id": 104,
     "name": "デリバード",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3822,6 +4134,9 @@
   {
     "id": 105,
     "name": "デルビル",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3860,6 +4175,9 @@
   {
     "id": 106,
     "name": "ヘルガー",
+    "ingredientA": "げきからハーブ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3898,6 +4216,9 @@
   {
     "id": 107,
     "name": "ハピナス",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3936,6 +4257,9 @@
   {
     "id": 108,
     "name": "ライコウ",
+    "ingredientA": "マメミート",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -3974,6 +4298,9 @@
   {
     "id": 109,
     "name": "エンテイ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "あんみんトマト",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4012,6 +4339,9 @@
   {
     "id": 110,
     "name": "スイクン",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "ワカクサコーン",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4050,6 +4380,9 @@
   {
     "id": 111,
     "name": "ヨーギラス",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4088,6 +4421,9 @@
   {
     "id": 112,
     "name": "サナギラス",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4126,6 +4462,9 @@
   {
     "id": 113,
     "name": "バンギラス",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4164,6 +4503,9 @@
   {
     "id": 114,
     "name": "キモリ",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4202,6 +4544,9 @@
   {
     "id": 115,
     "name": "ジュプトル",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4240,6 +4585,9 @@
   {
     "id": 116,
     "name": "ジュカイン",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4278,6 +4626,9 @@
   {
     "id": 117,
     "name": "アチャモ",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4316,6 +4667,9 @@
   {
     "id": 118,
     "name": "ワカシャモ",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4354,6 +4708,9 @@
   {
     "id": 119,
     "name": "バシャーモ",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4392,6 +4749,9 @@
   {
     "id": 120,
     "name": "ミズゴロウ",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4430,6 +4790,9 @@
   {
     "id": 121,
     "name": "ヌマクロー",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4468,6 +4831,9 @@
   {
     "id": 122,
     "name": "ラグラージ",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4506,6 +4872,9 @@
   {
     "id": 123,
     "name": "ラルトス",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4544,6 +4913,9 @@
   {
     "id": 124,
     "name": "キルリア",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4582,6 +4954,9 @@
   {
     "id": 125,
     "name": "サーナイト",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4620,6 +4995,9 @@
   {
     "id": 126,
     "name": "ナマケロ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4658,6 +5036,9 @@
   {
     "id": 127,
     "name": "ヤルキモノ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4696,6 +5077,9 @@
   {
     "id": 128,
     "name": "ケッキング",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4734,6 +5118,9 @@
   {
     "id": 129,
     "name": "ヤミラミ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4772,6 +5159,9 @@
   {
     "id": 130,
     "name": "クチート",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "あんみんトマト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4810,6 +5200,9 @@
   {
     "id": 131,
     "name": "ココドラ",
+    "ingredientA": "マメミート",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4848,6 +5241,9 @@
   {
     "id": 132,
     "name": "コドラ",
+    "ingredientA": "マメミート",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4886,6 +5282,9 @@
   {
     "id": 133,
     "name": "ボスゴドラ",
+    "ingredientA": "マメミート",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4924,6 +5323,9 @@
   {
     "id": 134,
     "name": "プラスル",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "モーモーミルク",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -4962,6 +5364,9 @@
   {
     "id": 135,
     "name": "マイナン",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "モーモーミルク",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5000,6 +5405,9 @@
   {
     "id": 136,
     "name": "ゴクリン",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5038,6 +5446,9 @@
   {
     "id": 137,
     "name": "マルノーム",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5076,6 +5487,9 @@
   {
     "id": 138,
     "name": "ナックラー",
+    "ingredientA": "つやつやアボカド",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5114,6 +5528,9 @@
   {
     "id": 139,
     "name": "ビブラーバ",
+    "ingredientA": "つやつやアボカド",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5152,6 +5569,9 @@
   {
     "id": 140,
     "name": "フライゴン",
+    "ingredientA": "つやつやアボカド",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5190,6 +5610,9 @@
   {
     "id": 141,
     "name": "チルット",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5228,6 +5651,9 @@
   {
     "id": 142,
     "name": "チルタリス",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "とくせんリンゴ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5266,6 +5692,9 @@
   {
     "id": 143,
     "name": "カゲボウズ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5304,6 +5733,9 @@
   {
     "id": 144,
     "name": "ジュペッタ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5342,6 +5774,9 @@
   {
     "id": 145,
     "name": "アブソル",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5380,6 +5815,9 @@
   {
     "id": 146,
     "name": "ソーナノ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5418,6 +5856,9 @@
   {
     "id": 147,
     "name": "タマザラシ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5456,6 +5897,9 @@
   {
     "id": 148,
     "name": "タマザラシ(ホリデー)",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5494,6 +5938,9 @@
   {
     "id": 149,
     "name": "トドグラー",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5532,6 +5979,9 @@
   {
     "id": 150,
     "name": "トドゼルガ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5570,6 +6020,9 @@
   {
     "id": 151,
     "name": "タツベイ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5608,6 +6061,9 @@
   {
     "id": 152,
     "name": "コモルー",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5646,6 +6102,9 @@
   {
     "id": 153,
     "name": "ボーマンダ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5684,6 +6143,9 @@
   {
     "id": 154,
     "name": "ラティアス",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ずっしりカボチャ",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5722,6 +6184,9 @@
   {
     "id": 155,
     "name": "コリンク",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5760,6 +6225,9 @@
   {
     "id": 156,
     "name": "ルクシオ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5798,6 +6266,9 @@
   {
     "id": 157,
     "name": "レントラー",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5836,6 +6307,9 @@
   {
     "id": 158,
     "name": "フワンテ",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5874,6 +6348,9 @@
   {
     "id": 159,
     "name": "フワライド",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5912,6 +6389,9 @@
   {
     "id": 160,
     "name": "ドンカラス",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5950,6 +6430,9 @@
   {
     "id": 161,
     "name": "ウソハチ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -5988,6 +6471,9 @@
   {
     "id": 162,
     "name": "マネネ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6026,6 +6512,9 @@
   {
     "id": 163,
     "name": "ピンプク",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6064,6 +6553,9 @@
   {
     "id": 164,
     "name": "ミカルゲ",
+    "ingredientA": "あじわいキノコ",
+    "ingredientB": "ずっしりカボチャ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6102,6 +6594,9 @@
   {
     "id": 165,
     "name": "リオル",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6140,6 +6635,9 @@
   {
     "id": 166,
     "name": "ルカリオ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6178,6 +6676,9 @@
   {
     "id": 167,
     "name": "グレッグル",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6205,6 +6706,9 @@
   {
     "id": 168,
     "name": "ドクロッグ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "マメミート",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6232,6 +6736,9 @@
   {
     "id": 169,
     "name": "ユキカブリ",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6270,6 +6777,9 @@
   {
     "id": 170,
     "name": "ユキノオー",
+    "ingredientA": "あんみんトマト",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6308,6 +6818,9 @@
   {
     "id": 171,
     "name": "マニューラ",
+    "ingredientA": "マメミート",
+    "ingredientB": "とくせんエッグ",
+    "ingredientC": "ワカクサ大豆",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6346,6 +6859,9 @@
   {
     "id": 172,
     "name": "ジバコイル",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "げきからハーブ",
+    "ingredientC": null,
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6373,6 +6889,9 @@
   {
     "id": 173,
     "name": "トゲキッス",
+    "ingredientA": "とくせんエッグ",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6411,6 +6930,9 @@
   {
     "id": 174,
     "name": "リーフィア",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6449,6 +6971,9 @@
   {
     "id": 175,
     "name": "グレイシア",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6487,6 +7012,9 @@
   {
     "id": 176,
     "name": "エルレイド",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6525,6 +7053,9 @@
   {
     "id": 177,
     "name": "クレセリア",
+    "ingredientA": "あったかジンジャー",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "あんみんトマト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6563,6 +7094,9 @@
   {
     "id": 178,
     "name": "ダークライ",
+    "ingredientA": "マメミート",
+    "ingredientB": "マメミート",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6599,6 +7133,9 @@
   {
     "id": 179,
     "name": "ムンナ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6637,6 +7174,9 @@
   {
     "id": 180,
     "name": "ムシャーナ",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "あまいミツ",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6675,6 +7215,9 @@
   {
     "id": 181,
     "name": "イシズマイ",
+    "ingredientA": "つやつやアボカド",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6713,6 +7256,9 @@
   {
     "id": 182,
     "name": "イワパレス",
+    "ingredientA": "つやつやアボカド",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6751,6 +7297,9 @@
   {
     "id": 183,
     "name": "ワシボン",
+    "ingredientA": "マメミート",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6789,6 +7338,9 @@
   {
     "id": 184,
     "name": "ウォーグル",
+    "ingredientA": "マメミート",
+    "ingredientB": "ワカクサコーン",
+    "ingredientC": "めざましコーヒー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6827,6 +7379,9 @@
   {
     "id": 185,
     "name": "ニンフィア",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6865,6 +7420,9 @@
   {
     "id": 186,
     "name": "デデンネ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "リラックスカカオ",
+    "ingredientC": "ワカクサコーン",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6903,6 +7461,9 @@
   {
     "id": 187,
     "name": "バケッチャ(こだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6941,6 +7502,9 @@
   {
     "id": 188,
     "name": "バケッチャ(ちゅうだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -6979,6 +7543,9 @@
   {
     "id": 189,
     "name": "バケッチャ(おおだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7017,6 +7584,9 @@
   {
     "id": 190,
     "name": "バケッチャ(ギガだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7055,6 +7625,9 @@
   {
     "id": 191,
     "name": "パンプジン(こだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7093,6 +7666,9 @@
   {
     "id": 192,
     "name": "パンプジン(ちゅうだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7131,6 +7707,9 @@
   {
     "id": 193,
     "name": "パンプジン(おおだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7169,6 +7748,9 @@
   {
     "id": 194,
     "name": "パンプジン(ギガだま)",
+    "ingredientA": "ずっしりカボチャ",
+    "ingredientB": "ワカクサ大豆",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7207,6 +7789,9 @@
   {
     "id": 195,
     "name": "オンバット",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7245,6 +7830,9 @@
   {
     "id": 196,
     "name": "オンバーン",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "マメミート",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7283,6 +7871,9 @@
   {
     "id": 197,
     "name": "アゴジムシ",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7321,6 +7912,9 @@
   {
     "id": 198,
     "name": "デンヂムシ",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7359,6 +7953,9 @@
   {
     "id": 199,
     "name": "クワガノン",
+    "ingredientA": "めざましコーヒー",
+    "ingredientB": "あじわいキノコ",
+    "ingredientC": "あまいミツ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7397,6 +7994,9 @@
   {
     "id": 200,
     "name": "アブリー",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "ワカクサコーン",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7435,6 +8035,9 @@
   {
     "id": 201,
     "name": "アブリボン",
+    "ingredientA": "あまいミツ",
+    "ingredientB": "ピュアなオイル",
+    "ingredientC": "ワカクサコーン",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7473,6 +8076,9 @@
   {
     "id": 202,
     "name": "ヌイコグマ",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "マメミート",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7511,6 +8117,9 @@
   {
     "id": 203,
     "name": "キテルグマ",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "マメミート",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7549,6 +8158,9 @@
   {
     "id": 204,
     "name": "キュワワー",
+    "ingredientA": "ワカクサコーン",
+    "ingredientB": "あったかジンジャー",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7587,6 +8199,9 @@
   {
     "id": 205,
     "name": "トゲデマル",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "つやつやアボカド",
+    "ingredientC": "リラックスカカオ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7625,6 +8240,9 @@
   {
     "id": 206,
     "name": "ミミッキュ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "あじわいキノコ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7663,6 +8281,9 @@
   {
     "id": 207,
     "name": "ウッウ",
+    "ingredientA": "ピュアなオイル",
+    "ingredientB": "ほっこりポテト",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7701,6 +8322,9 @@
   {
     "id": 208,
     "name": "エレズン",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7739,6 +8363,9 @@
   {
     "id": 209,
     "name": "ストリンダー(ハイ)",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7777,6 +8404,9 @@
   {
     "id": 210,
     "name": "ストリンダー(ロー)",
+    "ingredientA": "モーモーミルク",
+    "ingredientB": "とくせんリンゴ",
+    "ingredientC": "ふといながねぎ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7815,6 +8445,9 @@
   {
     "id": 211,
     "name": "ニャオハ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7853,6 +8486,9 @@
   {
     "id": 212,
     "name": "ニャローテ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7891,6 +8527,9 @@
   {
     "id": 213,
     "name": "マスカーニャ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "あったかジンジャー",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7929,6 +8568,9 @@
   {
     "id": 214,
     "name": "ホゲータ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "マメミート",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -7967,6 +8609,9 @@
   {
     "id": 215,
     "name": "アチゲータ",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "マメミート",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8005,6 +8650,9 @@
   {
     "id": 216,
     "name": "ラウドボーン",
+    "ingredientA": "とくせんリンゴ",
+    "ingredientB": "マメミート",
+    "ingredientC": "げきからハーブ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8043,6 +8691,9 @@
   {
     "id": 217,
     "name": "クワッス",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8081,6 +8732,9 @@
   {
     "id": 218,
     "name": "ウェルカモ",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8119,6 +8773,9 @@
   {
     "id": 219,
     "name": "ウェーニバル",
+    "ingredientA": "ワカクサ大豆",
+    "ingredientB": "ふといながねぎ",
+    "ingredientC": "ピュアなオイル",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8157,6 +8814,9 @@
   {
     "id": 220,
     "name": "パモ",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8195,6 +8855,9 @@
   {
     "id": 221,
     "name": "パモット",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8233,6 +8896,9 @@
   {
     "id": 222,
     "name": "パーモット",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "モーモーミルク",
+    "ingredientC": "とくせんエッグ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8271,6 +8937,9 @@
   {
     "id": 223,
     "name": "アルクジラ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "マメミート",
+    "ingredientC": "ずっしりカボチャ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8309,6 +8978,9 @@
   {
     "id": 224,
     "name": "ハルクジラ",
+    "ingredientA": "ほっこりポテト",
+    "ingredientB": "マメミート",
+    "ingredientC": "ずっしりカボチャ",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
@@ -8347,6 +9019,9 @@
   {
     "id": 225,
     "name": "ドオー",
+    "ingredientA": "リラックスカカオ",
+    "ingredientB": "めざましコーヒー",
+    "ingredientC": "ほっこりポテト",
     "ingredientPatterns": {
       "AAA": {
         "ingredients": [
