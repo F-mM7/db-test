@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import IngredientFilter from './components/IngredientFilter'
 import RecipeCalculator from './components/RecipeCalculator'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -12,18 +12,14 @@ const TABS = [
 function App() {
   const [activeTab, setActiveTab] = useState('ingredient')
 
-  const handleTabChange = useCallback((tabId) => {
-    setActiveTab(tabId)
-  }, [])
-
   return (
     <ErrorBoundary>
       <nav className="app-nav">
         {TABS.map(tab => (
           <button
             key={tab.id}
-            className={`app-nav-tab tab tab-blue ${activeTab === tab.id ? 'active' : ''}`}
-            onClick={() => handleTabChange(tab.id)}
+            className={`app-nav-tab tab ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
           </button>

@@ -1,44 +1,21 @@
-import { useMemo, memo } from 'react';
+import { memo } from 'react';
 import { ingredientIconUrl } from '../utils/constants';
 
 function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) {
-  // ポケモンのA、B、C食材を特定
-  const ingredientTypes = useMemo(() => {
-    const patterns = pokemon.ingredientPatterns;
-    let ingredientA = null, ingredientB = null, ingredientC = null;
+  const { ingredientA, ingredientB, ingredientC } = pokemon;
 
-    // AAAパターンからA食材を取得
-    if (patterns['AAA']) {
-      ingredientA = patterns['AAA'].ingredients[0];
-    }
+  const ingredientType =
+    selectedIngredient === ingredientA ? 'A' :
+    selectedIngredient === ingredientB ? 'B' :
+    selectedIngredient === ingredientC ? 'C' : '';
 
-    // ABBパターンからB食材を取得
-    if (patterns['ABB']) {
-      ingredientA = ingredientA || patterns['ABB'].ingredients[0];
-      ingredientB = patterns['ABB'].ingredients[1];
-    }
+  const maxItem = getMaxValueForIngredient(pokemon, selectedIngredient);
 
-    // AACパターンからC食材を取得
-    if (patterns['AAC']) {
-      ingredientA = ingredientA || patterns['AAC'].ingredients[0];
-      ingredientC = patterns['AAC'].ingredients[2];
-    }
-
-    return { A: ingredientA, B: ingredientB, C: ingredientC };
-  }, [pokemon.ingredientPatterns]);
-
-  // 選択した食材がA/B/Cのどれに該当するかを判定
-  const ingredientType = useMemo(() => {
-    if (ingredientTypes.A === selectedIngredient) return 'A';
-    if (ingredientTypes.B === selectedIngredient) return 'B';
-    if (ingredientTypes.C === selectedIngredient) return 'C';
-    return '';
-  }, [ingredientTypes, selectedIngredient]);
-
-  // 選択された食材についての最大値を計算
-  const maxItem = useMemo(() => {
-    return getMaxValueForIngredient(pokemon, selectedIngredient);
-  }, [pokemon, selectedIngredient, getMaxValueForIngredient]);
+  const slots = [
+    { label: 'A', name: ingredientA },
+    { label: 'B', name: ingredientB },
+    { label: 'C', name: ingredientC }
+  ];
 
   return (
     <div className="pokemon-card">
@@ -56,11 +33,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
 
       <div className="pokemon-ingredients">
         <div className="ingredient-types">
-          {[
-            { label: 'A', name: ingredientTypes.A },
-            { label: 'B', name: ingredientTypes.B },
-            { label: 'C', name: ingredientTypes.C }
-          ].map(({ label, name }) => (
+          {slots.map(({ label, name }) => (
             <div key={label} className="ingredient-row">
               <span className="ingredient-label-text">{label}:</span>
               {name ? (

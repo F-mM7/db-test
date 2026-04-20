@@ -216,7 +216,7 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
-  filter: var(--filter-icon-shadow-strong);
+  filter: var(--filter-icon-shadow);
 }
 
 .ingredient-icon-qty {
@@ -279,8 +279,6 @@
 }
 
 .total-ingredient-card:hover {
-  transform: var(--lift-md);
-  box-shadow: var(--shadow-lg);
   border-color: var(--color-purple);
 }
 
@@ -289,7 +287,7 @@
   height: 36px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: var(--filter-icon-shadow-strong);
+  filter: var(--filter-icon-shadow);
 }
 
 .total-ingredient-name {
@@ -306,7 +304,6 @@
   border-radius: var(--radius-md);
   font-size: 18px;
   font-weight: 800;
-  box-shadow: var(--shadow-glow-purple);
 }
 
 .no-results {
@@ -368,7 +365,7 @@
   height: 28px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: grayscale(0.5) var(--filter-icon-shadow-strong);
+  filter: grayscale(0.5) var(--filter-icon-shadow);
 }
 
 .missing-ingredient-name {

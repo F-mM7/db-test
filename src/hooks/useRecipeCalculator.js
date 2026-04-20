@@ -6,37 +6,28 @@ export const POT_SIZE_MAX = 81;
 export const POT_SIZE_STEP = 3;
 export const POT_SIZE_DEFAULT = 75;
 
+// 日曜のウィークエンドボーナスで鍋容量が 2 倍になる
+const WEEKEND_MULTIPLIER = 2;
+
 export function useRecipeCalculator(recipeData, ingredientData = []) {
   const [selectedRecipes, setSelectedRecipes] = useState({});
   const [potSize, setPotSize] = useState(POT_SIZE_DEFAULT);
-  const sortByEnergy = true;
 
-  // カテゴリ一覧をデータから導出
   const categories = useMemo(() => {
-    const categorySet = new Set();
-    recipeData.forEach(recipe => {
-      categorySet.add(recipe.category);
-    });
-    return Array.from(categorySet);
+    const set = new Set();
+    recipeData.forEach(r => set.add(r.category));
+    return Array.from(set);
   }, [recipeData]);
 
-  // 鍋サイズ・カテゴリでフィルタし、エナジーでソートした料理リスト
-  // 週末は鍋サイズが1.5倍になるため、weekendOnly フラグで区別
+  // 鍋サイズ・カテゴリでフィルタし、エナジー降順でソート。
+  // 週末（鍋容量 2 倍）でしか作れないものは weekendOnly フラグで区別する。
   const getFilteredRecipes = useCallback((category) => {
-    const weekendPotSize = Math.floor(potSize * 2);
-    let filtered = recipeData
+    const weekendPotSize = potSize * WEEKEND_MULTIPLIER;
+    return recipeData
       .filter(r => r.category === category && r.totalIngredients <= weekendPotSize)
-      .map(r => ({
-        ...r,
-        weekendOnly: r.totalIngredients > potSize
-      }));
-
-    if (sortByEnergy) {
-      filtered = [...filtered].sort((a, b) => b.energy - a.energy);
-    }
-
-    return filtered;
-  }, [recipeData, potSize, sortByEnergy]);
+      .map(r => ({ ...r, weekendOnly: r.totalIngredients > potSize }))
+      .sort((a, b) => b.energy - a.energy);
+  }, [recipeData, potSize]);
 
   // 必要食材の合計を算出
   const totalIngredients = useMemo(() => {

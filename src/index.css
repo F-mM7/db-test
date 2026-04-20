@@ -9,73 +9,47 @@
   --color-text: #c9d1d9;
   --color-text-strong: #f0f6fc;
   --color-text-muted: #8b949e;
-  --color-text-subtle: #6e7681;
   --color-text-on-accent: #ffffff;
 
   /* ─ Color: Accent ─ */
   --color-blue: #58a6ff;
   --color-blue-dark: #1f6feb;
-  --color-blue-light: #79c0ff;
   --color-green: #2ea043;
   --color-green-dark: #238636;
   --color-purple: #8b5cf6;
   --color-purple-dark: #6f42c1;
   --color-red: #f85149;
   --color-red-dark: #da3633;
-  --color-red-darker: #cf222e;
-  --color-red-darkest: #a40e26;
   --color-orange: #f09030;
   --color-orange-dark: #e87020;
 
   /* ─ Gradient ─ */
   --grad-surface: linear-gradient(135deg, var(--color-surface-2), var(--color-surface-1));
   --grad-surface-reverse: linear-gradient(135deg, var(--color-surface-1), var(--color-surface-2));
-  --grad-surface-darker: linear-gradient(135deg, var(--color-border), var(--color-surface-2));
   --grad-bg-surface: linear-gradient(135deg, var(--color-bg), var(--color-surface-1));
   --grad-blue: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
   --grad-green: linear-gradient(135deg, var(--color-green), var(--color-green-dark));
-  --grad-green-reverse: linear-gradient(135deg, var(--color-green-dark), var(--color-green));
   --grad-purple: linear-gradient(135deg, var(--color-purple), var(--color-purple-dark));
-  --grad-purple-reverse: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
-  --grad-red: linear-gradient(135deg, var(--color-red-dark), var(--color-red-darker));
-  --grad-red-light: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
-  --grad-red-hover: linear-gradient(135deg, var(--color-red-darker), var(--color-red-darkest));
+  --grad-red: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
 
-  /* ─ Radius (3 tiers) ─ */
-  --radius-sm: 6px;   /* small badges */
-  --radius-md: 10px;  /* buttons, mid-size */
-  --radius-lg: 14px;  /* cards, sections */
+  /* ─ Radius ─ */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 
-  /* ─ Motion (2 tiers, unified easing) ─ */
-  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.2s var(--ease-out);
-  --transition-smooth: all 0.3s var(--ease-out);
+  /* ─ Motion ─ */
+  --transition-fast: all 0.2s ease;
+  --transition-smooth: all 0.3s ease;
 
-  /* ─ Lift (hover transform) ─ */
-  --lift-sm: translateY(-2px);
-  --lift-md: translateY(-4px);
-
-  /* ─ Shadow (3 elevation tiers + inset) ─ */
+  /* ─ Shadow ─ */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
   --shadow-inset: inset 0 2px 8px rgba(0, 0, 0, 0.2);
-
-  /* ─ Shadow (accent glow, 4 colors) ─ */
-  --shadow-glow-blue: 0 4px 12px rgba(88, 166, 255, 0.3);
-  --shadow-glow-green: 0 4px 12px rgba(35, 134, 54, 0.3);
-  --shadow-glow-purple: 0 4px 12px rgba(139, 92, 246, 0.3);
-  --shadow-glow-red: 0 4px 12px rgba(248, 81, 73, 0.3);
 
   /* ─ Filter: Icon Drop Shadow ─ */
   --filter-icon-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
-  --filter-icon-shadow-strong: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
 
-  /* ─ Font ─ */
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-
-  font-family: var(--font-sans);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -110,7 +84,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--color-blue-light);
+  filter: brightness(1.2);
 }
 
 h1 {
@@ -147,14 +121,13 @@ h1 {
   background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
-  font-family: var(--font-sans);
 }
 
 /* ─ Typography: Gradient Title ─ */
 .gradient-title {
   text-align: center;
   color: var(--color-text-strong);
-  background: var(--title-gradient, var(--grad-blue));
+  background: var(--grad-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -162,10 +135,6 @@ h1 {
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
-}
-
-.gradient-title-purple {
-  --title-gradient: linear-gradient(135deg, var(--color-purple), var(--color-blue));
 }
 
 @media (max-width: 1024px) {

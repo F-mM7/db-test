@@ -1,6 +1,6 @@
-import { memo } from 'react';
-import { usePokemonData } from '../hooks/usePokemonData';
+import { useFetchJson } from '../hooks/useFetchJson';
 import { usePokemonFilter } from '../hooks/usePokemonFilter';
+import { DATA_URL } from '../utils/constants';
 import PokemonCard from './PokemonCard';
 import IngredientButton from './IngredientButton';
 import LoadingSpinner from './LoadingSpinner';
@@ -8,7 +8,7 @@ import ErrorDisplay from './ErrorDisplay';
 import './IngredientFilter.css';
 
 function IngredientFilter() {
-  const { pokemonData, loading, error } = usePokemonData();
+  const { data: pokemonData, loading, error } = useFetchJson(DATA_URL, []);
   const {
     selectedIngredient,
     ingredients,
@@ -18,33 +18,53 @@ function IngredientFilter() {
     clearFilter
   } = usePokemonFilter(pokemonData);
 
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-  
-  if (error) {
-    return <ErrorDisplay error={error} onRetry={() => window.location.reload()} />;
-  }
+  if (loading) return <LoadingSpinner />;
+  if (error) return <ErrorDisplay error={error} onRetry={() => window.location.reload()} />;
 
   return (
     <div className="page-container ingredient-filter-container">
       <header>
         <h1 className="gradient-title">ポケモンスリープ 食材別ポケモン検索</h1>
       </header>
-      
-      <IngredientSelection 
-        ingredients={ingredients}
-        selectedIngredient={selectedIngredient}
-        onIngredientClick={handleIngredientClick}
-      />
+
+      <section className="ingredient-section">
+        <h2>食材を選択</h2>
+        <div className="ingredient-buttons">
+          {ingredients.map(ingredient => (
+            <IngredientButton
+              key={ingredient}
+              ingredient={ingredient}
+              isActive={selectedIngredient === ingredient}
+              onClick={handleIngredientClick}
+            />
+          ))}
+        </div>
+      </section>
 
       {selectedIngredient && (
-        <SearchResults
-          selectedIngredient={selectedIngredient}
-          filteredPokemon={filteredPokemon}
-          getMaxValueForIngredient={getMaxValueForIngredient}
-          onClear={clearFilter}
-        />
+        <section className="results-section">
+          <div className="selected-header">
+            <h2>「{selectedIngredient}」を獲得できるポケモン</h2>
+            <button className="btn btn-sm btn-danger" onClick={clearFilter}>
+              選択をクリア
+            </button>
+          </div>
+
+          <div className="pokemon-grid">
+            {filteredPokemon.map(pokemon => (
+              <PokemonCard
+                key={pokemon.id}
+                pokemon={pokemon}
+                selectedIngredient={selectedIngredient}
+                getMaxValueForIngredient={getMaxValueForIngredient}
+              />
+            ))}
+          </div>
+
+          <div className="result-count">
+            {filteredPokemon.length}体のポケモンが見つかりました
+          </div>
+        </section>
       )}
 
       <footer className="info">
@@ -55,55 +75,5 @@ function IngredientFilter() {
     </div>
   );
 }
-
-const IngredientSelection = memo(({ ingredients, selectedIngredient, onIngredientClick }) => (
-  <section className="ingredient-section">
-    <h2>食材を選択</h2>
-    <div className="ingredient-buttons">
-      {ingredients.map(ingredient => (
-        <IngredientButton
-          key={ingredient}
-          ingredient={ingredient}
-          isActive={selectedIngredient === ingredient}
-          onClick={onIngredientClick}
-        />
-      ))}
-    </div>
-  </section>
-));
-
-const SearchResults = memo(({ 
-  selectedIngredient, 
-  filteredPokemon, 
-  getMaxValueForIngredient, 
-  onClear 
-}) => (
-  <section className="results-section">
-    <div className="selected-header">
-      <h2>「{selectedIngredient}」を獲得できるポケモン</h2>
-      <button className="btn btn-sm btn-danger" onClick={onClear}>
-        選択をクリア
-      </button>
-    </div>
-    
-    <div className="pokemon-grid">
-      {filteredPokemon.map(pokemon => (
-        <PokemonCard
-          key={pokemon.id}
-          pokemon={pokemon}
-          selectedIngredient={selectedIngredient}
-          getMaxValueForIngredient={getMaxValueForIngredient}
-        />
-      ))}
-    </div>
-    
-    <div className="result-count">
-      {filteredPokemon.length}体のポケモンが見つかりました
-    </div>
-  </section>
-));
-
-IngredientSelection.displayName = 'IngredientSelection';
-SearchResults.displayName = 'SearchResults';
 
 export default IngredientFilter;

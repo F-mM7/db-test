@@ -15,21 +15,12 @@
 
 .tab:hover {
   color: var(--color-text);
-  background: var(--grad-surface-darker);
 }
 
-.tab-blue.active {
+.tab.active {
   background: var(--grad-blue);
   color: var(--color-text-on-accent);
   border-color: var(--color-blue);
-  box-shadow: var(--shadow-glow-blue);
-}
-
-.tab-purple.active {
-  background: var(--grad-purple);
-  color: var(--color-text-on-accent);
-  border-color: var(--color-purple);
-  box-shadow: var(--shadow-glow-purple);
 }
 
 /* ─ Component: Button (flat) ─ */
@@ -52,32 +43,26 @@
 
 .btn-danger {
   background: var(--grad-red);
-  box-shadow: var(--shadow-glow-red);
 }
 
 .btn-danger:hover {
-  background: var(--grad-red-hover);
-  transform: var(--lift-sm);
+  filter: brightness(1.1);
 }
 
 .btn-success {
-  background: var(--grad-green-reverse);
+  background: var(--grad-green);
 }
 
 .btn-success:hover {
-  background: var(--grad-green);
-  transform: var(--lift-sm);
-  box-shadow: var(--shadow-glow-green);
+  filter: brightness(1.1);
 }
 
 .btn-purple {
-  background: var(--grad-purple-reverse);
+  background: var(--grad-purple);
 }
 
 .btn-purple:hover {
-  background: var(--grad-purple);
-  transform: var(--lift-sm);
-  box-shadow: var(--shadow-glow-purple);
+  filter: brightness(1.1);
 }
 
 /* ─ Component: Icon Button ─ */
