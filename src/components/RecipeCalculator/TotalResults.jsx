@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { ingredientIconUrl } from '../../utils/constants';
 
-const TotalResults = memo(({ totalIngredients, selectedCount, onClear }) => (
+const TotalResults = memo(({ totalIngredients, onClear }) => (
   <section>
     <div className="results-header">
       <h2>必要食材一覧</h2>
@@ -22,10 +22,6 @@ const TotalResults = memo(({ totalIngredients, selectedCount, onClear }) => (
           <span className="total-ingredient-quantity badge badge--solid-green badge--lg">{quantity}</span>
         </div>
       ))}
-    </div>
-
-    <div className="selected-recipes-summary">
-      <span className="summary-count">{selectedCount}</span> 品の料理を選択中
     </div>
   </section>
 ));

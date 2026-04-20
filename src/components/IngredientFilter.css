@@ -152,18 +152,6 @@
   flex: 1;
 }
 
-.result-count {
-  text-align: center;
-  font-size: 18px;
-  color: var(--color-text);
-  margin: 32px 0;
-  padding: 20px;
-  background: var(--color-surface-1);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  font-weight: 700;
-}
-
 .info {
   text-align: center;
   margin-top: 40px;
@@ -274,11 +262,5 @@
   .max-value {
     font-size: 14px;
     padding: 5px 10px;
-  }
-  
-  .result-count {
-    font-size: 16px;
-    padding: 16px;
-    margin: 24px 0;
   }
 }

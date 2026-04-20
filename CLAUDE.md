@@ -65,7 +65,7 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 │   │
 │   ├── App.jsx               # アプリケーションルート（タブ切替）
 │   ├── App.css               # ルート + .app-nav + .tab-panel
-│   ├── index.css             # デザイントークン（CSS 変数） + .page-container / .page-title
+│   ├── index.css             # デザイントークン（CSS 変数） + .page-container
 │   └── main.jsx              # エントリーポイント
 │
 ├── data/                            # データファイル (gitignore候補)

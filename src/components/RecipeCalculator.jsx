@@ -54,13 +54,6 @@ function RecipeCalculator() {
   return (
     <AsyncBoundary loading={recipeLoading || ingredientLoading} error={recipeError || ingredientError}>
       <div className="page-container recipe-calculator-container">
-        <header>
-          <h1 className="page-title">料理カリキュレーター</h1>
-          <p className="recipe-calculator-description">
-            作りたい料理と回数を指定すると、必要な食材の合計数を算出します
-          </p>
-        </header>
-
         <FilterBar
           potSize={potSize}
           onIncrement={incrementPotSize}
@@ -90,7 +83,6 @@ function RecipeCalculator() {
         {totalIngredients.length > 0 && (
           <TotalResults
             totalIngredients={totalIngredients}
-            selectedCount={selectedCount}
             onClear={clearAll}
           />
         )}

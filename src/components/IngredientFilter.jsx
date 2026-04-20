@@ -19,10 +19,6 @@ function IngredientFilter() {
   return (
     <AsyncBoundary loading={loading} error={error}>
       <div className="page-container ingredient-filter-container">
-        <header>
-          <h1 className="page-title">ポケモンスリープ 食材別ポケモン検索</h1>
-        </header>
-
         <section className="ingredient-section">
           <h2>食材を選択</h2>
           <div className="ingredient-buttons">
@@ -55,10 +51,6 @@ function IngredientFilter() {
                   getMaxValueForIngredient={getMaxValueForIngredient}
                 />
               ))}
-            </div>
-
-            <div className="result-count">
-              {filteredPokemon.length}体のポケモンが見つかりました
             </div>
           </section>
         )}

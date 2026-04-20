@@ -1,7 +1,6 @@
 :root {
   /* ─ Color: Surface ─ */
   --color-bg: #000000;
-  --color-surface-1: #161b22;
   --color-surface: #21262d;
   --color-border: #30363d;
 
@@ -84,17 +83,6 @@ h1 {
   background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
-}
-
-/* ─ Typography: Page Title ─ */
-.page-title {
-  text-align: center;
-  color: var(--color-blue);
-  font-size: clamp(1.8rem, calc(1.2rem + 2.5vw), 2.75rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin: 0 0 clamp(12px, calc(8px + 1.5vw), 28px);
 }
 
 @media (max-width: 1024px) {
