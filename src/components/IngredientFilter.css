@@ -1,5 +1,5 @@
 .ingredient-section {
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, calc(14px + 1.5vw), 30px);
 }
 
 .ingredient-buttons {
@@ -10,7 +10,7 @@
 
 .ingredient-button {
   padding: 12px 8px;
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   background: var(--color-surface);
   color: var(--color-text);
   border-radius: var(--radius-md);
@@ -49,7 +49,7 @@
 }
 
 .results-section {
-  margin-top: 40px;
+  margin-top: clamp(24px, calc(16px + 1.5vw), 40px);
 }
 
 .pokemon-grid {
@@ -62,7 +62,7 @@
 
 .pokemon-card {
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: clamp(20px, calc(16px + 1.5vw), 28px);
   transition: var(--transition);
@@ -185,11 +185,9 @@
     width: 100%;
   }
   
-  /* スマホでは badge--lg のフォントサイズ・パディングを縮小し、見出し右端へ寄せる */
+  /* 見出し右端へ寄せる（縮小は components.css 側 .badge--lg メディアクエリで対応） */
   .max-value {
     align-self: flex-end;
-    font-size: 16px;
-    padding: 6px 12px;
   }
   
   .ingredient-types {
@@ -221,14 +219,9 @@
     padding: 10px 4px;
   }
   
-  /* 極小画面では badge--solid-blue / badge--lg のフォントサイズ・パディングをさらに縮小 */
+  /* .ingredient-label のみ .badge--lg 内包値より小さく上書き（個別保持） */
   .ingredient-label {
     font-size: 12px;
     padding: 3px 8px;
-  }
-  
-  .max-value {
-    font-size: 14px;
-    padding: 5px 10px;
   }
 }

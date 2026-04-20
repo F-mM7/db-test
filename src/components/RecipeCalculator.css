@@ -6,7 +6,7 @@
   margin-bottom: 24px;
   padding: 16px 20px;
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   flex-wrap: wrap;
 }
@@ -37,7 +37,7 @@
   display: flex;
   gap: 8px;
   margin-bottom: 32px;
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 0;
   overflow-x: auto;
 }
@@ -46,13 +46,9 @@
   margin-left: auto;
 }
 
-/* 集計タブ右上のカウンタバッジ。.badge .badge--solid-red .badge--sm に円形サイズを付与 */
+/* 集計タブ右上のカウンタバッジ。サイズは .badge--circle、色は .badge--solid-red に委譲 */
 .summary-tab-badge {
   margin-left: 6px;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  border-radius: var(--radius-md);
 }
 
 /* 集計タブ選択中はバッジを白背景・緑文字に反転 */
@@ -87,7 +83,7 @@
   gap: 8px;
   padding: 10px 16px;
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: var(--transition);
 }
@@ -188,7 +184,7 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .results-header h2 {
@@ -208,7 +204,7 @@
 /* 食材カード（合計／集計にない、共通ベース） */
 .ingredient-card {
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
   display: flex;
@@ -266,7 +262,7 @@
 
 /* 集計にない食材セクション */
 .missing-ingredients-section {
-  margin-top: 32px;
+  margin-top: clamp(20px, calc(14px + 1.5vw), 32px);
 }
 
 .missing-ingredients-section .results-header h2 {
@@ -396,11 +392,6 @@
     font-size: 13px;
   }
 
-  .total-ingredient-quantity {
-    font-size: 16px;
-    padding: 5px 12px;
-  }
-
   .results-header {
     flex-direction: column;
     gap: 16px;
@@ -460,10 +451,5 @@
 
   .ingredient-card__name {
     font-size: 12px;
-  }
-
-  .total-ingredient-quantity {
-    font-size: 14px;
-    padding: 4px 10px;
   }
 }
