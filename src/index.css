@@ -20,7 +20,7 @@
 
   /* ─ Color: Accent Fill (塗りつぶし用、通常色より暗め) ─ */
   --fill-blue: #1f6feb;
-  --fill-green: #2a9540;
+  --fill-green: #23823a;
   --fill-purple: #6f42c1;
   --fill-red: #da3633;
   --fill-orange: #e87020;
@@ -31,14 +31,7 @@
   --radius-lg: 14px;
 
   /* ─ Motion ─ */
-  --transition-fast: all 0.2s ease;
-  --transition-smooth: all 0.3s ease;
-
-  /* ─ Shadow ─ */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
-  --shadow-inset: inset 0 2px 8px rgba(0, 0, 0, 0.2);
-  --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --transition: all 0.2s ease;
 
   /* ─ Filter: Icon Drop Shadow ─ */
   --filter-icon-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
@@ -96,7 +89,7 @@ h1 {
   background-color: var(--color-surface-2);
   color: var(--color-text);
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: var(--transition);
 }
 :where(button:hover) {
   border-color: var(--color-blue);
@@ -111,7 +104,7 @@ h1 {
 .page-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 24px;
+  padding: clamp(12px, calc(6px + 1.5vw), 24px);
   background: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
@@ -121,7 +114,7 @@ h1 {
 .page-title {
   text-align: center;
   color: var(--color-blue);
-  font-size: 2.75rem;
+  font-size: clamp(1.8rem, calc(1.2rem + 2.5vw), 2.75rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -130,26 +123,5 @@ h1 {
 @media (max-width: 1024px) {
   .page-container {
     max-width: 100%;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .page-container {
-    padding: 16px;
-  }
-
-  .page-title {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .page-container {
-    padding: 12px;
-  }
-
-  .page-title {
-    font-size: 1.8rem;
   }
 }

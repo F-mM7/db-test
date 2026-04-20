@@ -25,11 +25,10 @@
   background: var(--color-surface-2);
   color: var(--color-text);
   border-radius: var(--radius-md);
-  font-size: 15px;
+  font-size: clamp(13px, calc(11px + 0.5vw), 15px);
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   text-align: center;
   white-space: nowrap;
   display: flex;
@@ -47,7 +46,6 @@
 
 .ingredient-button:hover {
   border-color: var(--color-green);
-  box-shadow: var(--shadow-md);
 }
 
 .ingredient-button.active {
@@ -92,20 +90,18 @@
   background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition-smooth);
+  padding: clamp(20px, calc(16px + 1.5vw), 28px);
+  transition: var(--transition);
 }
 
 .pokemon-card:hover {
   border-color: var(--color-blue);
-  box-shadow: var(--shadow-md);
 }
 
 .pokemon-header h3 {
   color: var(--color-text-strong);
   margin: 0 0 20px 0;
-  font-size: 22px;
+  font-size: clamp(18px, calc(14px + 1vw), 22px);
   font-weight: 800;
   border-bottom: 3px solid var(--color-blue);
   padding-bottom: 12px;
@@ -151,7 +147,6 @@
   border: 2px solid var(--color-surface-2);
   padding: 20px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-inset);
 }
 
 .ingredient-row {
@@ -196,7 +191,6 @@
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   font-weight: 700;
-  box-shadow: var(--shadow-md);
 }
 
 .info {
@@ -212,135 +206,6 @@
   padding: 12px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-surface-2);
-}
-
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  gap: 24px;
-}
-
-.loading-spinner {
-  width: 64px;
-  height: 64px;
-  border: 4px solid var(--color-surface-2);
-  border-top: 4px solid var(--color-blue);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-text {
-  color: var(--color-blue);
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  gap: 20px;
-  text-align: center;
-}
-
-.error-display-icon {
-  font-size: 48px;
-}
-
-.error-text {
-  color: var(--color-red);
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.error-detail {
-  color: var(--color-text-muted);
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 8px;
-}
-
-/* ErrorBoundary スタイル */
-.error-boundary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: var(--color-bg);
-  padding: 20px;
-}
-
-.error-boundary-content {
-  max-width: 600px;
-  text-align: center;
-  background: var(--color-surface-2);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  box-shadow: var(--shadow-md);
-}
-
-.error-boundary-icon {
-  font-size: 64px;
-  margin-bottom: 20px;
-}
-
-.error-title {
-  color: var(--color-red);
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.error-message {
-  color: var(--color-text);
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.error-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.error-details {
-  text-align: left;
-  margin-top: 20px;
-  background: var(--color-bg);
-  border: 1px solid var(--color-surface-2);
-  border-radius: var(--radius-md);
-  padding: 16px;
-}
-
-.error-details summary {
-  color: var(--color-text-muted);
-  cursor: pointer;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.error-stack {
-  color: var(--color-red);
-  font-family: monospace;
-  font-size: 12px;
-  line-height: 1.4;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
 }
 
 /* タブレット用のレスポンシブデザイン */
@@ -368,7 +233,6 @@
   }
   
   .ingredient-button {
-    font-size: 14px;
     padding: 10px 6px;
   }
   
@@ -378,12 +242,7 @@
     padding: 4px;
   }
   
-  .pokemon-card {
-    padding: 24px;
-  }
-  
   .pokemon-header h3 {
-    font-size: 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -441,16 +300,7 @@
   }
   
   .ingredient-button {
-    font-size: 13px;
     padding: 10px 4px;
-  }
-  
-  .pokemon-card {
-    padding: 20px;
-  }
-  
-  .pokemon-header h3 {
-    font-size: 18px;
   }
   
   .ingredient-label {

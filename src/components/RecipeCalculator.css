@@ -120,12 +120,11 @@
   background: var(--color-surface-2);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: var(--transition-smooth);
+  transition: var(--transition);
 }
 
 .recipe-row:hover {
   border-color: var(--color-green);
-  box-shadow: var(--shadow-md);
 }
 
 .recipe-row.selected {
@@ -137,14 +136,6 @@
 .recipe-row.selected:hover {
   background: var(--color-green);
   border-color: var(--color-green);
-}
-
-.recipe-row.weekend-only {
-  opacity: 0.7;
-}
-
-.recipe-row.weekend-only:hover {
-  opacity: 1;
 }
 
 .recipe-weekend-cell {
@@ -230,7 +221,7 @@
   font-weight: 700;
   color: var(--color-text-strong);
   line-height: 1;
-  text-shadow: var(--shadow-text);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* 回数コントロール */
@@ -281,12 +272,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: var(--transition-smooth);
+  transition: var(--transition);
 }
 
 .total-ingredient-card:hover {
   border-color: var(--color-green);
-  box-shadow: var(--shadow-md);
 }
 
 .total-ingredient-icon {
@@ -359,7 +349,7 @@
   align-items: center;
   gap: 10px;
   opacity: 0.6;
-  transition: var(--transition-smooth);
+  transition: var(--transition);
 }
 
 .missing-ingredient-card:hover {
