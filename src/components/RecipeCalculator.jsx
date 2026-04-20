@@ -6,7 +6,6 @@ import AsyncBoundary from './AsyncBoundary';
 import FilterBar from './RecipeCalculator/FilterBar';
 import CategoryTabs, { SUMMARY_TAB } from './RecipeCalculator/CategoryTabs';
 import RecipeList from './RecipeCalculator/RecipeList';
-import SummaryList from './RecipeCalculator/SummaryList';
 import TotalResults from './RecipeCalculator/TotalResults';
 import MissingIngredients from './RecipeCalculator/MissingIngredients';
 import './RecipeCalculator.css';
@@ -67,18 +66,12 @@ function RecipeCalculator() {
           selectedCount={selectedCount}
         />
 
-        {isSummaryTab ? (
-          <SummaryList
-            recipes={selectedRecipeDetails}
-            onCountChange={setRecipeCount}
-          />
-        ) : (
-          <RecipeList
-            recipes={filteredRecipes}
-            selectedRecipes={selectedRecipes}
-            onCountChange={setRecipeCount}
-          />
-        )}
+        <RecipeList
+          variant={isSummaryTab ? 'summary' : 'list'}
+          recipes={isSummaryTab ? selectedRecipeDetails : filteredRecipes}
+          selectedRecipes={selectedRecipes}
+          onCountChange={setRecipeCount}
+        />
 
         {totalIngredients.length > 0 && (
           <TotalResults
