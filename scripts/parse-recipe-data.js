@@ -57,12 +57,6 @@ function parseTable($, table, category) {
   return recipes;
 }
 
-function uniqueIngredients(recipes) {
-  const set = new Set();
-  recipes.forEach(r => r.ingredients.forEach(i => set.add(i.name)));
-  return Array.from(set).sort();
-}
-
 export function parseRecipeData() {
   console.log('Pokemon Sleep Recipe Wiki Data Parser');
   console.log('=====================================');
@@ -96,7 +90,7 @@ export function parseRecipeData() {
       parseDate: new Date().toISOString(),
       totalRecipes: allRecipes.length,
       byCategory,
-      uniqueIngredients: uniqueIngredients(allRecipes),
+      uniqueIngredients: [...new Set(allRecipes.flatMap(r => r.ingredients.map(i => i.name)))].sort(),
       sampleData: allRecipes.slice(0, 3)
     });
 

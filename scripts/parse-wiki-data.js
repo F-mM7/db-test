@@ -129,16 +129,6 @@ function parseHtmlTable(html) {
   return pokemonList;
 }
 
-function uniqueIngredients(pokemonList) {
-  const set = new Set();
-  pokemonList.forEach(p => {
-    Object.values(p.ingredientPatterns).forEach(pat => {
-      pat.ingredients.forEach(i => set.add(i));
-    });
-  });
-  return Array.from(set).sort();
-}
-
 export function parseWikiData() {
   console.log('Pokemon Sleep Wiki Data Parser');
   console.log('==============================');
@@ -151,7 +141,9 @@ export function parseWikiData() {
     writeJson(dataDir, 'parse-summary.json', {
       parseDate: new Date().toISOString(),
       totalPokemon: pokemonList.length,
-      uniqueIngredients: uniqueIngredients(pokemonList),
+      uniqueIngredients: [...new Set(pokemonList.flatMap(p =>
+        Object.values(p.ingredientPatterns).flatMap(pat => pat.ingredients)
+      ))].sort(),
       sampleData: pokemonList.slice(0, 3)
     });
 
