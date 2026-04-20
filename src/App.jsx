@@ -5,7 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import './App.css'
 
 const TABS = [
-  { id: 'ingredient', label: '食材検索' },
+  { id: 'ingredient', label: '食材担当ポケモン検索' },
   { id: 'recipe', label: '料理カリキュレーター' }
 ]
 

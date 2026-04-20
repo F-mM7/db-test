@@ -2,13 +2,6 @@
   margin-bottom: 30px;
 }
 
-.ingredient-section h2 {
-  color: var(--color-text-strong);
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
 .ingredient-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -57,21 +50,6 @@
 
 .results-section {
   margin-top: 40px;
-}
-
-.selected-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid var(--color-border);
-}
-
-.selected-header h2 {
-  color: var(--color-blue);
-  margin: 0;
-  font-weight: 600;
 }
 
 .pokemon-grid {
@@ -212,16 +190,6 @@
     align-self: flex-end;
     font-size: 16px;
     padding: 6px 12px;
-  }
-  
-  .selected-header {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  
-  .selected-header h2 {
-    font-size: 18px;
   }
   
   .ingredient-types {

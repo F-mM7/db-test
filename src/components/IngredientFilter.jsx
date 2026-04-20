@@ -21,7 +21,6 @@ function IngredientFilter() {
     <AsyncBoundary loading={pokemonLoading || ingredientLoading} error={pokemonError || ingredientError}>
       <div className="page-container ingredient-filter-container">
         <section className="ingredient-section">
-          <h2>食材を選択</h2>
           <div className="ingredient-buttons">
             {ingredients.map(ingredient => (
               <IngredientButton
@@ -36,13 +35,6 @@ function IngredientFilter() {
 
         {selectedIngredient && (
           <section className="results-section">
-            <div className="selected-header">
-              <h2>「{selectedIngredient}」を獲得できるポケモン</h2>
-              <button className="btn btn-sm btn-danger" onClick={() => setSelectedIngredient(null)}>
-                選択をクリア
-              </button>
-            </div>
-
             <div className="pokemon-grid">
               {filteredPokemon.map(pokemon => (
                 <PokemonCard
