@@ -33,20 +33,18 @@ function IngredientFilter() {
           </div>
         </section>
 
-        {selectedIngredient && (
-          <section className="results-section">
-            <div className="pokemon-grid">
-              {filteredPokemon.map(pokemon => (
-                <PokemonCard
-                  key={pokemon.id}
-                  pokemon={pokemon}
-                  selectedIngredient={selectedIngredient}
-                  getMaxValueForIngredient={getMaxValueForIngredient}
-                />
-              ))}
-            </div>
-          </section>
-        )}
+        <section className="results-section">
+          <div className="pokemon-grid">
+            {filteredPokemon.map(pokemon => (
+              <PokemonCard
+                key={pokemon.id}
+                pokemon={pokemon}
+                selectedIngredient={selectedIngredient}
+                getMaxValueForIngredient={getMaxValueForIngredient}
+              />
+            ))}
+          </div>
+        </section>
 
         <footer className="info">
           <p className="note">

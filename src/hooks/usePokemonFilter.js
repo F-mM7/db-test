@@ -37,13 +37,17 @@ export function usePokemonFilter(pokemonData, ingredientData = []) {
   }, [pokemonData, baseEnergyMap]);
 
   // 初期選択: 基礎エナジーが既知の中で最大の食材
-  // ingredients は baseEnergy 昇順ソート済み（未知は末尾）なので、
-  // 末尾から baseEnergy が既知の最初の要素を取れば最大値になる
   const defaultIngredient = useMemo(() => {
-    for (let i = ingredients.length - 1; i >= 0; i--) {
-      if (baseEnergyMap.has(ingredients[i])) return ingredients[i];
+    let best = null;
+    let bestEnergy = -Infinity;
+    for (const name of ingredients) {
+      const energy = baseEnergyMap.get(name);
+      if (energy != null && energy > bestEnergy) {
+        bestEnergy = energy;
+        best = name;
+      }
     }
-    return null;
+    return best;
   }, [ingredients, baseEnergyMap]);
 
   // ユーザーが選択していなければ既定値（最大エナジー食材）を使う
