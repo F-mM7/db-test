@@ -6,15 +6,14 @@ class ErrorBoundary extends Component {
     this.state = { hasError: false, error: null, errorInfo: null };
   }
 
-  static getDerivedStateFromError() {
-    return { hasError: true };
+  // fallback UI に必要な情報は getDerivedStateFromError で一度に返す（React 公式推奨）
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
   }
 
+  // componentDidCatch は副作用（ロギング）と errorInfo の保存のみに専念
   componentDidCatch(error, errorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
+    this.setState({ errorInfo });
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
