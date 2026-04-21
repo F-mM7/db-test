@@ -1,3 +1,9 @@
+/* ─ Component: Icon Image ─ */
+.icon-img {
+  object-fit: contain;
+  filter: var(--filter-icon-shadow);
+}
+
 /* ─ Component: Badge ─ */
 .badge {
   display: inline-flex;
@@ -80,6 +86,8 @@
 
 /* ─ Component: Tab ─ */
 .tab {
+  display: inline-flex;
+  align-items: center;
   padding: 12px 24px;
   font-size: 15px;
   border: 1px solid var(--color-border);

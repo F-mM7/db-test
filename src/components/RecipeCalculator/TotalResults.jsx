@@ -14,12 +14,12 @@ const TotalResults = memo(({ totalIngredients, onClear }) => (
       {totalIngredients.map(({ name, quantity }) => (
         <div key={name} className="ingredient-card">
           <img
-            className="ingredient-card__icon"
+            className="icon-img ingredient-card__icon"
             src={ingredientIconUrl(name)}
             alt={name}
           />
           <span className="ingredient-card__name">{name}</span>
-          <span className="total-ingredient-quantity badge badge--solid-green badge--lg">{quantity}</span>
+          <span className="badge badge--solid-green badge--lg">{quantity}</span>
         </div>
       ))}
     </div>

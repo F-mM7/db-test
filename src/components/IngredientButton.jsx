@@ -7,7 +7,7 @@ const IngredientButton = memo(({ ingredient, isActive, onClick }) => (
     onClick={() => onClick(ingredient)}
   >
     <img
-      className="ingredient-button-icon"
+      className="icon-img ingredient-button-icon"
       src={ingredientIconUrl(ingredient)}
       alt=""
       loading="lazy"

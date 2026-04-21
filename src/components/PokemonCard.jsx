@@ -27,7 +27,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
           <span className="pokemon-name">
             {pokemon.name}
             {ingredientType && (
-              <span className="ingredient-label badge badge--solid-blue">{ingredientType}</span>
+              <span className="badge badge--solid-blue badge--sm">{ingredientType}</span>
             )}
           </span>
           <span className="max-value badge badge--solid-red badge--lg">
@@ -44,7 +44,7 @@ function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) 
               {name ? (
                 <>
                   <img
-                    className="ingredient-row-icon"
+                    className="icon-img ingredient-row-icon"
                     src={ingredientIconUrl(name)}
                     alt=""
                   />

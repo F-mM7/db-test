@@ -4,7 +4,7 @@ import { ingredientIconUrl } from '../utils/constants';
 const IngredientIcon = memo(({ name, quantity }) => (
   <span className="ingredient-icon-wrapper" title={name}>
     <img
-      className="ingredient-icon"
+      className="icon-img ingredient-icon"
       src={ingredientIconUrl(name)}
       alt={name}
       loading="lazy"

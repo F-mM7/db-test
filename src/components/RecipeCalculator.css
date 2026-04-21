@@ -44,15 +44,11 @@
 
 .summary-tab {
   margin-left: auto;
-}
-
-/* 集計タブ右上のカウンタバッジ。サイズは .badge--circle、色は .badge--solid-red に委譲 */
-.summary-tab-badge {
-  margin-left: 6px;
+  gap: 6px;
 }
 
 /* 集計タブ選択中はバッジを白背景・緑文字に反転 */
-.summary-tab.active .summary-tab-badge {
+.summary-tab.active .badge {
   background: var(--color-text-strong);
   color: var(--color-green);
 }
@@ -139,8 +135,6 @@
 .ingredient-icon {
   width: 32px;
   height: 32px;
-  object-fit: contain;
-  filter: var(--filter-icon-shadow);
 }
 
 .ingredient-icon-qty {
@@ -210,9 +204,7 @@
 .ingredient-card__icon {
   width: 36px;
   height: 36px;
-  object-fit: contain;
   flex-shrink: 0;
-  filter: var(--filter-icon-shadow);
 }
 
 .ingredient-card__name {
@@ -257,11 +249,6 @@
 
 .missing-ingredients-section .results-header h2 {
   color: var(--color-text-muted);
-}
-
-/* セクションヘッダーの種類数バッジ。.badge--outline をそのまま使用 */
-.missing-ingredients-count {
-  font-weight: 600;
 }
 
 .missing-ingredients-grid {

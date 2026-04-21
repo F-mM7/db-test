@@ -19,7 +19,7 @@ const CategoryTabs = memo(({ categories, activeTab, onSelect, selectedCount }) =
     >
       集計
       {selectedCount > 0 && (
-        <span className="summary-tab-badge badge badge--solid-red badge--sm badge--circle">{selectedCount}</span>
+        <span className="badge badge--solid-red badge--sm badge--circle">{selectedCount}</span>
       )}
     </button>
   </div>
