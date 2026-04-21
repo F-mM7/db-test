@@ -17,7 +17,7 @@ const MissingIngredients = memo(({ ingredients }) => (
             alt={name}
           />
           <span className="ingredient-card__name">{name}</span>
-          <span className="missing-ingredient-energy badge badge--outline badge--sm">
+          <span className="badge badge--outline badge--sm badge--num">
             {baseEnergy != null ? baseEnergy : '—'}
           </span>
         </div>

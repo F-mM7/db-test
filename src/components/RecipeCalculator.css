@@ -120,16 +120,6 @@
   white-space: nowrap;
 }
 
-/* 料理行の合計セル。.badge--outline + .badge--sm + .badge--block に色だけ重ねる */
-.recipe-total-badge {
-  color: var(--color-blue);
-  font-weight: 600;
-}
-
-.recipe-energy-badge {
-  color: var(--color-red);
-}
-
 /* 食材アイコン表示 */
 .recipe-ingredients-summary {
   display: flex;
@@ -281,13 +271,6 @@
   margin-bottom: 16px;
 }
 
-/* 集計にない食材の基礎エナジー値。.badge--outline + .badge--sm を tabular-nums に */
-.missing-ingredient-energy {
-  color: var(--color-text);
-  font-variant-numeric: tabular-nums;
-  flex-shrink: 0;
-}
-
 /* タブレット用のレスポンシブデザイン */
 @media (max-width: 1024px) {
   .recipe-row {
@@ -341,12 +324,14 @@
     grid-area: ingredients;
   }
 
-  .recipe-total-badge {
+  /* recipe-row 内の合計／エナジーバッジは text-blue / text-red を目印に
+     grid-template-areas へ配置。汎用モディファイア自体に画面固有スタイルは持たせない */
+  .recipe-row .badge--text-blue {
     grid-area: total;
     justify-self: start;
   }
 
-  .recipe-energy-badge {
+  .recipe-row .badge--text-red {
     grid-area: energy;
     justify-self: start;
   }

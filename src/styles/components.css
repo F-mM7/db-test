@@ -9,6 +9,7 @@
   line-height: 1;
   border-radius: var(--radius-md);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .badge--sm {
@@ -63,6 +64,18 @@
   box-sizing: border-box;
   padding-left: 0;
   padding-right: 0;
+}
+
+.badge--text-blue {
+  color: var(--color-blue);
+}
+
+.badge--text-red {
+  color: var(--color-red);
+}
+
+.badge--num {
+  font-variant-numeric: tabular-nums;
 }
 
 /* ─ Component: Tab ─ */
