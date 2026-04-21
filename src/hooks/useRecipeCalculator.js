@@ -51,31 +51,21 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
 
   // 集計に含まれていない食材を基礎エナジー昇順でソート
   // 基礎エナジー不明の食材は末尾にまわす
-  // baseEnergyMap / allIngredients は本フック外では使わないため内部に畳み込む
+  // ingredient-data.json に全食材が列挙されている前提で recipeData は走査しない
   const missingIngredients = useMemo(() => {
-    const baseEnergyMap = new Map();
-    const allIngredients = new Set();
-    ingredientData.forEach(({ name, baseEnergy }) => {
-      baseEnergyMap.set(name, baseEnergy);
-      allIngredients.add(name);
-    });
-    recipeData.forEach(recipe => {
-      recipe.ingredients.forEach(({ name }) => allIngredients.add(name));
-    });
-
     const usedSet = new Set(totalIngredients.map(t => t.name));
-    return Array.from(allIngredients)
-      .filter(name => !usedSet.has(name))
-      .map(name => ({
+    return ingredientData
+      .filter(({ name }) => !usedSet.has(name))
+      .map(({ name, baseEnergy }) => ({
         name,
-        baseEnergy: baseEnergyMap.has(name) ? baseEnergyMap.get(name) : null
+        baseEnergy: baseEnergy ?? null
       }))
       .sort((a, b) => {
         const ae = a.baseEnergy ?? Infinity;
         const be = b.baseEnergy ?? Infinity;
         return ae - be;
       });
-  }, [ingredientData, recipeData, totalIngredients]);
+  }, [ingredientData, totalIngredients]);
 
   // 料理の回数を設定
   const setRecipeCount = useCallback((recipeName, count) => {

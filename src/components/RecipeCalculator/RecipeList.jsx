@@ -21,7 +21,7 @@ const RecipeList = memo(({ variant, recipes, selectedRecipes, onCountChange }) =
           key={recipe.name}
           variant={variant}
           recipe={recipe}
-          count={isSummary ? recipe.count : (selectedRecipes?.[recipe.name] || 0)}
+          count={isSummary ? recipe.count : (selectedRecipes[recipe.name] || 0)}
           onCountChange={onCountChange}
         />
       ))}
