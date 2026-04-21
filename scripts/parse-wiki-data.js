@@ -59,18 +59,6 @@ function parsePattern($, cells, patternName, config) {
   return null;
 }
 
-// AAA→A、ABB→B、AAC→C を抜き出す（同じ A はパターン間で一致する前提）
-function extractABC(ingredientPatterns) {
-  return {
-    ingredientA: ingredientPatterns.AAA?.ingredients[0]
-              ?? ingredientPatterns.ABB?.ingredients[0]
-              ?? ingredientPatterns.AAC?.ingredients[0]
-              ?? null,
-    ingredientB: ingredientPatterns.ABB?.ingredients[1] ?? null,
-    ingredientC: ingredientPatterns.AAC?.ingredients[2] ?? null
-  };
-}
-
 function parsePokemonRow($, cells, id) {
   if (cells.length < MIN_CELLS.WITHOUT_C) {
     console.warn(`Row has ${cells.length} cells, expected at least ${MIN_CELLS.WITHOUT_C}`);
@@ -94,7 +82,7 @@ function parsePokemonRow($, cells, id) {
     if (data) ingredientPatterns[patternName] = data;
   }
 
-  return { id, name, ...extractABC(ingredientPatterns), ingredientPatterns };
+  return { id, name, ingredientPatterns };
 }
 
 function parseHtmlTable(html) {

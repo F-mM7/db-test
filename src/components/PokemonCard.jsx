@@ -2,7 +2,10 @@ import { memo } from 'react';
 import { ingredientIconUrl } from '../utils/constants';
 
 function PokemonCard({ pokemon, selectedIngredient, getMaxValueForIngredient }) {
-  const { ingredientA, ingredientB, ingredientC } = pokemon;
+  const { ingredientPatterns } = pokemon;
+  const ingredientA = ingredientPatterns.AAA?.ingredients[0];
+  const ingredientB = ingredientPatterns.ABB?.ingredients[1];
+  const ingredientC = ingredientPatterns.AAC?.ingredients[2];
 
   const ingredientType =
     selectedIngredient === ingredientA ? 'A' :
