@@ -43,8 +43,7 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 │   │   │   ├── FilterBar.jsx           # 鍋サイズ調整
 │   │   │   ├── CategoryTabs.jsx        # カテゴリタブ + 集計タブ
 │   │   │   ├── RecipeRow.jsx           # 料理1行（list / summary 共用）
-│   │   │   ├── RecipeList.jsx          # 料理一覧
-│   │   │   ├── SummaryList.jsx         # 集計タブの選択中料理一覧
+│   │   │   ├── RecipeList.jsx          # 料理一覧（variant で list / summary 兼用）
 │   │   │   ├── TotalResults.jsx        # 必要食材合計
 │   │   │   └── MissingIngredients.jsx  # 集計に含まれない食材
 │   │   ├── AsyncBoundary.jsx       # loading / error ハンドラ
@@ -79,6 +78,21 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
     ├── recipe-data.json             # パース済み料理データ
     └── ingredient-data.json         # パース済み食材データ (基礎エナジー含む)
 ```
+
+### CSS の境界基準（汎用 / 画面固有）
+
+CSS は以下の基準で配置先を判断する。判断軸は「別の画面で再利用される可能性があるか」。
+
+- **汎用 (`src/styles/components.css`)**
+  画面固有の文脈を持たず、複数画面で再利用できるクラス。
+  例: `.badge`, `.btn`, `.icon-btn`, `.tab` のベースとモディファイア（`.badge--outline`, `.badge--sm`, `.badge--text-blue` など）。
+  モディファイアは命名規則 `.badge--<属性>` に従う。
+
+- **画面固有 (`src/components/<画面>.css`)**
+  特定画面・セクションのレイアウト、特定箇所でしか使わない色反転やマージン調整等。
+  汎用クラスを画面固有のスコープで限定する場合（例: `.recipe-row .badge--text-blue { grid-area: total; }`）も、ここに記述する。
+
+新しいクラスを追加するときは、まず「他画面で使うか」を考え、不要なら画面固有 CSS に置く。汎用への昇格は再利用の必要性が出てから行う。
 
 ## データ構造
 
