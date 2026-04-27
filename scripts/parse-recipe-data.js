@@ -10,6 +10,63 @@ const CATEGORY_TABLE_MAP = [
   { tableIndex: 4, category: 'デザート・ドリンク' }
 ];
 
+/**
+ * Wiki 側で値が欠けている場合に補完する手動オーバーライド。
+ *
+ * 【追加するとき】
+ *   Wiki のセルが空欄等で `parseInt(...) || 0` になってしまう料理について、
+ *   `'<料理名>': { <フィールド>: <正しい値> }` の形で追記する。
+ *
+ * 【削除するとき】
+ *   Wiki が更新されてセルに値が入ると、parse 実行時に
+ *     ⚠ Override for "..." is now redundant (...). Please remove ...
+ *   または
+ *     ⚠ Override for "..." differs from wiki value (...). Please verify ...
+ *   という警告が出る。警告が出た料理はこのテーブルから削除すること。
+ *   （Wiki の値が正しければ Wiki が常に優先される）
+ *
+ * 参照元: https://wikiwiki.jp/poke_sleep/料理/レシピの一覧
+ */
+const RECIPE_OVERRIDES = {
+  // Wiki のエナジー列が空欄になっているため補完 (2026-04 時点で確認)。
+  // 値はゲーム内表記の「初期エナジー」。
+  'ごろごろねっとうサラダ': { energy: 25356 }
+};
+
+/**
+ * Wiki から取得した recipe にオーバーライドを適用する。
+ * - Wiki 側の値が「欠損」(falsy) のときだけ補完値を使う。
+ * - Wiki 側に値がある場合は Wiki を優先し、警告を出して削除を促す。
+ */
+function applyRecipeOverride(recipe) {
+  const override = RECIPE_OVERRIDES[recipe.name];
+  if (!override) return recipe;
+
+  const merged = { ...recipe };
+  for (const [key, fallbackValue] of Object.entries(override)) {
+    const wikiValue = recipe[key];
+    if (wikiValue) {
+      if (wikiValue === fallbackValue) {
+        console.warn(
+          `  ⚠ Override for "${recipe.name}".${key} is now redundant ` +
+          `(wiki=${wikiValue} matches override). ` +
+          `Please remove this entry from RECIPE_OVERRIDES.`
+        );
+      } else {
+        console.warn(
+          `  ⚠ Override for "${recipe.name}".${key} differs from wiki value ` +
+          `(wiki=${wikiValue}, override=${fallbackValue}). ` +
+          `Please verify and remove this entry from RECIPE_OVERRIDES.`
+        );
+      }
+    } else {
+      merged[key] = fallbackValue;
+      console.log(`  ↳ Override applied to "${recipe.name}".${key}: ${fallbackValue}`);
+    }
+  }
+  return merged;
+}
+
 function parseIngredients($, cell) {
   const links = $(cell).find('a.rel-wiki-page');
   if (links.length === 0) return [];
@@ -52,7 +109,8 @@ function parseTable($, table, category) {
     const totalIngredients = parseInt($(cells[4]).text().trim(), 10) || 0;
     const energy = parseInt($(cells[5]).text().trim(), 10) || 0;
 
-    recipes.push({ name, category, ingredients, totalIngredients, energy });
+    const recipe = { name, category, ingredients, totalIngredients, energy };
+    recipes.push(applyRecipeOverride(recipe));
   });
   return recipes;
 }
