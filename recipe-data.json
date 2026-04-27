@@ -928,6 +928,30 @@
     "energy": 25162
   },
   {
+    "name": "ごろごろねっとうサラダ",
+    "category": "サラダ",
+    "ingredients": [
+      {
+        "name": "ずっしりカボチャ",
+        "quantity": 20
+      },
+      {
+        "name": "ほっこりポテト",
+        "quantity": 30
+      },
+      {
+        "name": "ワカクサコーン",
+        "quantity": 18
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 27
+      }
+    ],
+    "totalIngredients": 95,
+    "energy": 0
+  },
+  {
     "name": "じゅくせいスイートポテト",
     "category": "デザート・ドリンク",
     "ingredients": [
