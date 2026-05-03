@@ -27,11 +27,7 @@ const CATEGORY_TABLE_MAP = [
  *
  * 参照元: https://wikiwiki.jp/poke_sleep/料理/レシピの一覧
  */
-const RECIPE_OVERRIDES = {
-  // Wiki のエナジー列が空欄になっているため補完 (2026-04 時点で確認)。
-  // 値はゲーム内表記の「初期エナジー」。
-  'ごろごろねっとうサラダ': { energy: 25356 }
-};
+const RECIPE_OVERRIDES = {};
 
 /**
  * Wiki から取得した recipe にオーバーライドを適用する。
