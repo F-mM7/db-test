@@ -3,8 +3,8 @@ import { useState, useMemo, useCallback } from 'react';
 // 鍋サイズ（初期12、3刻みで拡張、最大81）
 export const POT_SIZE_MIN = 12;
 export const POT_SIZE_MAX = 81;
-export const POT_SIZE_STEP = 3;
-export const POT_SIZE_DEFAULT = 78;
+const POT_SIZE_STEP = 3;
+const POT_SIZE_DEFAULT = 78;
 
 // 日曜のウィークエンドボーナスで鍋容量が 2 倍になる
 const WEEKEND_MULTIPLIER = 2;

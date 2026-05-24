@@ -9,7 +9,7 @@ const EMPTY_MESSAGES = {
 
 const RecipeList = memo(({ variant, recipes, selectedRecipes, onCountChange }) => {
   if (recipes.length === 0) {
-    return <p className="recipe-list-empty">{EMPTY_MESSAGES[variant]}</p>;
+    return <p>{EMPTY_MESSAGES[variant]}</p>;
   }
 
   const isSummary = variant === 'summary';
