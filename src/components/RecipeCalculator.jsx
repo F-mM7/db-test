@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { useFetchJson } from '../hooks/useFetchJson';
 import { useRecipeCalculator } from '../hooks/useRecipeCalculator';
 import { RECIPE_DATA_URL, INGREDIENT_DATA_URL } from '../utils/constants';
@@ -7,7 +7,7 @@ import FilterBar from './RecipeCalculator/FilterBar';
 import CategoryTabs, { SUMMARY_TAB } from './RecipeCalculator/CategoryTabs';
 import RecipeList from './RecipeCalculator/RecipeList';
 import TotalResults from './RecipeCalculator/TotalResults';
-import MissingIngredients from './RecipeCalculator/MissingIngredients';
+import AdditionalEnergy from './RecipeCalculator/AdditionalEnergy';
 import './RecipeCalculator.css';
 
 function RecipeCalculator() {
@@ -16,7 +16,7 @@ function RecipeCalculator() {
   const {
     selectedRecipes,
     totalIngredients,
-    missingIngredients,
+    allIngredients,
     setRecipeCount,
     clearAll,
     categories,
@@ -27,6 +27,7 @@ function RecipeCalculator() {
   } = useRecipeCalculator(recipeData, ingredientData);
 
   const [activeTab, setActiveTab] = useState(null);
+  const [highlightedIngredients, setHighlightedIngredients] = useState(() => new Set());
 
   const currentTab = activeTab || categories[0] || null;
   const isSummaryTab = currentTab === SUMMARY_TAB;
@@ -49,6 +50,18 @@ function RecipeCalculator() {
       })
       .filter(Boolean);
   }, [isSummaryTab, selectedRecipes, recipeData]);
+
+  const toggleHighlight = useCallback((name) => {
+    setHighlightedIngredients(prev => {
+      const next = new Set(prev);
+      if (next.has(name)) {
+        next.delete(name);
+      } else {
+        next.add(name);
+      }
+      return next;
+    });
+  }, []);
 
   return (
     <AsyncBoundary loading={recipeLoading || ingredientLoading} error={recipeError || ingredientError}>
@@ -77,11 +90,13 @@ function RecipeCalculator() {
           <TotalResults
             totalIngredients={totalIngredients}
             onClear={clearAll}
+            highlightedIngredients={highlightedIngredients}
+            onToggleHighlight={toggleHighlight}
           />
         )}
 
-        {isSummaryTab && missingIngredients.length > 0 && (
-          <MissingIngredients ingredients={missingIngredients} />
+        {isSummaryTab && allIngredients.length > 0 && (
+          <AdditionalEnergy ingredients={allIngredients} />
         )}
       </div>
     </AsyncBoundary>

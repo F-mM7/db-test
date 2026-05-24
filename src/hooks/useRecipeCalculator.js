@@ -49,16 +49,17 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
       .sort((a, b) => b.quantity - a.quantity);
   }, [selectedRecipes, recipeData]);
 
-  // 集計に含まれていない食材を基礎エナジー昇順でソート
-  // 基礎エナジー不明の食材は末尾にまわす
+  // 全食材を基礎エナジー昇順でソートし、必要食材の数量を付与する。
+  // 必要食材は通常表示、それ以外は muted 表示で「追加エナジー」セクションに使う。
+  // 基礎エナジー不明の食材は末尾にまわす。
   // ingredient-data.json に全食材が列挙されている前提で recipeData は走査しない
-  const missingIngredients = useMemo(() => {
-    const usedSet = new Set(totalIngredients.map(t => t.name));
+  const allIngredients = useMemo(() => {
+    const quantityByName = new Map(totalIngredients.map(t => [t.name, t.quantity]));
     return ingredientData
-      .filter(({ name }) => !usedSet.has(name))
       .map(({ name, baseEnergy }) => ({
         name,
-        baseEnergy: baseEnergy ?? null
+        baseEnergy: baseEnergy ?? null,
+        quantity: quantityByName.get(name) ?? 0
       }))
       .sort((a, b) => {
         const ae = a.baseEnergy ?? Infinity;
@@ -97,7 +98,7 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
   return {
     selectedRecipes,
     totalIngredients,
-    missingIngredients,
+    allIngredients,
     setRecipeCount,
     clearAll,
     categories,

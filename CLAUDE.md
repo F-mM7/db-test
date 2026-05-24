@@ -45,7 +45,7 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 │   │   │   ├── RecipeRow.jsx           # 料理1行（list / summary 共用）
 │   │   │   ├── RecipeList.jsx          # 料理一覧（variant で list / summary 兼用）
 │   │   │   ├── TotalResults.jsx        # 必要食材合計
-│   │   │   └── MissingIngredients.jsx  # 集計に含まれない食材
+│   │   │   └── AdditionalEnergy.jsx    # 追加エナジー（必要食材含む全食材一覧）
 │   │   ├── AsyncBoundary.jsx       # loading / error ハンドラ
 │   │   ├── LoadingSpinner.jsx      # ローディング表示
 │   │   ├── ErrorDisplay.jsx        # エラー表示

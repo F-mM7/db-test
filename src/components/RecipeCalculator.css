@@ -88,13 +88,15 @@
   border-color: var(--color-green);
 }
 
-.recipe-row.selected {
+.recipe-row.selected,
+.ingredient-card.selected {
   background: var(--fill-green);
   color: var(--color-text-strong);
   border-color: var(--fill-green);
 }
 
-.recipe-row.selected:hover {
+.recipe-row.selected:hover,
+.ingredient-card.selected:hover {
   background: var(--color-green);
   border-color: var(--color-green);
 }
@@ -185,7 +187,7 @@
   margin-bottom: 32px;
 }
 
-/* 食材カード（合計／集計にない、共通ベース） */
+/* 食材カード（必要食材／追加エナジー、共通ベース） */
 .ingredient-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -201,6 +203,16 @@
   border-color: var(--color-green);
 }
 
+/* button 要素のデフォルトを打ち消すためのリセット */
+button.ingredient-card {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  color: inherit;
+}
+
 .ingredient-card__icon {
   width: 36px;
   height: 36px;
@@ -214,13 +226,9 @@
   flex: 1;
 }
 
-/* 集計に含まれていない食材用バリアント（点線・グレースケール） */
+/* 必要食材に含まれない食材用バリアント（点線・グレースケール・地味な文字色のみ） */
 .ingredient-card--muted {
-  background: var(--color-surface);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 10px 14px;
-  gap: 10px;
+  border-style: dashed;
 }
 
 .ingredient-card--muted:hover {
@@ -228,30 +236,37 @@
 }
 
 .ingredient-card--muted .ingredient-card__icon {
-  width: 28px;
-  height: 28px;
-  filter: grayscale(0.5) var(--filter-icon-shadow);
+  filter: grayscale(1) opacity(0.5) var(--filter-icon-shadow);
 }
 
 .ingredient-card--muted .ingredient-card__name {
-  font-size: 13px;
   font-weight: 500;
   color: var(--color-text-muted);
+}
+
+/* 追加エナジーセクション。muted カード基準のコンパクトサイズで揃える */
+.additional-energy-section {
+  margin-top: clamp(20px, calc(14px + 1.5vw), 32px);
+}
+
+.additional-energy-section .ingredient-card {
+  padding: 10px 14px;
+  gap: 10px;
+}
+
+.additional-energy-section .ingredient-card__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.additional-energy-section .ingredient-card__name {
+  font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* 集計にない食材セクション */
-.missing-ingredients-section {
-  margin-top: clamp(20px, calc(14px + 1.5vw), 32px);
-}
-
-.missing-ingredients-section .results-header h2 {
-  color: var(--color-text-muted);
-}
-
-.missing-ingredients-grid {
+.additional-energy-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 10px;
@@ -269,7 +284,7 @@
     gap: 12px;
   }
 
-  .missing-ingredients-grid {
+  .additional-energy-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 8px;
   }
@@ -333,21 +348,21 @@
     gap: 10px;
   }
 
-  .missing-ingredients-grid {
+  .additional-energy-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 6px;
   }
 
-  .ingredient-card--muted {
+  .additional-energy-section .ingredient-card {
     padding: 8px 10px;
   }
 
-  .ingredient-card--muted .ingredient-card__icon {
+  .additional-energy-section .ingredient-card__icon {
     width: 24px;
     height: 24px;
   }
 
-  .ingredient-card--muted .ingredient-card__name {
+  .additional-energy-section .ingredient-card__name {
     font-size: 12px;
   }
 
@@ -407,7 +422,7 @@
     gap: 8px;
   }
 
-  .missing-ingredients-grid {
+  .additional-energy-grid {
     grid-template-columns: 1fr 1fr;
     gap: 6px;
   }
