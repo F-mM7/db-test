@@ -94,9 +94,6 @@ npm run download-wiki
 
 # Step 2: HTMLをパースしてJSONを生成
 npm run parse-wiki
-
-# 開発用: テーブル構造を分析（デバッグ時）
-node scripts/analyze-table-structure.js
 ```
 
 ### データ形式（最新版）
@@ -205,14 +202,8 @@ npm run deploy
    npm run fetch-data
    ```
 
-2. **パースエラー**  
-   Wiki HTML構造の変更が原因の可能性
-   ```bash
-   node scripts/analyze-table-structure.js
-   ```
-
-3. **セル位置エラー**
-   `scripts/parse-wiki-data.js` の `CELL_PATTERNS` 設定を確認
+2. **パースエラー / セル位置エラー**  
+   Wiki HTML 構造の変更が原因の可能性。 `scripts/parse-wiki-data.js` の `CELL_PATTERNS` 設定を確認する。
 
 ### 開発時の注意点
 

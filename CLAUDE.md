@@ -28,7 +28,6 @@ Wiki データを自動取得・解析し、食材ごとにポケモンを効率
 │   ├── parse-wiki-data.js            # ポケモン HTML → JSON パース
 │   ├── parse-recipe-data.js          # 料理 HTML → JSON パース
 │   ├── parse-ingredient-data.js      # 食材 HTML → JSON パース (基礎エナジー含む)
-│   ├── analyze-table-structure.js    # 開発用テーブル構造分析
 │   └── lib/
 │       └── io.js                     # 共通 I/O ヘルパー (loadHtml / writeJson)
 │
@@ -203,7 +202,7 @@ CELL_PATTERNS.WITHOUT_C_INGREDIENT = {
 ### よくある問題
 1. **データが表示されない** → `npm run fetch-data` でデータ更新
 2. **パースエラー** → Wiki HTML構造の変更可能性
-3. **セル位置エラー** → `analyze-table-structure.js` で構造確認
+3. **セル位置エラー** → `scripts/parse-wiki-data.js` の `CELL_PATTERNS` 設定を確認
 
 ### 開発時の注意点
 - パターン変更時は `constants.js` を更新
