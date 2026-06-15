@@ -2,7 +2,8 @@
 
 import * as cheerio from 'cheerio';
 import process from 'process';
-import { loadHtml, writeJson, dataDir, publicDir } from './lib/io.js';
+import { loadHtml, loadJson, writeJson, dataDir, publicDir } from './lib/io.js';
+import { assertCount, DATASETS } from './lib/validate.js';
 
 const CATEGORY_TABLE_MAP = [
   { tableIndex: 2, category: 'カレー・シチュー' },
@@ -86,29 +87,39 @@ function parseIngredients($, cell) {
 
 function parseTable($, table, category) {
   const recipes = [];
+  // 構造異常によるスキップ件数（「ごちゃまぜ」行の意図的スキップは含めない）
+  let anomalous = 0;
   $(table).find('tr').slice(1).each((_, row) => {
     const cells = $(row).find('td');
+
+    // 列数が4未満の行は区切り・見出しなどの非データ行とみなして静かにスキップする
     if (cells.length < 4) return;
 
-    // 「ごちゃまぜ」行は番号セルが "-" なのでスキップ
+    // 「ごちゃまぜ」行は番号セルが "-" なので意図的にスキップ（異常ではない）
     if ($(cells[0]).text().trim() === '-') return;
 
     const name = $(cells[2]).text().trim();
-    if (!name) return;
+    if (!name) {
+      console.warn(`  Warning: ${category} に料理名が空の行があります`);
+      anomalous++;
+      return;
+    }
 
     const ingredients = parseIngredients($, cells[3]);
     if (ingredients.length === 0) {
       console.warn(`  Warning: No ingredients found for "${name}"`);
+      anomalous++;
       return;
     }
 
+    // 空欄セルの 0 化は RECIPE_OVERRIDES による補完を前提とした意図的フォールバック
     const totalIngredients = parseInt($(cells[4]).text().trim(), 10) || 0;
     const energy = parseInt($(cells[5]).text().trim(), 10) || 0;
 
     const recipe = { name, category, ingredients, totalIngredients, energy };
     recipes.push(applyRecipeOverride(recipe));
   });
-  return recipes;
+  return { recipes, anomalous };
 }
 
 export function parseRecipeData() {
@@ -121,18 +132,29 @@ export function parseRecipeData() {
     const tables = $('table');
     console.log(`Found ${tables.length} tables`);
 
+    const previous = loadJson(DATASETS.recipe.file);
     const allRecipes = [];
+    let totalAnomalous = 0;
     for (const { tableIndex, category } of CATEGORY_TABLE_MAP) {
       const table = tables.eq(tableIndex);
+      // テーブル未検出はカテゴリ丸ごとの欠落＝劣化データになるため中止する
       if (table.length === 0) {
-        console.warn(`Warning: Table ${tableIndex} not found for ${category}`);
-        continue;
+        throw new Error(`${category} のテーブル（index ${tableIndex}）が見つかりません。Wiki のテーブル構成変更が疑われます。`);
       }
       console.log(`\nParsing ${category}...`);
-      const recipes = parseTable($, table, category);
+      const { recipes, anomalous } = parseTable($, table, category);
       console.log(`  ✓ Found ${recipes.length} recipes`);
       allRecipes.push(...recipes);
+      totalAnomalous += anomalous;
     }
+
+    if (totalAnomalous > 0) {
+      throw new Error(`${totalAnomalous} 件の料理行が想定外の構造でスキップされました。Wiki のテーブル構造変更が疑われます。`);
+    }
+    assertCount(DATASETS.recipe.label, allRecipes.length, {
+      absoluteMin: DATASETS.recipe.absoluteMin,
+      previousCount: previous?.length ?? null
+    });
 
     writeJson(publicDir, 'recipe-data.json', allRecipes);
 

@@ -21,6 +21,19 @@ export function loadHtml(filename, hint) {
   return html;
 }
 
+// 既存の JSON を読み込む。存在しない・破損している場合は null を返す
+// （前回件数との比較などに使う。破損時は比較をスキップさせ、原因を warn で残す）。
+export function loadJson(filename, targetDir = publicDir) {
+  const jsonPath = path.join(targetDir, filename);
+  if (!fs.existsSync(jsonPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+  } catch {
+    console.warn(`⚠ ${filename} の読み込みに失敗しました（破損の可能性）。前回件数との比較をスキップします。`);
+    return null;
+  }
+}
+
 export function writeJson(targetDir, filename, data) {
   fs.mkdirSync(targetDir, { recursive: true });
   const outPath = path.join(targetDir, filename);

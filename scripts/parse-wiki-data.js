@@ -2,7 +2,8 @@
 
 import * as cheerio from 'cheerio';
 import process from 'process';
-import { loadHtml, writeJson, dataDir, publicDir } from './lib/io.js';
+import { loadHtml, loadJson, writeJson, dataDir, publicDir } from './lib/io.js';
+import { assertCount, DATASETS } from './lib/validate.js';
 
 const CELL_PATTERNS = {
   WITH_C_INGREDIENT: {
@@ -95,16 +96,29 @@ function parseHtmlTable(html) {
   const pokemonList = [];
   let id = 1;
   let failed = 0;
+  let incomplete = 0;
 
   table.find('tbody tr').each((rowIndex, row) => {
+    const cells = $(row).find('td');
+    // 列数が下限未満の行は区切り・注釈などの非データ行とみなして静かにスキップする
+    if (cells.length < MIN_CELLS.WITHOUT_C) return;
+
     try {
-      const pokemon = parsePokemonRow($, $(row).find('td'), id);
-      if (pokemon) {
-        pokemonList.push(pokemon);
-        id++;
-      } else {
+      const pokemon = parsePokemonRow($, cells, id);
+      const got = pokemon ? Object.keys(pokemon.ingredientPatterns).length : 0;
+      // データ行の体裁なのに名前欠落・全パターン抽出失敗＝構造崩壊の兆候として計上
+      if (!pokemon || got === 0) {
         failed++;
+        return;
       }
+      // 一部パターンだけの欠損（例: C食材が未確定）は警告のみ。総量は assertCount で担保する。
+      const expected = cells.length >= MIN_CELLS.WITH_C ? 3 : 2;
+      if (got < expected) {
+        console.warn(`Incomplete patterns for "${pokemon.name}": ${got}/${expected}`);
+        incomplete++;
+      }
+      pokemonList.push(pokemon);
+      id++;
     } catch (error) {
       console.warn(`Error parsing row ${rowIndex}:`, error.message);
       failed++;
@@ -112,8 +126,12 @@ function parseHtmlTable(html) {
   });
 
   console.log(`✓ Successfully parsed: ${pokemonList.length} Pokemon`);
-  console.log(`✗ Failed to parse: ${failed} rows`);
+  console.log(`✗ Failed (data-shaped rows): ${failed}, ⚠ Incomplete patterns: ${incomplete}`);
   if (pokemonList.length === 0) throw new Error('No Pokemon data extracted from table');
+  // データ行の体裁なのに抽出に失敗した行は劣化の兆候。黙って通さず中止する。
+  if (failed > 0) {
+    throw new Error(`${failed} 行のデータパースに失敗しました。Wiki のテーブル構造変更が疑われます。`);
+  }
   return pokemonList;
 }
 
@@ -123,7 +141,13 @@ export function parseWikiData() {
 
   try {
     const html = loadHtml('wiki-raw.html', 'Please run "npm run download-wiki" first.');
+    const previous = loadJson(DATASETS.pokemon.file);
     const pokemonList = parseHtmlTable(html);
+
+    assertCount(DATASETS.pokemon.label, pokemonList.length, {
+      absoluteMin: DATASETS.pokemon.absoluteMin,
+      previousCount: previous?.length ?? null
+    });
 
     writeJson(publicDir, 'pokemon-data.json', pokemonList);
     writeJson(dataDir, 'parse-summary.json', {

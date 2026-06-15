@@ -2,7 +2,8 @@
 
 import * as cheerio from 'cheerio';
 import process from 'process';
-import { loadHtml, writeJson, dataDir, publicDir } from './lib/io.js';
+import { loadHtml, loadJson, writeJson, dataDir, publicDir } from './lib/io.js';
+import { assertCount, DATASETS } from './lib/validate.js';
 
 const COL = {
   NAME: 1,
@@ -29,25 +30,31 @@ function parseIntOrNull(text) {
   return Number.isNaN(value) ? null : value;
 }
 
+// 戻り値: { ing, anomalous }
+//   ing       … 抽出できた食材（失敗時 null）
+//   anomalous … データ行とみなせるのに抽出に失敗した場合 true（列数不足の非データ行は false）
 function parseRow($, row) {
   const cells = $(row).find('td');
-  if (cells.length < 4) return null;
+  if (cells.length < 4) return { ing: null, anomalous: false };
 
   const name = $(cells[COL.NAME]).find('a.rel-wiki-page').first().text().trim();
-  if (!name) return null;
+  if (!name) return { ing: null, anomalous: true };
 
   const baseEnergyText = $(cells[COL.BASE_ENERGY]).text().trim();
   const baseEnergy = parseInt(baseEnergyText, 10);
   if (Number.isNaN(baseEnergy)) {
     console.warn(`  Warning: Invalid base energy for "${name}" (raw: "${baseEnergyText}")`);
-    return null;
+    return { ing: null, anomalous: true };
   }
 
   return {
-    name,
-    baseEnergy,
-    effectiveEnergyMax: parseIntOrNull($(cells[COL.EFFECTIVE_ENERGY_MAX] ?? '').text().trim()),
-    dreamShards: parseIntOrNull($(cells[COL.DREAM_SHARDS] ?? '').text().trim())
+    ing: {
+      name,
+      baseEnergy,
+      effectiveEnergyMax: parseIntOrNull($(cells[COL.EFFECTIVE_ENERGY_MAX] ?? '').text().trim()),
+      dreamShards: parseIntOrNull($(cells[COL.DREAM_SHARDS] ?? '').text().trim())
+    },
+    anomalous: false
   };
 }
 
@@ -67,10 +74,22 @@ export function parseIngredientData() {
     const rows = $(target).find('tbody tr');
     console.log(`Processing ${rows.length} rows...`);
 
+    const previous = loadJson(DATASETS.ingredient.file);
     const ingredients = [];
+    let anomalous = 0;
     rows.each((_, row) => {
-      const ing = parseRow($, row);
+      const { ing, anomalous: a } = parseRow($, row);
       if (ing) ingredients.push(ing);
+      else if (a) anomalous++;
+    });
+
+    // データ行とみなせるのに抽出に失敗した行があれば劣化データの兆候として中止する
+    if (anomalous > 0) {
+      throw new Error(`${anomalous} 行の食材データのパースに失敗しました。Wiki のテーブル構造変更が疑われます。`);
+    }
+    assertCount(DATASETS.ingredient.label, ingredients.length, {
+      absoluteMin: DATASETS.ingredient.absoluteMin,
+      previousCount: previous?.length ?? null
     });
 
     writeJson(publicDir, 'ingredient-data.json', ingredients);
