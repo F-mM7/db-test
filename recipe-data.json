@@ -440,6 +440,54 @@
     "energy": 24802
   },
   {
+    "name": "ワカクサカレーパン",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あったかジンジャー",
+        "quantity": 20
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 20
+      },
+      {
+        "name": "ワカクサ大豆",
+        "quantity": 8
+      },
+      {
+        "name": "ピュアなオイル",
+        "quantity": 15
+      }
+    ],
+    "totalIngredients": 63,
+    "energy": 10945
+  },
+  {
+    "name": "とびはねるカレーうどん",
+    "category": "カレー・シチュー",
+    "ingredients": [
+      {
+        "name": "あったかジンジャー",
+        "quantity": 39
+      },
+      {
+        "name": "あじわいキノコ",
+        "quantity": 31
+      },
+      {
+        "name": "げきからハーブ",
+        "quantity": 22
+      },
+      {
+        "name": "マメミート",
+        "quantity": 20
+      }
+    ],
+    "totalIngredients": 112,
+    "energy": 25539
+  },
+  {
     "name": "ヤドンテールのペッパーサラダ",
     "category": "サラダ",
     "ingredients": [
