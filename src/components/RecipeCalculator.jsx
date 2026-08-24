@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from 'react';
 import { useFetchJson } from '../hooks/useFetchJson';
 import { useRecipeCalculator } from '../hooks/useRecipeCalculator';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 import { RECIPE_DATA_URL, INGREDIENT_DATA_URL } from '../utils/constants';
 import AsyncBoundary from './AsyncBoundary';
 import FilterBar from './RecipeCalculator/FilterBar';
@@ -9,6 +10,8 @@ import RecipeList from './RecipeCalculator/RecipeList';
 import TotalResults from './RecipeCalculator/TotalResults';
 import AdditionalEnergy from './RecipeCalculator/AdditionalEnergy';
 import './RecipeCalculator.css';
+
+const ACTIVE_TAB_KEY = 'pokesleep-kitchen:recipeCalculator:activeTab';
 
 function RecipeCalculator() {
   const { data: recipeData, loading: recipeLoading, error: recipeError } = useFetchJson(RECIPE_DATA_URL);
@@ -26,7 +29,7 @@ function RecipeCalculator() {
     getFilteredRecipes
   } = useRecipeCalculator(recipeData, ingredientData);
 
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useLocalStorage(ACTIVE_TAB_KEY, null);
   const [highlightedIngredients, setHighlightedIngredients] = useState(() => new Set());
 
   const currentTab = activeTab || categories[0] || null;

@@ -1,4 +1,5 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useMemo, useCallback } from 'react';
+import { useLocalStorage } from './useLocalStorage';
 
 // 鍋サイズ（初期12、3刻みで拡張、最大81）
 export const POT_SIZE_MIN = 12;
@@ -9,9 +10,12 @@ const POT_SIZE_DEFAULT = 78;
 // 日曜のウィークエンドボーナスで鍋容量が 2 倍になる
 const WEEKEND_MULTIPLIER = 2;
 
+const SELECTED_RECIPES_KEY = 'pokesleep-kitchen:recipeCalculator:selectedRecipes';
+const POT_SIZE_KEY = 'pokesleep-kitchen:recipeCalculator:potSize';
+
 export function useRecipeCalculator(recipeData, ingredientData = []) {
-  const [selectedRecipes, setSelectedRecipes] = useState({});
-  const [potSize, setPotSize] = useState(POT_SIZE_DEFAULT);
+  const [selectedRecipes, setSelectedRecipes] = useLocalStorage(SELECTED_RECIPES_KEY, {});
+  const [potSize, setPotSize] = useLocalStorage(POT_SIZE_KEY, POT_SIZE_DEFAULT);
 
   const categories = useMemo(() => {
     const set = new Set();
@@ -79,21 +83,21 @@ export function useRecipeCalculator(recipeData, ingredientData = []) {
       }
       return next;
     });
-  }, []);
+  }, [setSelectedRecipes]);
 
   // 全選択をクリア
   const clearAll = useCallback(() => {
     setSelectedRecipes({});
-  }, []);
+  }, [setSelectedRecipes]);
 
   // 鍋サイズを増減
   const incrementPotSize = useCallback(() => {
     setPotSize(prev => Math.min(prev + POT_SIZE_STEP, POT_SIZE_MAX));
-  }, []);
+  }, [setPotSize]);
 
   const decrementPotSize = useCallback(() => {
     setPotSize(prev => Math.max(prev - POT_SIZE_STEP, POT_SIZE_MIN));
-  }, []);
+  }, [setPotSize]);
 
   return {
     selectedRecipes,
