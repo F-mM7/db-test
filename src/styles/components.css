@@ -209,6 +209,27 @@
   border-color: var(--color-red);
 }
 
+/* ─ Component: Favorite Star ─ */
+.favorite-star {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.favorite-star:hover {
+  color: var(--color-yellow);
+}
+
+.favorite-star.active {
+  color: var(--color-yellow);
+}
+
 @media (max-width: 768px) {
   .tab {
     padding: 10px 16px;

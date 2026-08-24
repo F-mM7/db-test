@@ -267,7 +267,7 @@ button.ingredient-card {
 
 .additional-energy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 10px;
   margin-bottom: 16px;
 }
@@ -284,7 +284,7 @@ button.ingredient-card {
   }
 
   .additional-energy-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 8px;
   }
 }
@@ -348,7 +348,7 @@ button.ingredient-card {
   }
 
   .additional-energy-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
     gap: 6px;
   }
 
@@ -363,6 +363,10 @@ button.ingredient-card {
 
   .additional-energy-section .ingredient-card__name {
     font-size: 12px;
+  }
+
+  .additional-energy-section .favorite-star {
+    font-size: 15px;
   }
 
   .ingredient-card {
